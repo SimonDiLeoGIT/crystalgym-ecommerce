@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface propsType {
   setSearchMode(state: boolean): void,
   search_icon: string,
@@ -6,9 +8,23 @@ interface propsType {
 
 export const Search_Mobile: React.FC<propsType> = ({ setSearchMode, search_icon, close_icon }) => {
 
+  const [closeSearchMode, setCloseSearchMode] = useState(false);
+
+  function handleViewSearch() {
+    setCloseSearchMode(true);
+    setTimeout(function () {
+      setSearchMode(false);
+    }, 400);
+  }
+
+  const search_classes = (): string => {
+    let classes = " fixed w-screen h-screen top-0 left-0 bg-white";
+    !closeSearchMode ? (classes += ' open-mobile-menu') : (classes += ' close-mobile-menu');
+    return classes;
+  }
 
   return (
-    <section className="fixed w-screen h-screen top-0 left-0 bg-white">
+    <section className={search_classes()}>
       <section className="w-full grid grid-cols-5 p-2 border-b-2">
         <form className="border-2 rounded-full col-span-4 grid grid-cols-5 gap-2 p-2">
           <input type="text" placeholder="Search for a Product..."
@@ -23,7 +39,7 @@ export const Search_Mobile: React.FC<propsType> = ({ setSearchMode, search_icon,
         </form>
         <button
           className="ml-auto"
-          onClick={() => setSearchMode(false)}
+          onClick={() => handleViewSearch()}
         >
           <img src={close_icon} className="" />
         </button>

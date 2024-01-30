@@ -9,6 +9,7 @@ import close_icon from './../assets/nav icons/mobile/close-sm-svgrepo-com.svg'
 import { useState } from "react"
 import { MobileMenu } from "./MobileMenu"
 import { Search_Mobile } from "./Search_Mobile"
+import { Input } from "@nextui-org/react";
 
 export const Navbar = () => {
 
@@ -26,14 +27,14 @@ export const Navbar = () => {
   const menu_options = () => {
     if (viewMenu) {
       return (
-        <MobileMenu setViewMenu={setViewMenu} search_icon={search_icon} close_icon={close_icon} logo={logo} />
+        <MobileMenu setViewMenu={setViewMenu} close_icon={close_icon} logo={logo} />
       )
     }
   }
 
   return (
     <nav className="grid grid-cols-3 border-2 min-h-16">
-      <section className="m-auto ml-4 h-full">
+      <section className="m-auto ml-4 h-full lg:hidden">
         <button
           className="h-full"
           onClick={() => setViewMenu(true)}
@@ -42,13 +43,47 @@ export const Navbar = () => {
         </button>
         {menu_options()}
       </section>
-      <h1 className="m-auto h-full">
-        <Link to='/'>
+      <h1 className="m-auto h-full lg:ml-0 lg:px-4">
+        <Link to='/' className=" border-2">
           <img src={logo} className="h-full w-8" />
         </Link>
       </h1>
+      <ul className="invisible fixed w-full text-center py-6 lg:visible lg:relative">
+        <li className="inline hover:border-b-2 px-4 py-6 hover:cursor-pointer font-semibold">
+          <Link to="/women">WOMEN</Link>
+        </li>
+        <li className="inline px-8 hover:border-b-2 py-6 hover:cursor-pointer font-semibold">
+          <Link to="/men">MEN</Link>
+        </li>
+        <li className="inline hover:border-b-2 px-4 py-6 hover:cursor-pointer font-semibold">
+          <Link to="/accessories" className="h-full">ACCESSORIES</Link>
+        </li>
+      </ul>
       <ul className="w-full flex place-content-end">
-        <li className="my-auto mx-6 h-full">
+        <li className="invisible fixed my-auto mr-4 h-full grid place-content-center lg:visible lg:relative">
+          <form className="border-2 rounded-full col-span-4 grid grid-cols-5 gap-2 px-2">
+            <input type="text" placeholder="Search for a Product..."
+              className="rounded-full col-span-4 p-4 outline-none hover:cursor-pointer"
+            />
+            <button
+              className="m-auto p-2 rounded-full bg-slate-100"
+              onClick={() => setSearchMode(false)}
+            >
+              <img src={search_icon} className="w-5" />
+            </button>
+          </form>
+        </li>
+        <li className="invisible fixed my-auto mr-4 h-full lg:visible lg:relative">
+          <Link to='/'>
+            <img src={instagram_icon} className="h-full w-10" />
+          </Link>
+        </li>
+        <li className="invisible fixed my-auto mr-4 h-full lg:visible lg:relative">
+          <Link to='/'>
+            <img src={account_avatar} className="h-full w-7" />
+          </Link>
+        </li>
+        <li className="my-auto mx-6 h-full lg:hidden">
           <section className="h-full">
             <button onClick={() => setSearchMode(true)} className="h-full">
               <img src={search_icon} className="h-full w-7" />
@@ -62,20 +97,7 @@ export const Navbar = () => {
           </Link>
         </li>
       </ul>
-      {/*<h1 className="my-auto mx-4">
-        <Link to="/">Home</Link>
-      </h1>
-      <ul className="w-full text-center py-6">
-        <li className="inline hover:border-b-2 py-6">
-          <Link to="/women">WOMEN</Link>
-        </li>
-        <li className="inline mx-4 hover:border-b-2 py-6">
-          <Link to="/men">MEN</Link>
-        </li>
-        <li className="inline hover:border-b-2 py-6">
-          <Link to="/accessories">ACCESSORIES</Link>
-        </li>
-      </ul>
+      {/*
       <ul className="w-full flex place-content-end">
         <li className="my-auto mr-4">
           <form>

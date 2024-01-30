@@ -1,17 +1,32 @@
 import { Link } from "react-router-dom"
+import './../styles/mobile-menu.css'
+import { useState } from "react"
 
 interface propsType {
   setViewMenu(state: boolean): void,
-  search_icon: string,
   close_icon: string,
   logo: string,
 }
 
 export const MobileMenu: React.FC<propsType> = ({ setViewMenu, close_icon, logo }) => {
 
+  const [closeMenu, setCloseMenu] = useState(false);
+
+  function handleViewMenu() {
+    setCloseMenu(true);
+    setTimeout(function () {
+      setViewMenu(false);
+    }, 400);
+  }
+
+  const nav_classes = (): string => {
+    let classes = " fixed w-screen h-screen top-0 left-0 bg-white";
+    !closeMenu ? (classes += ' open-mobile-menu') : (classes += ' close-mobile-menu');
+    return classes;
+  }
 
   return (
-    <nav className="fixed w-screen h-screen top-0 left-0 bg-white">
+    <nav className={nav_classes()}>
       <header className="w-full border-b-2 min-h-16 grid">
         <h1 className=" m-auto h-full px-2">
           <Link to='/'>
@@ -20,7 +35,7 @@ export const MobileMenu: React.FC<propsType> = ({ setViewMenu, close_icon, logo 
         </h1>
         <button
           className="absolute right-0 top-0 p-4"
-          onClick={() => setViewMenu(false)}
+          onClick={() => handleViewMenu()}
         >
           <img src={close_icon} className="" />
         </button>
