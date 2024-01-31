@@ -2,83 +2,38 @@
   "posts": [
     {
       "id": "1",
-      "image": "url_imagen_1.jpg",
-      "title": "Post 1",
-      "info": "Descripción del Post 1",
-      "price": 29.99,
-      "sex": ""
+      "image": "/src/assets/Posts_img/Bag/EVERYDAY MINI GYM BAG/Blue/EVERYDAY MINI GYM BAG 1.jpg",
+      "title": "EVERYDAY MINI GYM BAG",
+      "info": "Bag",
+      "price": 29.99
     },
     {
       "id": "2",
-      "image": "url_imagen_2.jpg",
-      "title": "Post 2",
-      "info": "Descripción del Post 2",
-      "price": 39.99,
-      "sex": ""
+      "image": "/src/assets/Posts_img/Diver/POWER WASHED CREW/Brown/POWER WASHED CREW 1.jpg",
+      "title": "POWER WASHED CREW",
+      "info": "Diver",
+      "price": 69.99
     },
     {
       "id": "3",
-      "image": "url_imagen_3.jpg",
-      "title": "Post 3",
-      "info": "Descripción del Post 3",
-      "price": 49.99,
-      "sex": ""
+      "image": "/src/assets/Posts_img/Diver/Indy Grizzly Oversize/Blue/Indi-blue-grizzly-og-oversize-diver.jpg",
+      "title": "INDY GRIZZLY OVERSIZE",
+      "info": "Diver",
+      "price": 39.99
     },
     {
       "id": "4",
-      "image": "url_imagen_4.jpg",
-      "title": "Post 4",
-      "info": "Descripción del Post 4",
-      "price": 19.99,
-      "sex": ""
+      "image": "/src/assets/Posts_img/Shirt/Camisa Santa Cruz Flannel Oversize/Crema/Camisa Santa Cruz Flannel Oversize Niño Crema Material zoom.jpg",
+      "title": "SANTA CRUZ FLANNEL OVERSIZE SHIRT",
+      "info": "Shirt",
+      "price": 19.99
     },
     {
       "id": "5",
-      "image": "url_imagen_5.jpg",
-      "title": "Post 5",
-      "info": "Descripción del Post 5",
-      "price": 59.99,
-      "sex": ""
-    },
-    {
-      "id": "6",
-      "image": "url_imagen_6.jpg",
-      "title": "Post 6",
-      "info": "Descripción del Post 6",
-      "price": 69.99,
-      "sex": ""
-    },
-    {
-      "id": "7",
-      "image": "url_imagen_7.jpg",
-      "title": "Post 7",
-      "info": "Descripción del Post 7",
-      "price": 79.99,
-      "sex": ""
-    },
-    {
-      "id": "8",
-      "image": "url_imagen_8.jpg",
-      "title": "Post 8",
-      "info": "Descripción del Post 8",
-      "price": 89.99,
-      "sex": ""
-    },
-    {
-      "id": "9",
-      "image": "url_imagen_9.jpg",
-      "title": "Post 9",
-      "info": "Descripción del Post 9",
-      "price": 99.99,
-      "sex": ""
-    },
-    {
-      "id": "10",
-      "image": "url_imagen_10.jpg",
-      "title": "Post 10",
-      "info": "Descripción del Post 10",
-      "price": 109.99,
-      "sex": ""
+      "image": "/src/assets/Posts_img/Short/INTERLOCK TECH 6 SHORTS/Black/INTERLOCK TECH 6 SHORTS 1.jpg",
+      "title": "INTERLOCK TECH 6 SHORTS",
+      "info": "Short",
+      "price": 14.99
     }
   ]
 }
