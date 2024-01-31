@@ -18,15 +18,15 @@ export const Search_Mobile: React.FC<propsType> = ({ setSearchMode, search_icon,
   }
 
   const search_classes = (): string => {
-    let classes = " fixed w-screen h-screen top-0 left-0 bg-white";
+    let classes = " fixed w-screen h-screen top-0 left-0 -bg--color-white z-10";
     !closeSearchMode ? (classes += ' open-mobile-menu') : (classes += ' close-mobile-menu');
     return classes;
   }
 
   return (
     <section className={search_classes()}>
-      <section className="w-full grid grid-cols-5 p-2 border-b-2">
-        <form className="border-2 rounded-full col-span-4 grid grid-cols-5 gap-2 p-2">
+      <section className="w-full grid grid-cols-5 p-2  border-b -border--color-very-light-grey">
+        <form className=" border-2 -border--color-very-light-grey rounded-full col-span-4 grid grid-cols-5 gap-2 p-2">
           <input type="text" placeholder="Search for a Product..."
             className="rounded-full col-span-4 px-2"
           />

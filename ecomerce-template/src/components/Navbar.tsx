@@ -33,7 +33,7 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className="grid grid-cols-3 border-2 min-h-16">
+    <nav className="grid grid-cols-3 border-b -border--color-very-light-grey min-h-16">
       <section className="m-auto ml-4 h-full lg:hidden">
         <button
           className="h-full"
@@ -44,7 +44,7 @@ export const Navbar = () => {
         {menu_options()}
       </section>
       <h1 className="m-auto h-full lg:ml-0 lg:px-4">
-        <Link to='/' className=" border-2">
+        <Link to='/' className=" ">
           <img src={logo} className="h-full w-8" />
         </Link>
       </h1>
