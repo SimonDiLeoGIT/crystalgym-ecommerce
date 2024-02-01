@@ -1,20 +1,39 @@
 import { News_Posts_Section } from "../components/post_section/News_Posts_Section"
-import home_header_img from "./../assets/Home_images/home_header_img.png"
 import posts from "../assets/posts.json"
+import './../styles/home.css'
+import { News } from "../components/News"
 
 export const Home = () => {
   return (
-    <section className="max-w-screen overflow-x-hidden">
+    <main className="max-w-screen overflow-x-hidden font-roboto">
       <header>
-        <img src={home_header_img} />
-        <h1 className="absolute top-2/4 left-4 mt-20 font-bold text-xl">NEW <span className="-text--color-dark-violet">THIS</span> MONTH</h1>
-        <h2 className="absolute top-2/4 left-4 mt-28 font-semibold text-sm">Urban and gym clothing.</h2>
-        <section className="absolute w-screen top-3/4 text-center">
-          <button className="font-roboto -bg--color-light-grey-violet font-bold p-4 rounded-full w-5/6 my-2">FEATURED PRODUCTS</button>
-          <button className="font-roboto -bg--color-black -text--color-light-grey-violet font-bold p-4 rounded-full w-5/6 my-2">NEW PRODUCTS</button>
-        </section>
+        <News
+          news={{
+            id: '1',
+            image: 'header-clothe',
+            title_front: 'NEW',
+            title_middle: ' THIS ',
+            title_end: 'MONTH',
+            info: 'Urban and gym clothing.',
+            button1_title: 'FEATURED PRODUCTS',
+            button2_title: 'NEW PRODUCTS',
+          }}
+        />
       </header>
       <News_Posts_Section posts={posts.posts} />
-    </section>
+      <News
+        news={{
+          id: '1',
+          image: 'off-clothe',
+          title_front: '20%',
+          title_middle: '',
+          title_end: 'OFF',
+          info: 'Urban and gym clothing.',
+          button1_title: 'FEATURED PRODUCTS',
+          button2_title: 'NEW PRODUCTS',
+        }}
+      />
+      <News_Posts_Section posts={posts.posts} />
+    </main>
   )
 }

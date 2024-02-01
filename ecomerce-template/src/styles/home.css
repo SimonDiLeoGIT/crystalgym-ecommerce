@@ -1,0 +1,15 @@
+.header-clothe,
+.off-clothe {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85vh;
+  max-height: 600px;
+}
+
+.header-clothe {
+  background-image: url('../assets/Home_images/home_header_img.png');
+}
+
+.off-clothe {
+  background-image: url('../assets/Home_images/urban-clothe.jpg');
+}

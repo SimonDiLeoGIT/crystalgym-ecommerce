@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'home-header-background': "url('./../assets/Home_images/home_header_img.png')",
+      }
+    },
     colors: {
       /* Dark Grey Violet */
       '--color-dark-grey-violet': '#301F2F',
