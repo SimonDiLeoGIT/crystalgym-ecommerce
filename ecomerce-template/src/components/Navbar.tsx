@@ -33,7 +33,7 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className="grid grid-cols-3 border-b -border--color-very-light-grey min-h-16">
+    <nav className="grid grid-cols-3 border-b -border--color-very-light-grey min-h-20">
       <section className="m-auto ml-4 h-full lg:hidden">
         <button
           className="h-full"

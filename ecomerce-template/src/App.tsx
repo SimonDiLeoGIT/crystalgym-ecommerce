@@ -1,4 +1,4 @@
-import { Header } from "./components/Header"
+import { Router } from "./components/Router"
 import './styles/global/fonts.css'
 
 function App() {
@@ -6,8 +6,7 @@ function App() {
 
   return (
     <>
-      <Header />
-
+      <Router />
     </>
   )
 }
