@@ -1,44 +1,52 @@
 import { Link } from "react-router-dom"
 import ig from "../assets/social_media_icons/instagramsvg.svg"
-import face from "../assets/social_media_icons/facebook.svg"
 import linkedin from "../assets/social_media_icons/linkedin.svg"
 import git from "../assets/social_media_icons/github.svg"
 
 export const Footer = () => {
   return (
-    <footer>
-      <nav>
+    <footer className="-bg--color-black -text--color-white px-4 mt-4">
+      <nav className="text-center p-2">
         <ul>
-          <li>
+          <li className="p-2">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="p-2">
             <Link to="/">Products</Link>
           </li>
-          <li>
+          <li className="p-2">
             <Link to="/">Terms & Conditions</Link>
           </li>
         </ul>
       </nav>
-      <section>
+      <section className="">
         <header>
-          <h1>Sign Up for Email</h1>
-          <p>
+          <h1 className="text-lg font-medium">Sign Up for Email</h1>
+          <p className="my-2">
             Sign up to receive emails and get first dibs on new arrivals, sales,
             exclusive content, events and more!
           </p>
         </header>
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="submit" />
+        <form className="">
+          <input
+            type="text" placeholder="Name"
+            className="w-full p-2 -bg--color-very-light-grey -text--color-black placeholder:-text--color-black"
+          />
+          <input
+            type="email" placeholder="Email"
+            className="w-full p-2 -bg--color-very-light-grey -text--color-black placeholder:-text--color-black mt-2"
+          />
+          <input
+            type="submit"
+            className="-text--color-black -bg--color-light-grey-violet font-bold p-2 w-24 my-4"
+          />
         </form>
       </section>
-      <section>
+      <section className="">
         <header>
           <h1>Contact Us</h1>
         </header>
-        <ul className="flex place-content-center">
+        <ul className="flex place-content-center my-4">
           <li>
             <a href="https://www.linkedin.com/in/simondileodev/" target="_blank">
               <img
@@ -67,10 +75,10 @@ export const Footer = () => {
             </a>
           </li>
         </ul>
-        <p>e-commerce@gmail.com</p>
-        <p>Gowland, Buenos Aires 513 n° 223</p>
+        <p className="text-sm">e-commerce@gmail.com</p>
+        <p className="text-sm mt-2">Gowland, Buenos Aires 513 n° 223</p>
       </section>
-      <p>&copy; 2024 e-commerce</p>
+      <p className="py-4 w-full text-center">&copy; 2024 e-commerce</p>
     </footer>
   )
 }
