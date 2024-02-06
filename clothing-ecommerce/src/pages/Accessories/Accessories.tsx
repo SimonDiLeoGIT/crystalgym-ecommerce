@@ -1,6 +1,7 @@
 import { News } from "../../components/News"
 import { Posts_Section } from "../../components/post_section/Posts_Section"
-import posts from "../../assets/posts.json"
+import all_accessories from "../../assets/json/accessories/accessories.json"
+import bag from "../../assets/json/accessories/bag.json"
 
 export const Accessories = () => {
   return (
@@ -9,30 +10,28 @@ export const Accessories = () => {
         <News
           news={{
             id: '1',
-            image: 'grey-man',
-            title_front: 'WOMEN',
-            title_middle: '',
-            title_end: 'CLOTHING',
-            info: 'Urban and gym clothing.',
-            button1_title: 'FEATURED PRODUCTS',
-            button2_title: 'NEW PRODUCTS',
+            image: 'accessories',
+            title_front: 'GYM',
+            title_middle: 'ACCESSORIES',
+            title_end: '',
+            info: 'Have a great workout with our accessories.',
+            button1_title: 'ALL ACCESSORIES'
           }}
         />
       </header>
-      <Posts_Section posts={posts.posts} />
+      <Posts_Section posts={all_accessories.posts} title="All Accessories" />
       <News
         news={{
           id: '1',
-          image: 'green-man',
-          title_front: '20%',
-          title_middle: '',
-          title_end: 'OFF',
+          image: 'bag-accessor',
+          title_front: 'GYM',
+          title_middle: 'BAG',
+          title_end: '',
           info: 'Urban and gym clothing.',
-          button1_title: 'FEATURED PRODUCTS',
-          button2_title: 'NEW PRODUCTS',
+          button1_title: 'BAG SHOP',
         }}
       />
-      <Posts_Section posts={posts.posts} />
+      <Posts_Section posts={bag.posts} title="Bag" />
     </main>
   )
 }

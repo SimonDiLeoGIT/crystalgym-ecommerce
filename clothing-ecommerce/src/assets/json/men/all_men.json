@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "image": "/src/assets/Posts_img/Shirt/Camisa Santa Cruz Flannel Oversize/Crema/Camisa Santa Cruz Flannel Oversize Niño Crema Material zoom.jpg",
+      "title": "SANTA CRUZ SHIRT",
+      "info": "Shirt",
+      "price": 29.99
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/Posts_img/Short/INTERLOCK TECH 6 SHORTS/White/INTERLOCK TECH 6 SHORTS 1.jpg",
+      "title": "INTERLOCK TECH",
+      "info": "Short",
+      "price": 9.99
+    },
+    {
+      "id": "3",
+      "image": "/src/assets/Posts_img/Diver/POWER WASHED CREW/Brown/POWER WASHED CREW 1.jpg",
+      "title": "ONE BAG",
+      "info": "Bag",
+      "price": 49.99
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "image": "/src/assets/Home_images/Oversized.jpg",
+      "title": "OVERSIZE WHITE T-SHIRT",
+      "info": "T-Shirt",
+      "price": 29.99
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/Home_images/urban-clothe.jpg",
+      "title": "OVERSIZE BLUE T-SHIRT",
+      "info": "T-Shirt",
+      "price": 27
+    },
+    {
+      "id": "3",
+      "image": "/src/assets/Home_images/grey-gym-man.jpg",
+      "title": "GYM GREY T-SHIRT",
+      "info": "T-Shirt",
+      "price": 19.99
+    },
+    {
+      "id": "4",
+      "image": "/src/assets/Home_images/green-man.jpg",
+      "title": "POWER GREEN OVERSIZE",
+      "info": "T-Shirt",
+      "price": 29.99
+    }
+  ]
+}

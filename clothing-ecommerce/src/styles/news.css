@@ -1,5 +1,7 @@
 @import url("../styles/global/fonts.css");
 
+.accessories,
+.bag-accessor,
 .green-man,
 .gym-woman,
 .violet-woman,
@@ -15,6 +17,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 85vh;
+}
+
+.accessories {
+  background-image: url('../assets/Home_images/Gymshark-Cap.jpg');
+}
+
+.bag-accessor {
+  background-image: url('../assets/Home_images/Nike-Brasilia-Bag.png');
 }
 
 .green-man {

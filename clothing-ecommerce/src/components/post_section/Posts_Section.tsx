@@ -12,14 +12,15 @@ type PostsList = Post[]
 
 interface Props {
   posts: PostsList
+  title: string
 }
 
-export const Posts_Section: React.FC<Props> = ({ posts }) => {
+export const Posts_Section: React.FC<Props> = ({ posts, title }) => {
 
 
   return (
     <section className="p-2 mb-4">
-      <h1 className="font-bold text-xl p-2">NEW THIS MONTH</h1>
+      <h1 className="font-bold text-xl p-2">{title}</h1>
       <section className="flex overflow-x-auto whitespace-nowrap">
         {posts.map(post => {
           return (

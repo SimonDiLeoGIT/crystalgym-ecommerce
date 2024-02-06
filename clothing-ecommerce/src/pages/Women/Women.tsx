@@ -11,28 +11,26 @@ export const Women = () => {
             id: '1',
             image: 'violet-woman',
             title_front: 'WOMEN',
-            title_middle: '',
-            title_end: 'CLOTHING',
+            title_middle: 'CLOTHING',
+            title_end: '',
             info: 'Urban and gym clothing.',
-            button1_title: 'FEATURED PRODUCTS',
-            button2_title: 'NEW PRODUCTS',
+            button1_title: 'SHOP WOMEN',
           }}
         />
       </header>
-      <Posts_Section posts={posts.posts} />
+      <Posts_Section posts={posts.posts} title="All Women" />
       <News
         news={{
           id: '1',
           image: 'gym-woman',
           title_front: '20%',
-          title_middle: '',
-          title_end: 'OFF',
+          title_middle: 'OFF',
+          title_end: '',
           info: 'Urban and gym clothing.',
           button1_title: 'FEATURED PRODUCTS',
-          button2_title: 'NEW PRODUCTS',
         }}
       />
-      <Posts_Section posts={posts.posts} />
+      <Posts_Section posts={posts.posts} title="" />
     </main>
   )
 }

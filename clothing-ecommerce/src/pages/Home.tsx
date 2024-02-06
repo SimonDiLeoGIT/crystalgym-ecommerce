@@ -12,28 +12,26 @@ export const Home = () => {
             id: '1',
             image: 'header-clothe',
             title_front: 'NEW',
-            title_middle: ' THIS ',
+            title_middle: 'THIS',
             title_end: 'MONTH',
             info: 'Urban and gym clothing.',
             button1_title: 'FEATURED PRODUCTS',
-            button2_title: 'NEW PRODUCTS',
           }}
         />
       </header>
-      <Posts_Section posts={posts.posts} />
+      <Posts_Section posts={posts.posts} title="New This Month" />
       <News
         news={{
           id: '1',
           image: 'off-clothe',
           title_front: '20%',
-          title_middle: '',
-          title_end: 'OFF',
+          title_middle: 'OFF',
+          title_end: '',
           info: 'Urban and gym clothing.',
           button1_title: 'FEATURED PRODUCTS',
-          button2_title: 'NEW PRODUCTS',
         }}
       />
-      <Posts_Section posts={posts.posts} />
+      <Posts_Section posts={posts.posts} title="20% Off" />
     </main>
   )
 }
