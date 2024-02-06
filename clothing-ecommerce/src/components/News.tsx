@@ -1,4 +1,4 @@
-import './../styles/home.css'
+import './../styles/news.css'
 
 interface News {
   id: string,

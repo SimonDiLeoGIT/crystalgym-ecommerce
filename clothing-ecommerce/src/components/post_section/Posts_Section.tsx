@@ -14,7 +14,7 @@ interface Props {
   posts: PostsList
 }
 
-export const News_Posts_Section: React.FC<Props> = ({ posts }) => {
+export const Posts_Section: React.FC<Props> = ({ posts }) => {
 
 
   return (

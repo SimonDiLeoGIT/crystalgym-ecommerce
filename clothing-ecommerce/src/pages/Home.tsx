@@ -1,6 +1,6 @@
-import { News_Posts_Section } from "../components/post_section/News_Posts_Section"
+import { Posts_Section } from "../components/post_section/Posts_Section"
 import posts from "../assets/posts.json"
-import './../styles/home.css'
+import './../styles/news.css'
 import { News } from "../components/News"
 
 export const Home = () => {
@@ -20,7 +20,7 @@ export const Home = () => {
           }}
         />
       </header>
-      <News_Posts_Section posts={posts.posts} />
+      <Posts_Section posts={posts.posts} />
       <News
         news={{
           id: '1',
@@ -33,7 +33,7 @@ export const Home = () => {
           button2_title: 'NEW PRODUCTS',
         }}
       />
-      <News_Posts_Section posts={posts.posts} />
+      <Posts_Section posts={posts.posts} />
     </main>
   )
 }
