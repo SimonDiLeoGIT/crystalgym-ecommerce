@@ -1,0 +1,4 @@
+.carousel-animation {
+  transition: ease-in;
+  animation-duration: 500ms;
+}

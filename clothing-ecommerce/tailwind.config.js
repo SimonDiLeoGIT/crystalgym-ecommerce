@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'home-header-background': "url('./../assets/Home_images/home_header_img.png')",
-      }
     },
     colors: {
       /* Dark Grey Violet */
