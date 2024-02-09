@@ -1,5 +1,5 @@
 import { Posts_Section } from "../components/post_section/Posts_Section"
-import posts from "../assets/posts.json"
+import posts from "../assets/json/posts.json"
 import './../styles/news.css'
 import { News } from "../components/News"
 

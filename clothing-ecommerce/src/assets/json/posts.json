@@ -2,38 +2,38 @@
   "posts": [
     {
       "id": "1",
-      "image": "/src/assets/Posts_img/Bag/EVERYDAY MINI GYM BAG/Blue/EVERYDAY MINI GYM BAG 1.jpg",
+      "image": "/src/assets/images/Posts_img/Accessories/bag/Gymshark-Small-Bag.jpg",
       "title": "EVERYDAY MINI GYM BAG",
       "info": "Bag",
       "price": 29.99
     },
     {
       "id": "2",
-      "image": "/src/assets/Posts_img/Diver/POWER WASHED CREW/Brown/POWER WASHED CREW 1.jpg",
+      "image": "/src/assets/images/men/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 1.jpg",
       "title": "POWER WASHED CREW",
-      "info": "Diver",
-      "price": 69.99
+      "info": "Hoodie",
+      "price": 38
     },
     {
       "id": "3",
-      "image": "/src/assets/Posts_img/Diver/Indy Grizzly Oversize/Blue/Indi-blue-grizzly-og-oversize-diver.jpg",
-      "title": "INDY GRIZZLY OVERSIZE",
-      "info": "Diver",
-      "price": 39.99
+      "image": "/src/assets/images/men/Jogger/Essential/Militar Green/essential-1.jpg",
+      "title": "ESSENTIAL",
+      "info": "Jogger",
+      "price": 32
     },
     {
       "id": "4",
-      "image": "/src/assets/Posts_img/Shirt/Camisa Santa Cruz Flannel Oversize/Crema/Camisa Santa Cruz Flannel Oversize Niño Crema Material zoom.jpg",
-      "title": "SANTA CRUZ FLANNEL OVERSIZE SHIRT",
-      "info": "Shirt",
-      "price": 19.99
+      "image": "/src/assets/images/Home_images/violet-women.jpeg",
+      "title": "PURPLE JOGGER",
+      "info": "Jogger",
+      "price": 21
     },
     {
       "id": "5",
-      "image": "/src/assets/Posts_img/Short/INTERLOCK TECH 6 SHORTS/Black/INTERLOCK TECH 6 SHORTS 1.jpg",
-      "title": "INTERLOCK TECH 6 SHORTS",
-      "info": "Short",
-      "price": 14.99
+      "image": "/src/assets/images/Home_images/white-background-gym-woman.jpg",
+      "title": "GYM CLOTH",
+      "info": "Jogger",
+      "price": 21
     }
   ]
 }

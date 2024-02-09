@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom"
-import account_avatar from './../assets/nav icons/account-user-avatar.svg'
-import instagram_icon from './../assets/nav icons/instagram.svg'
-import bag_icon from './../assets/nav icons/bag-shopping.svg'
-import search_icon from './../assets/nav icons/mobile and desktop/search-svgrepo-com.svg'
-import menu from './../assets/nav icons/mobile/menu-svgrepo-com.svg'
-import logo from './../assets/nav icons/mobile and desktop/amazon-svgrepo-com.svg'
-import close_icon from './../assets/nav icons/mobile/close-sm-svgrepo-com.svg'
+import account_avatar from './../assets/icons/nav icons/account-user-avatar.svg'
+import instagram_icon from './../assets/icons/nav icons/instagram.svg'
+import bag_icon from './../assets/icons/nav icons/bag-shopping.svg'
+import search_icon from './../assets/icons/nav icons/mobile and desktop/search-svgrepo-com.svg'
+import menu from './../assets/icons/nav icons/mobile/menu-svgrepo-com.svg'
+import logo from './../assets/icons/nav icons/mobile and desktop/amazon-svgrepo-com.svg'
+import close_icon from './../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg'
 import { useState } from "react"
 import { MobileMenu } from "./MobileMenu"
 import { Search_Mobile } from "./Search_Mobile"
-import { Input } from "@nextui-org/react";
 
 export const Navbar = () => {
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import ig from "../assets/social_media_icons/instagramsvg.svg"
-import linkedin from "../assets/social_media_icons/linkedin.svg"
-import git from "../assets/social_media_icons/github.svg"
+import ig from "../assets/icons/social_media_icons/instagramsvg.svg"
+import linkedin from "../assets/icons/social_media_icons/linkedin.svg"
+import git from "../assets/icons/social_media_icons/github.svg"
 
 export const Footer = () => {
   return (

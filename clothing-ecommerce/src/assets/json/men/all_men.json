@@ -2,24 +2,24 @@
   "posts": [
     {
       "id": "1",
-      "image": "/src/assets/Posts_img/Shirt/Camisa Santa Cruz Flannel Oversize/Crema/Camisa Santa Cruz Flannel Oversize Niño Crema Material zoom.jpg",
-      "title": "SANTA CRUZ SHIRT",
-      "info": "Shirt",
-      "price": 29.99
+      "image": "/src/assets/images/men/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 1.jpg",
+      "title": "POWER WASHED CREW",
+      "info": "Hoodie",
+      "price": 48
     },
     {
       "id": "2",
-      "image": "/src/assets/Posts_img/Short/INTERLOCK TECH 6 SHORTS/White/INTERLOCK TECH 6 SHORTS 1.jpg",
+      "image": "/src/assets/images/men/Short/INTERLOCK TECH 6 SHORTS/White/INTERLOCK TECH 6 SHORTS 2.jpg",
       "title": "INTERLOCK TECH",
       "info": "Short",
-      "price": 9.99
+      "price": 10
     },
     {
       "id": "3",
-      "image": "/src/assets/Posts_img/Diver/POWER WASHED CREW/Brown/POWER WASHED CREW 1.jpg",
-      "title": "ONE BAG",
-      "info": "Bag",
-      "price": 49.99
+      "image": "/src/assets/images/men/Hoodie/Heritage Washed/Green/heritage-washed-1.jpg",
+      "title": "HERITAGE WASHED",
+      "info": "Hoodie",
+      "price": 48
     }
   ]
 }

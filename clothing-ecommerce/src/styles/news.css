@@ -20,34 +20,34 @@
 }
 
 .accessories {
-  background-image: url('../assets/Home_images/Gymshark-Cap.jpg');
+  background-image: url('../assets/images/Home_images/Gymshark-Cap.jpg');
 }
 
 .bag-accessor {
-  background-image: url('../assets/Home_images/Nike-Brasilia-Bag.png');
+  background-image: url('../assets/images/Home_images/Nike-Brasilia-Bag.png');
 }
 
 .green-man {
-  background-image: url('../assets/Home_images/green-man.jpg');
+  background-image: url('../assets/images/images/Home_images/green-man.jpg');
 }
 
 .grey-man {
-  background-image: url('../assets/Home_images/grey-gym-man.jpg');
+  background-image: url('../assets/images/Home_images/grey-gym-man.jpg');
 }
 
 .gym-woman {
-  background-image: url('../assets/Home_images/white-background-gym-woman.jpg');
+  background-image: url('../assets/images/Home_images/white-background-gym-woman.jpg');
 }
 
 .violet-woman {
-  background-image: url('../assets/Home_images/violet-women.jpeg');
+  background-image: url('../assets/images/Home_images/violet-women.jpeg');
   color: var(--color-white);
 }
 
 .header-clothe {
-  background-image: url('../assets/Home_images/Oversized.jpg');
+  background-image: url('../assets/images/Home_images/Oversized.jpg');
 }
 
 .off-clothe {
-  background-image: url('../assets/Home_images/urban-clothe.jpg');
+  background-image: url('../assets/images/Home_images/urban-clothe.jpg');
 }
