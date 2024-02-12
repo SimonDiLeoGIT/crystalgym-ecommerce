@@ -1,37 +1,23 @@
-// import { News } from "../../components/News"
-// import { Posts_Section } from "../../components/post_section/Posts_Section"
-// import t_shirt from "../../assets/json/men/t-shirt.json"
-// import all_men from "../../assets/json/men/all_men.json"
+import { Posts_Section } from "../../components/post_section/Posts_Section"
+import posts from "../../assets/json/posts.json"
+import new_this_month from "../../assets/json/home/advertisement/new-this-month.json"
+import off_20 from "../../assets/json/home/advertisement/20-off.json"
 
-// export const Men = () => {
-//   return (
-//     <main className="max-w-screen overflow-x-hidden font-roboto">
-//       <header>
-//         <News
-//           news={{
-//             id: '1',
-//             image: 'grey-man',
-//             title_front: 'MEN',
-//             title_middle: 'CLOTHING',
-//             title_end: '',
-//             info: 'Urban and gym clothing.',
-//             button1_title: 'FEATURED PRODUCTS',
-//           }}
-//         />
-//       </header>
-//       <Posts_Section posts={all_men.posts} title="Men Shop" />
-//       <News
-//         news={{
-//           id: '1',
-//           image: 'green-man',
-//           title_front: 'MEN',
-//           title_middle: 'T-SHIRT',
-//           title_end: '',
-//           info: 'T-Shirt clothing.',
-//           button1_title: 'FEATURED PRODUCTS',
-//         }}
-//       />
-//       <Posts_Section posts={t_shirt.posts} title="Men T-Shirt" />
-//     </main>
-//   )
-// }
+import { Carousel } from "../../components/Carousel"
+
+export const Men = () => {
+  return (
+    <main className="max-w-screen overflow-x-hidden font-roboto">
+      <header>
+        <Carousel
+          advertisement={new_this_month.advertisement} images={new_this_month.images}
+        />
+      </header>
+      <Posts_Section posts={posts.posts} title="New This Month" />
+      <Carousel
+        advertisement={off_20.advertisement} images={off_20.images}
+      />
+      <Posts_Section posts={posts.posts} title="20% Off" />
+    </main>
+  )
+}
