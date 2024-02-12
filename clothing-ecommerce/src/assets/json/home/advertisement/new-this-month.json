@@ -1,0 +1,24 @@
+{
+  "advertisement": {
+    "title_front": "NEW",
+    "title_middle": "THIS",
+    "title_end": "MONTH",
+    "info": "Urban and gym clothing.",
+    "button_title": "SHOP NEW",
+    "button_link": "/"
+  },
+  "images": [
+    {
+      "id": "0",
+      "image": "/src/assets/images/men/advertisement/Oversized.jpg"
+    },
+    {
+      "id": "1",
+      "image": "/src/assets/images/men/advertisement/20-off.jpg"
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/images/men/advertisement/pantalon-cintura-1.jpg"
+    }
+  ]
+}

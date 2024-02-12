@@ -1,4 +1,5 @@
 .carousel-animation {
-  transition: ease-in;
+  transition: ease-out;
   animation-duration: 500ms;
+  transform: translateX(0%, -100%);
 }
