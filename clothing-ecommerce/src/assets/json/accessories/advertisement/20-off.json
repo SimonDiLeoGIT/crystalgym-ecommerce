@@ -1,0 +1,24 @@
+{
+  "advertisement": {
+    "title_front": "20%",
+    "title_middle": "OFF",
+    "title_end": "",
+    "info": "20% off in urban and gym clothing.",
+    "button_title": "SHOP 20% OFF",
+    "button_link": "/"
+  },
+  "images": [
+    {
+      "id": "0",
+      "image": "/src/assets/images/men/advertisement/Oversized.jpg"
+    },
+    {
+      "id": "1",
+      "image": "/src/assets/images/men/advertisement/20-off.jpg"
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/images/men/advertisement/pantalon-cintura-1.jpg"
+    }
+  ]
+}

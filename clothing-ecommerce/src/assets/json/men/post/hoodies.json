@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "image": "/src/assets/images/men/post/Hoodies/gs-x-david-laid-3.jpg",
+      "title": "GS DAVID LAID",
+      "info": "Hoodie",
+      "price": 29.99
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/images/men/post/Hoodies/hoodie-sewatshirt-1.jpg",
+      "title": "SWEATSHIRT",
+      "info": "Hoodie",
+      "price": 38
+    },
+    {
+      "id": "3",
+      "image": "/src/assets/images/men/post/Hoodies/POWER WASHED CREW 2.jpg",
+      "title": "POWER WASHED",
+      "info": "Hoodie",
+      "price": 10
+    },
+    {
+      "id": "4",
+      "image": "/src/assets/images/men/post/Hoodies/rest-day-3.jpg",
+      "title": "REST DAY",
+      "info": "Hoodie",
+      "price": 31
+    },
+    {
+      "id": "5",
+      "image": "/src/assets/images/men/post/Hoodies/ripped-hoodie-1.jpg",
+      "title": "RIPPED",
+      "info": "Hoodie",
+      "price": 21
+    }
+  ]
+}

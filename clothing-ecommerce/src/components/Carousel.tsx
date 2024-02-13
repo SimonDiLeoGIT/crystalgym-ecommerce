@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import '../styles/global/carousel.css'
 import { useState } from 'react'
-
+import left_arrow from '../assets/icons/carousel/left-arrow.svg'
+import right_arrow from '../assets/icons/carousel/right-arrow.svg'
 interface image {
   title_front: string,
   title_middle: string,
@@ -65,7 +66,7 @@ export const Carousel: React.FC<Props> = ({ advertisement, images }) => {
         })}
       </section>
       <section className='absolute top-2/3 grid gap-12'>
-        <section className=' w-screen p-5 -bg--color-very-light-grey'>
+        <section className=' w-screen p-5 -bg--color-very-light-grey bg-opacity-60'>
           <h1 className="font-bold text-2xl">{advertisement.title_front}<span className="-text--color-light-grey-violet -bg--color-black rounded-md px-2 mx-2">{advertisement.title_middle}</span> {advertisement.title_end}</h1>
           <p className="font-semibold text-sm">{advertisement.info}</p>
         </section>
@@ -73,16 +74,22 @@ export const Carousel: React.FC<Props> = ({ advertisement, images }) => {
       </section>
       <div className='absolute w-screen grid grid-cols-2 top-1/2'>
         <button
-          className='m-auto ml-4'
+          className='m-auto ml-4 rounded-full -bg--color-light-grey-violet opacity-60 shadow-md -shadow--color-greyest-violet'
           onClick={() => previmage()}
         >
-          A
+          <img
+            src={left_arrow} alt=""
+            width='30px'
+          />
         </button>
         <button
-          className='m-auto mr-4'
+          className='m-auto mr-4 rounded-full -bg--color-light-grey-violet opacity-60 shadow-md -shadow--color-greyest-violet'
           onClick={() => nextimage()}
         >
-          A
+          <img
+            src={right_arrow} alt=""
+            width='30px'
+          />
         </button>
       </div>
     </section>
