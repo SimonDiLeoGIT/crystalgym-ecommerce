@@ -10,15 +10,15 @@
   "images": [
     {
       "id": "0",
-      "image": "/src/assets/images/home/advertisement/new-this-month/dense-sweatshirt-1.jpg"
+      "image": "/src/assets/images/home/advertisement/new-this-month/new-this-month-1.jpg"
     },
     {
       "id": "1",
-      "image": "/src/assets/images/home/advertisement/new-this-month/violet-women.jpeg"
+      "image": "/src/assets/images/home/advertisement/new-this-month/new-this-month-2.jpg"
     },
     {
       "id": "2",
-      "image": "/src/assets/images/home/advertisement/new-this-month/Gymshark-Wrist-Straps.jpg"
+      "image": "/src/assets/images/home/advertisement/new-this-month/new-this-month-3.jpg"
     }
   ]
 }

@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "image": "/src/assets/images/women/post/gym-clothes/cozy-1.jpg",
+      "title": "COZY JOGGER",
+      "info": "Jogger",
+      "price": 29.99
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/images/women/post/gym-clothes/midi-track-jacket-1.jpg",
+      "title": "MIDI TRACK JACKET",
+      "info": "Hoodie",
+      "price": 38
+    },
+    {
+      "id": "3",
+      "image": "/src/assets/images/women/post/gym-clothes/rest-day-sweats-1.jpg",
+      "title": "REST DAY SWEATS",
+      "info": "Hoodie",
+      "price": 10
+    },
+    {
+      "id": "4",
+      "image": "/src/assets/images/women/post/gym-clothes/signature-jacket-1.jpg",
+      "title": "SIGNATURE JACKET",
+      "info": "Hoodie",
+      "price": 31
+    },
+    {
+      "id": "5",
+      "image": "/src/assets/images/women/post/gym-clothes/traning-oversized-1.jpg",
+      "title": "TRAINING OVERSIZED",
+      "info": "T-Shirt",
+      "price": 21
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "image": "/src/assets/images/women/post/tops/crop-mesh-tank-1.jpg",
+      "title": "CROP MESH TANK",
+      "info": "Top",
+      "price": 29.99
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/images/women/post/tops/motivation-tee-1.jpg",
+      "title": "MOTIVATION TEE",
+      "info": "Top",
+      "price": 38
+    },
+    {
+      "id": "3",
+      "image": "/src/assets/images/women/post/tops/strappy-crop-cami-tank-1.jpg",
+      "title": "STRAPPY CROP CAMI TANK",
+      "info": "Top",
+      "price": 10
+    },
+    {
+      "id": "4",
+      "image": "/src/assets/images/women/post/tops/swoosh-light-1.jpg",
+      "title": "SWOOSH LIGHT",
+      "info": "Top",
+      "price": 31
+    },
+    {
+      "id": "5",
+      "image": "/src/assets/images/women/post/tops/taupe-notre-dame-boxy-oversized-1.jpg",
+      "title": "TAUPE NOTRE DAME OXY OVERSIZED",
+      "info": "Top",
+      "price": 21
+    }
+  ]
+}

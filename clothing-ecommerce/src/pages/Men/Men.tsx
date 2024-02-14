@@ -1,6 +1,6 @@
 import { Posts_Section } from "../../components/post_section/Posts_Section"
-import gym_clothing from "../../assets/json/men/advertisement/gym-clothing.json"
-import gym_clothing_post from "../../assets/json/men/post/gym-clothing.json"
+import gym_clothes from "../../assets/json/men/advertisement/gym-clothes.json"
+import gym_clothes_post from "../../assets/json/men/post/gym-clothes.json"
 import hoodies from "../../assets/json/men/advertisement/hoodies.json"
 import hoodies_post from "../../assets/json/men/post/hoodies.json"
 
@@ -11,10 +11,10 @@ export const Men = () => {
     <main className="max-w-screen overflow-x-hidden font-roboto">
       <header>
         <Carousel
-          advertisement={gym_clothing.advertisement} images={gym_clothing.images}
+          advertisement={gym_clothes.advertisement} images={gym_clothes.images}
         />
       </header>
-      <Posts_Section posts={gym_clothing_post.posts} title="Gym Clothing" />
+      <Posts_Section posts={gym_clothes_post.posts} title="Gym Clothes" />
       <Carousel
         advertisement={hoodies.advertisement} images={hoodies.images}
       />

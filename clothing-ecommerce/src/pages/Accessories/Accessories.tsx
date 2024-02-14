@@ -1,7 +1,7 @@
 import { Posts_Section } from "../../components/post_section/Posts_Section"
 import posts from "../../assets/json/posts.json"
-import new_this_month from "../../assets/json/accessories/advertisement/new-this-month.json"
-import off_20 from "../../assets/json/accessories/advertisement/20-off.json"
+import gym_accessories from "../../assets/json/accessories/advertisement/gym-accessories.json"
+import cap from "../../assets/json/accessories/advertisement/cap.json"
 
 import { Carousel } from "../../components/Carousel"
 
@@ -10,14 +10,14 @@ export const Accessories = () => {
     <main className="max-w-screen overflow-x-hidden font-roboto">
       <header>
         <Carousel
-          advertisement={new_this_month.advertisement} images={new_this_month.images}
+          advertisement={gym_accessories.advertisement} images={gym_accessories.images}
         />
       </header>
-      <Posts_Section posts={posts.posts} title="New This Month" />
+      <Posts_Section posts={posts.posts} title="Gym Accessories" />
       <Carousel
-        advertisement={off_20.advertisement} images={off_20.images}
+        advertisement={cap.advertisement} images={cap.images}
       />
-      <Posts_Section posts={posts.posts} title="20% Off" />
+      <Posts_Section posts={posts.posts} title="Urban Caps" />
     </main>
   )
 }

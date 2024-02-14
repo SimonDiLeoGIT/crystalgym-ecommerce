@@ -1,0 +1,24 @@
+{
+  "advertisement": {
+    "title_front": "URBAN",
+    "title_middle": "CAPS",
+    "title_end": "",
+    "info": "20% off in urban and gym clothing.",
+    "button_title": "SHOP CAPS",
+    "button_link": "/"
+  },
+  "images": [
+    {
+      "id": "0",
+      "image": "/src/assets/images/accessories/advertisement/cap/cap-1.jpg"
+    },
+    {
+      "id": "1",
+      "image": "/src/assets/images/accessories/advertisement/cap/cap-2.jpg"
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/images/accessories/advertisement/cap/cap-3.jpg"
+    }
+  ]
+}
