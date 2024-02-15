@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import './../styles/mobile-menu.css'
 import { useState } from "react"
+import open_arrow from "../assets/icons/moblile menu/arrow-open-down-svg.svg"
 
 interface propsType {
   setViewMenu(state: boolean): void,
@@ -11,6 +12,9 @@ interface propsType {
 export const MobileMenu: React.FC<propsType> = ({ setViewMenu, close_icon, logo }) => {
 
   const [closeMenu, setCloseMenu] = useState(false);
+  const [openWomen, setWomenOpen] = useState(false);
+  const [openMen, setMenOpen] = useState(false);
+  const [openAccessories, setAccessoriesOpen] = useState(false);
 
   function handleViewMenu() {
     setCloseMenu(true);
@@ -52,13 +56,73 @@ export const MobileMenu: React.FC<propsType> = ({ setViewMenu, close_icon, logo 
             </Link>
           </li>
           <li className="border-b -border--color-very-light-grey">
-            <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4">WOMEN</Link>
+            <details className="block p-4" onClick={() => setWomenOpen(!openWomen)}>
+              <summary className="list-none grid grid-cols-2 relative">
+                WOMEN
+                <span><img src={open_arrow} alt="open arrow" className={`w-3 absolute bottom-0 right-0 transition-transform ${openWomen ? "rotate-180" : ""}`} /></span>
+              </summary>
+              <ul>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4">All Products</Link>
+                </li>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4"> Tops </Link>
+                </li>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4"> T-Shirt </Link>
+                </li>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4"> Hoodies </Link>
+                </li>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4"> Joggers </Link>
+                </li>
+              </ul>
+            </details>
           </li>
           <li className="border-b -border--color-very-light-grey">
-            <Link to="/men" onClick={() => setViewMenu(false)} className="block p-4">MEN</Link>
+            <details className="block p-4" onClick={() => setMenOpen(!openMen)}>
+              <summary className="list-none grid grid-cols-2 relative">
+                MEN
+                <span><img src={open_arrow} alt="open arrow" className={`w-3 absolute bottom-0 right-0 transition-transform ${openMen ? "rotate-180" : ""}`} /></span>
+              </summary>
+              <ul>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4">All Products</Link>
+                </li>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4"> T-Shirt </Link>
+                </li>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4"> Hoodies </Link>
+                </li>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4"> Joggers </Link>
+                </li>
+              </ul>
+            </details>
           </li>
           <li className="border-b -border--color-very-light-grey">
-            <Link to="/accessories" onClick={() => setViewMenu(false)} className="block p-4">ACCESSORIES</Link>
+            <details className="block p-4" onClick={() => setAccessoriesOpen(!openAccessories)}>
+              <summary className="list-none grid grid-cols-2 relative">
+                ACCESSORIES
+                <span><img src={open_arrow} alt="open arrow" className={`w-3 absolute bottom-0 right-0 transition-transform ${openAccessories ? "rotate-180" : ""}`} /></span>
+              </summary>
+              <ul>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4">All Products</Link>
+                </li>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4"> Caps </Link>
+                </li>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4"> Bags </Link>
+                </li>
+                <li>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4"> Gym Products </Link>
+                </li>
+              </ul>
+            </details>
           </li>
           <li className="border-b -border--color-very-light-grey">
             <Link to="/accessories" onClick={() => setViewMenu(false)} className="block p-4">ACCOUNT</Link>

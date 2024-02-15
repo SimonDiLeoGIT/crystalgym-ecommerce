@@ -29,3 +29,19 @@
   animation-duration: 400ms;
   animation-delay: 0ms;
 }
+
+details[open] ul {
+  animation: sweep .5s both;
+}
+
+@keyframes sweep {
+  from {
+    opacity: 0;
+    margin-left: -10px
+  }
+
+  to {
+    opacity: 1;
+    margin-left: 0px
+  }
+}
