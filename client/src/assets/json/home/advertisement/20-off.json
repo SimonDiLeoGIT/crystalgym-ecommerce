@@ -10,15 +10,15 @@
   "images": [
     {
       "id": "0",
-      "image": "/src/assets/images/home/advertisement/20-off/global-2.jpg"
+      "image": "/src/assets/images/home/advertisement/20-off/20-off-1.jpg"
     },
     {
       "id": "1",
-      "image": "/src/assets/images/home/advertisement/20-off/Gymshark-Water-Bottle.jpg"
+      "image": "/src/assets/images/home/advertisement/20-off/20-off-2.jpg"
     },
     {
       "id": "2",
-      "image": "/src/assets/images/home/advertisement/20-off/INTERLOCK TECH 6 SHORTS 2.jpg"
+      "image": "/src/assets/images/home/advertisement/20-off/20-off-3.jpg"
     }
   ]
 }
