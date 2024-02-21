@@ -19,7 +19,7 @@ export const Router = () => {
         <Route path="/men" element={<Men />} />
         <Route path="/women" element={<Women />} />
         <Route path="/accessories" element={<Accessories />} />
-        <Route path="/men/all" element={<Shop title="All Men" clothes={men_clothe.all} />} />
+        <Route path="/men/all-products" element={<Shop title="All Men" clothes={men_clothe.all} />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -88,7 +88,7 @@ export const MobileMenu: React.FC<propsType> = ({ setViewMenu, close_icon, logo 
               </summary>
               <ul>
                 <li>
-                  <Link to="/men" onClick={() => setViewMenu(false)} className="block p-4">All Products</Link>
+                  <Link to="/men/all-products" onClick={() => setViewMenu(false)} className="block p-4">All Products</Link>
                 </li>
                 <li>
                   <Link to="/men" onClick={() => setViewMenu(false)} className="block p-4"> T-Shirt </Link>

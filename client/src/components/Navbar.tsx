@@ -8,7 +8,7 @@ import logo from './../assets/icons/nav icons/mobile and desktop/amazon-svgrepo-
 import close_icon from './../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg'
 import { useState } from "react"
 import { MobileMenu } from "./MobileMenu"
-import { Search_Mobile } from "./Search_Mobile"
+import { SearchMobile } from "./SearchMobile"
 
 export const Navbar = () => {
 
@@ -18,7 +18,7 @@ export const Navbar = () => {
   const search_mode = () => {
     if (searchMode) {
       return (
-        <Search_Mobile setSearchMode={setSearchMode} search_icon={search_icon} close_icon={close_icon} />
+        <SearchMobile setSearchMode={setSearchMode} search_icon={search_icon} close_icon={close_icon} />
       )
     }
   }
@@ -96,31 +96,6 @@ export const Navbar = () => {
           </Link>
         </li>
       </ul>
-      {/*
-      <ul className="w-full flex place-content-end">
-        <li className="my-auto mr-4">
-          <form>
-            <input type="text" placeholder="Search for a Product..."
-              className="border-2 rounded-full p-2"
-            />
-          </form>
-        </li>
-        <li className="my-auto">
-          <Link to='/'>
-            <img src={instagram_icon} />
-          </Link>
-        </li>
-        <li className="my-auto mx-4">
-          <Link to='/'>
-            <img src={account_avatar} />
-          </Link>
-        </li>
-        <li className="my-auto mr-4">
-          <Link to='/'>
-            <img src={bag_icon} />
-          </Link>
-        </li>
-  </ul>*/}
     </nav>
   )
 }
