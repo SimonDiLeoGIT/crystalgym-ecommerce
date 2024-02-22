@@ -7,6 +7,7 @@ import off_20_posts from "../assets/json/home/post/20-off.json"
 import { Carousel } from "../components/Carousel"
 
 export const Home = () => {
+
   return (
     <main className="max-w-screen overflow-x-hidden font-roboto">
       <header>
