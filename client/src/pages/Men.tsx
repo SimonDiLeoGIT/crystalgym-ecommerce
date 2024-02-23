@@ -1,10 +1,10 @@
-import { Posts_Section } from "../../components/post_section/Posts_Section"
-import gym_clothes from "../../assets/json/men/advertisement/gym-clothes.json"
-import gym_clothes_post from "../../assets/json/men/post/gym-clothes.json"
-import hoodies from "../../assets/json/men/advertisement/hoodies.json"
-import hoodies_post from "../../assets/json/men/post/hoodies.json"
+import { Posts_Section } from "../components/ProductsAdvertisement/ProductsAdvertisement"
+import gym_clothes from "../assets/json/men/advertisement/gym-clothes.json"
+import gym_clothes_post from "../assets/json/men/post/gym-clothes.json"
+import hoodies from "../assets/json/men/advertisement/hoodies.json"
+import hoodies_post from "../assets/json/men/post/hoodies.json"
 
-import { Carousel } from "../../components/Carousel"
+import { Carousel } from "../components/Carousel/Carousel"
 
 export const Men = () => {
   return (

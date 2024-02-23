@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import './../styles/mobile-menu.css'
+import './mobile-menu.css'
 import { useState } from "react"
-import open_arrow from "../assets/icons/moblile menu/arrow-open-down-svg.svg"
+import open_arrow from "../../assets/icons/moblile menu/arrow-open-down-svg.svg"
 
 interface propsType {
   setViewMenu(state: boolean): void,
@@ -63,7 +63,7 @@ export const MobileMenu: React.FC<propsType> = ({ setViewMenu, close_icon, logo 
               </summary>
               <ul>
                 <li>
-                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4">All Products</Link>
+                  <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4">All Women</Link>
                 </li>
                 <li>
                   <Link to="/women/tops" onClick={() => setViewMenu(false)} className="block p-4"> Tops </Link>
@@ -88,7 +88,7 @@ export const MobileMenu: React.FC<propsType> = ({ setViewMenu, close_icon, logo 
               </summary>
               <ul>
                 <li>
-                  <Link to="/men/" onClick={() => setViewMenu(false)} className="block p-4">All Products</Link>
+                  <Link to="/men/" onClick={() => setViewMenu(false)} className="block p-4">All Men</Link>
                 </li>
                 <li>
                   <Link to="/men/t-shirt" onClick={() => setViewMenu(false)} className="block p-4"> T-Shirt </Link>
@@ -110,7 +110,7 @@ export const MobileMenu: React.FC<propsType> = ({ setViewMenu, close_icon, logo 
               </summary>
               <ul>
                 <li>
-                  <Link to="/accessories" onClick={() => setViewMenu(false)} className="block p-4">All Products</Link>
+                  <Link to="/accessories" onClick={() => setViewMenu(false)} className="block p-4">All Accessories</Link>
                 </li>
                 <li>
                   <Link to="/accessories" onClick={() => setViewMenu(false)} className="block p-4"> Caps </Link>

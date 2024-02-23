@@ -1,5 +1,21 @@
 import { createContext, useState } from "react";
-import { CartState, Product } from "../interfaces/interfaces";
+
+
+interface Product {
+  id: string,
+  name: string,
+  category: string,
+  sex: string,
+  new: boolean,
+  image: string,
+  price: number
+}
+
+interface CartState {
+  productCount: number,
+  products: Product[],
+  total: number
+}
 
 interface Props {
   children: JSX.Element | JSX.Element[]

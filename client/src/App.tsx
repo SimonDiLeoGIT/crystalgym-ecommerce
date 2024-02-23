@@ -1,4 +1,4 @@
-import { Router } from "./components/Router"
+import { Router } from "./components/Router/Router"
 import './styles/global/fonts.css'
 
 function App() {

@@ -1,9 +1,9 @@
-import { Posts_Section } from "../../components/post_section/Posts_Section"
-import posts from "../../assets/json/posts.json"
-import gym_accessories from "../../assets/json/accessories/advertisement/gym-accessories.json"
-import cap from "../../assets/json/accessories/advertisement/cap.json"
+import { Posts_Section } from "../components/ProductsAdvertisement/ProductsAdvertisement"
+import posts from "../assets/json/posts.json"
+import gym_accessories from "../assets/json/accessories/advertisement/gym-accessories.json"
+import cap from "../assets/json/accessories/advertisement/cap.json"
 
-import { Carousel } from "../../components/Carousel"
+import { Carousel } from "../components/Carousel/Carousel"
 
 export const Accessories = () => {
   return (

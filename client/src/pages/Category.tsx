@@ -27,7 +27,7 @@ export const Category: React.FC<Props> = ({ title, category, sex }) => {
       </header>
       <section className="grid grid-cols-2 gap-2">
         {clothes.map((clothe) => {
-          if ((category === clothe.category || category === "*") && (sex === "*" || sex === clothe.sex)) {
+          if (((category === clothe.category || category === "*") && (sex === "*" || sex === clothe.sex)) || (category === "new" && clothe.new)) {
             return (
               <Link to="/">
                 <article className="shadow-md" key={clothe.id}>

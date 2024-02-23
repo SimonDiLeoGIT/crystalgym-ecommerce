@@ -6,7 +6,7 @@ interface propsType {
   close_icon: string,
 }
 
-export const SearchMobile: React.FC<propsType> = ({ setSearchMode, search_icon, close_icon }) => {
+export const MobileSearch: React.FC<propsType> = ({ setSearchMode, search_icon, close_icon }) => {
 
   const [closeSearchMode, setCloseSearchMode] = useState(false);
 

@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import '../styles/global/carousel.css'
+import './carousel.css'
 import { useState } from 'react'
-import left_arrow from '../assets/icons/carousel/left-arrow.svg'
-import right_arrow from '../assets/icons/carousel/right-arrow.svg'
+import left_arrow from '../../assets/icons/carousel/left-arrow.svg'
+import right_arrow from '../../assets/icons/carousel/right-arrow.svg'
 interface image {
   title_front: string,
   title_middle: string,

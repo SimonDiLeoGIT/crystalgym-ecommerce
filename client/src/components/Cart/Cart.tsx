@@ -1,6 +1,5 @@
-import bag_icon from "../assets/icons/nav icons/bag-shopping.svg"
-import image from "../assets/images/men/clothes/Jogger/Easy Care/Grey/easy-care-1.jpg"
-import "../styles/cart.css"
+import bag_icon from "../../assets/icons/nav icons/bag-shopping.svg"
+import image from "../../assets/images/men/clothes/Jogger/Easy Care/Grey/easy-care-1.jpg"
 
 export const Cart = () => {
   return (

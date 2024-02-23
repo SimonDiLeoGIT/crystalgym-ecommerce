@@ -1,10 +1,10 @@
-import { Posts_Section } from "../components/post_section/Posts_Section"
+import { Posts_Section } from "../components/ProductsAdvertisement/ProductsAdvertisement"
 import new_this_month from "../assets/json/home/advertisement/new-this-month.json"
 import new_this_month_posts from "../assets/json/home/post/new-this-month.json"
 import off_20 from "../assets/json/home/advertisement/20-off.json"
 import off_20_posts from "../assets/json/home/post/20-off.json"
 
-import { Carousel } from "../components/Carousel"
+import { Carousel } from "../components/Carousel/Carousel"
 
 export const Home = () => {
 

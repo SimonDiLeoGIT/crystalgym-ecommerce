@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom"
-import account_avatar from './../assets/icons/nav icons/account-user-avatar.svg'
-import instagram_icon from './../assets/icons/nav icons/instagram.svg'
-import search_icon from './../assets/icons/nav icons/mobile and desktop/search-svgrepo-com.svg'
-import menu from './../assets/icons/nav icons/mobile/menu-svgrepo-com.svg'
-import logo from './../assets/icons/nav icons/mobile and desktop/amazon-svgrepo-com.svg'
-import close_icon from './../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg'
+import account_avatar from '../../assets/icons/nav icons/account-user-avatar.svg'
+import instagram_icon from '../../assets/icons/nav icons/instagram.svg'
+import search_icon from '../../assets/icons/nav icons/mobile and desktop/search-svgrepo-com.svg'
+import menu from '../../assets/icons/nav icons/mobile/menu-svgrepo-com.svg'
+import logo from '../../assets/icons/nav icons/mobile and desktop/amazon-svgrepo-com.svg'
+import close_icon from '../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg'
 import { useState } from "react"
-import { MobileMenu } from "./MobileMenu"
-import { SearchMobile } from "./SearchMobile"
-import { Cart } from "./Cart"
+import { MobileMenu } from "../MobileMenu/MobileMenu"
+import { MobileSearch } from "../MobileSearch/MobileSearch"
+import { Cart } from "../Cart/Cart"
 
 export const Navbar = () => {
 
@@ -18,7 +18,7 @@ export const Navbar = () => {
   const search_mode = () => {
     if (searchMode) {
       return (
-        <SearchMobile setSearchMode={setSearchMode} search_icon={search_icon} close_icon={close_icon} />
+        <MobileSearch setSearchMode={setSearchMode} search_icon={search_icon} close_icon={close_icon} />
       )
     }
   }
