@@ -6,7 +6,6 @@
       "category": "Hoodie",
       "sex": "men",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-1.jpg",
       "price": 29.99
     },
@@ -16,19 +15,8 @@
       "category": "Hoodie",
       "sex": "men",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1.jpg",
       "price": 38
-    },
-    {
-      "id": "3",
-      "name": "SWEATSHIRT",
-      "category": "Hoodie",
-      "sex": "men",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/men/clothes/Hoodie/Hoodie Sweatshirt/hoodie-sewatshirt-1.jpg",
-      "price": 10
     },
     {
       "id": "4",
@@ -36,7 +24,6 @@
       "category": "Hoodie",
       "sex": "men",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Brown/POWER WASHED CREW 1.jpg",
       "price": 31
     },
@@ -46,18 +33,7 @@
       "category": "Hoodie",
       "sex": "men",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "6",
-      "name": "RIPPED",
-      "category": "Hoodie",
-      "sex": "men",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-1.jpg",
       "price": 21
     },
     {
@@ -66,7 +42,6 @@
       "category": "Jogger",
       "sex": "men",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/men/clothes/Jogger/Easy Care/Grey/easy-care-1.jpg",
       "price": 21
     },
@@ -76,7 +51,6 @@
       "category": "Jogger",
       "sex": "men",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/men/clothes/Jogger/Essential/Black/essential-1.jpg",
       "price": 21
     },
@@ -86,28 +60,7 @@
       "category": "Jogger",
       "sex": "men",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/men/clothes/Jogger/Global/Black/global-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "10",
-      "name": "PANTALON CINTURA",
-      "category": "Jogger",
-      "sex": "men",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/men/clothes/Jogger/Pantalon cintura/Green/pantalon-cintura-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "11",
-      "name": "TECH FLEECE",
-      "category": "Jogger",
-      "sex": "men",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/men/clothes/Jogger/Teh Fleece/Light Brown/tech-fleece-1.jpg",
       "price": 21
     },
     {
@@ -116,7 +69,6 @@
       "category": "Short",
       "sex": "men",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/men/clothes/Short/INTERLOCK TECH 6 SHORTS/Black/INTERLOCK TECH 6 SHORTS 1.jpg",
       "price": 21
     },
@@ -126,7 +78,6 @@
       "category": "T-Shirt",
       "sex": "men",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Black/basic-heavtweight-1.jpg",
       "price": 21
     },
@@ -136,7 +87,6 @@
       "category": "T-Shirt",
       "sex": "men",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Light Brown/basic-oversized-1.jpg",
       "price": 21
     },
@@ -146,7 +96,6 @@
       "category": "T-Shirt",
       "sex": "men",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-1.jpg",
       "price": 21
     },
@@ -156,18 +105,7 @@
       "category": "T-Shirt",
       "sex": "men",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/men/clothes/T-Shirt/Ocean/Black/ocean-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "17",
-      "name": "POWER OVERSIZED",
-      "category": "T-Shirt",
-      "sex": "men",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Pink/power-oversized-gymshark-1.jpg",
       "price": 21
     },
     {
@@ -176,7 +114,6 @@
       "category": "Hoodie",
       "sex": "women",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-1.jpg",
       "price": 21
     },
@@ -186,18 +123,7 @@
       "category": "Hoodie",
       "sex": "women",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "20",
-      "name": "GS POWER CREOPPED ZIP",
-      "category": "Hoodie",
-      "sex": "women",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-1.jpg",
       "price": 21
     },
     {
@@ -206,7 +132,6 @@
       "category": "Hoodie",
       "sex": "women",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-1.jpg",
       "price": 21
     },
@@ -216,7 +141,6 @@
       "category": "Hoodie",
       "sex": "women",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-1.jpg",
       "price": 21
     },
@@ -226,28 +150,7 @@
       "category": "Hoodie",
       "sex": "women",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "24",
-      "name": "SIGNATURE JACKET",
-      "category": "Hoodie",
-      "sex": "women",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "25",
-      "name": "COMFORT RIB",
-      "category": "Jogger",
-      "sex": "women",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-1.jpg",
       "price": 21
     },
     {
@@ -256,7 +159,6 @@
       "category": "Jogger",
       "sex": "women",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/women/clothing/joggers/cozy/black/cozy-1.jpg",
       "price": 21
     },
@@ -266,38 +168,7 @@
       "category": "Jogger",
       "sex": "women",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "28",
-      "name": "LIFTING STRAIGHT LEG",
-      "category": "Jogger",
-      "sex": "women",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-3.jpg",
-      "price": 21
-    },
-    {
-      "id": "29",
-      "name": "REST DAY SWEATS",
-      "category": "Jogger",
-      "sex": "women",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "30",
-      "name": "SIGNATURE JOGGER",
-      "category": "Jogger",
-      "sex": "women",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-1.jpg",
       "price": 21
     },
     {
@@ -306,18 +177,7 @@
       "category": "Jogger",
       "sex": "women",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "32",
-      "name": "CROP MESH TANK",
-      "category": "Top",
-      "sex": "women",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-1.jpg",
       "price": 21
     },
     {
@@ -326,7 +186,6 @@
       "category": "Top",
       "sex": "women",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-1.jpg",
       "price": 21
     },
@@ -336,7 +195,6 @@
       "category": "Top",
       "sex": "women",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-1.jpg",
       "price": 21
     },
@@ -346,18 +204,7 @@
       "category": "Top",
       "sex": "women",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "36",
-      "name": "SWOOSH LIGHT",
-      "category": "Top",
-      "sex": "women",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-1.jpg",
       "price": 21
     },
     {
@@ -366,18 +213,7 @@
       "category": "Top",
       "sex": "women",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1.jpg",
-      "price": 21
-    },
-    {
-      "id": "38",
-      "name": "VITAL SEAMLESS",
-      "category": "Top",
-      "sex": "women",
-      "new": false,
-      "off": true,
-      "image": "/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-1.jpg",
       "price": 21
     },
     {
@@ -386,7 +222,6 @@
       "category": "T-Shirt",
       "sex": "women",
       "new": true,
-      "off": false,
       "image": "/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-1.jpg",
       "price": 21
     },
@@ -396,7 +231,6 @@
       "category": "T-Shirt",
       "sex": "women",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/pink/stone-paris-city-oversized-1.jpg",
       "price": 21
     },
@@ -406,7 +240,6 @@
       "category": "T-Shirt",
       "sex": "women",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/women/clothing/t-shirt/Taupe Notre Dame Boxy Oversized/Taupe/taupe-notre-dame-boxy-oversized-1.jpg",
       "price": 21
     },
@@ -416,7 +249,6 @@
       "category": "T-Shirt",
       "sex": "women",
       "new": true,
-      "off": true,
       "image": "/src/assets/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-1.jpg",
       "price": 21
     }

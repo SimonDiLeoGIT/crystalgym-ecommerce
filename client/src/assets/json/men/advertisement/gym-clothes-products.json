@@ -1,0 +1,84 @@
+{
+  "all": [
+    {
+      "id": "1",
+      "name": "GS DAVID LAID",
+      "category": "Hoodie",
+      "sex": "men",
+      "new": true,
+      "off": false,
+      "image": "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-1.jpg",
+      "price": 29.99
+    },
+    {
+      "id": "2",
+      "name": "HERITAGE WASHED",
+      "category": "Hoodie",
+      "sex": "men",
+      "new": true,
+      "off": false,
+      "image": "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1.jpg",
+      "price": 38
+    },
+    {
+      "id": "4",
+      "name": "POWER WASHED CREW",
+      "category": "Hoodie",
+      "sex": "men",
+      "new": true,
+      "off": false,
+      "image": "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Brown/POWER WASHED CREW 1.jpg",
+      "price": 31
+    },
+    {
+      "id": "5",
+      "name": "REST DAY",
+      "category": "Hoodie",
+      "sex": "men",
+      "new": true,
+      "off": true,
+      "image": "/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-1.jpg",
+      "price": 21
+    },
+    {
+      "id": "8",
+      "name": "ESSENTIAL",
+      "category": "Jogger",
+      "sex": "men",
+      "new": true,
+      "off": false,
+      "image": "/src/assets/images/men/clothes/Jogger/Essential/Black/essential-1.jpg",
+      "price": 21
+    },
+    {
+      "id": "9",
+      "name": "GLOBAL",
+      "category": "Jogger",
+      "sex": "men",
+      "new": true,
+      "off": true,
+      "image": "/src/assets/images/men/clothes/Jogger/Global/Black/global-1.jpg",
+      "price": 21
+    },
+    {
+      "id": "11",
+      "name": "TECH FLEECE",
+      "category": "Jogger",
+      "sex": "men",
+      "new": false,
+      "off": true,
+      "image": "/src/assets/images/men/clothes/Jogger/Teh Fleece/Light Brown/tech-fleece-1.jpg",
+      "price": 21
+    },
+    {
+      "id": "12",
+      "name": "INTERLOCK TECH",
+      "category": "Short",
+      "sex": "men",
+      "new": true,
+      "off": false,
+      "image": "/src/assets/images/men/clothes/Short/INTERLOCK TECH 6 SHORTS/Black/INTERLOCK TECH 6 SHORTS 1.jpg",
+      "price": 21
+    }
+  ]
+}

@@ -6,6 +6,11 @@ import { Accessories } from "../../pages/Accessories"
 import { Footer } from "../Footer/Footer"
 import { Men } from "../../pages/Men"
 import { Category } from "../../pages/Category"
+import { NewsProducts } from "../../pages/NewsProducts"
+import newThisMonthProducts from "../../assets/json/home/advertisement/new-this-month-products.json"
+import OffProducts from "../../assets/json/home/advertisement/20-off-products.json"
+import menGymClothing from "../../assets/json/men/advertisement/gym-clothes-products.json"
+import womenGymClothing from "../../assets/json/women/advertisement/gym-clothes-products.json"
 
 export const Router = () => {
   return (
@@ -21,13 +26,14 @@ export const Router = () => {
         <Route path="/men/hoodies" element={<Category title="HOODIES" category="Hoodie" sex="men" />} />
         <Route path="/men/joggers" element={<Category title="JOGGERS" category="Jogger" sex="men" />} />
         <Route path="/men/t-shirt" element={<Category title="T-SHIRT" category="T-Shirt" sex="men" />} />
-        <Route path="/men/gym-clothes" element={<Category title="GYM CLOTHES" category="*" sex="men" />} />
+        <Route path="/men/news/gym-clothes" element={<NewsProducts title="GYM CLOTHES" products={menGymClothing.all} />} />
         <Route path="/women/hoodies" element={<Category title="HOODIES" category="Hoodie" sex="women" />} />
         <Route path="/women/joggers" element={<Category title="JOGGERS" category="Jogger" sex="women" />} />
         <Route path="/women/t-shirt" element={<Category title="T-SHIRT" category="T-Shirt" sex="women" />} />
         <Route path="/women/tops" element={<Category title="TOPS" category="Top" sex="women" />} />
-        <Route path="/women/gym-clothes" element={<Category title="GYM CLOTHES" category="*" sex="women" />} />
-        <Route path="/new" element={<Category title="NEW THIS MONTH" category="new" sex="*" />} />
+        <Route path="/women/news/gym-clothes" element={<NewsProducts title="GYM CLOTHES" products={womenGymClothing.all} />} />
+        <Route path="/new" element={<NewsProducts title="NEW THIS MONTH" products={newThisMonthProducts.all} />} />
+        <Route path="/20-off" element={<NewsProducts title="20% OFF" products={OffProducts.all} />} />
       </Routes>
       <Footer />
     </BrowserRouter>
