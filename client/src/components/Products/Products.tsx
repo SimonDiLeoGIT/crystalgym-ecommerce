@@ -1,20 +1,11 @@
-import bag_icon from "../assets/icons/nav icons/bag-shopping.svg"
-import like_icon from "../assets/icons/like-icon.svg"
+import bag_icon from "../../assets/icons/nav icons/bag-shopping.svg"
+import like_icon from "../../assets/icons/like-icon.svg"
 import { Link } from "react-router-dom"
 
-
-interface Product {
-  id: string,
-  name: string,
-  category: string,
-  sex: string,
-  new: boolean,
-  image: string,
-  price: number
-}
+type clotheList = ProductInterface[];
 
 interface Props {
-  clothes: Product[]
+  clothes: clotheList
 }
 
 export const Products: React.FC<Props> = ({ clothes }) => {
