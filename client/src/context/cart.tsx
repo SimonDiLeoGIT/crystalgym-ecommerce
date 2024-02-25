@@ -1,51 +1,65 @@
-import { createContext, useState } from "react";
-
+import { ReactNode, createContext, useState } from "react";
 
 interface Product {
   id: string,
-  name: string,
-  category: string,
-  sex: string,
-  new: boolean,
-  image: string,
-  price: number
+  quantity: number
 }
 
-interface CartState {
-  productCount: number,
-  products: Product[],
-  total: number
-}
-
+type product = Product
 interface Props {
-  children: JSX.Element | JSX.Element[]
+  children: ReactNode
 }
 
-const INITIAL_STATE: CartState = {
-  productCount: 0,
-  products: [],
-  total: 0
+type CartContext = {
+  addToCart: (id: string) => void,
+  removeFromCart: (id: string) => void,
 }
 
-export const CartContext = createContext({
-
-})
+export const CartContext = createContext({} as CartContext)
 
 export const CartProvider = ({ children }: Props) => {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState<product[]>([])
 
-  const addToCart = (product: Product) => {
+  const addToCart = (id: string) => {
+    setCart(currItems => {
+      if (currItems.find(item => item.id === id) == null) {
+        return [...cart, { id, quantity: 1 }]
+      } else {
+        return currItems.map(item => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity + 1 }
+          } else {
+            return item
+          }
+        })
+      }
+    })
+    console.log(cart)
+  }
 
+  const removeFromCart = (id: string) => {
+    setCart(currItems => {
+      if (currItems.find(item => item.id === id)?.quantity === 1) {
+        return currItems.filter(item => item.id !== id)
+      } else {
+        return currItems.map(item => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity - 1 }
+          } else {
+            return item
+          }
+        })
+      }
+    })
   }
-  const clearCart = () => {
-    setCart([])
-  }
+  // const clearCart = () => {
+  //   setCart([])
+  // }
 
   return (
     <CartContext.Provider value={{
-      cart,
       addToCart,
-      clearCart
+      removeFromCart,
     }}
     >
       {children}

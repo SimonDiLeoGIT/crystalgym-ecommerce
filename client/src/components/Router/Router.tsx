@@ -11,13 +11,16 @@ import newThisMonthProducts from "../../assets/json/home/advertisement/new-this-
 import OffProducts from "../../assets/json/home/advertisement/20-off-products.json"
 import menGymClothing from "../../assets/json/men/advertisement/gym-clothes-products.json"
 import womenGymClothing from "../../assets/json/women/advertisement/gym-clothes-products.json"
+import { CartProvider } from "../../context/cart"
 
 export const Router = () => {
   return (
     <BrowserRouter>
-      <header>
-        <Navbar />
-      </header>
+      <CartProvider>
+        <header>
+          <Navbar />
+        </header>
+      </CartProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/men" element={<Men />} />
