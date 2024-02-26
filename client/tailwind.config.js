@@ -34,6 +34,10 @@ export default {
       '--color-black': '#1E1E1E',
       /* Very Light Grey */
       '--color-very-light-grey': '#CBCBCB',
+      /* Red */
+      '--color-red': '#940505',
+      /* Green */
+      '--color-green': '#1E831C',
     },
     fontFamily: {
       'roboto': ['roboto', 'sans-serif'],

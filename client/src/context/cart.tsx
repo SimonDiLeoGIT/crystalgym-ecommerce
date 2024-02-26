@@ -28,7 +28,8 @@ type CartContext = {
   addToCart: (product: product) => void,
   removeFromCart: (product: product) => void,
   cart: cartItem[]
-  getCartQuantity: () => number
+  getCartQuantity: () => number,
+  clearCart: () => void
 }
 
 export const CartContext = createContext({} as CartContext)
@@ -80,9 +81,10 @@ export const CartProvider = ({ children }: Props) => {
       }
     })
   }
-  // const clearCart = () => {
-  //   setCart([])
-  // }
+
+  const clearCart = () => {
+    setCart([])
+  }
 
   return (
     <CartContext.Provider value={{
@@ -90,7 +92,8 @@ export const CartProvider = ({ children }: Props) => {
       addToCart,
       removeFromCart,
       cart,
-      getCartQuantity
+      getCartQuantity,
+      clearCart
     }}
     >
       {children}
