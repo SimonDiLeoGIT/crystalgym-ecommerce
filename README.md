@@ -1,2 +1,3 @@
-# ecommerce-template
-This is a ecommerce template for your ecommerce projects
+# Clothing e-commerce
+This is a  clothing e-commerce
+
