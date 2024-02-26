@@ -10,15 +10,13 @@ interface Product {
   price: number,
 }
 
+type product = Product
+
 interface CartItem {
-  id: string,
-  name: string,
-  image: string,
-  price: number,
+  product: product
   quantity: number
 }
 
-type product = Product
 type cartItem = CartItem
 
 interface Props {
@@ -29,6 +27,8 @@ type CartContext = {
   getCartItems: () => cartItem[],
   addToCart: (product: product) => void,
   removeFromCart: (product: product) => void,
+  cart: cartItem[]
+  getCartQuantity: () => number
 }
 
 export const CartContext = createContext({} as CartContext)
@@ -36,17 +36,25 @@ export const CartContext = createContext({} as CartContext)
 export const CartProvider = ({ children }: Props) => {
   const [cart, setCart] = useState<cartItem[]>([])
 
-  function getCartItems() {
+  const getCartItems = () => {
     return cart
+  }
+
+  const getCartQuantity = () => {
+    let quantity = 0;
+    cart.map(item => {
+      quantity += item.quantity
+    })
+    return quantity
   }
 
   const addToCart = (product: product) => {
     setCart(currItems => {
-      if (currItems.find(item => item.id === product.id) == null) {
+      if (currItems.find(item => item.product.id === product.id) == null) {
         return [...cart, { product, quantity: 1 }]
       } else {
         return currItems.map(item => {
-          if (item.id === product.id) {
+          if (item.product.id === product.id) {
             return { ...item, quantity: item.quantity + 1 }
           } else {
             return item
@@ -59,11 +67,11 @@ export const CartProvider = ({ children }: Props) => {
 
   const removeFromCart = (product: product) => {
     setCart(currItems => {
-      if (currItems.find(item => item.id === product.id)?.quantity === 1) {
-        return currItems.filter(item => item.id !== product.id)
+      if (currItems.find(item => item.product.id === product.id)?.quantity === 1) {
+        return currItems.filter(item => item.product.id !== product.id)
       } else {
         return currItems.map(item => {
-          if (item.id === product.id) {
+          if (item.product.id === product.id) {
             return { ...item, quantity: item.quantity - 1 }
           } else {
             return item
@@ -81,6 +89,8 @@ export const CartProvider = ({ children }: Props) => {
       getCartItems,
       addToCart,
       removeFromCart,
+      cart,
+      getCartQuantity
     }}
     >
       {children}
