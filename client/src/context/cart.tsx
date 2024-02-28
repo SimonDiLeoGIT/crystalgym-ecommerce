@@ -27,6 +27,7 @@ type CartContext = {
   getCartItems: () => cartItem[],
   addToCart: (product: product) => void,
   removeFromCart: (product: product) => void,
+  clearFromCart: (product: product) => void,
   cart: cartItem[]
   getCartQuantity: () => number,
   clearCart: () => void
@@ -82,6 +83,12 @@ export const CartProvider = ({ children }: Props) => {
     })
   }
 
+  const clearFromCart = (product: product) => {
+    setCart(currItems => {
+      return currItems.filter(item => item.product.id !== product.id)
+    })
+  }
+
   const clearCart = () => {
     setCart([])
   }
@@ -91,6 +98,7 @@ export const CartProvider = ({ children }: Props) => {
       getCartItems,
       addToCart,
       removeFromCart,
+      clearFromCart,
       cart,
       getCartQuantity,
       clearCart
