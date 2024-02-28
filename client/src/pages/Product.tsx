@@ -17,18 +17,52 @@ export const Product = () => {
   })
 
   return (
-    <>
-      <ul>
-        {product !== null &&
-          product.image.map(i => {
+    <section className="w-screen overflow-x-hidden">
+      <header>
+        <section className="flex overflow-scroll">
+          {
+            product?.image[0].src.map(i => {
+              return (
+                <img
+                  className="w-screen h-1/3 object-cover"
+                  src={i}
+                />
+              )
+            })
+          }
+        </section>
+      </header>
+      <div className="p-6 -text--color-black ">
+        <h1 className="text-xl">
+          <strong>
+            {product?.name}
+          </strong>
+          {product?.new && <span className="ml-4 -bg--color-very-light-grey rounded-2xl px-2 py-1 text-xs font-extrabold -text--color-black"> NEW </span>}
+        </h1>
+        <p className="my-1">
+          {product?.category}
+        </p>
+        <p className="font-bold">
+          ${product?.price}
+        </p>
+      </div>
+      <section>
+        {
+          product?.image.map(i => {
             return (
-              <li>
-                <img src={i} />
-              </li>
+              <article>
+                <img src={i.src[0]} />
+                <p>
+                  {i.color}
+                </p>
+              </article>
             )
           })
         }
-      </ul>
-    </>
+      </section>
+      <button className="block m-auto -bg--color-black -text--color-light-grey-violet font-bold p-4 rounded-full w-11/12">
+        ADD TO BAG
+      </button>
+    </section>
   )
 }
