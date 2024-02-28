@@ -7,7 +7,9 @@
       "sex": "women",
       "new": true,
       "off": false,
-      "image": "/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -17,7 +19,9 @@
       "sex": "women",
       "new": true,
       "off": false,
-      "image": "/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -27,7 +31,9 @@
       "sex": "women",
       "new": false,
       "off": true,
-      "image": "/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -37,7 +43,9 @@
       "sex": "women",
       "new": true,
       "off": true,
-      "image": "/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -47,7 +55,9 @@
       "sex": "women",
       "new": true,
       "off": false,
-      "image": "/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -57,7 +67,9 @@
       "sex": "women",
       "new": true,
       "off": true,
-      "image": "/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -67,7 +79,9 @@
       "sex": "women",
       "new": false,
       "off": true,
-      "image": "/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -77,7 +91,9 @@
       "sex": "women",
       "new": false,
       "off": true,
-      "image": "/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -87,7 +103,9 @@
       "sex": "women",
       "new": true,
       "off": true,
-      "image": "/src/assets/images/women/clothing/joggers/cozy/black/cozy-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/joggers/cozy/black/cozy-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -97,7 +115,9 @@
       "sex": "women",
       "new": true,
       "off": false,
-      "image": "/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -107,7 +127,9 @@
       "sex": "women",
       "new": false,
       "off": true,
-      "image": "/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-3.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-3.jpg"
+      ],
       "price": 21
     },
     {
@@ -117,7 +139,9 @@
       "sex": "women",
       "new": false,
       "off": true,
-      "image": "/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -127,7 +151,9 @@
       "sex": "women",
       "new": false,
       "off": true,
-      "image": "/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -137,7 +163,9 @@
       "sex": "women",
       "new": true,
       "off": true,
-      "image": "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -147,7 +175,9 @@
       "sex": "women",
       "new": false,
       "off": true,
-      "image": "/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -157,7 +187,9 @@
       "sex": "women",
       "new": true,
       "off": false,
-      "image": "/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -167,7 +199,9 @@
       "sex": "women",
       "new": true,
       "off": true,
-      "image": "/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -177,7 +211,9 @@
       "sex": "women",
       "new": true,
       "off": true,
-      "image": "/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -187,7 +223,9 @@
       "sex": "women",
       "new": false,
       "off": true,
-      "image": "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -197,7 +235,9 @@
       "sex": "women",
       "new": true,
       "off": true,
-      "image": "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -207,7 +247,9 @@
       "sex": "women",
       "new": false,
       "off": true,
-      "image": "/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-1.jpg"
+      ],
       "price": 21
     },
     {
@@ -217,7 +259,9 @@
       "sex": "women",
       "new": true,
       "off": false,
-      "image": "/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-1.jpg",
+      "image": [
+        "/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-1.jpg"
+      ],
       "price": 21
     }
   ]

@@ -47,7 +47,7 @@ export const Cart = () => {
           {cart.map(item => {
             return (
               <li className="w-11/12 grid grid-cols-3 p-4 m-auto gap-2 border-b -border--color-very-light-grey">
-                <img className="w-20 row-span-2" src={item.product.image} alt={item.product.name} />
+                <img className="w-20 row-span-2" src={item.product.image[0]} alt={item.product.name} />
                 <section className="col-span-2 relative">
                   <p className="w-3/4"><strong> {item.product.name} </strong></p>
                   <button onClick={() => clearFromCart(item.product)} className="absolute top-0 right-0">

@@ -1,16 +1,6 @@
 import { ReactNode, createContext, useState } from "react";
 
-interface Product {
-  id: string,
-  name: string,
-  category: string,
-  sex: string,
-  new: boolean,
-  image: string,
-  price: number,
-}
-
-type product = Product
+type product = ProductInterface
 
 interface CartItem {
   product: product

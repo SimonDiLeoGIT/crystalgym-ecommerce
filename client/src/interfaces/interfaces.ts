@@ -4,6 +4,6 @@ interface ProductInterface {
   category: string,
   sex: string,
   new: boolean,
-  image: string,
+  image: string[],
   price: number
 }
