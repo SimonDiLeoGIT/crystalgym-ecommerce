@@ -5,7 +5,6 @@ type product = ProductInterface
 interface CartItem {
   product: product
   quantity: number
-  colorId: string
 }
 
 type cartItem = CartItem
@@ -16,9 +15,9 @@ interface Props {
 
 type CartContext = {
   getCartItems: () => cartItem[],
-  addToCart: (product: product, color: string) => void,
-  removeFromCart: (product: product, color: string) => void,
-  clearFromCart: (product: product, color: string) => void,
+  addToCart: (product: product) => void,
+  removeFromCart: (product: product) => void,
+  clearFromCart: (product: product) => void,
   cart: cartItem[]
   getCartQuantity: () => number,
   clearCart: () => void
@@ -41,14 +40,14 @@ export const CartProvider = ({ children }: Props) => {
     return quantity
   }
 
-  const addToCart = (product: product, color: string) => {
+  const addToCart = (product: product) => {
     setCart(currItems => {
-      if (currItems.find(item => item.product.id === product.id && item.colorId === color) == null) {
-        return [...cart, { product, quantity: 1, colorId: color }]
+      if (currItems.find(item => item.product.id === product.id && item.product.colorId === product.colorId) == null) {
+        return [...cart, { product, quantity: 1 }]
       } else {
         return currItems.map(item => {
-          if (item.product.id === product.id && item.colorId === color) {
-            return { ...item, quantity: item.quantity + 1, colorId: color }
+          if (item.product.id === product.id && item.product.colorId === product.colorId) {
+            return { ...item, quantity: item.quantity + 1 }
           } else {
             return item
           }
@@ -58,13 +57,13 @@ export const CartProvider = ({ children }: Props) => {
     console.log(cart)
   }
 
-  const removeFromCart = (product: product, color: string) => {
+  const removeFromCart = (product: product) => {
     setCart(currItems => {
-      if (currItems.find(item => item.product.id === product.id && item.colorId === color)?.quantity === 1) {
-        return currItems.filter(item => item.product.id !== product.id)
+      if (currItems.find(item => item.product.id === product.id && item.product.colorId === product.colorId)?.quantity === 1) {
+        return currItems.filter(item => item.product.id !== product.id || (item.product.id === product.id && item.product.colorId !== product.colorId))
       } else {
         return currItems.map(item => {
-          if (item.product.id === product.id && item.colorId === color) {
+          if (item.product.id === product.id && item.product.colorId === product.colorId) {
             return { ...item, quantity: item.quantity - 1 }
           } else {
             return item
@@ -74,9 +73,9 @@ export const CartProvider = ({ children }: Props) => {
     })
   }
 
-  const clearFromCart = (product: product, color: string) => {
+  const clearFromCart = (product: product) => {
     setCart(currItems => {
-      return currItems.filter(item => item.product.id !== product.id || (item.product.id === product.id && item.colorId !== color))
+      return currItems.filter(item => item.product.id !== product.id || (item.product.id === product.id && item.product.colorId !== product.colorId))
     })
   }
 

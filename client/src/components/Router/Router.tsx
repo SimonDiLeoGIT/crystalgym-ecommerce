@@ -25,10 +25,10 @@ export const Router = () => {
         <Route path="/women" element={<Women />} />
         <Route path="/accessories" element={<Accessories />} />
         <Route path="/:sex/:category" element={<Category />} />
-        <Route path="/men/news/gym-clothes" element={<NewsProducts title="GYM CLOTHES" products={menGymClothing.all} />} />
+        {/* <Route path="/men/news/gym-clothes" element={<NewsProducts title="GYM CLOTHES" products={menGymClothing.all} />} />
         <Route path="/women/news/gym-clothes" element={<NewsProducts title="GYM CLOTHES" products={womenGymClothing.all} />} />
-        <Route path="/new" element={<NewsProducts title="NEW THIS MONTH" products={newThisMonthProducts.all} />} />
-        <Route path="/20-off" element={<NewsProducts title="20% OFF" products={OffProducts.all} />} />
+        <Route path="/new" element={<NewsProducts title="NEW THIS MONTH" products={newThisMonthProducts.all} />} /> */}
+        {/* <Route path="/20-off" element={<NewsProducts title="20% OFF" products={OffProducts.all} />} /> */}
         <Route path="/product/:id/:colorId" element={<Product />} />
       </Routes>
       <Footer />

@@ -1,23 +1,15 @@
-interface Color {
-  colorId: string
-  colorName: string
-}
 
-type colorType = Color
-
-interface Image {
-  color: colorType
-  src: string[]
-}
-
-type images = Image[]
+type images = string[]
 
 interface ProductInterface {
-  id: string,
+  id: number,
   name: string,
   category: string,
   sex: string,
   new: boolean,
-  image: images,
+  off: boolean,
+  colorId: number,
+  colorName: string,
+  images: images,
   price: number
 }

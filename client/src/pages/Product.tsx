@@ -9,17 +9,12 @@ export const Product = () => {
 
   const { id } = useParams()
   const { colorId } = useParams()
-  const [product, setProduct] = useState<product>()
-  const [images, setImages] = useState<string[]>()
+  const [product, setProduct] = useState<product | null>()
 
   useEffect(() => {
-    console.log(id)
-    console.log(colorId)
-    const productAsigned = all_clothes.all.find(clothe => clothe.id === id)
-    console.log(productAsigned)
+    const productAsigned = all_clothes.all.find(clothe => clothe.id.toString() === id && clothe.colorId.toString() === colorId)
     setProduct(productAsigned)
-    const imagesDisplay = productAsigned?.image.find(i => i.color.colorId === colorId)
-    setImages(imagesDisplay?.src)
+    console.log(productAsigned)
   })
 
   const { addToCart } = useCart()
@@ -29,7 +24,7 @@ export const Product = () => {
       <header>
         <section className="flex overflow-scroll">
           {
-            images?.map(image => {
+            product?.images.map(image => {
               return (
                 <img
                   className="w-screen h-1/3 object-cover"
@@ -56,22 +51,24 @@ export const Product = () => {
       </div>
       <section className="text-center">
         {
-          product?.image.map(image => {
-            return (
-              <Link to={`/product/${id}/${image.color.colorId}`}>
-                <article className="w-24 mx-4 inline-block">
-                  <img src={image.src[0]} className={`border-2 ${image.color.colorId === colorId ? "-border--color-black" : "-border--color-very-light-grey"}`} />
-                  <p className="-text--color-black font-semibold text-sm">
-                    {image.color.colorName}
-                  </p>
-                </article>
-              </Link>
-            )
+          all_clothes.all?.map(clothe => {
+            if (clothe.id.toString() === id) {
+              return (
+                <Link to={`/product/${id}/${clothe.colorId}`}>
+                  <article className="w-24 mx-4 inline-block">
+                    <img src={clothe.images[0]} className={`border-2 ${clothe.colorId.toString() === colorId ? "-border--color-black" : "-border--color-very-light-grey"}`} />
+                    <p className="-text--color-black font-semibold text-sm">
+                      {clothe.colorName}
+                    </p>
+                  </article>
+                </Link>
+              )
+            }
           })
         }
       </section>
       <button
-        onClick={() => addToCart(product, colorId)}
+        onClick={() => addToCart(product)}
         className="block m-auto -bg--color-black -text--color-light-grey-violet font-bold p-4 my-4 rounded-full w-11/12">
         ADD TO BAG
       </button>
