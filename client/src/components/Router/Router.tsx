@@ -24,18 +24,12 @@ export const Router = () => {
         <Route path="/men" element={<Men />} />
         <Route path="/women" element={<Women />} />
         <Route path="/accessories" element={<Accessories />} />
-        <Route path="/men/hoodies" element={<Category title="HOODIES" category="Hoodie" sex="men" />} />
-        <Route path="/men/joggers" element={<Category title="JOGGERS" category="Jogger" sex="men" />} />
-        <Route path="/men/t-shirt" element={<Category title="T-SHIRT" category="T-Shirt" sex="men" />} />
+        <Route path="/:sex/:category" element={<Category />} />
         <Route path="/men/news/gym-clothes" element={<NewsProducts title="GYM CLOTHES" products={menGymClothing.all} />} />
-        <Route path="/women/hoodies" element={<Category title="HOODIES" category="Hoodie" sex="women" />} />
-        <Route path="/women/joggers" element={<Category title="JOGGERS" category="Jogger" sex="women" />} />
-        <Route path="/women/t-shirt" element={<Category title="T-SHIRT" category="T-Shirt" sex="women" />} />
-        <Route path="/women/tops" element={<Category title="TOPS" category="Top" sex="women" />} />
         <Route path="/women/news/gym-clothes" element={<NewsProducts title="GYM CLOTHES" products={womenGymClothing.all} />} />
         <Route path="/new" element={<NewsProducts title="NEW THIS MONTH" products={newThisMonthProducts.all} />} />
         <Route path="/20-off" element={<NewsProducts title="20% OFF" products={OffProducts.all} />} />
-        <Route path="/product/:id" element={<Product />} />
+        <Route path="/product/:id/:colorId" element={<Product />} />
       </Routes>
       <Footer />
     </BrowserRouter>

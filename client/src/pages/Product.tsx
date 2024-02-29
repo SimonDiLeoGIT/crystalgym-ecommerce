@@ -1,31 +1,39 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import all_clothes from "../assets/json/shop/clothes.json"
 import { useEffect, useState } from "react"
+import { useCart } from "../hook/useCart"
 
 type product = ProductInterface
 
 export const Product = () => {
 
   const { id } = useParams()
-  const [product, setProduct] = useState<product | null>(null)
+  const { colorId } = useParams()
+  const [product, setProduct] = useState<product>()
+  const [images, setImages] = useState<string[]>()
 
   useEffect(() => {
     console.log(id)
+    console.log(colorId)
     const productAsigned = all_clothes.all.find(clothe => clothe.id === id)
     console.log(productAsigned)
     setProduct(productAsigned)
+    const imagesDisplay = productAsigned?.image.find(i => i.color.colorId === colorId)
+    setImages(imagesDisplay?.src)
   })
+
+  const { addToCart } = useCart()
 
   return (
     <section className="w-screen overflow-x-hidden">
       <header>
         <section className="flex overflow-scroll">
           {
-            product?.image[0].src.map(i => {
+            images?.map(image => {
               return (
                 <img
                   className="w-screen h-1/3 object-cover"
-                  src={i}
+                  src={image}
                 />
               )
             })
@@ -46,21 +54,25 @@ export const Product = () => {
           ${product?.price}
         </p>
       </div>
-      <section>
+      <section className="text-center">
         {
-          product?.image.map(i => {
+          product?.image.map(image => {
             return (
-              <article>
-                <img src={i.src[0]} />
-                <p>
-                  {i.color}
-                </p>
-              </article>
+              <Link to={`/product/${id}/${image.color.colorId}`}>
+                <article className="w-24 mx-4 inline-block">
+                  <img src={image.src[0]} className={`border-2 ${image.color.colorId === colorId ? "-border--color-black" : "-border--color-very-light-grey"}`} />
+                  <p className="-text--color-black font-semibold text-sm">
+                    {image.color.colorName}
+                  </p>
+                </article>
+              </Link>
             )
           })
         }
       </section>
-      <button className="block m-auto -bg--color-black -text--color-light-grey-violet font-bold p-4 rounded-full w-11/12">
+      <button
+        onClick={() => addToCart(product, colorId)}
+        className="block m-auto -bg--color-black -text--color-light-grey-violet font-bold p-4 my-4 rounded-full w-11/12">
         ADD TO BAG
       </button>
     </section>

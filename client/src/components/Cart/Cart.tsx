@@ -47,10 +47,18 @@ export const Cart = () => {
           {cart.map(item => {
             return (
               <li className="w-11/12 grid grid-cols-3 p-4 m-auto gap-2 border-b -border--color-very-light-grey">
-                <img className="w-20 row-span-2" src={item.product.image[0].src[0]} alt={item.product.name} />
+                {
+                  item.product.image.map(image => {
+                    return (
+                      image.color.colorId === item.colorId
+                      &&
+                      <img className="w-20 row-span-2" src={image.src[0]} alt={item.product.name} />
+                    )
+                  })
+                }
                 <section className="col-span-2 relative">
                   <p className="w-3/4"><strong> {item.product.name} </strong></p>
-                  <button onClick={() => clearFromCart(item.product)} className="absolute top-0 right-0">
+                  <button onClick={() => clearFromCart(item.product, item.colorId)} className="absolute top-0 right-0">
                     <img src={trash_icon} className="w-6" />
                   </button>
                   <p>{item.product.category}</p>
@@ -58,11 +66,11 @@ export const Cart = () => {
                   <p className=""> <strong> Total </strong> - ${item.product.price * item.quantity} </p>
                 </section>
                 <footer className="m-auto ml-0 font-semibold text-lg col-span-2 grid grid-cols-3 w-32 rounded-lg overflow-hidden">
-                  <button onClick={() => removeFromCart(item.product)} className="-bg--color-light-grey-violet"> - </button>
+                  <button onClick={() => removeFromCart(item.product, item.colorId)} className="-bg--color-light-grey-violet"> - </button>
                   <small className="m-aut w-full py-2 text-center">
                     {item.quantity}
                   </small>
-                  <button onClick={() => addToCart(item.product)} className="-bg--color-light-grey-violet"> + </button>
+                  <button onClick={() => addToCart(item.product, item.colorId)} className="-bg--color-light-grey-violet"> + </button>
                 </footer>
               </li>
             )

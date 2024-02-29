@@ -66,16 +66,16 @@ export const MobileMenu: React.FC<propsType> = ({ setViewMenu, close_icon, logo 
                   <Link to="/women" onClick={() => setViewMenu(false)} className="block p-4">All Women</Link>
                 </li>
                 <li>
-                  <Link to="/women/tops" onClick={() => setViewMenu(false)} className="block p-4"> Tops </Link>
+                  <Link to="/women/Top" onClick={() => setViewMenu(false)} className="block p-4"> Tops </Link>
                 </li>
                 <li>
-                  <Link to="/women/t-shirt" onClick={() => setViewMenu(false)} className="block p-4"> T-Shirt </Link>
+                  <Link to="/women/T-Shirt" onClick={() => setViewMenu(false)} className="block p-4"> T-Shirt </Link>
                 </li>
                 <li>
-                  <Link to="/women/hoodies" onClick={() => setViewMenu(false)} className="block p-4"> Hoodies </Link>
+                  <Link to="/women/Hoodie" onClick={() => setViewMenu(false)} className="block p-4"> Hoodies </Link>
                 </li>
                 <li>
-                  <Link to="/women/joggers" onClick={() => setViewMenu(false)} className="block p-4"> Joggers </Link>
+                  <Link to="/women/Jogger" onClick={() => setViewMenu(false)} className="block p-4"> Joggers </Link>
                 </li>
               </ul>
             </details>
@@ -91,13 +91,13 @@ export const MobileMenu: React.FC<propsType> = ({ setViewMenu, close_icon, logo 
                   <Link to="/men/" onClick={() => setViewMenu(false)} className="block p-4">All Men</Link>
                 </li>
                 <li>
-                  <Link to="/men/t-shirt" onClick={() => setViewMenu(false)} className="block p-4"> T-Shirt </Link>
+                  <Link to="/men/T-Shirt" onClick={() => setViewMenu(false)} className="block p-4"> T-Shirt </Link>
                 </li>
                 <li>
-                  <Link to="/men/hoodies" onClick={() => setViewMenu(false)} className="block p-4"> Hoodies </Link>
+                  <Link to="/men/Hoodie" onClick={() => setViewMenu(false)} className="block p-4"> Hoodies </Link>
                 </li>
                 <li>
-                  <Link to="/men/joggers" onClick={() => setViewMenu(false)} className="block p-4"> Joggers </Link>
+                  <Link to="/men/Jogger" onClick={() => setViewMenu(false)} className="block p-4"> Joggers </Link>
                 </li>
               </ul>
             </details>

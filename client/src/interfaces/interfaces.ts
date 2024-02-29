@@ -1,5 +1,12 @@
+interface Color {
+  colorId: string
+  colorName: string
+}
+
+type colorType = Color
+
 interface Image {
-  color: string
+  color: colorType
   src: string[]
 }
 
