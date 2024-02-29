@@ -11,10 +11,10 @@
         {
           "color": "Dark Red",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-3.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-4.jpg"
+            "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-3.jpg",
+            "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-4.jpg"
           ]
         }
       ],
@@ -31,33 +31,33 @@
         {
           "color": "Green",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-3.jpg"
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-3.jpg"
           ]
         },
         {
           "color": "Grey",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Grey/heritage-washed-1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Grey/heritage-washed-2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Grey/heritage-washed-3.jpg"
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Grey/heritage-washed-1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Grey/heritage-washed-2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Grey/heritage-washed-3.jpg"
           ]
         },
         {
           "color": "Red",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Red/heritage-washed-1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Red/heritage-washed-2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Red/heritage-washed-3.jpg"
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Red/heritage-washed-1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Red/heritage-washed-2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Red/heritage-washed-3.jpg"
           ]
         },
         {
           "color": "Yellow",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-3.jpg"
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-3.jpg"
           ]
         }
       ],
@@ -74,9 +74,9 @@
         {
           "color": "Black",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/Hoodie Sweatshirt/hoodie-sewatshirt-1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Hoodie Sweatshirt/hoodie-sewatshirt-2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Hoodie Sweatshirt/hoodie-sewatshirt-3.jpg"
+            "/src/assets/images/men/clothes/Hoodie/Hoodie Sweatshirt/hoodie-sewatshirt-1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Hoodie Sweatshirt/hoodie-sewatshirt-2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Hoodie Sweatshirt/hoodie-sewatshirt-3.jpg"
           ]
         }
       ],
@@ -93,19 +93,19 @@
         {
           "color": "Brown",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Brown/POWER WASHED CREW 1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Brown/POWER WASHED CREW 2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Brown/POWER WASHED CREW 3.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Brown/POWER WASHED CREW 4.jpg"
+            "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Brown/POWER WASHED CREW 1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Brown/POWER WASHED CREW 2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Brown/POWER WASHED CREW 3.jpg",
+            "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Brown/POWER WASHED CREW 4.jpg"
           ]
         },
         {
           "color": "Grey",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 3.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 4.jpg"
+            "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 3.jpg",
+            "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 4.jpg"
           ]
         }
       ],
@@ -122,37 +122,37 @@
         {
           "color": "Brown",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-3.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-4.jpg"
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-3.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-4.jpg"
           ]
         },
         {
           "color": "Light Brown",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-3.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-4.jpg"
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-3.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-4.jpg"
           ]
         },
         {
           "color": "Light Grey",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Light Grey/rest-day-1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Light Grey/rest-day-2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Light Grey/rest-day-3.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Light Grey/rest-day-4.jpg"
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Grey/rest-day-1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Grey/rest-day-2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Grey/rest-day-3.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Grey/rest-day-4.jpg"
           ]
         },
         {
           "color": "Red",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-3.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-4.jpg"
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-3.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-4.jpg"
           ]
         }
       ],
@@ -169,10 +169,10 @@
         {
           "color": "Black",
           "src": [
-            "/client/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-1.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-2.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-3.jpg",
-            "/client/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-4.jpg"
+            "/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-1.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-2.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-3.jpg",
+            "/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-4.jpg"
           ]
         }
       ],
@@ -189,25 +189,25 @@
         {
           "color": "Grey",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Easy Care/Grey/easy-care-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Easy Care/Grey/easy-care-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Easy Care/Grey/easy-care-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Easy Care/Grey/easy-care-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Easy Care/Grey/easy-care-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Easy Care/Grey/easy-care-3.jpg"
           ]
         },
         {
           "color": "Light Brown",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Easy Care/Light Brown/easy-care-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Easy Care/Light Brown/easy-care-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Easy Care/Light Brown/easy-care-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Easy Care/Light Brown/easy-care-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Easy Care/Light Brown/easy-care-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Easy Care/Light Brown/easy-care-3.jpg"
           ]
         },
         {
           "color": "White",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Easy Care/White/easy-care-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Easy Care/White/easy-care-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Easy Care/White/easy-care-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Easy Care/White/easy-care-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Easy Care/White/easy-care-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Easy Care/White/easy-care-3.jpg"
           ]
         }
       ],
@@ -224,33 +224,33 @@
         {
           "color": "Black",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Essential/Black/essential-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Essential/Black/essential-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Essential/Black/essential-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Essential/Black/essential-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Essential/Black/essential-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Essential/Black/essential-3.jpg"
           ]
         },
         {
           "color": "Brown",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Essential/Brown/essential-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Essential/Brown/essential-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Essential/Brown/essential-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Essential/Brown/essential-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Essential/Brown/essential-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Essential/Brown/essential-3.jpg"
           ]
         },
         {
           "color": "Militar Green",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Essential/Militar Green/essential-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Essential/Militar Green/essential-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Essential/Militar Green/essential-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Essential/Militar Green/essential-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Essential/Militar Green/essential-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Essential/Militar Green/essential-3.jpg"
           ]
         },
         {
           "color": "White",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Essential/White/essential-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Essential/White/essential-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Essential/White/essential-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Essential/White/essential-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Essential/White/essential-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Essential/White/essential-3.jpg"
           ]
         }
       ],
@@ -267,17 +267,17 @@
         {
           "color": "Light Grey",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Global/Light Grey/global-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Global/Light Grey/global-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Global/Light Grey/global-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Global/Light Grey/global-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Global/Light Grey/global-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Global/Light Grey/global-3.jpg"
           ]
         },
         {
           "color": "Black",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Global/Black/global-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Global/Black/global-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Global/Black/global-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Global/Black/global-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Global/Black/global-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Global/Black/global-3.jpg"
           ]
         }
       ],
@@ -294,17 +294,17 @@
         {
           "color": "Green",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Pantalon cintura/Green/pantalon-cintura-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Pantalon cintura/Green/pantalon-cintura-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Pantalon cintura/Green/pantalon-cintura-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Pantalon cintura/Green/pantalon-cintura-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Pantalon cintura/Green/pantalon-cintura-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Pantalon cintura/Green/pantalon-cintura-3.jpg"
           ]
         },
         {
           "color": "White",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Pantalon cintura/White/pantalon-cintura-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Pantalon cintura/White/pantalon-cintura-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Pantalon cintura/White/pantalon-cintura-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Pantalon cintura/White/pantalon-cintura-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Pantalon cintura/White/pantalon-cintura-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Pantalon cintura/White/pantalon-cintura-3.jpg"
           ]
         }
       ],
@@ -321,17 +321,17 @@
         {
           "color": "Light Brown",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Teh Fleece/Light Brown/tech-fleece-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Teh Fleece/Light Brown/tech-fleece-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Teh Fleece/Light Brown/tech-fleece-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Teh Fleece/Light Brown/tech-fleece-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Teh Fleece/Light Brown/tech-fleece-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Teh Fleece/Light Brown/tech-fleece-3.jpg"
           ]
         },
         {
           "color": "White",
           "src": [
-            "/client/src/assets/images/men/clothes/Jogger/Teh Fleece/White/tech-fleece-1.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Teh Fleece/White/tech-fleece-2.jpg",
-            "/client/src/assets/images/men/clothes/Jogger/Teh Fleece/White/tech-fleece-3.jpg"
+            "/src/assets/images/men/clothes/Jogger/Teh Fleece/White/tech-fleece-1.jpg",
+            "/src/assets/images/men/clothes/Jogger/Teh Fleece/White/tech-fleece-2.jpg",
+            "/src/assets/images/men/clothes/Jogger/Teh Fleece/White/tech-fleece-3.jpg"
           ]
         }
       ],
@@ -348,15 +348,15 @@
         {
           "color": "Black",
           "src": [
-            "/client/src/assets/images/men/clothes/Short/INTERLOCK TECH 6 SHORTS/Black/INTERLOCK TECH 6 SHORTS 1.jpg",
-            "/client/src/assets/images/men/clothes/Short/INTERLOCK TECH 6 SHORTS/Black/INTERLOCK TECH 6 SHORTS 2.jpg"
+            "/src/assets/images/men/clothes/Short/INTERLOCK TECH 6 SHORTS/Black/INTERLOCK TECH 6 SHORTS 1.jpg",
+            "/src/assets/images/men/clothes/Short/INTERLOCK TECH 6 SHORTS/Black/INTERLOCK TECH 6 SHORTS 2.jpg"
           ]
         },
         {
           "color": "White",
           "src": [
-            "/client/src/assets/images/men/clothes/Short/INTERLOCK TECH 6 SHORTS/White/INTERLOCK TECH 6 SHORTS 1.jpg",
-            "/client/src/assets/images/men/clothes/Short/INTERLOCK TECH 6 SHORTS/White/INTERLOCK TECH 6 SHORTS 2.jpg"
+            "/src/assets/images/men/clothes/Short/INTERLOCK TECH 6 SHORTS/White/INTERLOCK TECH 6 SHORTS 1.jpg",
+            "/src/assets/images/men/clothes/Short/INTERLOCK TECH 6 SHORTS/White/INTERLOCK TECH 6 SHORTS 2.jpg"
           ]
         }
       ],
@@ -373,26 +373,26 @@
         {
           "color": "Black",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Black/basic-heavtweight-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Black/basic-heavtweight-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Black/basic-heavtweight-3.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Black/basic-heavtweight-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Black/basic-heavtweight-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Black/basic-heavtweight-3.jpg"
           ]
         },
         {
           "color": "Grey",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavyweight-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavtweight-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavtweight-3.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavtweight-4.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavyweight-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavtweight-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavtweight-3.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavtweight-4.jpg"
           ]
         },
         {
           "color": "Light Brown",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavyweight-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavtweight-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavtweight-3.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavyweight-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavtweight-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavtweight-3.jpg"
           ]
         }
       ],
@@ -409,25 +409,25 @@
         {
           "color": "Light Brown",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Light Brown/basic-oversized-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Light Brown/basic-oversized-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Light Brown/basic-oversized-3.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Light Brown/basic-oversized-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Light Brown/basic-oversized-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Light Brown/basic-oversized-3.jpg"
           ]
         },
         {
           "color": "Black",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Black/basic-oversized-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Black/basic-oversized-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Black/basic-oversized-3.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Black/basic-oversized-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Black/basic-oversized-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Oversized/Black/basic-oversized-3.jpg"
           ]
         },
         {
           "color": "White",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Oversized/White/basic-oversized-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Oversized/White/basic-oversized-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Basic Oversized/White/basic-oversized-3.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Basic Oversized/White/basic-oversized-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Oversized/White/basic-oversized-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Basic Oversized/White/basic-oversized-3.jpg"
           ]
         }
       ],
@@ -444,25 +444,25 @@
         {
           "color": "Green",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-3.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-3.jpg"
           ]
         },
         {
           "color": "Black",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Black/dense-sweatshirt-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Black/dense-sweatshirt-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Black/dense-sweatshirt-3.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Black/dense-sweatshirt-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Black/dense-sweatshirt-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Black/dense-sweatshirt-3.jpg"
           ]
         },
         {
           "color": "White",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-3.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-3.jpg"
           ]
         }
       ],
@@ -479,7 +479,7 @@
         {
           "color": "Ocean",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Ocean/Black/ocean-1.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Ocean/Black/ocean-1.jpg"
           ]
         }
       ],
@@ -496,25 +496,25 @@
         {
           "color": "Pink",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Pink/power-oversized-gymshark-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Pink/power-oversized-gymshark-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Pink/power-oversized-gymshark-3.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Pink/power-oversized-gymshark-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Pink/power-oversized-gymshark-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Pink/power-oversized-gymshark-3.jpg"
           ]
         },
         {
           "color": "Green",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Green/power-oversized-gymshark-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Green/power-oversized-gymshark-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Green/power-oversized-gymshark-3.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Green/power-oversized-gymshark-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Green/power-oversized-gymshark-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Green/power-oversized-gymshark-3.jpg"
           ]
         },
         {
           "color": "Black",
           "src": [
-            "/client/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Black/power-oversized-gymshark-1.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Black/power-oversized-gymshark-2.jpg",
-            "/client/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Black/power-oversized-gymshark-3.jpg"
+            "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Black/power-oversized-gymshark-1.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Black/power-oversized-gymshark-2.jpg",
+            "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Black/power-oversized-gymshark-3.jpg"
           ]
         }
       ],
@@ -531,25 +531,25 @@
         {
           "color": "Red",
           "src": [
-            "/client/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-1.jpg",
-            "/client/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-2.jpg",
-            "/client/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-3.jpg"
+            "/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-3.jpg"
           ]
         },
         {
           "color": "Black",
           "src": [
-            "/client/src/assets/images/women/clothing/hoodies/bombshell/black/bombshell-1.jpg",
-            "/client/src/assets/images/women/clothing/hoodies/bombshell/black/bombshell-2.jpg",
-            "/client/src/assets/images/women/clothing/hoodies/bombshell/black/bombshell-3.jpg"
+            "/src/assets/images/women/clothing/hoodies/bombshell/black/bombshell-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/bombshell/black/bombshell-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/bombshell/black/bombshell-3.jpg"
           ]
         },
         {
           "color": "Blue",
           "src": [
-            "/client/src/assets/images/women/clothing/hoodies/bombshell/blue/bombshell-1.jpg",
-            "/client/src/assets/images/women/clothing/hoodies/bombshell/blue/bombshell-2.jpg",
-            "/client/src/assets/images/women/clothing/hoodies/bombshell/blue/bombshell-3.jpg"
+            "/src/assets/images/women/clothing/hoodies/bombshell/blue/bombshell-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/bombshell/blue/bombshell-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/bombshell/blue/bombshell-3.jpg"
           ]
         }
       ],
@@ -564,12 +564,29 @@
       "off": false,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Blue",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-3.jpg"
+          ]
+        },
+        {
+          "color": "Brown",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/comfort rib jacket/brown/comfort-rib-jacket-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/comfort rib jacket/brown/comfort-rib-jacket-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/comfort rib jacket/brown/comfort-rib-jacket-3.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/comfort rib jacket/white/comfort-rib-jacket-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/comfort rib jacket/white/comfort-rib-jacket-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/comfort rib jacket/white/comfort-rib-jacket-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-1.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-2.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-3.jpg"
       ],
       "price": 21
     },
@@ -582,12 +599,13 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-1.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-2.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-3.jpg"
       ],
       "price": 21
     },
@@ -600,12 +618,21 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Green",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-3.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-1.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-2.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-3.jpg"
       ],
       "price": 21
     },
@@ -618,12 +645,29 @@
       "off": false,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Grey",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-3.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-1.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/oversized hoodie/white/oversized-hoodie-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/oversized hoodie/white/oversized-hoodie-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/oversized hoodie/white/oversized-hoodie-1.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-1.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-2.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-3.jpg"
       ],
       "price": 21
     },
@@ -636,12 +680,29 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-3.jpg"
+          ]
+        },
+        {
+          "color": "Pink",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/rest day sweats/pink/rest-day-sweats-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/rest day sweats/pink/rest-day-sweats-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/rest day sweats/pink/rest-day-sweats-3.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/rest day sweats/white/rest-day-sweats-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/rest day sweats/white/rest-day-sweats-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/rest day sweats/white/rest-day-sweats-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-1.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-2.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-3.jpg"
       ],
       "price": 21
     },
@@ -654,12 +715,29 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Blue",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-3.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/signature jacket/black/signature-jacket-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/signature jacket/black/signature-jacket-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/signature jacket/black/signature-jacket-3.jpg"
+          ]
+        },
+        {
+          "color": "Grey",
+          "src": [
+            "/src/assets/images/women/clothing/hoodies/signature jacket/grey/signature-jacket-1.jpg",
+            "/src/assets/images/women/clothing/hoodies/signature jacket/grey/signature-jacket-2.jpg",
+            "/src/assets/images/women/clothing/hoodies/signature jacket/grey/signature-jacket-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-1.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-2.jpg",
-        "/client/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-3.jpg"
       ],
       "price": 21
     },
@@ -672,12 +750,29 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Blue",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-1.jpg",
+            "/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-2.jpg",
+            "/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-3.jpg"
+          ]
+        },
+        {
+          "color": "Light Brown",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/comfort rib/light brown/comfort-rib-1.jpg",
+            "/src/assets/images/women/clothing/joggers/comfort rib/light brown/comfort-rib-2.jpg",
+            "/src/assets/images/women/clothing/joggers/comfort rib/light brown/comfort-rib-3.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/comfort rib/white/comfort-rib-1.jpg",
+            "/src/assets/images/women/clothing/joggers/comfort rib/white/comfort-rib-2.jpg",
+            "/src/assets/images/women/clothing/joggers/comfort rib/white/comfort-rib-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-1.jpg",
-        "/client/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-2.jpg",
-        "/client/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-3.jpg"
       ],
       "price": 21
     },
@@ -690,12 +785,21 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/cozy/black/cozy-1.jpg",
+            "/src/assets/images/women/clothing/joggers/cozy/black/cozy-2.jpg",
+            "/src/assets/images/women/clothing/joggers/cozy/black/cozy-3.jpg"
+          ]
+        },
+        {
+          "color": "Pink",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/cozy/pink/cozy-1.jpg",
+            "/src/assets/images/women/clothing/joggers/cozy/pink/cozy-2.jpg",
+            "/src/assets/images/women/clothing/joggers/cozy/pink/cozy-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/joggers/cozy/black/cozy-1.jpg",
-        "/client/src/assets/images/women/clothing/joggers/cozy/black/cozy-2.jpg",
-        "/client/src/assets/images/women/clothing/joggers/cozy/black/cozy-3.jpg"
       ],
       "price": 21
     },
@@ -708,12 +812,29 @@
       "off": false,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-1.jpg",
+            "/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-2.jpg",
+            "/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-3.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-1.jpg",
+            "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-2.jpg",
+            "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-3.jpg"
+          ]
+        },
+        {
+          "color": "Green",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/lifting lightweight/green/lifting-lightweight-1.jpg",
+            "/src/assets/images/women/clothing/joggers/lifting lightweight/green/lifting-lightweight-2.jpg",
+            "/src/assets/images/women/clothing/joggers/lifting lightweight/green/lifting-lightweight-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-1.jpg",
-        "/client/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-2.jpg",
-        "/client/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-3.jpg"
       ],
       "price": 21
     },
@@ -726,12 +847,21 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Light Brown",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-3.jpg",
+            "/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-1.jpg",
+            "/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/liifting straight leg/black/lifting-straight-leg-3.jpg",
+            "/src/assets/images/women/clothing/joggers/liifting straight leg/black/lifting-straight-leg-1.jpg",
+            "/src/assets/images/women/clothing/joggers/liifting straight leg/black/lifting-straight-leg-2.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-3.jpg",
-        "/client/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-1.jpg",
-        "/client/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-2.jpg"
       ],
       "price": 21
     },
@@ -744,12 +874,29 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "White",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-1.jpg",
+            "/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-2.jpg",
+            "/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-3.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/rest day sweats/black/rest-day-sweats-1.jpg",
+            "/src/assets/images/women/clothing/joggers/rest day sweats/black/rest-day-sweats-2.jpg",
+            "/src/assets/images/women/clothing/joggers/rest day sweats/black/rest-day-sweats-3.jpg"
+          ]
+        },
+        {
+          "color": "Light Brown",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/rest day sweats/light brown/rest-day-sweats-1.jpg",
+            "/src/assets/images/women/clothing/joggers/rest day sweats/light brown/rest-day-sweats-2.jpg",
+            "/src/assets/images/women/clothing/joggers/rest day sweats/light brown/rest-day-sweats-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-1.jpg",
-        "/client/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-2.jpg",
-        "/client/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-3.jpg"
       ],
       "price": 21
     },
@@ -762,12 +909,13 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Blue",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-1.jpg",
+            "/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-2.jpg",
+            "/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-1.jpg",
-        "/client/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-2.jpg",
-        "/client/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-3.jpg"
       ],
       "price": 21
     },
@@ -780,12 +928,21 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-1.jpg",
+            "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-2.jpg",
+            "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-3.jpg"
+          ]
+        },
+        {
+          "color": "Grey",
+          "src": [
+            "/src/assets/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-1.jpg",
+            "/src/assets/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-2.jpg",
+            "/src/assets/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-1.jpg",
-        "/client/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-2.jpg",
-        "/client/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-3.jpg"
       ],
       "price": 21
     },
@@ -798,12 +955,29 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Violet",
+          "src": [
+            "/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-1.jpg",
+            "/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-2.jpg",
+            "/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-3.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/top/crop mesh tank/black/crop-mesh-tank-1.jpg",
+            "/src/assets/images/women/clothing/top/crop mesh tank/black/crop-mesh-tank-2.jpg",
+            "/src/assets/images/women/clothing/top/crop mesh tank/black/crop-mesh-tank-3.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "src": [
+            "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-1.jpg",
+            "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-2.jpg",
+            "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-1.jpg",
-        "/client/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-2.jpg",
-        "/client/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-3.jpg"
       ],
       "price": 21
     },
@@ -816,12 +990,21 @@
       "off": false,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-1.jpg",
+            "/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-2.jpg",
+            "/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-3.jpg"
+          ]
+        },
+        {
+          "color": "Brown",
+          "src": [
+            "/src/assets/images/women/clothing/top/jordan indy/brown/taupe-notre-dame-boxy-oversized-1.jpg",
+            "/src/assets/images/women/clothing/top/jordan indy/brown/taupe-notre-dame-boxy-oversized-2.jpg",
+            "/src/assets/images/women/clothing/top/jordan indy/brown/taupe-notre-dame-boxy-oversized-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-1.jpg",
-        "/client/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-2.jpg",
-        "/client/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-3.jpg"
       ],
       "price": 21
     },
@@ -834,12 +1017,29 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Red",
+          "src": [
+            "/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-1.jpg",
+            "/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-2.jpg",
+            "/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-3.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-1.jpg",
+            "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-2.jpg",
+            "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-3.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "src": [
+            "/src/assets/images/women/clothing/top/motivation tee/white/motivation-tee-1.jpg",
+            "/src/assets/images/women/clothing/top/motivation tee/white/motivation-tee-2.jpg",
+            "/src/assets/images/women/clothing/top/motivation tee/white/motivation-tee-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-1.jpg",
-        "/client/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-2.jpg",
-        "/client/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-3.jpg"
       ],
       "price": 21
     },
@@ -852,12 +1052,21 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "White",
+          "src": [
+            "/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-1.jpg",
+            "/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-2.jpg",
+            "/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-3.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/top/strappy crop cami tank/black/strappy-crop-cami-tank-1.jpg",
+            "/src/assets/images/women/clothing/top/strappy crop cami tank/black/strappy-crop-cami-tank-2.jpg",
+            "/src/assets/images/women/clothing/top/strappy crop cami tank/black/strappy-crop-cami-tank-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-1.jpg",
-        "/client/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-2.jpg",
-        "/client/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-3.jpg"
       ],
       "price": 21
     },
@@ -870,12 +1079,21 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Pink",
+          "src": [
+            "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-1.jpg",
+            "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-2.jpg",
+            "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-3.jpg"
+          ]
+        },
+        {
+          "color": "Purple",
+          "src": [
+            "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-1.jpg",
+            "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-2.jpg",
+            "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-1.jpg",
-        "/client/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-2.jpg",
-        "/client/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-3.jpg"
       ],
       "price": 21
     },
@@ -888,12 +1106,29 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Light Brown",
+          "src": [
+            "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1.jpg",
+            "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-2.jpg",
+            "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-3.jpg"
+          ]
+        },
+        {
+          "color": "Pink",
+          "src": [
+            "/src/assets/images/women/clothing/top/tiny twist bra/pink/tyni-twist-bra-1.jpg",
+            "/src/assets/images/women/clothing/top/tiny twist bra/pink/tyni-twist-bra-2.jpg",
+            "/src/assets/images/women/clothing/top/tiny twist bra/pink/tyni-twist-bra-3.jpg"
+          ]
+        },
+        {
+          "color": "Violet",
+          "src": [
+            "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-1.jpg",
+            "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-2.jpg",
+            "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1.jpg",
-        "/client/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-2.jpg",
-        "/client/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-3.jpg"
       ],
       "price": 21
     },
@@ -906,12 +1141,29 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-1.jpg",
+            "/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-2.jpg",
+            "/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-3.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "src": [
+            "/src/assets/images/women/clothing/top/vital seamless/blue/vital-seamless-1.jpg",
+            "/src/assets/images/women/clothing/top/vital seamless/blue/vital-seamless-2.jpg",
+            "/src/assets/images/women/clothing/top/vital seamless/blue/vital-seamless-3.jpg"
+          ]
+        },
+        {
+          "color": "Green",
+          "src": [
+            "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-1.jpg",
+            "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-2.jpg",
+            "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-1.jpg",
-        "/client/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-2.jpg",
-        "/client/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-3.jpg"
       ],
       "price": 21
     },
@@ -924,12 +1176,21 @@
       "off": false,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-1.jpg",
+            "/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-2.jpg",
+            "/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-3.jpg"
+          ]
+        },
+        {
+          "color": "Light Blue",
+          "src": [
+            "/src/assets/images/women/clothing/t-shirt/block oversized/light blue/block-oversized-1.jpg",
+            "/src/assets/images/women/clothing/t-shirt/block oversized/light blue/block-oversized-2.jpg",
+            "/src/assets/images/women/clothing/t-shirt/block oversized/light blue/block-oversized-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-1.jpg",
-        "/client/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-2.jpg",
-        "/client/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-3.jpg"
       ],
       "price": 21
     },
@@ -942,12 +1203,21 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Pink",
+          "src": [
+            "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/pink/stone-paris-city-oversized-1.jpg",
+            "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/pink/stone-paris-city-oversized-2.jpg",
+            "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/pink/stone-paris-city-oversized-3.jpg"
+          ]
+        },
+        {
+          "color": "Stone",
+          "src": [
+            "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/stone/stone-paris-city-oversized-1.jpg",
+            "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/stone/stone-paris-city-oversized-2.jpg",
+            "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/stone/stone-paris-city-oversized-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/pink/stone-paris-city-oversized-1.jpg",
-        "/client/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/pink/stone-paris-city-oversized-2.jpg",
-        "/client/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/pink/stone-paris-city-oversized-3.jpg"
       ],
       "price": 21
     },
@@ -960,12 +1230,13 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "Taupe",
+          "src": [
+            "/src/assets/images/women/clothing/t-shirt/Taupe Notre Dame Boxy Oversized/Taupe/taupe-notre-dame-boxy-oversized-1.jpg",
+            "/src/assets/images/women/clothing/t-shirt/Taupe Notre Dame Boxy Oversized/Taupe/taupe-notre-dame-boxy-oversized-2.jpg",
+            "/src/assets/images/women/clothing/t-shirt/Taupe Notre Dame Boxy Oversized/Taupe/taupe-notre-dame-boxy-oversized-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/t-shirt/Taupe Notre Dame Boxy Oversized/Taupe/taupe-notre-dame-boxy-oversized-1.jpg",
-        "/client/src/assets/images/women/clothing/t-shirt/Taupe Notre Dame Boxy Oversized/Taupe/taupe-notre-dame-boxy-oversized-2.jpg",
-        "/client/src/assets/images/women/clothing/t-shirt/Taupe Notre Dame Boxy Oversized/Taupe/taupe-notre-dame-boxy-oversized-3.jpg"
       ],
       "price": 21
     },
@@ -978,12 +1249,21 @@
       "off": true,
       "image": [
         {
-          "color": "",
-          "src": []
+          "color": "White",
+          "src": [
+            "/src/assets/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-1.jpg",
+            "/src/assets/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-2.jpg",
+            "/src/assets/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-3.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "src": [
+            "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-1.jpg",
+            "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-2.jpg",
+            "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-3.jpg"
+          ]
         }
-        "/client/src/assets/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-1.jpg",
-        "/client/src/assets/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-2.jpg",
-        "/client/src/assets/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-3.jpg"
       ],
       "price": 21
     }
