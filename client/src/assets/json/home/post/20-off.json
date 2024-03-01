@@ -1,39 +1,114 @@
-{
-  "posts": [
-    {
-      "id": "1",
-      "image": "/src/assets/images/home/post/20-off/global-2.jpg",
-      "title": "GLOBAL",
-      "info": "Jogger",
-      "price": 29.99
-    },
-    {
-      "id": "2",
-      "image": "/src/assets/images/home/post/20-off/Gymshark-Beanie.jpg",
-      "title": "BEANIE",
-      "info": "Cap",
-      "price": 38
-    },
-    {
-      "id": "3",
-      "image": "/src/assets/images/home/post/20-off/Gymshark-Water-Bottle.jpg",
-      "title": "WATER BOTTLE",
-      "info": "Bottle",
-      "price": 10
-    },
-    {
-      "id": "4",
-      "image": "/src/assets/images/home/post/20-off/INTERLOCK TECH 6 SHORTS 2.jpg",
-      "title": "TECH SHORT",
-      "info": "Short",
-      "price": 31
-    },
-    {
-      "id": "5",
-      "image": "/src/assets/images/home/post/20-off/ocean-1.jpg",
-      "title": "CLASSIC OVERSIZED",
-      "info": "T-Shirt",
-      "price": 21
-    }
-  ]
-}
+[
+  {
+    "id": 9,
+    "name": "GLOBAL",
+    "category": "Jogger",
+    "sex": "men",
+    "new": true,
+    "off": true,
+    "colorId": 2,
+    "colorName": "Black",
+    "images": [
+      "/src/assets/images/men/clothes/Jogger/Global/Black/global-1.jpg",
+      "/src/assets/images/men/clothes/Jogger/Global/Black/global-2.jpg",
+      "/src/assets/images/men/clothes/Jogger/Global/Black/global-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 15,
+    "name": "DENSE SWEATSHIRT",
+    "category": "T-Shirt",
+    "sex": "men",
+    "new": true,
+    "off": false,
+    "colorId": 3,
+    "colorName": "White",
+    "images": [
+      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-1.jpg",
+      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-2.jpg",
+      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 21,
+    "name": "MIDI TRACK JACKET",
+    "category": "Hoodie",
+    "sex": "women",
+    "new": true,
+    "off": true,
+    "colorId": 2,
+    "colorName": "Black",
+    "images": [
+      "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-1.jpg",
+      "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-2.jpg",
+      "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 27,
+    "name": "LIFTING LIGHTWEIGHT",
+    "category": "Jogger",
+    "sex": "women",
+    "new": true,
+    "off": false,
+    "colorId": 2,
+    "colorName": "Blue",
+    "images": [
+      "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-1.jpg",
+      "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-2.jpg",
+      "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 32,
+    "name": "CROP MESH TANK",
+    "category": "Top",
+    "sex": "women",
+    "new": false,
+    "off": true,
+    "colorId": 3,
+    "colorName": "White",
+    "images": [
+      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-1.jpg",
+      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-2.jpg",
+      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 37,
+    "name": "TINY TWIST BRA",
+    "category": "Top",
+    "sex": "women",
+    "new": true,
+    "off": true,
+    "colorId": 1,
+    "colorName": "Light Brown",
+    "images": [
+      "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1.jpg",
+      "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-2.jpg",
+      "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 42,
+    "name": "TRAINING OVERSIZED",
+    "category": "T-Shirt",
+    "sex": "women",
+    "new": true,
+    "off": true,
+    "colorId": 2,
+    "colorName": "Black",
+    "images": [
+      "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-1.jpg",
+      "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-2.jpg",
+      "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-3.jpg"
+    ],
+    "price": 21
+  }
+]

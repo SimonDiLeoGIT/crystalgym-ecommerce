@@ -1,39 +1,115 @@
-{
-  "posts": [
-    {
-      "id": "1",
-      "image": "/src/assets/images/home/post/new-this-month/dense-sweatshirt-1.jpg",
-      "title": "DENSE SWEATSHIRT",
-      "info": "T-Shirt",
-      "price": 29.99
-    },
-    {
-      "id": "2",
-      "image": "/src/assets/images/home/post/new-this-month/basic-heavtweight-1.jpg",
-      "title": "BASIC HEAVY WEIGHT",
-      "info": "T-Shirt",
-      "price": 38
-    },
-    {
-      "id": "3",
-      "image": "/src/assets/images/home/post/new-this-month/Gymshark-Wrist-Straps.jpg",
-      "title": "WRIST STRAPS",
-      "info": "Straps",
-      "price": 10
-    },
-    {
-      "id": "4",
-      "image": "/src/assets/images/home/post/new-this-month/ripped-hoodie-1.jpg",
-      "title": "RIPPED HOODIE",
-      "info": "Hoodie",
-      "price": 31
-    },
-    {
-      "id": "5",
-      "image": "/src/assets/images/home/post/new-this-month/violet-women.jpeg",
-      "title": "GYM OUTFIT",
-      "info": "Outfit",
-      "price": 21
-    }
-  ]
-}
+[
+  {
+    "id": 2,
+    "name": "HERITAGE WASHED",
+    "category": "Hoodie",
+    "sex": "men",
+    "new": true,
+    "off": false,
+    "colorId": 1,
+    "colorName": "Green",
+    "images": [
+      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1.jpg",
+      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-2.jpg",
+      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-3.jpg"
+    ],
+    "price": 38
+  },
+  {
+    "id": 5,
+    "name": "REST DAY",
+    "category": "Hoodie",
+    "sex": "men",
+    "new": true,
+    "off": true,
+    "colorId": 4,
+    "colorName": "Red",
+    "images": [
+      "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-1.jpg",
+      "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-2.jpg",
+      "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-3.jpg",
+      "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-4.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 9,
+    "name": "GLOBAL",
+    "category": "Jogger",
+    "sex": "men",
+    "new": true,
+    "off": true,
+    "colorId": 2,
+    "colorName": "Black",
+    "images": [
+      "/src/assets/images/men/clothes/Jogger/Global/Black/global-1.jpg",
+      "/src/assets/images/men/clothes/Jogger/Global/Black/global-2.jpg",
+      "/src/assets/images/men/clothes/Jogger/Global/Black/global-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 15,
+    "name": "DENSE SWEATSHIRT",
+    "category": "T-Shirt",
+    "sex": "men",
+    "new": true,
+    "off": false,
+    "colorId": 1,
+    "colorName": "Green",
+    "images": [
+      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-1.jpg",
+      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-2.jpg",
+      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 22,
+    "name": "OVERSIZED HOODIE",
+    "category": "Hoodie",
+    "sex": "women",
+    "new": true,
+    "off": false,
+    "colorId": 2,
+    "colorName": "Black",
+    "images": [
+      "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-1.jpg",
+      "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-2.jpg",
+      "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 31,
+    "name": "TRAINING FLEECE",
+    "category": "Jogger",
+    "sex": "women",
+    "new": true,
+    "off": true,
+    "colorId": 1,
+    "colorName": "Black",
+    "images": [
+      "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-1.jpg",
+      "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-2.jpg",
+      "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 36,
+    "name": "SWOOSH LIGHT",
+    "category": "Top",
+    "sex": "women",
+    "new": false,
+    "off": true,
+    "colorId": 2,
+    "colorName": "Purple",
+    "images": [
+      "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-1.jpg",
+      "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-2.jpg",
+      "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-3.jpg"
+    ],
+    "price": 21
+  }
+]

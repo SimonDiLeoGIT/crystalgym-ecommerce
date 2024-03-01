@@ -480,9 +480,9 @@
       "colorId": 2,
       "colorName": "Grey",
       "images": [
-        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavtweight-1.jpg",
-        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavtweight-2.jpg",
-        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavtweight-3.jpg"
+        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavyweight-1.jpg",
+        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavyweight-2.jpg",
+        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Grey/basic-heavyweight-3.jpg"
       ],
       "price": 21
     },
@@ -496,9 +496,9 @@
       "colorId": 3,
       "colorName": "Light Brown",
       "images": [
-        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavtweight-1.jpg",
-        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavtweight-2.jpg",
-        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavtweight-3.jpg"
+        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavyweight-1.jpg",
+        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavyweight-2.jpg",
+        "/src/assets/images/men/clothes/T-Shirt/Basic Heavyweight/Light Brown/basic-heavyweight-3.jpg"
       ],
       "price": 21
     },
@@ -1102,9 +1102,9 @@
       "colorId": 2,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/joggers/liifting straight leg/black/lifting-straight-leg-3.jpg",
-        "/src/assets/images/women/clothing/joggers/liifting straight leg/black/lifting-straight-leg-1.jpg",
-        "/src/assets/images/women/clothing/joggers/liifting straight leg/black/lifting-straight-leg-2.jpg"
+        "/src/assets/images/women/clothing/joggers/liifting straight leg/black/liifting-straight-leg-1.jpg",
+        "/src/assets/images/women/clothing/joggers/liifting straight leg/black/liifting-straight-leg-2.jpg",
+        "/src/assets/images/women/clothing/joggers/liifting straight leg/black/liifting-straight-leg-3.jpg"
       ],
       "price": 21
     },
@@ -1278,7 +1278,7 @@
       "colorId": 2,
       "colorName": "Brown",
       "images": [
-        "/src/assets/images/women/clothing/top/jordan indy/brown/taupe-notre-dame-boxy-oversized-1.jpg",
+        "/src/assets/images/women/clothing/top/jordan indy/brown/jordan-indy-1.jpg",
         "/src/assets/images/women/clothing/top/jordan indy/brown/taupe-notre-dame-boxy-oversized-2.jpg",
         "/src/assets/images/women/clothing/top/jordan indy/brown/taupe-notre-dame-boxy-oversized-3.jpg"
       ],
@@ -1422,9 +1422,9 @@
       "colorId": 2,
       "colorName": "Pink",
       "images": [
-        "/src/assets/images/women/clothing/top/tiny twist bra/pink/tyni-twist-bra-1.jpg",
-        "/src/assets/images/women/clothing/top/tiny twist bra/pink/tyni-twist-bra-2.jpg",
-        "/src/assets/images/women/clothing/top/tiny twist bra/pink/tyni-twist-bra-3.jpg"
+        "/src/assets/images/women/clothing/top/tiny twist bra/pink/tiny-twist-bra-1.jpg",
+        "/src/assets/images/women/clothing/top/tiny twist bra/pink/tiny-twist-bra-2.jpg",
+        "/src/assets/images/women/clothing/top/tiny twist bra/pink/tiny-twist-bra-3.jpg"
       ],
       "price": 21
     },

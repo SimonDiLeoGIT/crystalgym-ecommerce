@@ -1,4 +1,4 @@
-import { Posts_Section } from "../components/ProductsAdvertisement/ProductsAdvertisement"
+import { ProductsAdvertisement } from "../components/ProductsAdvertisement/ProductsAdvertisement"
 import gym_clothes from "../assets/json/men/advertisement/gym-clothes.json"
 import gym_clothes_post from "../assets/json/men/post/gym-clothes.json"
 import hoodies from "../assets/json/men/advertisement/hoodies.json"
@@ -14,11 +14,11 @@ export const Men = () => {
           advertisement={gym_clothes.advertisement} images={gym_clothes.images}
         />
       </header>
-      <Posts_Section posts={gym_clothes_post.posts} title="Gym Clothes" />
+      <ProductsAdvertisement products={gym_clothes_post} title="Gym Clothes" />
       <Carousel
         advertisement={hoodies.advertisement} images={hoodies.images}
       />
-      <Posts_Section posts={hoodies_post.posts} title="All Hoodies" />
+      <ProductsAdvertisement products={hoodies_post} title="All Hoodies" />
     </main>
   )
 }

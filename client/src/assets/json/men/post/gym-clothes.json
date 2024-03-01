@@ -1,39 +1,84 @@
-{
-  "posts": [
-    {
-      "id": "1",
-      "image": "/src/assets/images/men/post/gym-clothing/global-2.jpg",
-      "title": "GLOBAL",
-      "info": "Jogger",
-      "price": 29.99
-    },
-    {
-      "id": "2",
-      "image": "/src/assets/images/men/post/gym-clothing/POWER WASHED CREW 2.jpg",
-      "title": "POWER WASHED CREW",
-      "info": "Hoodie",
-      "price": 38
-    },
-    {
-      "id": "3",
-      "image": "/src/assets/images/men/post/gym-clothing/power-oversized-gymshark-2.jpg",
-      "title": "POWER OVERSIZED",
-      "info": "T-Shirt",
-      "price": 10
-    },
-    {
-      "id": "4",
-      "image": "/src/assets/images/men/post/gym-clothing/sport-5-3.jpg",
-      "title": "SPORT",
-      "info": "Short",
-      "price": 31
-    },
-    {
-      "id": "5",
-      "image": "/src/assets/images/men/post/gym-clothing/tech-fleece-1.jpg",
-      "title": "TECH FLEECE",
-      "info": "Short",
-      "price": 21
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "GS DAVID LAID",
+    "category": "Hoodie",
+    "sex": "men",
+    "new": true,
+    "off": false,
+    "colorId": 1,
+    "colorName": "Dark Red",
+    "images": [
+      "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-1.jpg",
+      "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-2.jpg",
+      "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-3.jpg",
+      "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-4.jpg"
+    ],
+    "price": 29.99
+  },
+  {
+    "id": 2,
+    "name": "HERITAGE WASHED",
+    "category": "Hoodie",
+    "sex": "men",
+    "new": true,
+    "off": false,
+    "colorId": 4,
+    "colorName": "Yellow",
+    "images": [
+      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-1.jpg",
+      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-2.jpg",
+      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-3.jpg"
+    ],
+    "price": 38
+  },
+  {
+    "id": 5,
+    "name": "REST DAY",
+    "category": "Hoodie",
+    "sex": "men",
+    "new": true,
+    "off": true,
+    "colorId": 2,
+    "colorName": "Light Brown",
+    "images": [
+      "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-1.jpg",
+      "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-2.jpg",
+      "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-3.jpg",
+      "/src/assets/images/men/clothes/Hoodie/Rest Day/Light Brown/rest-day-4.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 11,
+    "name": "TECH FLEECE",
+    "category": "Jogger",
+    "sex": "men",
+    "new": false,
+    "off": true,
+    "colorId": 1,
+    "colorName": "Light Brown",
+    "images": [
+      "/src/assets/images/men/clothes/Jogger/Teh Fleece/Light Brown/tech-fleece-1.jpg",
+      "/src/assets/images/men/clothes/Jogger/Teh Fleece/Light Brown/tech-fleece-2.jpg",
+      "/src/assets/images/men/clothes/Jogger/Teh Fleece/Light Brown/tech-fleece-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 17,
+    "name": "POWER OVERSIZED",
+    "category": "T-Shirt",
+    "sex": "men",
+    "new": false,
+    "off": true,
+    "colorId": 3,
+    "colorName": "Green",
+    "images": [
+      "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Green/power-oversized-gymshark-1.jpg",
+      "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Green/power-oversized-gymshark-2.jpg",
+      "/src/assets/images/men/clothes/T-Shirt/Power Oversized Gymshark/Green/power-oversized-gymshark-3.jpg"
+    ],
+    "price": 21
+  }
+]

@@ -1,39 +1,82 @@
-{
-  "posts": [
-    {
-      "id": "1",
-      "image": "/src/assets/images/women/post/tops/crop-mesh-tank-1.jpg",
-      "title": "CROP MESH TANK",
-      "info": "Top",
-      "price": 29.99
-    },
-    {
-      "id": "2",
-      "image": "/src/assets/images/women/post/tops/motivation-tee-1.jpg",
-      "title": "MOTIVATION TEE",
-      "info": "Top",
-      "price": 38
-    },
-    {
-      "id": "3",
-      "image": "/src/assets/images/women/post/tops/strappy-crop-cami-tank-1.jpg",
-      "title": "STRAPPY CROP CAMI TANK",
-      "info": "Top",
-      "price": 10
-    },
-    {
-      "id": "4",
-      "image": "/src/assets/images/women/post/tops/swoosh-light-1.jpg",
-      "title": "SWOOSH LIGHT",
-      "info": "Top",
-      "price": 31
-    },
-    {
-      "id": "5",
-      "image": "/src/assets/images/women/post/tops/taupe-notre-dame-boxy-oversized-1.jpg",
-      "title": "TAUPE NOTRE DAME OXY OVERSIZED",
-      "info": "Top",
-      "price": 21
-    }
-  ]
-}
+[
+  {
+    "id": 32,
+    "name": "CROP MESH TANK",
+    "category": "Top",
+    "sex": "women",
+    "new": false,
+    "off": true,
+    "colorId": 3,
+    "colorName": "White",
+    "images": [
+      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-1.jpg",
+      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-2.jpg",
+      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 34,
+    "name": "MOTIVATION TEE",
+    "category": "Top",
+    "sex": "women",
+    "new": true,
+    "off": true,
+    "colorId": 2,
+    "colorName": "Black",
+    "images": [
+      "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-1.jpg",
+      "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-2.jpg",
+      "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 36,
+    "name": "SWOOSH LIGHT",
+    "category": "Top",
+    "sex": "women",
+    "new": false,
+    "off": true,
+    "colorId": 1,
+    "colorName": "Pink",
+    "images": [
+      "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-1.jpg",
+      "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-2.jpg",
+      "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 37,
+    "name": "TINY TWIST BRA",
+    "category": "Top",
+    "sex": "women",
+    "new": true,
+    "off": true,
+    "colorId": 3,
+    "colorName": "Violet",
+    "images": [
+      "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-1.jpg",
+      "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-2.jpg",
+      "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-3.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 38,
+    "name": "VITAL SEAMLESS",
+    "category": "Top",
+    "sex": "women",
+    "new": false,
+    "off": true,
+    "colorId": 3,
+    "colorName": "Green",
+    "images": [
+      "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-1.jpg",
+      "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-2.jpg",
+      "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-3.jpg"
+    ],
+    "price": 21
+  }
+]

@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom"
 import all_clothes from "../assets/json/shop/clothes.json"
 import { useEffect, useState } from "react"
 import { useCart } from "../hook/useCart"
+import { ProductsAdvertisement } from "../components/ProductsAdvertisement/ProductsAdvertisement"
 
 type product = ProductInterface
 
@@ -15,20 +16,47 @@ export const Product = () => {
     const productAsigned = all_clothes.all.find(clothe => clothe.id.toString() === id && clothe.colorId.toString() === colorId)
     setProduct(productAsigned)
     console.log(productAsigned)
+    window.scrollTo(0, 0);
   })
+
+  const [currentimage, changeCurrentimage] = useState(0);
+  const [translateValue, setTranslateValue] = useState(0);
+
+  function nextimage() {
+    let newIndex = (currentimage + 1);
+    if (currentimage < 2) {
+      changeCurrentimage(currentimage + 1);
+    } else {
+      changeCurrentimage(0);
+      newIndex = 0;
+    }
+    setTranslateValue(-100 * newIndex);
+  }
+
+  function previmage() {
+    let newIndex = (currentimage - 1);
+    if (currentimage > 0) {
+      changeCurrentimage(currentimage - 1);
+    } else {
+      changeCurrentimage(2);
+      newIndex = 2;
+    }
+    setTranslateValue(-100 * newIndex);
+  }
 
   const { addToCart } = useCart()
 
   return (
     <section className="w-screen overflow-x-hidden">
       <header>
-        <section className="flex overflow-scroll">
+        <section className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${translateValue}%)` }}>
           {
             product?.images.map(image => {
               return (
                 <img
                   className="w-screen h-1/3 object-cover"
                   src={image}
+                  onClick={() => nextimage()}
                 />
               )
             })
@@ -72,6 +100,7 @@ export const Product = () => {
         className="block m-auto -bg--color-black -text--color-light-grey-violet font-bold p-4 my-4 rounded-full w-11/12">
         ADD TO BAG
       </button>
+      <ProductsAdvertisement products={all_clothes.all.filter(item => item.category === product?.category && item.sex === product.sex && item.id !== product.id)} title="Similar Products" />
     </section>
   )
 }

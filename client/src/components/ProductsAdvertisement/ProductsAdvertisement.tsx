@@ -1,37 +1,30 @@
 import { Link } from "react-router-dom"
 
-interface Post {
-  id: string,
-  image: string,
-  title: string,
-  info: string,
-  price: number,
-}
 
-type PostsList = Post[]
+type ProductList = ProductInterface[]
 
 interface Props {
-  posts: PostsList
+  products: ProductList
   title: string
 }
 
-export const Posts_Section: React.FC<Props> = ({ posts, title }) => {
+export const ProductsAdvertisement: React.FC<Props> = ({ products, title }) => {
 
 
   return (
     <section className="p-2 mb-4">
       <h1 className="font-bold text-xl p-2">{title}</h1>
       <section className="flex overflow-x-auto whitespace-nowrap">
-        {posts.map(post => {
+        {products.map(product => {
           return (
-            <Link to="/">
-              <article className="min-w-72 mx-1" key={post.id}>
+            <Link to={`/product/${product.id}/${product.colorId}`}>
+              <article className="min-w-72 mx-1" key={product.id}>
                 <figure className="mb-4 h-96">
-                  <img className="w-full h-5/6 object-cover" src={post.image} alt={post.title} />
+                  <img className="w-full h-5/6 object-cover" src={product.images[0]} alt={product.name} />
                   <figcaption className="mt-2">
-                    <h1 className="text-lg font-bold text-nowrap overflow-x-hidden text-ellipsis">{post.title}</h1>
-                    <p className="text-sm">{post.info}</p>
-                    <p className="text-sm">${post.price}</p>
+                    <h1 className="text-lg font-bold text-nowrap overflow-x-hidden text-ellipsis">{product.name}</h1>
+                    <p className="text-sm">{product.category}</p>
+                    <p className="text-sm">${product.price}</p>
                   </figcaption>
                 </figure>
               </article>
