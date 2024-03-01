@@ -18,17 +18,30 @@ export const Products: React.FC<Props> = ({ clothes }) => {
 
   const totalArticles = 10
   const [totalPages, setTotalPages] = useState<number>(0)
-  const [currentPage, setCurrentPage] = useState<number>(1)
+  const [currentPage, setCurrentPage] = useState<number>(0)
+  const [data, setData] = useState<clotheList>(clothes.slice(currentPage, totalArticles))
 
   useEffect(() => {
     setTotalPages(clothes?.length / totalArticles)
 
   })
 
+  const handlePageClick = (event) => {
+
+    const newOffset = (event.selected * totalArticles) % clothes.length;
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newOffset}`
+    );
+    // setItemOffset(newOffset);
+    const next = (event.selected * totalArticles) % clothes.length;
+    setCurrentPage(next)
+    setData(clothes.slice(next, (next) + totalArticles))
+  }
+
   return (
     <section className="grid grid-cols-2 gap-2">
       {
-        clothes?.map((clothe) => {
+        data?.map((clothe) => {
           return (
             <article className="shadow-md">
               <figure>
@@ -55,17 +68,21 @@ export const Products: React.FC<Props> = ({ clothes }) => {
         }
         )
       }
-      <footer className='w-screen'>
+      <footer className='w-screen my-4'>
         <ReactPaginate
           breakLabel="..."
           nextLabel=">"
-          // onPageChange={handlePageClick}
-          pageRangeDisplayed={0}
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={3}
           pageCount={totalPages}
           previousLabel="<"
           renderOnZeroPageCount={null}
-          containerClassName='flex justify-center'
-          pageClassName='w-10'
+          containerClassName="flex justify-center hover:cursor-pointer"
+          pageLinkClassName=" p-2"
+          pageClassName="p-2 rounded-lg hover:-bg--color-very-light-grey"
+          activeClassName="-bg--color-light-grey-violet hover:-bg--color-light-grey-violet"
+          previousClassName="p-2 "
+          nextClassName="p-2"
         />
       </footer>
     </section>
