@@ -53,29 +53,29 @@ export const Carousel: React.FC<Props> = ({ advertisement, images }) => {
   }
 
   return (
-    <section className='relative w-full overflow-x-auto'>
-      <div className='overflow-hidden '>
+    <section className='relative w-full overflow-x-auto shadow-lg -shadow--color-grey m-auto lg:my-8 lg:w-11/12 lg:rounded-xl'>
+      <div className='overflow-hidden m-auto '>
         <section className='flex transition-transform duration-500 ease-in-out' style={{ transform: `translateX(${translateValue}%)` }}>
           {images.map((image) => {
             return (
               <img
                 src={image.image}
                 alt={image.id}
-                className='min-w-full h-screen max-h-screen object-cover md:h-96'
+                className='min-w-full h-screen max-h-screen object-cover md:h-[32rem]'
               />
             )
           })}
         </section>
       </div>
-      <section className='absolute top-2/3 grid gap-12 w-full md:top-4 md:left-16 md:w-96 md:rounded-xl md: md:-bg--color-very-light-grey md:bg-opacity-60'>
-        <section className=' w-full p-5 -bg--color-very-light-grey bg-opacity-60 md:bg-opacity-0'>
+      <section className='absolute top-2/3 grid gap-12 w-full md:top-auto md:bottom-4 md:left-16 md:w-96 md:h-44 md:rounded-xl md:gap-0 md:-bg--color-very-light-grey md:bg-opacity-60'>
+        <section className=' w-full p-5 -bg--color-very-light-grey bg-opacity-60 md:bg-opacity-0 '>
           <h1 className="font-bold text-2xl">{advertisement.title_front}<span className="-text--color-light-grey-violet -bg--color-black rounded-md px-2 mx-2">{advertisement.title_middle}</span> {advertisement.title_end}</h1>
           <p className="font-semibold text-sm">{advertisement.info}</p>
         </section>
         <Link to={advertisement.button_link} className="text-center -bg--color-light-grey-violet font-bold p-4 rounded-full w-11/12 max-w-lg m-auto mb-4">{advertisement.button_title}</Link>
       </section>
       <button
-        className='absolute top-1/2 left-4 rounded-full -bg--color-light-grey-violet opacity-60 shadow-md -shadow--color-greyest-violet md:bottom-4 md:top-4'
+        className='absolute top-1/2 left-4 rounded-full -bg--color-light-grey-violet opacity-60 shadow-md -shadow--color-greyest-violet hover:opacity-45 md:bottom-2 md:top-2 md:left-2 md:px-2'
         onClick={() => previmage()}
       >
         <img
@@ -84,7 +84,7 @@ export const Carousel: React.FC<Props> = ({ advertisement, images }) => {
         />
       </button>
       <button
-        className='absolute top-1/2 right-4 rounded-full -bg--color-light-grey-violet opacity-60 shadow-md -shadow--color-greyest-violet md:bottom-4 md:top-4'
+        className='absolute top-1/2 right-4 rounded-full -bg--color-light-grey-violet opacity-60 shadow-md -shadow--color-greyest-violet hover:opacity-45 md:bottom-2 md:top-2 md:right-2 md:px-2'
         onClick={() => nextimage()}
       >
         <img
