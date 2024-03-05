@@ -11,11 +11,11 @@ export const Product = () => {
   const { id } = useParams()
   const { colorId } = useParams()
   const [product, setProduct] = useState<product | null>()
+  const { addToCart } = useCart()
 
   useEffect(() => {
     const productAsigned = all_clothes.all.find(clothe => clothe.id.toString() === id && clothe.colorId.toString() === colorId)
     setProduct(productAsigned)
-    console.log(productAsigned)
     window.scrollTo(0, 0);
   })
 
@@ -43,8 +43,6 @@ export const Product = () => {
     }
     setTranslateValue(-100 * newIndex);
   }
-
-  const { addToCart } = useCart()
 
   return (
     <section className="w-screen overflow-x-hidden">
