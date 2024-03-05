@@ -11,9 +11,11 @@ interface Props {
 export const ProductsAdvertisement: React.FC<Props> = ({ products, title }) => {
 
 
+
   return (
-    <section className="p-2 mb-4">
+    <section className="p-2 mb-4 lg:w-11/12 lg:m-auto">
       <h1 className="font-bold text-xl p-2">{title}</h1>
+
       <section className="flex overflow-x-auto whitespace-nowrap">
         {products.map(product => {
           return (

@@ -3,7 +3,7 @@ import add_to_bag_icon from "../../assets/icons/nav icons/bag-plus-1122-svgrepo-
 import like_icon from "../../assets/icons/like-icon.svg"
 import { useCart } from "../../hook/useCart";
 import { Link } from "react-router-dom";
-import { ReactElement, ReactEventHandler, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import left_arrow from '../../assets/icons/carousel/left-arrow.svg'
 import right_arrow from '../../assets/icons/carousel/right-arrow.svg'
