@@ -1,0 +1,5 @@
+@import url("../../styles/global/fonts.css");
+
+.products-container-shadow {
+  box-shadow: inset 10px 10px 10px 10px var(--color-grey);
+}
