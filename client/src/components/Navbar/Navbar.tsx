@@ -160,7 +160,7 @@ export const Navbar = () => {
 
 
   return (
-    <nav className={`grid grid-cols-3 border-b -border--color-very-light-grey h-20 shadow-lg -shadow--color-very-light-grey z-10 -bg--color-white transition-transform duration-500 ease-in-out fixed w-screen top-0 ${scrollDown && "scroll-down shadow-none"} ${scrollUp && "scroll-up"}`}>
+    <nav className={`grid grid-cols-3 border-b -border--color-very-light-grey h-20 shadow-lg -shadow--color-very-light-grey z-50 -bg--color-white transition-transform duration-500 fixed w-screen top-0 ${scrollDown && "scroll-down shadow-none"} ${scrollUp && "scroll-up"}`}>
       <section className="m-auto ml-4 h-full lg:hidden">
         <button
           className="h-full"
@@ -175,7 +175,7 @@ export const Navbar = () => {
           <img src={logo} className="h-full w-8 lg:w-10 mx-2" />
         </Link>
       </h1>
-      <ul className="invisible w-full text-center h-full lg:visible lg:relative">
+      <ul className="invisible w-full text-center h-full lg:visible lg:relative -bg--color-white">
         {
           nav_links.map(link => {
             return (
@@ -183,7 +183,7 @@ export const Navbar = () => {
                 <h1 className="h-full">
                   <Link to={link.link} className="h-full flex items-center justify-center">{link.name}</Link>
                 </h1>
-                <section className="hidden group-hover:grid hover:grid place-content-start absolute z-10 top-20 w-full -bg--color-white border -border--color-very-light-grey">
+                <section className="hidden group-hover:grid hover:grid place-content-start absolute -z-20 top-20 w-full -bg--color-white border -border--color-very-light-grey open-submenu">
                   {
                     link.sections.map(section => {
                       return (

@@ -5,3 +5,18 @@
 .scroll-down {
   transform: translate3d(0, -100%, 0);
 }
+
+@keyframes open-submenu {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+.open-submenu {
+  animation: open-submenu 200ms ease-in-out;
+}
