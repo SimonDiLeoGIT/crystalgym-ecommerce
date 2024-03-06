@@ -76,21 +76,22 @@ export const Products: React.FC<Props> = ({ clothes }) => {
         <ReactPaginate
           breakLabel="..."
           nextLabel={
-            <img src={right_arrow} />
+            <img src={right_arrow} className="w-4" />
           }
           onPageChange={handlePageClick}
-          pageRangeDisplayed={3}
+          pageRangeDisplayed={1}
           pageCount={totalPages}
+          marginPagesDisplayed={2}
           previousLabel={
-            <img src={left_arrow} />
+            <img src={left_arrow} className="w-4" />
           }
           renderOnZeroPageCount={null}
-          containerClassName="flex justify-center hover:cursor-pointer"
-          pageLinkClassName=" p-2"
-          pageClassName="p-2 rounded-lg font-semibold -text--color-black hover:-bg--color-very-light-grey hover:opacity-60"
+          containerClassName=" flex justify-center hover:cursor-pointer  m-auto"
+          pageLinkClassName="p-1 md:p-2"
+          pageClassName="p-2 md:p-2 rounded-lg font-semibold -text--color-black hover:-bg--color-very-light-grey hover:opacity-60"
           activeClassName="-bg--color-light-grey-violet -text--color-white hover:-bg--color-light-grey-violet"
-          previousClassName="text-center h-6 w-6 -bg--color-light-grey-violet rounded-full m-auto hover:opacity-60"
-          nextClassName="text-center h-6 w-6 -bg--color-light-grey-violet rounded-full m-auto hover:opacity-60"
+          previousClassName="h-8 w-4 md:w-8 flex items-center justify-center -bg--color-light-grey-violet rounded-lg m-auto mr-1 hover:opacity-60"
+          nextClassName="h-8 w-4 md:w-8 flex items-center justify-center -bg--color-light-grey-violet rounded-lg m-auto ml-1 hover:opacity-60"
         />
       </footer>
     </section>

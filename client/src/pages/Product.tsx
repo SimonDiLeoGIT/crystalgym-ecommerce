@@ -46,7 +46,7 @@ export const Product = () => {
 
   return (
     <section className="w-screen overflow-x-hidden">
-      <section className="md:grid md:grid-cols-2 md:w-11/12 md:m-auto max-w-7xl">
+      <section className="md:grid md:grid-cols-2 md:w-11/12 md:m-auto max-w-7xl md:my-10">
         <header className="overflow-x-hidden">
           <section className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${translateValue}%)` }}>
             {
