@@ -5,7 +5,7 @@ import search_icon from '../../assets/icons/nav icons/mobile and desktop/search-
 import menu from '../../assets/icons/nav icons/mobile/menu-svgrepo-com.svg'
 import logo from '../../assets/icons/nav icons/mobile and desktop/amazon-svgrepo-com.svg'
 import close_icon from '../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg'
-import { useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { MobileMenu } from "../MobileMenu/MobileMenu"
 import { MobileSearch } from "../MobileSearch/MobileSearch"
 import { Cart } from "../Cart/Cart"
@@ -14,6 +14,31 @@ export const Navbar = () => {
 
   const [viewMenu, setViewMenu] = useState(false);
   const [searchMode, setSearchMode] = useState(false);
+
+  const [y, setY] = useState(window.scrollY);
+  const [scrollUp, setScrollUp] = useState(false);
+  const [scrollDown, setScrollDown] = useState(false);
+
+  const handleNavigation = useCallback(
+    e => {
+      const window = e.currentTarget;
+      if (y > window.scrollY) {
+        console.log("scrolling up");
+      } else if (y < window.scrollY) {
+        console.log("scrolling down");
+      }
+      setY(window.scrollY);
+    }, [y]
+  );
+
+  useEffect(() => {
+    setY(window.scrollY);
+    window.addEventListener("scroll", handleNavigation);
+
+    return () => {
+      window.removeEventListener("scroll", handleNavigation);
+    };
+  }, [handleNavigation]);
 
   const search_mode = () => {
     if (searchMode) {
@@ -127,8 +152,9 @@ export const Navbar = () => {
     }
   ]
 
+
   return (
-    <nav className="grid grid-cols-3 border-b -border--color-very-light-grey h-20">
+    <nav className="grid grid-cols-3 border-b -border--color-very-light-grey h-20 shadow-lg -shadow--color-very-light-grey">
       <section className="m-auto ml-4 h-full lg:hidden">
         <button
           className="h-full"
@@ -151,18 +177,18 @@ export const Navbar = () => {
                 <h1 className="h-full">
                   <Link to={link.link} className="h-full flex items-center justify-center">{link.name}</Link>
                 </h1>
-                <section className="hidden group-hover:grid hover:grid absolute z-10 top-20 left-0 w-full -bg--color-white">
+                <section className="hidden group-hover:grid hover:grid place-content-start absolute z-10 top-20 w-full -bg--color-white border -border--color-very-light-grey">
                   {
                     link.sections.map(section => {
                       return (
-                        <article className="col-span-1">
-                          <h1>
+                        <article className="col-span-1 p-4 text-start">
+                          <h1 className="font-bold text-lg -text--color-black">
                             {section.title}
                           </h1>
                           <ul>
                             {section.links.map(link => {
                               return (
-                                <li>
+                                <li className="font-medium py-1 -text--color-greyest-violet hover:-text--color-dark-grey-violet">
                                   <Link to={link.link}>{link.label}</Link>
                                 </li>
                               )
