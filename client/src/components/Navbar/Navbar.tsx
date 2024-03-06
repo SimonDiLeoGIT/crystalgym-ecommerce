@@ -31,8 +31,104 @@ export const Navbar = () => {
     }
   }
 
+  const nav_links = [
+    {
+      "name": "WOMEN",
+      "link": "/women/",
+      "sections": [
+        {
+          "title": "Products",
+          "links": [
+            {
+              "label": "All Women",
+              "link": "/women/"
+            },
+            {
+              "label": "Top",
+              "link": "/women/Top"
+            },
+            {
+              "label": "T-Shirt",
+              "link": "/women/T-Shirt"
+            },
+            {
+              "label": "Hoodie",
+              "link": "/women/Hoodie"
+            },
+            {
+              "label": "Jogger",
+              "link": "/women/Jogger"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MEN",
+      "link": "/men/",
+      "sections": [
+        {
+          "title": "Products",
+          "links": [
+            {
+              "label": "All Men",
+              "link": "/men/"
+            },
+            {
+              "label": "T-Shirt",
+              "link": "/men/T-Shirt"
+            },
+            {
+              "label": "Hoodie",
+              "link": "/men/Hoodie"
+            },
+            {
+              "label": "Jogger",
+              "link": "/men/Jogger"
+            },
+            {
+              "label": "Short",
+              "link": "/men/Short"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ACCESSORIES",
+      "link": "/accessories/",
+      "sections": [
+        {
+          "title": "Products",
+          "links": [
+            {
+              "label": "All Men",
+              "link": "/men/"
+            },
+            {
+              "label": "T-Shirt",
+              "link": "/men/T-Shirt"
+            },
+            {
+              "label": "Hoodie",
+              "link": "/men/Hoodie"
+            },
+            {
+              "label": "Jogger",
+              "link": "/men/Jogger"
+            },
+            {
+              "label": "Short",
+              "link": "/men/Short"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+
   return (
-    <nav className="grid grid-cols-3 border-b -border--color-very-light-grey min-h-20">
+    <nav className="grid grid-cols-3 border-b -border--color-very-light-grey h-20">
       <section className="m-auto ml-4 h-full lg:hidden">
         <button
           className="h-full"
@@ -42,12 +138,48 @@ export const Navbar = () => {
         </button>
         {menu_options()}
       </section>
-      <h1 className="m-auto h-full lg:ml-0 lg:px-4">
-        <Link to='/' className=" ">
-          <img src={logo} className="h-full w-8" />
+      <h1 className="m-auto h-full py-2 lg:py-0 lg:ml-4">
+        <Link to='/' className="">
+          <img src={logo} className="h-full w-8 lg:w-10 mx-2" />
         </Link>
       </h1>
-      <ul className="invisible fixed w-full text-center py-6 lg:visible lg:relative">
+      <ul className="invisible w-full text-center h-full lg:visible lg:relative">
+        {
+          nav_links.map(link => {
+            return (
+              <li className="inline-block hover:border-b-2 w-32 h-full hover:cursor-pointer font-semibold group">
+                <h1 className="h-full">
+                  <Link to={link.link} className="h-full flex items-center justify-center">{link.name}</Link>
+                </h1>
+                <section className="hidden group-hover:grid hover:grid absolute z-10 top-20 left-0 w-full -bg--color-white">
+                  {
+                    link.sections.map(section => {
+                      return (
+                        <article className="col-span-1">
+                          <h1>
+                            {section.title}
+                          </h1>
+                          <ul>
+                            {section.links.map(link => {
+                              return (
+                                <li>
+                                  <Link to={link.link}>{link.label}</Link>
+                                </li>
+                              )
+                            })
+                            }
+                          </ul>
+                        </article>
+                      )
+                    })
+                  }
+                </section>
+              </li>
+            )
+          })
+        }
+      </ul>
+      {/* <ul className="invisible fixed w-full text-center py-6 lg:visible lg:relative">
         <li className="inline hover:border-b-2 px-4 py-6 hover:cursor-pointer font-semibold">
           <Link to="/women">WOMEN</Link>
         </li>
@@ -57,7 +189,7 @@ export const Navbar = () => {
         <li className="inline hover:border-b-2 px-4 py-6 hover:cursor-pointer font-semibold">
           <Link to="/accessories" className="h-full">ACCESSORIES</Link>
         </li>
-      </ul>
+      </ul> */}
       <ul className="w-full flex place-content-end">
         <li className="invisible fixed my-auto mr-4 h-full grid place-content-center lg:visible lg:relative">
           <form className="border-2 rounded-full col-span-4 grid grid-cols-5 gap-2 px-2">

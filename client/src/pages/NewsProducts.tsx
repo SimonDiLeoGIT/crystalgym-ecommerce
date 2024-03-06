@@ -17,9 +17,9 @@ export const NewsProducts: React.FC<Props> = ({ title, products }) => {
   }, []);
 
   return (
-    <section className="p-3">
+    <section className="w-11/12 m-auto">
       <header className="py-2">
-        <h1 className="font-semibold text-xl"> {title} <span className="-text--color-grey text-sm"> * </span> </h1>
+        <h1 className="font-semibold text-xl md:font-bold md:text-3xl"> {title} <span className="-text--color-grey text-sm md:text-lg"> * </span> </h1>
       </header>
       <Products clothes={products} />
     </section>

@@ -29,9 +29,9 @@ export const Category = () => {
   }, []);
 
   return (
-    <section className="p-3">
+    <section className="w-11/12 m-auto">
       <header className="py-2">
-        <h1 className="font-semibold text-xl"> {category?.toUpperCase()} <span className="-text--color-grey text-sm"> {sex?.toUpperCase()} </span> </h1>
+        <h1 className="font-semibold text-xl md:font-bold md:text-3xl"> {category?.toUpperCase()} <span className="-text--color-grey text-sm md:text-lg"> {sex?.toUpperCase()} </span> </h1>
       </header>
       <Products clothes={getClotheList()} />
     </section>

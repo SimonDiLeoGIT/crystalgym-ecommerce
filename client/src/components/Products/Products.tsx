@@ -41,7 +41,7 @@ export const Products: React.FC<Props> = ({ clothes }) => {
   }
 
   return (
-    <section className="w-11/12 m-auto  ">
+    <section className="">
       <section className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-4">
         {
           data?.map((clothe) => {
