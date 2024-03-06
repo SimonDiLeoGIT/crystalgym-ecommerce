@@ -16,7 +16,7 @@ import { Product } from "../../pages/Product"
 export const Router = () => {
   return (
     <BrowserRouter>
-      <header>
+      <header className="h-20">
         <Navbar />
       </header>
       <Routes>

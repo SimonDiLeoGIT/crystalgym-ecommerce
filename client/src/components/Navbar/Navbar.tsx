@@ -9,6 +9,7 @@ import { useCallback, useEffect, useState } from "react"
 import { MobileMenu } from "../MobileMenu/MobileMenu"
 import { MobileSearch } from "../MobileSearch/MobileSearch"
 import { Cart } from "../Cart/Cart"
+import "./Navbar.css"
 
 export const Navbar = () => {
 
@@ -24,10 +25,15 @@ export const Navbar = () => {
       const window = e.currentTarget;
       if (y > window.scrollY) {
         console.log("scrolling up");
+        setScrollDown(false)
+        setScrollUp(true)
       } else if (y < window.scrollY) {
         console.log("scrolling down");
+        setScrollUp(false)
+        window.scrollY > 60 && setScrollDown(true)
       }
       setY(window.scrollY);
+      console.log(window.scrollY)
     }, [y]
   );
 
@@ -154,7 +160,7 @@ export const Navbar = () => {
 
 
   return (
-    <nav className="grid grid-cols-3 border-b -border--color-very-light-grey h-20 shadow-lg -shadow--color-very-light-grey">
+    <nav className={`grid grid-cols-3 border-b -border--color-very-light-grey h-20 shadow-lg -shadow--color-very-light-grey z-10 -bg--color-white transition-transform duration-500 ease-in-out fixed w-screen top-0 ${scrollDown && "scroll-down shadow-none"} ${scrollUp && "scroll-up"}`}>
       <section className="m-auto ml-4 h-full lg:hidden">
         <button
           className="h-full"
