@@ -48,10 +48,10 @@ export const Products: React.FC<Props> = ({ clothes }) => {
           data?.map((clothe) => {
             return (
               <article className="shadow-md">
-                <figure className="">
+                <figure className="h-full">
                   <div className="relative">
                     <Link to={`/product/${clothe.id}/${clothe.colorId}`}>
-                      <img className="w-full" src={clothe.images[0]} alt={clothe.name} />
+                      <img className="h-full object-cover" src={clothe.images[0]} alt={clothe.name} />
                     </Link>
                     <button onClick={() => addToCart(clothe)} className="absolute top-2 right-2 -bg--color-white rounded-full p-2"> <img src={add_to_bag_icon} alt="bag icon" className="w-4" />  </button>
                     <button className="absolute bottom-2 right-2 -bg--color-white rounded-full p-2"> <img src={like_icon} alt="like icon" className="w-4" /> </button>
@@ -61,7 +61,7 @@ export const Products: React.FC<Props> = ({ clothes }) => {
                       </span>
                     }
                   </div>
-                  <figcaption className="p-4">
+                  <figcaption className="p-4  m-auto ml-0 mb-0 w-full">
                     <h1 className="text-sm font-semibold text-nowrap overflow-x-hidden text-ellipsis">{clothe.name}</h1>
                     <p className="text-sm">{clothe.category}</p>
                     <p className="text-sm">${clothe.price}</p>

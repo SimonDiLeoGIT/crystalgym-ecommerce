@@ -175,7 +175,7 @@ export const Navbar = () => {
           <img src={logo} className="h-full w-8 lg:w-10 mx-2" />
         </Link>
       </h1>
-      <ul className="invisible w-full text-center h-full lg:visible lg:relative -bg--color-white">
+      <ul className="invisible hidden w-full text-center h-full lg:visible lg:relative lg:block -bg--color-white">
         {
           nav_links.map(link => {
             return (
@@ -222,9 +222,9 @@ export const Navbar = () => {
           <Link to="/accessories" className="h-full">ACCESSORIES</Link>
         </li>
       </ul> */}
-      <ul className="w-full flex place-content-end">
-        <li className="invisible fixed my-auto mr-4 h-full grid place-content-center lg:visible lg:relative">
-          <form className="border-2 rounded-full col-span-4 grid grid-cols-5 gap-2 px-2">
+      <ul className="w-full flex place-content-end ">
+        <li className="invisible h-full flex items-center lg:visible lg:relative">
+          <form className="border rounded-lg h-12 -border--color-very-light-grey grid grid-cols-5 gap-2 px-2">
             <input type="text" placeholder="Search for a Product..."
               className="rounded-full col-span-4 p-4 outline-none hover:cursor-pointer"
             />
