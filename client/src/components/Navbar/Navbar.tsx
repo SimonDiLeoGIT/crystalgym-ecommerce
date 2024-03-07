@@ -179,7 +179,7 @@ export const Navbar = () => {
         {
           nav_links.map(link => {
             return (
-              <li className="inline-block hover:border-b-2 w-32 h-full hover:cursor-pointer font-semibold group">
+              <li className="inline-block hover:border-b-2 w-24 h-full hover:cursor-pointer font-semibold group">
                 <h1 className="h-full">
                   <Link to={link.link} className="h-full flex items-center justify-center">{link.name}</Link>
                 </h1>
@@ -224,15 +224,15 @@ export const Navbar = () => {
       </ul> */}
       <ul className="w-full flex place-content-end ">
         <li className="invisible h-full flex items-center lg:visible lg:relative">
-          <form className="border rounded-lg h-12 -border--color-very-light-grey grid grid-cols-5 gap-2 px-2">
+          <form className="border rounded-lg h-12 w-52 -border--color-very-light-grey flex items-center">
             <input type="text" placeholder="Search for a Product..."
-              className="rounded-full col-span-4 p-4 outline-none hover:cursor-pointer"
+              className="rounded-lg h-full w-full p-2 outline-none"
             />
             <button
-              className="m-auto p-2 rounded-full bg-slate-100"
+              className="p-2 mx-1 rounded-full hover:opacity-60 hover:-bg--color-very-light-grey"
               onClick={() => setSearchMode(false)}
             >
-              <img src={search_icon} className="w-5" />
+              <img src={search_icon} className="" />
             </button>
           </form>
         </li>
