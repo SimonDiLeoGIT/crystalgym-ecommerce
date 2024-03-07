@@ -24,9 +24,14 @@ export const Products: React.FC<Props> = ({ clothes }) => {
   const [data, setData] = useState<clotheList>(clothes.slice(currentPage, totalArticles))
 
   useEffect(() => {
-    setData(clothes?.slice(currentPage, totalArticles))
+    setData(clothes.slice(currentPage, (currentPage) + totalArticles))
     setTotalPages(clothes?.length / totalArticles)
-  })
+  }, [clothes, currentPage]);
+
+  useEffect(() => {
+    setCurrentPage(0)
+  }, [clothes]);
+
 
   const handlePageClick = (event) => {
 
@@ -37,6 +42,7 @@ export const Products: React.FC<Props> = ({ clothes }) => {
     // setItemOffset(newOffset);
     const next = (event.selected * totalArticles) % clothes.length;
     setCurrentPage(next)
+    console.log("Page: " + next)
     setData(clothes.slice(next, (next) + totalArticles))
     window.scrollTo(0, 0);
   }
