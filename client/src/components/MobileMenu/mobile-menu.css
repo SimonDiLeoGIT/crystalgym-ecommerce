@@ -1,3 +1,8 @@
+.none-scroll {
+  overflow: hidden;
+}
+
+
 @keyframes open-menu {
   from {
     transform: translateX(-100vh);

@@ -1,0 +1,58 @@
+.none-scroll {
+  overflow: hidden;
+}
+
+@keyframes opacity-animation {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.opacity-animation {
+  animation: opacity-animation forwards;
+  animation-duration: 400ms;
+  animation-delay: 200ms;
+}
+
+@keyframes open-cart {
+  from {
+    transform: translateX(150vh);
+  }
+
+  to {
+    transform: translateX(0vh);
+  }
+}
+
+@keyframes close-cart {
+  from {
+    transform: translateX(0vh);
+  }
+
+  to {
+    transform: translateX(150vh);
+  }
+}
+
+
+.open-cart {
+  animation: open-cart forwards;
+  animation-duration: 600ms;
+  animation-delay: 0ms;
+}
+
+.close-cart {
+  animation: close-cart forwards;
+  animation-duration: 400ms;
+  animation-delay: 0ms;
+}
+
+@media (min-width: 1000px) {
+  .none-scroll {
+    margin-right: 1rem;
+  }
+}

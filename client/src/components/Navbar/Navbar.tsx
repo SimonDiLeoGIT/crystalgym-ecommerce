@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import account_avatar from '../../assets/icons/nav icons/account-user-avatar.svg'
 import instagram_icon from '../../assets/icons/nav icons/instagram.svg'
 import search_icon from '../../assets/icons/nav icons/mobile and desktop/search-svgrepo-com.svg'
-import menu from '../../assets/icons/nav icons/mobile/menu-svgrepo-com.svg'
 import logo from '../../assets/icons/nav icons/mobile and desktop/amazon-svgrepo-com.svg'
 import close_icon from '../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg'
 import { useCallback, useEffect, useState } from "react"
@@ -10,31 +9,29 @@ import { MobileMenu } from "../MobileMenu/MobileMenu"
 import { MobileSearch } from "../MobileSearch/MobileSearch"
 import { Cart } from "../Cart/Cart"
 import "./Navbar.css"
+import { useCart } from "../../hook/useCart"
 
 export const Navbar = () => {
 
-  const [viewMenu, setViewMenu] = useState(false);
+  const { isOpenCart } = useCart();
+
   const [searchMode, setSearchMode] = useState(false);
 
   const [y, setY] = useState(window.scrollY);
   const [scrollUp, setScrollUp] = useState(false);
   const [scrollDown, setScrollDown] = useState(false);
 
-  const handleNavigation = useCallback(
-    e => {
-      const window = e.currentTarget;
-      if (y > window.scrollY) {
-        console.log("scrolling up");
-        setScrollDown(false)
-        setScrollUp(true)
-      } else if (y < window.scrollY) {
-        console.log("scrolling down");
-        setScrollUp(false)
-        window.scrollY > 60 && setScrollDown(true)
-      }
-      setY(window.scrollY);
-      console.log(window.scrollY)
-    }, [y]
+  const handleNavigation = useCallback((e) => {
+    const window = e.currentTarget;
+    if (y > window.scrollY) {
+      setScrollDown(false)
+      setScrollUp(true)
+    } else if (y < window.scrollY) {
+      setScrollUp(false)
+      window.scrollY > 60 && setScrollDown(true)
+    }
+    setY(window.scrollY);
+  }, [y]
   );
 
   useEffect(() => {
@@ -46,18 +43,17 @@ export const Navbar = () => {
     };
   }, [handleNavigation]);
 
+  useEffect(() => {
+    if (isOpenCart) {
+      setScrollDown(false)
+      setScrollUp(true)
+    }
+  }, [isOpenCart])
+
   const search_mode = () => {
     if (searchMode) {
       return (
         <MobileSearch setSearchMode={setSearchMode} search_icon={search_icon} close_icon={close_icon} />
-      )
-    }
-  }
-
-  const menu_options = () => {
-    if (viewMenu) {
-      return (
-        <MobileMenu setViewMenu={setViewMenu} close_icon={close_icon} logo={logo} />
       )
     }
   }
@@ -160,17 +156,11 @@ export const Navbar = () => {
 
 
   return (
-    <nav className={`grid grid-cols-3 border-b -border--color-very-light-grey h-20 shadow-lg -shadow--color-very-light-grey z-50 -bg--color-white transition-transform duration-500 fixed w-screen top-0 ${scrollDown && "scroll-down shadow-none"} ${scrollUp && "scroll-up"}`}>
+    <nav className={`grid grid-cols-3 border-b -border--color-very-light-grey h-20 shadow-lg -shadow--color-very-light-grey z-40 -bg--color-white transition-transform duration-500 fixed w-screen px-4 top-0 ${scrollDown && !isOpenCart && " scroll-down shadow-none"} ${scrollUp && " scroll-up"}`}>
       <section className="m-auto ml-4 h-full lg:hidden">
-        <button
-          className="h-full"
-          onClick={() => setViewMenu(true)}
-        >
-          <img src={menu} className="h-full w-8" />
-        </button>
-        {menu_options()}
+        <MobileMenu />
       </section>
-      <h1 className="m-auto h-full py-2 lg:py-0 lg:ml-4">
+      <h1 className="m-auto h-full py-2 lg:py-0 lg:ml-0">
         <Link to='/' className="">
           <img src={logo} className="h-full w-8 lg:w-10 mx-2" />
         </Link>
@@ -183,7 +173,7 @@ export const Navbar = () => {
                 <h1 className="h-full">
                   <Link to={link.link} className="h-full flex items-center justify-center">{link.name}</Link>
                 </h1>
-                <section className="hidden group-hover:grid hover:grid place-content-start absolute -z-20 top-20 w-full -bg--color-white border -border--color-very-light-grey open-submenu">
+                <section className="hidden group-hover:grid hover:grid place-content-start absolute -z-20 top-20 w-full left-0 -bg--color-white border -border--color-very-light-grey open-submenu">
                   {
                     link.sections.map(section => {
                       return (
@@ -211,50 +201,41 @@ export const Navbar = () => {
           })
         }
       </ul>
-      {/* <ul className="invisible fixed w-full text-center py-6 lg:visible lg:relative">
-        <li className="inline hover:border-b-2 px-4 py-6 hover:cursor-pointer font-semibold">
-          <Link to="/women">WOMEN</Link>
-        </li>
-        <li className="inline px-8 hover:border-b-2 py-6 hover:cursor-pointer font-semibold">
-          <Link to="/men">MEN</Link>
-        </li>
-        <li className="inline hover:border-b-2 px-4 py-6 hover:cursor-pointer font-semibold">
-          <Link to="/accessories" className="h-full">ACCESSORIES</Link>
-        </li>
-      </ul> */}
-      <ul className="w-full flex place-content-end ">
-        <li className="invisible h-full flex items-center lg:visible lg:relative">
-          <form className="border rounded-lg h-12 w-52 -border--color-very-light-grey flex items-center">
+      <ul className="flex place-content-end min-w-28 mr-2">
+        <li className="invisible hidden h-full items-center lg:visible lg:flex lg:relative mr-1">
+          <form className="border rounded-lg h-12 max-w-56 -border--color-very-light-grey flex items-center">
             <input type="text" placeholder="Search for a Product..."
               className="rounded-lg h-full w-full p-2 outline-none"
             />
             <button
-              className="p-2 mx-1 rounded-full hover:opacity-60 hover:-bg--color-very-light-grey"
+              className="p-2 mx-1 rounded-full hover:opacity-60 hover:-bg--color-very-light-grey "
               onClick={() => setSearchMode(false)}
             >
               <img src={search_icon} className="" />
             </button>
           </form>
         </li>
-        <li className="invisible fixed my-auto mr-4 h-full lg:visible lg:relative">
+        <li className="invisible hidden fixed my-auto px-1 h-full lg:flex items-center lg:visible lg:relative">
           <Link to='/'>
-            <img src={instagram_icon} className="h-full w-10" />
+            <div className="w-10 h-10 flex items-center duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
+              <img src={instagram_icon} className="m-auto w-10" />
+            </div>
           </Link>
         </li>
-        <li className="invisible fixed my-auto mr-4 h-full lg:visible lg:relative">
-          <Link to='/'>
-            <img src={account_avatar} className="h-full w-7" />
+        <li className="invisible hidden fixed px-1 my-auto h-full lg:flex items-center lg:visible lg:relative">
+          <Link to='/' className="">
+            <div className="w-10 h-10 flex items-center duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
+              <img src={account_avatar} className="m-auto w-7" />
+            </div>
           </Link>
         </li>
-        <li className="my-auto mx-6 h-full lg:hidden">
-          <section className="h-full">
-            <button onClick={() => setSearchMode(true)} className="h-full">
-              <img src={search_icon} className="h-full w-7" />
-            </button>
-            {search_mode()}
-          </section>
+        <li className="my-auto px-1 h-full flex items-center lg:hidden">
+          <button onClick={() => setSearchMode(true)} className="w-10 h-10 flex items-center duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
+            <img src={search_icon} className="m-auto w-7 min-w-5" />
+          </button>
+          {search_mode()}
         </li>
-        <li className="my-auto mr-4 h-full">
+        <li className="h-full px-1">
           <Cart />
         </li>
       </ul>

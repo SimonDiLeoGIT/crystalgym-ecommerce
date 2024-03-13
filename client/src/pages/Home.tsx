@@ -15,11 +15,11 @@ export const Home = () => {
           advertisement={new_this_month.advertisement} images={new_this_month.images}
         />
       </header>
-      <ProductsAdvertisement products={new_this_month_posts} title="New This Month" />
+      <ProductsAdvertisement products={new_this_month_posts} title="New This Month" link="/new" />
       <Carousel
         advertisement={off_20.advertisement} images={off_20.images}
       />
-      <ProductsAdvertisement products={off_20_posts} title="20% Off" />
+      <ProductsAdvertisement products={off_20_posts} title="20% Off" link="/20-off" />
     </main>
   )
 }

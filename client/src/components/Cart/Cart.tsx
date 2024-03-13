@@ -1,86 +1,68 @@
-import { useState } from "react"
+import { useEffect } from "react"
+import { useCart } from "../../hook/useCart"
 import bag_icon from "../../assets/icons/nav icons/bag-shopping.svg"
 import close_icon from "../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg"
-import trash_icon from "../../assets/icons/nav icons/trash-slash-alt-svgrepo-com.svg"
-import { useCart } from "../../hook/useCart"
+import './Cart.css'
+import { CartItems } from "./CartItems"
 
 export const Cart = () => {
 
-  const { cart, addToCart, removeFromCart, clearFromCart, getCartQuantity, clearCart } = useCart()
-
-  const [openCart, setOpenCart] = useState(false);
+  const { cart, getCartQuantity, clearCart, isOpenCart, closeCart, openCart, hiddenCart } = useCart()
 
   function cartClasses() {
-    let classes = "fixed bottom-0 left-0 w-screen h-screen z-10 -bg--color-white grid place-content-start"
-    !openCart && (classes += " hidden")
+    let classes = "fixed top-0 left-0 w-screen h-screen z-50  md:left-0 opacity-animation"
+    hiddenCart && (classes += " hidden")
     return classes
   }
 
-  function viewCart() {
-    setOpenCart(!openCart)
-    console.log(cart)
+  function cartContentClasses() {
+    let classes = "fixed h-screen w-full -bg--color-white grid place-content-star md:w-[32rem] md:right-0 top-0 "
+    if (isOpenCart) {
+      classes += " open-cart"
+      document.body.classList.add('none-scroll')
+    } else {
+      classes += " close-cart"
+      document.body.classList.remove('none-scroll')
+    }
+    return classes
   }
+
+  useEffect(() => {
+    window.addEventListener('keydown', closeCart)
+  })
+
 
   return (
     <>
-      <button onClick={() => viewCart()} className="h-full relative">
-        <img src={bag_icon} alt="Bag Icon" className="h-full w-8" />
+      <button onClick={() => openCart()} className="h-full">
+        <div className="w-10 h-10 flex items-center duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
+          <img src={bag_icon} alt="Bag Icon" className="m-auto w-8 min-w-6" />
+        </div>
         {getCartQuantity() > 0 &&
           <span className="absolute bottom-4 -bg--color-black -text--color-light-grey-violet rounded-full w-6 h-6 font-semibold"> {getCartQuantity()} </span>
         }
       </button>
 
       <aside className={cartClasses()}>
-        <header className="w-screen text-end h-20 border-b -border--color-very-light-grey">
-          <button onClick={() => setOpenCart(!openCart)} className="px-4 h-full">
-            <img src={close_icon} alt="close" />
-          </button>
-        </header>
-        <ul className="overflow-y-scroll w-screen mb-44">
+        <section className={cartContentClasses()}>
+          <header className="w-full h-20 flex border-b -border--color-very-light-grey">
+            <button onClick={() => closeCart()} className=" w-10 h-10 flex items-center m-auto mr-4 duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
+              <img src={close_icon} alt="close" className="m-auto w-7" />
+            </button>
+          </header>
+          <CartItems />
           {
-            cart.length === 0 &&
-            <section className="w-full grid place-content-center absolute top-1/3">
-              <img src={bag_icon} alt="Bag icon" className="w-40 m-auto" />
-              <h2 className="text-xl font-semibold opacity-60"> Your Bag is Empty! :( </h2>
-            </section>
+            cart.length > 0 &&
+            <footer className="-bg--color-white w-full text-center font-bold absolute bottom-0 py-4">
+              <button onClick={() => clearCart()} className="w-10/12 py-4 rounded-full -bg--color-white -text--color-red border-4 shadow-md -shadow--color-greyest-violet duration-150 hover:-bg--color-red hover:bg-opacity-60 hover:-shadow--color-red">
+                CLEAR BAG
+              </button>
+              <button className="w-10/12 py-5 mt-4 rounded-full -bg--color-black -text--color-light-grey-violet shadow-md -shadow--color-greyest-violet duration-150 hover:opacity-85">
+                BUY BAG
+              </button>
+            </footer>
           }
-          {cart.map(item => {
-            return (
-              <li className="w-11/12 grid grid-cols-3 p-4 m-auto gap-2 border-b -border--color-very-light-grey">
-                {
-                  <img className="w-20 row-span-2" src={item.product.images[0]} alt={item.product.name} />
-                }
-                <section className="col-span-2 relative">
-                  <p className="w-3/4"><strong> {item.product.name} </strong></p>
-                  <button onClick={() => clearFromCart(item.product)} className="absolute top-0 right-0">
-                    <img src={trash_icon} className="w-6" />
-                  </button>
-                  <p>{item.product.category}</p>
-                  <p className="font-bold"> ${item.product.price} </p>
-                  <p className=""> <strong> Total </strong> - ${item.product.price * item.quantity} </p>
-                </section>
-                <footer className="m-auto ml-0 font-semibold text-lg col-span-2 grid grid-cols-3 w-32 rounded-lg overflow-hidden">
-                  <button onClick={() => removeFromCart(item.product)} className="-bg--color-light-grey-violet"> - </button>
-                  <small className="m-aut w-full py-2 text-center">
-                    {item.quantity}
-                  </small>
-                  <button onClick={() => addToCart(item.product)} className="-bg--color-light-grey-violet"> + </button>
-                </footer>
-              </li>
-            )
-          })}
-        </ul>
-        {
-          cart.length > 0 &&
-          <footer className="-bg--color-white w-full text-center font-bold absolute bottom-0 py-4">
-            <button onClick={() => clearCart()} className="w-10/12 py-4 rounded-full -bg--color-white -text--color-red border-4 shadow-md -shadow--color-greyest-violet">
-              CLEAR BAG
-            </button>
-            <button className="w-10/12 py-4 mt-4 rounded-full -bg--color-black -text--color-light-grey-violet shadow-md -shadow--color-greyest-violet">
-              BUY BAG
-            </button>
-          </footer>
-        }
+        </section>
       </aside>
     </>
   )

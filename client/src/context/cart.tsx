@@ -20,13 +20,32 @@ type CartContext = {
   clearFromCart: (product: product) => void,
   cart: cartItem[]
   getCartQuantity: () => number,
-  clearCart: () => void
+  clearCart: () => void,
+  isOpenCart: boolean,
+  setIsOpenCart: (isOpen: boolean) => void,
+  closeCart: () => void,
+  openCart: () => void,
+  hiddenCart: boolean
 }
 
 export const CartContext = createContext({} as CartContext)
 
 export const CartProvider = ({ children }: Props) => {
   const [cart, setCart] = useState<cartItem[]>([])
+  const [isOpenCart, setIsOpenCart] = useState<boolean>(false)
+  const [hiddenCart, setHiddenCart] = useState<boolean>(true)
+
+  const closeCart = () => {
+    setIsOpenCart(false)
+    setTimeout(() => {
+      setHiddenCart(true)
+    }, 200)
+  }
+
+  const openCart = () => {
+    setIsOpenCart(true)
+    setHiddenCart(false)
+  }
 
   const getCartItems = () => {
     return cart
@@ -54,7 +73,7 @@ export const CartProvider = ({ children }: Props) => {
         })
       }
     })
-    console.log(cart)
+    openCart()
   }
 
   const removeFromCart = (product: product) => {
@@ -91,7 +110,12 @@ export const CartProvider = ({ children }: Props) => {
       clearFromCart,
       cart,
       getCartQuantity,
-      clearCart
+      clearCart,
+      isOpenCart,
+      setIsOpenCart,
+      closeCart,
+      openCart,
+      hiddenCart
     }}
     >
       {children}

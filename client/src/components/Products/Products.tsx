@@ -1,77 +1,48 @@
-
-import add_to_bag_icon from "../../assets/icons/nav icons/bag-plus-1122-svgrepo-com.svg"
-import like_icon from "../../assets/icons/like-icon.svg"
-import { useCart } from "../../hook/useCart";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import left_arrow from '../../assets/icons/carousel/left-arrow.svg'
 import right_arrow from '../../assets/icons/carousel/right-arrow.svg'
+import { ProductImg } from "../ProductImg/ProductImg";
 
-type clotheList = ProductInterface[];
+type productList = ProductInterface[];
 
 interface Props {
-  clothes: clotheList
+  products: productList
 }
 
-export const Products: React.FC<Props> = ({ clothes }) => {
-
-  const { addToCart } = useCart()
+export const Products: React.FC<Props> = ({ products }) => {
 
   const totalArticles = 10
   const [totalPages, setTotalPages] = useState<number>(0)
   const [currentPage, setCurrentPage] = useState<number>(0)
-  const [data, setData] = useState<clotheList>(clothes.slice(currentPage, totalArticles))
+  const [data, setData] = useState<productList>(products.slice(currentPage, totalArticles))
 
   useEffect(() => {
-    setData(clothes.slice(currentPage, (currentPage) + totalArticles))
-    setTotalPages(clothes?.length / totalArticles)
-  }, [clothes, currentPage]);
+    setData(products.slice(currentPage, (currentPage) + totalArticles))
+    setTotalPages(products?.length / totalArticles)
+  }, [products, currentPage]);
 
   useEffect(() => {
     setCurrentPage(0)
-  }, [clothes]);
+  }, [products]);
 
 
   const handlePageClick = (event) => {
-
-    const newOffset = (event.selected * totalArticles) % clothes.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
-    // setItemOffset(newOffset);
-    const next = (event.selected * totalArticles) % clothes.length;
+    const next = (event.selected * totalArticles) % products.length;
     setCurrentPage(next)
-    console.log("Page: " + next)
-    setData(clothes.slice(next, (next) + totalArticles))
+    setData(products.slice(next, (next) + totalArticles))
     window.scrollTo(0, 0);
   }
 
   return (
-    <section className="">
-      <section className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-4">
+    <section className=" m-auto">
+      <section className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-4 xl:grid-cols-5">
         {
-          data?.map((clothe) => {
+          data?.map((product) => {
             return (
               <article className="shadow-md">
                 <figure className="">
-                  <div className="relative">
-                    <Link to={`/product/${clothe.id}/${clothe.colorId}`}>
-                      <img className="h-full " src={clothe.images[0]} alt={clothe.name} />
-                    </Link>
-                    <button onClick={() => addToCart(clothe)} className="absolute top-2 right-2 -bg--color-white rounded-full p-2"> <img src={add_to_bag_icon} alt="bag icon" className="w-4" />  </button>
-                    <button className="absolute bottom-2 right-2 -bg--color-white rounded-full p-2"> <img src={like_icon} alt="like icon" className="w-4" /> </button>
-                    {clothe.new &&
-                      <span className="absolute bottom-2 left-2 -bg--color-white rounded-2xl px-2 py-1 text-sm font-bold -text--color-black">
-                        New
-                      </span>
-                    }
-                  </div>
-                  <figcaption className="p-4  m-auto ml-0 mb-0 w-full">
-                    <h1 className="text-sm font-semibold text-nowrap overflow-x-hidden text-ellipsis">{clothe.name}</h1>
-                    <p className="text-sm">{clothe.category}</p>
-                    <p className="text-sm">${clothe.price}</p>
-                  </figcaption>
+                  <ProductImg product={product} />
                 </figure>
               </article>
             )

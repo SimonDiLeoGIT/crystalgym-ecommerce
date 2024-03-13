@@ -1526,54 +1526,6 @@
     },
     {
       "id": 40,
-      "name": "STONE PARIS CITY OVERSIZED",
-      "category": "T-Shirt",
-      "sex": "women",
-      "new": true,
-      "off": true,
-      "colorId": 1,
-      "colorName": "Pink",
-      "images": [
-        "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/pink/stone-paris-city-oversized-1.jpg",
-        "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/pink/stone-paris-city-oversized-2.jpg",
-        "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/pink/stone-paris-city-oversized-3.jpg"
-      ],
-      "price": 21
-    },
-    {
-      "id": 40,
-      "name": "STONE PARIS CITY OVERSIZED",
-      "category": "T-Shirt",
-      "sex": "women",
-      "new": true,
-      "off": true,
-      "colorId": 2,
-      "colorName": "Stone",
-      "images": [
-        "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/stone/stone-paris-city-oversized-1.jpg",
-        "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/stone/stone-paris-city-oversized-2.jpg",
-        "/src/assets/images/women/clothing/t-shirt/Stone Paris City Oversized/stone/stone-paris-city-oversized-3.jpg"
-      ],
-      "price": 21
-    },
-    {
-      "id": 41,
-      "name": "TAUPE NOTRE DAME BOXY OVERSIZED",
-      "category": "T-Shirt",
-      "sex": "women",
-      "new": true,
-      "off": true,
-      "colorId": 1,
-      "colorName": "Taupe",
-      "images": [
-        "/src/assets/images/women/clothing/t-shirt/Taupe Notre Dame Boxy Oversized/Taupe/taupe-notre-dame-boxy-oversized-1.jpg",
-        "/src/assets/images/women/clothing/t-shirt/Taupe Notre Dame Boxy Oversized/Taupe/taupe-notre-dame-boxy-oversized-2.jpg",
-        "/src/assets/images/women/clothing/t-shirt/Taupe Notre Dame Boxy Oversized/Taupe/taupe-notre-dame-boxy-oversized-3.jpg"
-      ],
-      "price": 21
-    },
-    {
-      "id": 42,
       "name": "TRAINING OVERSIZED",
       "category": "T-Shirt",
       "sex": "women",
@@ -1589,7 +1541,7 @@
       "price": 21
     },
     {
-      "id": 42,
+      "id": 40,
       "name": "TRAINING OVERSIZED",
       "category": "T-Shirt",
       "sex": "women",

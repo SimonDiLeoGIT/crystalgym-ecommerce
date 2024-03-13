@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom"
 import './ProductsAdvertisement.css'
-
+import { ProductImg } from "../ProductImg/ProductImg"
 
 type ProductList = ProductInterface[]
 
 interface Props {
   products: ProductList
   title: string
+  link: string
 }
 
-export const ProductsAdvertisement: React.FC<Props> = ({ products, title }) => {
-
-
+export const ProductsAdvertisement: React.FC<Props> = ({ products, title, link }) => {
 
   return (
     <section className="p-2 mb-4 lg:w-11/12 lg:m-auto">
@@ -19,20 +18,18 @@ export const ProductsAdvertisement: React.FC<Props> = ({ products, title }) => {
       <section className="flex overflow-x-auto whitespace-nowrap">
         {products.map(product => {
           return (
-            <Link to={`/product/${product.id}/${product.colorId}`}>
-              <article className="min-w-72 mx-1" key={product.id}>
-                <figure className="mb-4 h-96">
-                  <img className="w-full h-5/6 object-cover" src={product.images[0]} alt={product.name} />
-                  <figcaption className="mt-2">
-                    <h1 className="text-lg font-bold text-nowrap overflow-x-hidden text-ellipsis">{product.name}</h1>
-                    <p className="text-sm">{product.category}</p>
-                    <p className="text-sm">${product.price}</p>
-                  </figcaption>
-                </figure>
-              </article>
-            </Link>
+            <article className="min-w-72 mx-1">
+              <figure className="mb-4 min-h-96">
+                <ProductImg product={product} />
+              </figure>
+            </article>
           )
         })}
+        <Link to={link}>
+          <article className="w-12 h-full rounded-lg overflow-hidden  hover:opacity-60">
+            <p className="-bg--color-light-grey-violet h-full -text--color-white text-4xl font-bold flex items-center justify-center">+</p>
+          </article>
+        </Link>
       </section>
     </section>
   )

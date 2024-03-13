@@ -1,66 +1,49 @@
-import { Link, useParams } from "react-router-dom"
-import all_clothes from "../assets/json/shop/clothes.json"
+import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useCart } from "../hook/useCart"
 import { ProductsAdvertisement } from "../components/ProductsAdvertisement/ProductsAdvertisement"
-
+import { ArrowButtons } from "../components/ArrowButtons/ArrowButtons"
+import all_clothes from "../assets/json/shop/clothes.json"
+import { ProductColors } from "../components/ProductColors/ProductColors"
 type product = ProductInterface
 
 export const Product = () => {
 
   const { id } = useParams()
   const { colorId } = useParams()
-  const [product, setProduct] = useState<product | null>()
   const { addToCart } = useCart()
 
-  useEffect(() => {
-    const productAsigned = all_clothes.all.find(clothe => clothe.id.toString() === id && clothe.colorId.toString() === colorId)
-    setProduct(productAsigned)
-    window.scrollTo(0, 0);
-  })
-
-  const [currentimage, changeCurrentimage] = useState(0);
+  const [product, setProduct] = useState<product | null>()
+  const [currentImage, changeCurrentImage] = useState(0);
   const [translateValue, setTranslateValue] = useState(0);
 
-  function nextimage() {
-    let newIndex = (currentimage + 1);
-    if (currentimage < 2) {
-      changeCurrentimage(currentimage + 1);
-    } else {
-      changeCurrentimage(0);
-      newIndex = 0;
-    }
-    setTranslateValue(-100 * newIndex);
-  }
-
-  function previmage() {
-    let newIndex = (currentimage - 1);
-    if (currentimage > 0) {
-      changeCurrentimage(currentimage - 1);
-    } else {
-      changeCurrentimage(2);
-      newIndex = 2;
-    }
-    setTranslateValue(-100 * newIndex);
-  }
+  useEffect(() => {
+    const productAssigned = all_clothes.all.find(clothe => clothe.id.toString() === id && clothe.colorId.toString() === colorId)
+    setProduct(productAssigned)
+    changeCurrentImage(0)
+    setTranslateValue(0)
+    window.scrollTo(0, 0)
+  }, [id, colorId])
 
   return (
-    <section className="w-screen overflow-x-hidden">
+    <section className="max-w-screen lg:w-11/12 lg:m-auto">
       <section className="md:grid md:grid-cols-2 md:w-11/12 md:m-auto max-w-7xl md:my-10">
         <header className="overflow-x-hidden">
-          <section className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${translateValue}%)` }}>
-            {
-              product?.images.map(image => {
-                return (
-                  <img
-                    className="w-screen h-1/3 object-cover"
-                    src={image}
-                    onClick={() => nextimage()}
-                  />
-                )
-              })
-            }
-          </section>
+          <div className="relative">
+            <section className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${translateValue}%)` }}>
+              {
+                product?.images.map(image => {
+                  return (
+                    <img
+                      className="w-screen h-1/3 object-cover"
+                      src={image}
+                    />
+                  )
+                })
+              }
+            </section>
+            <ArrowButtons currentImage={currentImage} changeCurrentImage={changeCurrentImage} setTranslateValue={setTranslateValue} carousel={false} />
+          </div>
         </header>
         <section className="md:grid">
           <div className="p-6 -text--color-black md:grid place-content-center">
@@ -77,32 +60,15 @@ export const Product = () => {
               ${product?.price}
             </p>
           </div>
-          <section className="text-center">
-            {
-              all_clothes.all?.map(clothe => {
-                if (clothe.id.toString() === id) {
-                  return (
-                    <Link to={`/product/${id}/${clothe.colorId}`}>
-                      <article className="w-24 mx-4 inline-block">
-                        <img src={clothe.images[0]} className={`border-2 ${clothe.colorId.toString() === colorId ? "-border--color-black" : "-border--color-very-light-grey"}`} />
-                        <p className="-text--color-black font-semibold text-sm">
-                          {clothe.colorName}
-                        </p>
-                      </article>
-                    </Link>
-                  )
-                }
-              })
-            }
-          </section>
+          <ProductColors />
           <button
             onClick={() => addToCart(product)}
-            className="block m-auto -bg--color-black -text--color-light-grey-violet font-bold p-4 my-4 rounded-full w-11/12 max-w-md max-h-20">
+            className="block m-auto -bg--color-black -text--color-light-grey-violet font-bold p-4 my-4 rounded-full w-11/12 max-w-md max-h-20 duration-150 hover:opacity-85">
             ADD TO BAG
           </button>
         </section>
       </section>
-      <ProductsAdvertisement products={all_clothes.all.filter(item => item.category === product?.category && item.sex === product.sex && item.id !== product.id)} title="Similar Products" />
+      <ProductsAdvertisement products={all_clothes.all.filter(item => item.category === product?.category && item.sex === product.sex && item.id !== product.id).slice(0, 6)} title="Similar Products" link={`/${product?.sex}/${product?.category}`} />
     </section >
   )
 }
