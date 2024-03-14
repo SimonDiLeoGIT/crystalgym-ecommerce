@@ -7,7 +7,7 @@
     "button_title": "SHOP GYM CLOTHES",
     "button_link": "/women/news/gym-clothes"
   },
-  "images": [
+  "mobileImages": [
     {
       "id": "0",
       "image": "/src/assets/images/women/advertisement/gym-clothes/violet-women.jpeg"
@@ -19,6 +19,20 @@
     {
       "id": "2",
       "image": "/src/assets/images/women/advertisement/gym-clothes/blue-gym-woman.jpg"
+    }
+  ],
+  "desktopImages": [
+    {
+      "id": "0",
+      "image": "/src/assets/images/women/advertisement/gym-clothes/desktop/black-clothe-gym-women.jpg"
+    },
+    {
+      "id": "1",
+      "image": "/src/assets/images/women/advertisement/gym-clothes/desktop/gym-girl.jpg"
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/images/women/advertisement/gym-clothes/desktop/three-girls.jpg"
     }
   ]
 }

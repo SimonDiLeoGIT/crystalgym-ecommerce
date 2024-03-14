@@ -7,18 +7,19 @@ import tops_post from "../assets/json/women/post/tops.json"
 import { Carousel } from "../components/Carousel/Carousel"
 
 export const Women = () => {
+
   return (
     <main className="max-w-screen overflow-x-hidden font-roboto">
       <header>
         <Carousel
-          advertisement={gym_clothes.advertisement} images={gym_clothes.images}
+          advertisement={gym_clothes.advertisement} mobileImages={gym_clothes.mobileImages} desktopImages={gym_clothes.desktopImages}
         />
       </header>
-      <ProductsAdvertisement products={gym_clothes_post} title="Gym Clothes" />
+      <ProductsAdvertisement products={gym_clothes_post} title="Gym Clothes" link="/women/news/gym-clothes" />
       <Carousel
-        advertisement={tops.advertisement} images={tops.images}
+        advertisement={tops.advertisement} mobileImages={tops.mobileImages} desktopImages={tops.desktopImages}
       />
-      <ProductsAdvertisement products={tops_post} title="Training Tops" />
+      <ProductsAdvertisement products={tops_post} title="Training Tops" link="/women/Top" />
     </main>
   )
 }

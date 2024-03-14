@@ -7,7 +7,7 @@
     "button_title": "SHOP 20% OFF",
     "button_link": "/20-off"
   },
-  "images": [
+  "mobileImages": [
     {
       "id": "0",
       "image": "/src/assets/images/home/advertisement/20-off/20-off-1.jpg"
@@ -19,6 +19,20 @@
     {
       "id": "2",
       "image": "/src/assets/images/home/advertisement/20-off/20-off-3.jpg"
+    }
+  ],
+  "desktopImages": [
+    {
+      "id": "0",
+      "image": "/src/assets/images/home/advertisement/20-off/desktop/the-rock.jpg"
+    },
+    {
+      "id": "1",
+      "image": "/src/assets/images/home/advertisement/20-off/desktop/resting-girl.jpg"
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/images/home/advertisement/20-off/desktop/muscle.jpg"
     }
   ]
 }

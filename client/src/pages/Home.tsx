@@ -12,12 +12,12 @@ export const Home = () => {
     <main className="max-w-screen overflow-x-hidden font-roboto lg:w-11/12 lg:m-auto xl:9/12">
       <header>
         <Carousel
-          advertisement={new_this_month.advertisement} images={new_this_month.images}
+          advertisement={new_this_month.advertisement} mobileImages={new_this_month.mobileImages} desktopImages={new_this_month.desktopImages}
         />
       </header>
       <ProductsAdvertisement products={new_this_month_posts} title="New This Month" link="/new" />
       <Carousel
-        advertisement={off_20.advertisement} images={off_20.images}
+        advertisement={off_20.advertisement} mobileImages={off_20.mobileImages} desktopImages={off_20.desktopImages}
       />
       <ProductsAdvertisement products={off_20_posts} title="20% Off" link="/20-off" />
     </main>

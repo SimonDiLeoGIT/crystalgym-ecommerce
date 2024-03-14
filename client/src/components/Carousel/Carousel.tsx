@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import './carousel.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowButtons } from '../ArrowButtons/ArrowButtons'
 interface image {
   title_front: string,
@@ -19,26 +19,48 @@ interface Image {
 type ImagesType = Image[]
 
 interface Props {
-  images: ImagesType,
+  mobileImages: ImagesType,
+  desktopImages: ImagesType,
   advertisement: image
 }
 
 
-export const Carousel: React.FC<Props> = ({ advertisement, images }) => {
+export const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktopImages }) => {
 
   const [currentImage, changeCurrentImage] = useState(0);
   const [translateValue, setTranslateValue] = useState(0);
 
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const getImages = () => {
+    let images: ImagesType;
+    (windowWidth < 768) ? (images = mobileImages) : (images = desktopImages)
+    return images;
+  }
+
   return (
-    <section className='relative w-full overflow-x-auto shadow-lg -shadow--color-grey m-auto lg:my-8 lg:w-11/12 lg:rounded-xl'>
+    <section className='relative w-full overflow-x-auto -bg--color-very-light-grey bg-opacity-65 shadow-lg -shadow--color-grey m-auto lg:my-8 lg:w-11/12 lg:rounded-xl'>
       <div className='overflow-hidden m-auto '>
         <section className='flex transition-transform duration-500 ease-in-out' style={{ transform: `translateX(${translateValue}%)` }}>
-          {images.map((image) => {
+          {getImages().map((image) => {
             return (
               <img
                 src={image.image}
                 alt={image.id}
-                className='min-w-full h-screen max-h-screen object-cover md:h-[32rem]'
+                className='min-w-full h-screen max-h-screen object-cover md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
               />
             )
           })}
