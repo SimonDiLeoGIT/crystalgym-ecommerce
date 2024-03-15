@@ -7,7 +7,7 @@
     "button_title": "SHOP HOODIES",
     "button_link": "/men/Hoodie"
   },
-  "images": [
+  "mobileImages": [
     {
       "id": "0",
       "image": "/src/assets/images/men/advertisement/Hoodies/hoodie-1.jpg"
@@ -19,6 +19,20 @@
     {
       "id": "2",
       "image": "/src/assets/images/men/advertisement/Hoodies/hoodie-3jpg.jpg"
+    }
+  ],
+  "desktopImages": [
+    {
+      "id": "0",
+      "image": "/src/assets/images/men/advertisement/Hoodies/desktop/hoodie-1.jpg"
+    },
+    {
+      "id": "1",
+      "image": "/src/assets/images/men/advertisement/Hoodies/desktop/hoodie-2.jpg"
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/images/men/advertisement/Hoodies/desktop/hoodie-3.jpg"
     }
   ]
 }

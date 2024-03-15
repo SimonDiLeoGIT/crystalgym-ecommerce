@@ -9,13 +9,13 @@ export const Accessories = () => {
   return (
     <main className="max-w-screen overflow-x-hidden font-roboto">
       <header>
-        <Carousel
-          advertisement={gym_accessories.advertisement} images={gym_accessories.images}
-        />
+        {/* <Carousel
+          advertisement={gym_accessories.advertisement} mobileImages={gym_accessories.mobileImages} desktopImages={gym_accessories.desktopImages}
+        /> */}
       </header>
       {/* <ProductsAdvertisement posts={posts.posts} title="Gym Accessories" /> */}
       <Carousel
-        advertisement={cap.advertisement} images={cap.images}
+        advertisement={cap.advertisement} mobileImages={cap.mobileImages} desktopImages={cap.desktopImages}
       />
       {/* <ProductsAdvertisement posts={posts.posts} title="Urban Caps" /> */}
     </main>

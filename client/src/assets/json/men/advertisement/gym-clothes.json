@@ -7,7 +7,7 @@
     "button_title": "SHOP GYM CLOTHES",
     "button_link": "/men/news/gym-clothes"
   },
-  "images": [
+  "mobileImages": [
     {
       "id": "0",
       "image": "/src/assets/images/men/advertisement/gym-clothing/gym-clothes-1.jpg"
@@ -19,6 +19,20 @@
     {
       "id": "2",
       "image": "/src/assets/images/men/advertisement/gym-clothing/gym-clothes-3.jpg"
+    }
+  ],
+  "desktopImages": [
+    {
+      "id": "0",
+      "image": "/src/assets/images/men/advertisement/gym-clothing/desktop/resting-man.jpg"
+    },
+    {
+      "id": "1",
+      "image": "/src/assets/images/men/advertisement/gym-clothing/desktop/lifting-man.jpg"
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/images/men/advertisement/gym-clothing/desktop/running-men.jpg"
     }
   ]
 }

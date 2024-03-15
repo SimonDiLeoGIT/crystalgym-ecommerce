@@ -11,14 +11,14 @@ export const Men = () => {
     <main className="max-w-screen overflow-x-hidden font-roboto">
       <header>
         <Carousel
-          advertisement={gym_clothes.advertisement} images={gym_clothes.images}
+          advertisement={gym_clothes.advertisement} mobileImages={gym_clothes.mobileImages} desktopImages={gym_clothes.desktopImages}
         />
       </header>
-      <ProductsAdvertisement products={gym_clothes_post} title="Gym Clothes" />
+      <ProductsAdvertisement products={gym_clothes_post} title="Gym Clothes" link="/men/news/gym-clothes" />
       <Carousel
-        advertisement={hoodies.advertisement} images={hoodies.images}
+        advertisement={hoodies.advertisement} mobileImages={hoodies.mobileImages} desktopImages={hoodies.desktopImages}
       />
-      <ProductsAdvertisement products={hoodies_post} title="All Hoodies" />
+      <ProductsAdvertisement products={hoodies_post} title="All Hoodies" link="/men/Hoodie" />
     </main>
   )
 }
