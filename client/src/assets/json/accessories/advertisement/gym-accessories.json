@@ -5,9 +5,9 @@
     "title_end": "",
     "info": "Urban and gym clothing.",
     "button_title": "SHOP GYM ACCESSORIES",
-    "button_link": "/"
+    "button_link": "/accessories/all"
   },
-  "images": [
+  "mobileImages": [
     {
       "id": "0",
       "image": "/src/assets/images/accessories/advertisement/gym-accessories/gym-accessories-1.jpg"
@@ -19,6 +19,20 @@
     {
       "id": "2",
       "image": "/src/assets/images/accessories/advertisement/gym-accessories/gym-accessories-3.jpg"
+    }
+  ],
+  "desktopImages": [
+    {
+      "id": "0",
+      "image": "/src/assets/images/accessories/advertisement/gym-accessories/desktop/accesorie-1.jpg"
+    },
+    {
+      "id": "1",
+      "image": "/src/assets/images/accessories/advertisement/gym-accessories/desktop/accesorie-2.jpg"
+    },
+    {
+      "id": "2",
+      "image": "/src/assets/images/accessories/advertisement/gym-accessories/desktop/accesorie-3.jpg"
     }
   ]
 }

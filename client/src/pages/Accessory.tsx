@@ -1,14 +1,14 @@
 import { useEffect } from "react";
-import clothe_data from '../assets/json/shop/clothes.json'
+import accessories from '../assets/json/shop/accessories.json'
 import { Products } from "../components/Products/Products";
 import { useParams } from "react-router-dom";
 
 
 type product = ProductInterface;
 
-export const Category = () => {
+export const Accessory = () => {
 
-  const clothes = clothe_data.all
+  const clothes = accessories
 
   const { sex } = useParams()
   const { category } = useParams()
@@ -16,7 +16,7 @@ export const Category = () => {
   function getClotheList(): product[] {
     const clotheList: product[] = [];
     clothes.map((clothe) => {
-      if ((category === clothe.category) && (sex === clothe.sex)) {
+      if (category === clothe.category) {
         const c: product = clothe
         clotheList.push(c)
       }

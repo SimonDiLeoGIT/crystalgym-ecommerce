@@ -8,6 +8,7 @@ interface ProductInterface {
   sex: string,
   new: boolean,
   off: boolean,
+  accessory: boolean,
   colorId: number,
   colorName: string,
   images: images,

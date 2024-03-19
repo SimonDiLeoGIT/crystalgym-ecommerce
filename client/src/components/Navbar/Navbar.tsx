@@ -129,24 +129,20 @@ export const Navbar = () => {
           "title": "Products",
           "links": [
             {
-              "label": "All Men",
-              "link": "/men/"
+              "label": "All Products",
+              "link": "/accessories/all"
             },
             {
-              "label": "T-Shirt",
-              "link": "/men/T-Shirt"
+              "label": "Caps",
+              "link": "/accessories/Cap"
             },
             {
-              "label": "Hoodie",
-              "link": "/men/Hoodie"
+              "label": "Belts",
+              "link": "/accessories/Belt"
             },
             {
-              "label": "Jogger",
-              "link": "/men/Jogger"
-            },
-            {
-              "label": "Short",
-              "link": "/men/Short"
+              "label": "Bags",
+              "link": "/accessories/Bag"
             }
           ]
         }
@@ -223,7 +219,7 @@ export const Navbar = () => {
           </Link>
         </li>
         <li className="invisible hidden fixed px-1 my-auto h-full lg:flex items-center lg:visible lg:relative">
-          <Link to='/' className="">
+          <Link to='/profile' className="">
             <div className="w-10 h-10 flex items-center duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
               <img src={account_avatar} className="m-auto w-7" />
             </div>

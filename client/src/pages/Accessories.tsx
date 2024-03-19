@@ -1,23 +1,24 @@
 import { ProductsAdvertisement } from "../components/ProductsAdvertisement/ProductsAdvertisement"
-import posts from "../assets/json/posts.json"
+import posts from "../assets/json/accessories/post/accessories.json"
 import gym_accessories from "../assets/json/accessories/advertisement/gym-accessories.json"
 import cap from "../assets/json/accessories/advertisement/cap.json"
+import caps from "../assets/json/accessories/post/cap.json"
 
 import { Carousel } from "../components/Carousel/Carousel"
 
 export const Accessories = () => {
   return (
-    <main className="max-w-screen overflow-x-hidden font-roboto">
+    <main className="max-w-screen overflow-x-hidden font-roboto lg:w-11/12 lg:m-auto xl:9/12">
       <header>
-        {/* <Carousel
+        <Carousel
           advertisement={gym_accessories.advertisement} mobileImages={gym_accessories.mobileImages} desktopImages={gym_accessories.desktopImages}
-        /> */}
+        />
       </header>
-      {/* <ProductsAdvertisement posts={posts.posts} title="Gym Accessories" /> */}
+      <ProductsAdvertisement products={posts} title="Gym Accessories" link="/accessories/all" />
       <Carousel
         advertisement={cap.advertisement} mobileImages={cap.mobileImages} desktopImages={cap.desktopImages}
       />
-      {/* <ProductsAdvertisement posts={posts.posts} title="Urban Caps" /> */}
+      <ProductsAdvertisement products={caps} title="Caps" link="/accessories/Cap" />
     </main>
   )
 }

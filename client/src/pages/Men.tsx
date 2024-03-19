@@ -8,7 +8,7 @@ import { Carousel } from "../components/Carousel/Carousel"
 
 export const Men = () => {
   return (
-    <main className="max-w-screen overflow-x-hidden font-roboto">
+    <main className="max-w-screen overflow-x-hidden font-roboto lg:w-11/12 lg:m-auto xl:9/12">
       <header>
         <Carousel
           advertisement={gym_clothes.advertisement} mobileImages={gym_clothes.mobileImages} desktopImages={gym_clothes.desktopImages}

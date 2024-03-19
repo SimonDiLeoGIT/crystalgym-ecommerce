@@ -1,0 +1,83 @@
+[
+  {
+    "id": 41,
+    "name": "MEDIUM EVERYDAY GYM",
+    "category": "Bag",
+    "sex": "unisex",
+    "new": true,
+    "off": false,
+    "accessory": true,
+    "colorId": 1,
+    "colorName": "Black",
+    "images": [
+      "/src/assets/images/accessories/clothes/bag/medium everyday gym/black/bag-1.jpg",
+      "/src/assets/images/accessories/clothes/bag/medium everyday gym/black/bag-2.jpg",
+      "/src/assets/images/accessories/clothes/bag/medium everyday gym/black/bag-3.jpg"
+    ],
+    "price": 29.99
+  },
+  {
+    "id": 43,
+    "name": "SHARKED",
+    "category": "Cap",
+    "sex": "unisex",
+    "new": true,
+    "off": false,
+    "accessory": true,
+    "colorId": 1,
+    "colorName": "Black",
+    "images": [
+      "/src/assets/images/accessories/clothes/cap/sharked/black/cap-1.jpg",
+      "/src/assets/images/accessories/clothes/cap/sharked/black/cap-2.jpg"
+    ],
+    "price": 29.99
+  },
+  {
+    "id": 43,
+    "name": "SHARKED",
+    "category": "Cap",
+    "sex": "unisex",
+    "new": true,
+    "off": false,
+    "accessory": true,
+    "colorId": 2,
+    "colorName": "Light Brown",
+    "images": [
+      "/src/assets/images/accessories/clothes/cap/sharked/light brown/cap-1.jpg",
+      "/src/assets/images/accessories/clothes/cap/sharked/light brown/cap-2.jpg"
+    ],
+    "price": 29.99
+  },
+  {
+    "id": 44,
+    "name": "RDX BELT",
+    "category": "Belt",
+    "sex": "unisex",
+    "new": true,
+    "off": false,
+    "accessory": true,
+    "colorId": 1,
+    "colorName": "Black",
+    "images": [
+      "/src/assets/images/accessories/clothes/cinturon/rdx/black/cinturon-1.jpg",
+      "/src/assets/images/accessories/clothes/cinturon/rdx/black/cinturon-2.jpg"
+    ],
+    "price": 29.99
+  },
+  {
+    "id": 45,
+    "name": "FITGRIFF BELT",
+    "category": "Belt",
+    "sex": "unisex",
+    "new": true,
+    "off": false,
+    "accessory": true,
+    "colorId": 1,
+    "colorName": "Black",
+    "images": [
+      "/src/assets/images/accessories/clothes/cinturon/fitgriff/black/cinturon-1.jpg",
+      "/src/assets/images/accessories/clothes/cinturon/fitgriff/black/cinturon-2.jpg"
+    ],
+    "price": 29.99
+  }
+]
