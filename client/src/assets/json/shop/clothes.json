@@ -1682,6 +1682,7 @@
       "colorName": "Black",
       "images": [
         "/src/assets/images/accessories/clothes/cap/sharked/black/cap-1.jpg",
+        "/src/assets/images/accessories/clothes/cap/sharked/black/cap-2.jpg",
         "/src/assets/images/accessories/clothes/cap/sharked/black/cap-2.jpg"
       ],
       "price": 29.99
@@ -1698,6 +1699,7 @@
       "colorName": "Light Brown",
       "images": [
         "/src/assets/images/accessories/clothes/cap/sharked/light brown/cap-1.jpg",
+        "/src/assets/images/accessories/clothes/cap/sharked/light brown/cap-2.jpg",
         "/src/assets/images/accessories/clothes/cap/sharked/light brown/cap-2.jpg"
       ],
       "price": 29.99
@@ -1714,6 +1716,7 @@
       "colorName": "Black",
       "images": [
         "/src/assets/images/accessories/clothes/cinturon/rdx/black/cinturon-1.jpg",
+        "/src/assets/images/accessories/clothes/cinturon/rdx/black/cinturon-2.jpg",
         "/src/assets/images/accessories/clothes/cinturon/rdx/black/cinturon-2.jpg"
       ],
       "price": 29.99
@@ -1730,6 +1733,7 @@
       "colorName": "Black",
       "images": [
         "/src/assets/images/accessories/clothes/cinturon/fitgriff/black/cinturon-1.jpg",
+        "/src/assets/images/accessories/clothes/cinturon/fitgriff/black/cinturon-2.jpg",
         "/src/assets/images/accessories/clothes/cinturon/fitgriff/black/cinturon-2.jpg"
       ],
       "price": 29.99

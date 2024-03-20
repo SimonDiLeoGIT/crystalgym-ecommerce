@@ -7,7 +7,7 @@ import { CartItems } from "./CartItems"
 
 export const Cart = () => {
 
-  const { cart, getCartQuantity, clearCart, isOpenCart, closeCart, openCart, hiddenCart } = useCart()
+  const { cart, getCartQuantity, clearCart, isOpenCart, closeCart, openCart, hiddenCart, orderCart } = useCart()
 
   function cartClasses() {
     let classes = "fixed top-0 left-0 w-screen h-screen z-50  md:left-0 opacity-animation"
@@ -57,7 +57,7 @@ export const Cart = () => {
               <button onClick={() => clearCart()} className="w-10/12 py-4 rounded-full -bg--color-white -text--color-red border-4 shadow-md -shadow--color-greyest-violet duration-150 hover:-bg--color-red hover:bg-opacity-60 hover:-shadow--color-red">
                 CLEAR BAG
               </button>
-              <button className="w-10/12 py-5 mt-4 rounded-full -bg--color-black -text--color-light-grey-violet shadow-md -shadow--color-greyest-violet duration-150 hover:opacity-85">
+              <button onClick={() => orderCart()} className="w-10/12 py-5 mt-4 rounded-full -bg--color-black -text--color-light-grey-violet shadow-md -shadow--color-greyest-violet duration-150 hover:opacity-85">
                 BUY BAG
               </button>
             </footer>

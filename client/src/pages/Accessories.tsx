@@ -1,5 +1,5 @@
 import { ProductsAdvertisement } from "../components/ProductsAdvertisement/ProductsAdvertisement"
-import posts from "../assets/json/accessories/post/accessories.json"
+import accessories from "../assets/json/shop/accessories.json"
 import gym_accessories from "../assets/json/accessories/advertisement/gym-accessories.json"
 import cap from "../assets/json/accessories/advertisement/cap.json"
 import caps from "../assets/json/accessories/post/cap.json"
@@ -14,7 +14,7 @@ export const Accessories = () => {
           advertisement={gym_accessories.advertisement} mobileImages={gym_accessories.mobileImages} desktopImages={gym_accessories.desktopImages}
         />
       </header>
-      <ProductsAdvertisement products={posts} title="Gym Accessories" link="/accessories/all" />
+      <ProductsAdvertisement products={accessories} title="Gym Accessories" link="/accessories/all" />
       <Carousel
         advertisement={cap.advertisement} mobileImages={cap.mobileImages} desktopImages={cap.desktopImages}
       />

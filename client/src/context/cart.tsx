@@ -25,7 +25,8 @@ type CartContext = {
   setIsOpenCart: (isOpen: boolean) => void,
   closeCart: () => void,
   openCart: () => void,
-  hiddenCart: boolean
+  hiddenCart: boolean,
+  orderCart: () => void
 }
 
 export const CartContext = createContext({} as CartContext)
@@ -102,6 +103,10 @@ export const CartProvider = ({ children }: Props) => {
     setCart([])
   }
 
+  const orderCart = () => {
+
+  }
+
   return (
     <CartContext.Provider value={{
       getCartItems,
@@ -115,7 +120,8 @@ export const CartProvider = ({ children }: Props) => {
       setIsOpenCart,
       closeCart,
       openCart,
-      hiddenCart
+      hiddenCart,
+      orderCart
     }}
     >
       {children}
