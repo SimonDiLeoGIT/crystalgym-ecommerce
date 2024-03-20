@@ -2,18 +2,18 @@ import { Orders } from "../components/Orders/Orders"
 
 export const Profile = () => {
   return (
-    <>
-      <article>
-        <h1>
-          Hello Simon Di Leo
+    <section className="p-2 -text--color-black">
+      <article className="w-full">
+        <h1 className="font-bold text-lg">
+          Hello @username!
         </h1>
       </article>
-      <section>
-        <h1>
+      <section className="w-full">
+        <h1 className="font-bold">
           Your Orders
         </h1>
         <Orders />
       </section>
-    </>
+    </section>
   )
 }
