@@ -101,10 +101,13 @@ export const CartProvider = ({ children }: Props) => {
 
   const clearCart = () => {
     setCart([])
+    setTimeout(
+      closeCart, 200
+    )
   }
 
   const orderCart = () => {
-
+    clearCart()
   }
 
   return (

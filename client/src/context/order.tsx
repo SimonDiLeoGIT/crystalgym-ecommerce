@@ -2,13 +2,18 @@ import { ReactNode, createContext, useState } from "react";
 
 type product = ProductInterface
 
+interface OrderItem {
+  product: product
+  quantity: number
+}
+
 interface Props {
   children: ReactNode
 }
 
 type OrderContext = {
-  getOrders: () => [product[]],
-  addOrder: (products: product[]) => void,
+  getOrders: () => OrderItem[][],
+  addOrder: (products: OrderItem[]) => void,
   // removeFromOrder: (product: product) => void,
 }
 
@@ -17,10 +22,13 @@ export const OrderContext = createContext({} as OrderContext)
 
 export const OrderProvider = ({ children }: Props) => {
 
-  const [orders, setOrders] = useState<[product[]]>([[]])
+  const [orders, setOrders] = useState<OrderItem[][]>([])
 
-  const addOrder = (products: product[]) => {
-    setOrders(...[], [products])
+  const addOrder = (products: OrderItem[]) => {
+    // orders.length > 0 ?
+    setOrders([...orders, products])
+    // : setOrders([products])
+    console.log(orders)
   }
 
   const getOrders = () => {

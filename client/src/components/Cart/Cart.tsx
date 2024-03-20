@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { useCart } from "../../hook/useCart"
+import { useOrder } from "../../hook/useOrder"
 import bag_icon from "../../assets/icons/nav icons/bag-shopping.svg"
 import close_icon from "../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg"
 import './Cart.css'
@@ -8,6 +9,7 @@ import { CartItems } from "./CartItems"
 export const Cart = () => {
 
   const { cart, getCartQuantity, clearCart, isOpenCart, closeCart, openCart, hiddenCart, orderCart } = useCart()
+  const { addOrder } = useOrder()
 
   function cartClasses() {
     let classes = "fixed top-0 left-0 w-screen h-screen z-50  md:left-0 opacity-animation"
@@ -25,6 +27,11 @@ export const Cart = () => {
       document.body.classList.remove('none-scroll')
     }
     return classes
+  }
+
+  function handleBuy() {
+    addOrder(cart)
+    orderCart()
   }
 
   useEffect(() => {
@@ -57,7 +64,7 @@ export const Cart = () => {
               <button onClick={() => clearCart()} className="w-10/12 py-4 rounded-full -bg--color-white -text--color-red border-4 shadow-md -shadow--color-greyest-violet duration-150 hover:-bg--color-red hover:bg-opacity-60 hover:-shadow--color-red">
                 CLEAR BAG
               </button>
-              <button onClick={() => orderCart()} className="w-10/12 py-5 mt-4 rounded-full -bg--color-black -text--color-light-grey-violet shadow-md -shadow--color-greyest-violet duration-150 hover:opacity-85">
+              <button onClick={() => handleBuy()} className="w-10/12 py-5 mt-4 rounded-full -bg--color-black -text--color-light-grey-violet shadow-md -shadow--color-greyest-violet duration-150 hover:opacity-85">
                 BUY BAG
               </button>
             </footer>
