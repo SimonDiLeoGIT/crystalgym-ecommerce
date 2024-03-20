@@ -1,3 +1,5 @@
+import { Orders } from "../components/Orders/Orders"
+
 export const Profile = () => {
   return (
     <>
@@ -10,9 +12,7 @@ export const Profile = () => {
         <h1>
           Your Orders
         </h1>
-        <article>
-
-        </article>
+        <Orders />
       </section>
     </>
   )

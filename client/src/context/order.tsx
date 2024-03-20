@@ -2,9 +2,15 @@ import { ReactNode, createContext, useState } from "react";
 
 type product = ProductInterface
 
+
 interface OrderItem {
   product: product
   quantity: number
+}
+
+interface Order {
+  order: OrderItem[],
+  total: number
 }
 
 interface Props {
@@ -12,8 +18,9 @@ interface Props {
 }
 
 type OrderContext = {
-  getOrders: () => OrderItem[][],
+  getOrders: () => Order[],
   addOrder: (products: OrderItem[]) => void,
+  orders: Order[]
   // removeFromOrder: (product: product) => void,
 }
 
@@ -22,12 +29,14 @@ export const OrderContext = createContext({} as OrderContext)
 
 export const OrderProvider = ({ children }: Props) => {
 
-  const [orders, setOrders] = useState<OrderItem[][]>([])
+  const [orders, setOrders] = useState<Order[]>([])
 
   const addOrder = (products: OrderItem[]) => {
-    // orders.length > 0 ?
-    setOrders([...orders, products])
-    // : setOrders([products])
+    let totalPrice = 0;
+    products.map(p => {
+      totalPrice += (p.quantity * p.product.price)
+    })
+    setOrders([...orders, { order: products, total: totalPrice }])
     console.log(orders)
   }
 
@@ -38,7 +47,8 @@ export const OrderProvider = ({ children }: Props) => {
   return (
     <OrderContext.Provider value={{
       addOrder,
-      getOrders
+      getOrders,
+      orders
     }}
     >
       {children}
