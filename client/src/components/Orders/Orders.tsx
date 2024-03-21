@@ -7,7 +7,14 @@ export const Orders = () => {
   const { orders } = useOrder()
 
   return (
-    <section className="">
+    <section className="-text--color-black">
+      {orders.length === 0 &&
+        <article className="min-h-96 grid place-content-center -bg--color-very-light-grey bg-opacity-30 rounded-3xl my-8 gap-8">
+          <h1 className="text-3xl font-bold">There's no Orders :(</h1>
+          <p>Find a product you like, add it to your cart, and proceed to purchase.</p>
+          <Link to="/new" className="text-center -bg--color-black -text--color-light-grey-violet font-bold p-4 rounded-full w-11/12 max-w-lg m-auto mb-4 duration-150 hover:opacity-85">Shop Products</Link>
+        </article>
+      }
       <ul>
         {orders.map(order => {
           return (

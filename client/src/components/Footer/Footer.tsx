@@ -5,7 +5,7 @@ import git from "../../assets/icons/social_media_icons/github.svg"
 
 export const Footer = () => {
   return (
-    <footer className="-bg--color-black -text--color-white px-4 mt-4 lg:grid lg:grid-cols-2">
+    <footer className="-bg--color-black -text--color-white px-4 mt-4 lg:grid lg:grid-cols-2 ">
       <nav className="text-center p-2 m-auto max-w-lg lg:text-start">
         <ul className="">
           <li className="p-2 ">
