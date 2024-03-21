@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import account_avatar from '../../assets/icons/nav icons/account-user-avatar.svg'
 import instagram_icon from '../../assets/icons/nav icons/instagram.svg'
 import search_icon from '../../assets/icons/nav icons/mobile and desktop/search-svgrepo-com.svg'
-import logo from '../../assets/icons/nav icons/mobile and desktop/amazon-svgrepo-com.svg'
+import logo from '../../assets/icons/CrystalGymLogo.png'
 import close_icon from '../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg'
 import { useCallback, useEffect, useState } from "react"
 import { MobileMenu } from "../MobileMenu/MobileMenu"
@@ -156,9 +156,10 @@ export const Navbar = () => {
       <section className="m-auto ml-4 h-full lg:hidden">
         <MobileMenu />
       </section>
-      <h1 className="m-auto h-full py-2 lg:py-0 lg:ml-0">
-        <Link to='/' className="">
-          <img src={logo} className="h-full w-8 lg:w-10 mx-2" />
+      <h1 className="m-auto h-full py-2 lg:py-0 lg:ml-0 overflow-hidden flex items-center">
+        <Link to='/' className="flex items-center">
+          <img src={logo} className="min-w-16 w-16 lg: mx-2" />
+          <div className="hidden md:block font-bold">CrystalGym</div>
         </Link>
       </h1>
       <ul className="invisible hidden w-full text-center h-full lg:visible lg:relative lg:block -bg--color-white">

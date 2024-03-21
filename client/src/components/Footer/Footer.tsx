@@ -9,13 +9,13 @@ export const Footer = () => {
       <nav className="text-center p-2 m-auto max-w-lg lg:text-start">
         <ul className="">
           <li className="p-2 ">
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="hover:opacity-60">Home</Link>
           </li>
           <li className="p-2">
-            <Link to="/">Products</Link>
+            <Link to="/new" className="hover:opacity-60">Products</Link>
           </li>
           <li className="p-2">
-            <Link to="/">Terms & Conditions</Link>
+            <Link to="/terms&conditions" className="hover:opacity-60">Terms & Conditions</Link>
           </li>
         </ul>
       </nav>
@@ -29,16 +29,17 @@ export const Footer = () => {
         </header>
         <form className="m-auto max-w-lg">
           <input
-            type="text" placeholder="Name"
+            type="text" placeholder="Name" required
             className="w-full p-2 -bg--color-very-light-grey -text--color-black placeholder:-text--color-black"
           />
           <input
-            type="email" placeholder="Email"
+            type="email" placeholder="Email" required
             className="w-full p-2 -bg--color-very-light-grey -text--color-black placeholder:-text--color-black mt-2"
           />
           <input
             type="submit"
-            className="-text--color-black -bg--color-light-grey-violet font-bold p-2 w-24 my-4"
+            value="Submit"
+            className="-text--color-black -bg--color-light-grey-violet font-bold p-2 w-24 my-4 hover:opacity-60 hover:cursor-pointer"
           />
         </form>
       </section>

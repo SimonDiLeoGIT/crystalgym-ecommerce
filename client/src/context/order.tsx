@@ -10,7 +10,8 @@ interface OrderItem {
 
 interface Order {
   order: OrderItem[],
-  total: number
+  total: number,
+  date: Date
 }
 
 interface Props {
@@ -36,7 +37,10 @@ export const OrderProvider = ({ children }: Props) => {
     products.map(p => {
       totalPrice += (p.quantity * p.product.price)
     })
-    setOrders([...orders, { order: products, total: totalPrice }])
+
+    const date = new Date()
+
+    setOrders([...orders, { order: products, total: totalPrice, date: date }])
     console.log(orders)
   }
 

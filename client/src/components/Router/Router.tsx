@@ -15,6 +15,7 @@ import menGymClothing from "../../assets/json/men/advertisement/gym-clothes-prod
 import womenGymClothing from "../../assets/json/women/advertisement/gym-clothes-products.json"
 import gymAccessories from "../../assets/json/shop/accessories.json"
 import { Accessory } from "../../pages/Accessory"
+import { TerminosCondiciones } from "../../pages/TerminosCondiciones"
 
 export const Router = () => {
   return (
@@ -36,6 +37,7 @@ export const Router = () => {
         <Route path="/20-off" element={<NewsProducts title="20% OFF" products={OffProducts} />} />
         <Route path="/product/:id/:colorId" element={<Product />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/terms&conditions" element={<TerminosCondiciones />} />
       </Routes>
       <Footer />
     </BrowserRouter>
