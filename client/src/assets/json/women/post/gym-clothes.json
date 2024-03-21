@@ -6,6 +6,7 @@
     "sex": "women",
     "new": true,
     "off": false,
+    "accessory": false,
     "colorId": 2,
     "colorName": "Brown",
     "images": [
@@ -22,6 +23,7 @@
     "sex": "women",
     "new": true,
     "off": false,
+    "accessory": false,
     "colorId": 3,
     "colorName": "White",
     "images": [
@@ -38,6 +40,7 @@
     "sex": "women",
     "new": false,
     "off": true,
+    "accessory": false,
     "colorId": 3,
     "colorName": "White",
     "images": [
@@ -54,6 +57,7 @@
     "sex": "women",
     "new": true,
     "off": true,
+    "accessory": false,
     "colorId": 3,
     "colorName": "White",
     "images": [
@@ -70,6 +74,7 @@
     "sex": "women",
     "new": false,
     "off": true,
+    "accessory": false,
     "colorId": 2,
     "colorName": "Purple",
     "images": [
@@ -86,6 +91,7 @@
     "sex": "women",
     "new": false,
     "off": true,
+    "accessory": false,
     "colorId": 2,
     "colorName": "Blue",
     "images": [
@@ -102,6 +108,7 @@
     "sex": "women",
     "new": true,
     "off": false,
+    "accessory": false,
     "colorId": 1,
     "colorName": "Black",
     "images": [
@@ -118,6 +125,7 @@
     "sex": "women",
     "new": true,
     "off": true,
+    "accessory": false,
     "colorId": 1,
     "colorName": "White",
     "images": [
@@ -134,6 +142,7 @@
     "sex": "women",
     "new": true,
     "off": true,
+    "accessory": false,
     "colorId": 2,
     "colorName": "Black",
     "images": [

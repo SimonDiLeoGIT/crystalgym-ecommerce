@@ -6,6 +6,7 @@
     "sex": "men",
     "new": true,
     "off": false,
+    "accessory": false,
     "colorId": 1,
     "colorName": "Dark Red",
     "images": [
@@ -23,6 +24,7 @@
     "sex": "men",
     "new": true,
     "off": false,
+    "accessory": false,
     "colorId": 4,
     "colorName": "Yellow",
     "images": [
@@ -39,6 +41,7 @@
     "sex": "men",
     "new": true,
     "off": true,
+    "accessory": false,
     "colorId": 2,
     "colorName": "Light Brown",
     "images": [
@@ -56,6 +59,7 @@
     "sex": "men",
     "new": false,
     "off": true,
+    "accessory": false,
     "colorId": 1,
     "colorName": "Light Brown",
     "images": [
@@ -72,6 +76,7 @@
     "sex": "men",
     "new": false,
     "off": true,
+    "accessory": false,
     "colorId": 3,
     "colorName": "Green",
     "images": [
