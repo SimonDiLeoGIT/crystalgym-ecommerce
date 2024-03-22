@@ -41,9 +41,7 @@ export const Products: React.FC<Props> = ({ products }) => {
           data?.map((product) => {
             return (
               <article className="shadow-md">
-                <figure className="">
-                  <ProductImg product={product} />
-                </figure>
+                <ProductImg product={product} />
               </article>
             )
           }

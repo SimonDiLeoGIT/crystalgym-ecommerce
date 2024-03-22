@@ -68,23 +68,6 @@
     "price": 21
   },
   {
-    "id": 36,
-    "name": "SWOOSH LIGHT",
-    "category": "Top",
-    "sex": "women",
-    "new": false,
-    "off": true,
-    "accessory": false,
-    "colorId": 2,
-    "colorName": "Purple",
-    "images": [
-      "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-1.jpg",
-      "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-2.jpg",
-      "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-3.jpg"
-    ],
-    "price": 21
-  },
-  {
     "id": 38,
     "name": "VITAL SEAMLESS",
     "category": "Top",

@@ -19,9 +19,7 @@ export const ProductsAdvertisement: React.FC<Props> = ({ products, title, link }
         {products.map(product => {
           return (
             <article className="min-w-72 mx-1">
-              <figure className="mb-4 min-h-96">
-                <ProductImg product={product} />
-              </figure>
+              <ProductImg product={product} />
             </article>
           )
         })}
