@@ -10,9 +10,7 @@
     "colorId": 3,
     "colorName": "White",
     "images": [
-      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-1.jpg",
-      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-2.jpg",
-      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-3.jpg"
+      "/src/assets/images/women/post/tops/crop-mesh-tank-1.jpg"
     ],
     "price": 21
   },
@@ -27,15 +25,13 @@
     "colorId": 2,
     "colorName": "Black",
     "images": [
-      "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-1.jpg",
-      "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-2.jpg",
-      "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-3.jpg"
+      "/src/assets/images/women/post/tops/motivation-tee-1.jpg"
     ],
     "price": 21
   },
   {
-    "id": 36,
-    "name": "SWOOSH LIGHT",
+    "id": 35,
+    "name": "STRAPPY CROP",
     "category": "Top",
     "sex": "women",
     "new": false,
@@ -44,15 +40,13 @@
     "colorId": 1,
     "colorName": "Pink",
     "images": [
-      "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-1.jpg",
-      "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-2.jpg",
-      "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-3.jpg"
+      "/src/assets/images/women/post/tops/strappy-crop-cami-tank-1.jpg"
     ],
     "price": 21
   },
   {
-    "id": 37,
-    "name": "TINY TWIST BRA",
+    "id": 36,
+    "name": "SWOOSH LIGHT",
     "category": "Top",
     "sex": "women",
     "new": true,
@@ -61,9 +55,22 @@
     "colorId": 3,
     "colorName": "Violet",
     "images": [
-      "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-1.jpg",
-      "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-2.jpg",
-      "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-3.jpg"
+      "/src/assets/images/women/post/tops/swoosh-light-1.jpg"
+    ],
+    "price": 21
+  },
+  {
+    "id": 37,
+    "name": "TINY TWIST BRA",
+    "category": "Top",
+    "sex": "women",
+    "new": false,
+    "off": true,
+    "accessory": false,
+    "colorId": 3,
+    "colorName": "Green",
+    "images": [
+      "/src/assets/images/women/post/tops/tiny-twist-bra-1.jpg"
     ],
     "price": 21
   },
@@ -78,9 +85,7 @@
     "colorId": 3,
     "colorName": "Green",
     "images": [
-      "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-1.jpg",
-      "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-2.jpg",
-      "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-3.jpg"
+      "/src/assets/images/women/post/tops/vital-seamless-1.jpg"
     ],
     "price": 21
   }

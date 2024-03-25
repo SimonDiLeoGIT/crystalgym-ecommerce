@@ -636,21 +636,6 @@
       "price": 21
     },
     {
-      "id": 16,
-      "name": "OCEAN",
-      "category": "T-Shirt",
-      "sex": "men",
-      "new": true,
-      "off": true,
-      "accessory": false,
-      "colorId": 1,
-      "colorName": "Black",
-      "images": [
-        "/src/assets/images/men/clothes/T-Shirt/Ocean/Black/ocean-1.jpg"
-      ],
-      "price": 21
-    },
-    {
       "id": 17,
       "name": "POWER OVERSIZED",
       "category": "T-Shirt",
