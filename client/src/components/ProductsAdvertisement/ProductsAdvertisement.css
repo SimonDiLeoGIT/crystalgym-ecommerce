@@ -1,1 +1,26 @@
 @import url("../../styles/global/fonts.css");
+
+.scrollable-images::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollable-images::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 4rem;
+}
+
+.scrollable-images::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(34, 34, 34, 0.2);
+}
+
+.scrollable-images::-webkit-scrollbar-thumb:hover {
+  background: rgba(36, 36, 36, 0.3);
+  cursor: pointer;
+}
+
+.scrollable-images::-webkit-scrollbar-thumb:active {
+  /* background: rgba(131, 131, 131, 0.9); */
+}
