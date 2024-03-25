@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 import { useOrder } from "../../hook/useOrder"
+import open from "../../assets/icons/open.svg"
+import delete_icon from "../../assets/icons/nav icons/trash-slash-alt-svgrepo-com.svg"
 
 export const Orders = () => {
 
@@ -15,12 +17,12 @@ export const Orders = () => {
           <Link to="/new" className="text-center -bg--color-black -text--color-light-grey-violet font-bold p-4 rounded-full w-11/12 max-w-lg m-auto mb-4 duration-150 hover:opacity-85">Shop Products</Link>
         </article>
       }
-      <ul>
+      <ul className="min-w-64">
         {orders.map(order => {
           return (
-            <li className="-bg--color-very-light-grey bg-opacity-30 p-4 rounded-3xl my-4 md:p-6 md:my-8">
+            <li className="-bg--color-very-light-grey bg-opacity-30 p-4 rounded-3xl my-4 md:p-6 md:my-8 w-full">
               <p className="font-bold">{order.date.toLocaleDateString('en-US', { day: 'numeric', month: 'long' })}</p>
-              <ul className=" my-2 md:my-4 lg:grid grid-cols-2 gap-8">
+              <ul className="lg:grid grid-cols-2 gap-4">
                 {order.order.map(currOrder => {
                   return (
                     <li className="p-2 my-2 -bg--color-white rounded-xl flex md:p-4 items-center">
@@ -31,12 +33,17 @@ export const Orders = () => {
                         <p>Quantity: {currOrder.quantity}</p>
                         <p>Subtotal: ${currOrder.quantity * currOrder.product.price}</p>
                       </div>
-                      <Link
-                        to={`/product/${currOrder.product.id}/${currOrder.product.colorId}`}
-                        className="-bg--color-light-grey-violet -text--color-black rounded-full h-10 font-bold text-sm w-28 text-center place-content-center m-auto mr-0  hover:opacity-60"
-                      >
-                        View Product
-                      </Link>
+                      <div className="m-auto mr-2">
+                        <Link
+                          to={`/product/${currOrder.product.id}/${currOrder.product.colorId}`}
+                          className="m-auto block duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full"
+                        >
+                          <img src={open} className="w-10 min-w-10 p-2" />
+                        </Link>
+                        <button /*onClick={() => clearFromCart(item.product)}*/ className="duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
+                          <img src={delete_icon} className="w-10 min-w-10 p-2" />
+                        </button>
+                      </div>
                     </li>
                   )
                 })}

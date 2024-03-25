@@ -103,24 +103,20 @@ export const MobileMenu = () => {
           "title": "Products",
           "links": [
             {
-              "label": "All Men",
-              "link": "/men/"
+              "label": "All Products",
+              "link": "/accessories/all"
             },
             {
-              "label": "T-Shirt",
-              "link": "/men/T-Shirt"
+              "label": "Caps",
+              "link": "/accessories/Cap"
             },
             {
-              "label": "Hoodie",
-              "link": "/men/Hoodie"
+              "label": "Belts",
+              "link": "/accessories/Belt"
             },
             {
-              "label": "Jogger",
-              "link": "/men/Jogger"
-            },
-            {
-              "label": "Short",
-              "link": "/men/Short"
+              "label": "Bags",
+              "link": "/accessories/Bag"
             }
           ]
         }
@@ -201,10 +197,7 @@ export const MobileMenu = () => {
                 })
               }
               <li className="border-b -border--color-very-light-grey">
-                <Link to="/accessories" onClick={() => handleViewMenu()} className="block p-4">ACCOUNT</Link>
-              </li>
-              <li className="border-b -border--color-very-light-grey">
-                <Link to="/accessories" onClick={() => handleViewMenu()} className="block p-4">CONTACT</Link>
+                <Link to="/profile" onClick={() => handleViewMenu()} className="block p-4">ACCOUNT</Link>
               </li>
             </ul>
           </section>
