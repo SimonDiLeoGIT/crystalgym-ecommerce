@@ -5,6 +5,7 @@ import bag_icon from "../../assets/icons/nav icons/bag-shopping.svg"
 import close_icon from "../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg"
 import './Cart.css'
 import { CartItems } from "./CartItems"
+import { Link } from "react-router-dom"
 
 export const Cart = () => {
 
@@ -64,9 +65,9 @@ export const Cart = () => {
               <button onClick={() => clearCart()} className="w-10/12 py-4 rounded-full -bg--color-white -text--color-red border-4 shadow-md -shadow--color-greyest-violet duration-150 hover:-bg--color-red hover:bg-opacity-60 hover:-shadow--color-red">
                 CLEAR BAG
               </button>
-              <button onClick={() => handleBuy()} className="w-10/12 py-5 mt-4 rounded-full -bg--color-black -text--color-light-grey-violet shadow-md -shadow--color-greyest-violet duration-150 hover:opacity-85">
-                BUY BAG
-              </button>
+              <Link to="/profile" onClick={() => handleBuy()} className="w-10/12 block m-auto py-5 mt-4 rounded-full -bg--color-black -text--color-light-grey-violet shadow-md -shadow--color-greyest-violet duration-150 hover:opacity-85">
+                <p>BUY BAG</p>
+              </Link>
             </footer>
           }
         </section>

@@ -21,7 +21,10 @@ interface Props {
 type OrderContext = {
   getOrders: () => Order[],
   addOrder: (products: OrderItem[]) => void,
-  orders: Order[]
+  confirmOrder: () => void,
+  orders: Order[],
+  unconfirmedOrder: Order,
+  orderUnconfirmedExists: boolean
   // removeFromOrder: (product: product) => void,
 }
 
@@ -31,6 +34,8 @@ export const OrderContext = createContext({} as OrderContext)
 export const OrderProvider = ({ children }: Props) => {
 
   const [orders, setOrders] = useState<Order[]>([])
+  const [unconfirmedOrder, setUnconfirmedOrder] = useState<Order>({ order: [], date: new Date(), total: 0 })
+  const [orderUnconfirmedExists, setOrderUnconfirmedExists] = useState<boolean>(false)
 
   const addOrder = (products: OrderItem[]) => {
     let totalPrice = 0;
@@ -40,8 +45,17 @@ export const OrderProvider = ({ children }: Props) => {
 
     const date = new Date()
 
-    setOrders([...orders, { order: products, total: totalPrice, date: date }])
+    setUnconfirmedOrder({ order: products, total: totalPrice, date: date })
+    setOrderUnconfirmedExists(true)
     console.log(orders)
+  }
+
+  const confirmOrder = () => {
+    if (orderUnconfirmedExists) {
+      setOrders([unconfirmedOrder, ...orders])
+      setUnconfirmedOrder({ order: [], date: new Date(), total: 0 })
+      setOrderUnconfirmedExists(false)
+    }
   }
 
   const getOrders = () => {
@@ -52,7 +66,10 @@ export const OrderProvider = ({ children }: Props) => {
     <OrderContext.Provider value={{
       addOrder,
       getOrders,
-      orders
+      orders,
+      unconfirmedOrder,
+      confirmOrder,
+      orderUnconfirmedExists
     }}
     >
       {children}
