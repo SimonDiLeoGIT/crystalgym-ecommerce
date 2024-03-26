@@ -40,6 +40,11 @@ export const Orders = () => {
     )
   }
 
+  function handleCancelOrder(orderId: number) {
+    const confirm = window.confirm("Are you sure you want to cancel this order? \n :(")
+    confirm && cancelOrder(orderId)
+  }
+
   return (
     <section className="-text--color-black">
       {orders.length === 0 && !unconfirmedOrderExists &&
@@ -112,7 +117,7 @@ export const Orders = () => {
               </ul>
               <p className="md:text-lg"><strong>Total:</strong> ${order.total}</p>
               <div className="w-full text-center">
-                <button onClick={() => cancelOrder(order.id)} className="w-72 font-bold py-4 rounded-full -bg--color-white -text--color-red border-4 shadow-md -shadow--color-greyest-violet duration-150 hover:-bg--color-red hover:bg-opacity-60 hover:-shadow--color-red">
+                <button onClick={() => handleCancelOrder(order.id)} className="w-72 font-bold py-4 rounded-full -bg--color-white -text--color-red border-4 shadow-md -shadow--color-greyest-violet duration-150 hover:-bg--color-red hover:bg-opacity-60 hover:-shadow--color-red">
                   CANCEL ORDER
                 </button>
               </div>
