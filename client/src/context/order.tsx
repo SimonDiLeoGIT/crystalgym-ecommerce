@@ -24,7 +24,7 @@ type OrderContext = {
   confirmOrder: () => void,
   orders: Order[],
   unconfirmedOrder: Order,
-  orderUnconfirmedExists: boolean
+  unconfirmedOrderExists: boolean
   // removeFromOrder: (product: product) => void,
 }
 
@@ -35,26 +35,39 @@ export const OrderProvider = ({ children }: Props) => {
 
   const [orders, setOrders] = useState<Order[]>([])
   const [unconfirmedOrder, setUnconfirmedOrder] = useState<Order>({ order: [], date: new Date(), total: 0 })
-  const [orderUnconfirmedExists, setOrderUnconfirmedExists] = useState<boolean>(false)
+  const [unconfirmedOrderExists, setUnconfirmedOrderExists] = useState<boolean>(false)
 
   const addOrder = (products: OrderItem[]) => {
     let totalPrice = 0;
+
+    const date = new Date()
+
     products.map(p => {
       totalPrice += (p.quantity * p.product.price)
     })
 
-    const date = new Date()
+    if (!unconfirmedOrderExists) {
+      setUnconfirmedOrder({ order: products, total: totalPrice, date: date })
+      setUnconfirmedOrderExists(true)
+    } else {
+      const newUnconfirmedOrder = unconfirmedOrder
+      products.map(p => {
+        newUnconfirmedOrder.order.push(p)
+      })
+      newUnconfirmedOrder.total += totalPrice
+      setUnconfirmedOrder(newUnconfirmedOrder)
+    }
 
-    setUnconfirmedOrder({ order: products, total: totalPrice, date: date })
-    setOrderUnconfirmedExists(true)
+
+
     console.log(orders)
   }
 
   const confirmOrder = () => {
-    if (orderUnconfirmedExists) {
+    if (unconfirmedOrderExists) {
       setOrders([unconfirmedOrder, ...orders])
       setUnconfirmedOrder({ order: [], date: new Date(), total: 0 })
-      setOrderUnconfirmedExists(false)
+      setUnconfirmedOrderExists(false)
     }
   }
 
@@ -69,7 +82,7 @@ export const OrderProvider = ({ children }: Props) => {
       orders,
       unconfirmedOrder,
       confirmOrder,
-      orderUnconfirmedExists
+      unconfirmedOrderExists
     }}
     >
       {children}

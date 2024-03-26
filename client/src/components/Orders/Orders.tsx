@@ -7,12 +7,13 @@ import { useEffect, useState } from "react"
 export const Orders = () => {
 
 
-  const { orders, orderUnconfirmedExists, confirmOrder, unconfirmedOrder } = useOrder()
+  const { orders, unconfirmedOrderExists, confirmOrder, unconfirmedOrder } = useOrder()
 
   const [orderIsConfirmed, setOrderIsConfirmed] = useState<boolean>(false)
 
   useEffect(() => {
     window.scrollTo(0, 0)
+
     const handleBeforeUnload = (event) => {
       if (unconfirmedOrder && !orderIsConfirmed) {
         event.preventDefault()
@@ -22,22 +23,10 @@ export const Orders = () => {
     };
 
 
-
-    const handlePopstate = (event) => {
-      if (unconfirmedOrder && !orderIsConfirmed) {
-        const confirmation = window.confirm('Attention! If you leave the page, the purchase will be deleted.');
-        if (!confirmation) {
-          window.history.pushState(null, '', window.location.href);
-        }
-      }
-    };
-
     window.addEventListener("beforeunload", handleBeforeUnload);
-    window.addEventListener("popstate", handlePopstate);
 
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
-      window.removeEventListener("popstate", handlePopstate);
     };
 
   }, [orderIsConfirmed, unconfirmedOrder]);
@@ -46,26 +35,25 @@ export const Orders = () => {
     setOrderIsConfirmed(true)
     confirmOrder()
     setTimeout(() =>
-      alert("Confirmed purchase"), 400
+      alert("Confirmed purchase. \n THANKS :) "), 400
     )
   }
 
   return (
     <section className="-text--color-black">
-      {orders.length === 0 && !orderUnconfirmedExists &&
+      {orders.length === 0 && !unconfirmedOrderExists &&
         <article className="min-h-96 grid place-content-center -bg--color-very-light-grey bg-opacity-30 rounded-3xl my-8 gap-8">
-          <h1 className="text-3xl font-bold">There's no Orders :(</h1>
+          <h2 className="text-3xl font-bold">There's no Orders :(</h2>
           <p>Find a product you like, add it to your cart, and proceed to purchase.</p>
           <Link to="/new" className="text-center -bg--color-black -text--color-light-grey-violet font-bold p-4 rounded-full w-11/12 max-w-lg m-auto mb-4 duration-150 hover:opacity-85">Shop Products</Link>
         </article>
       }
       <ul className="min-w-64">
         {
-          orderUnconfirmedExists
+          unconfirmedOrderExists
           &&
-          <article className="text-center">
-            <h2 className=""> New Order </h2>
-            <p> Are you sure you want to buy these items? </p>
+          <li className="text-center -bg--color-light-grey-violet bg-opacity-60 rounded-3xl my-8 p-8 gap-8">
+            <h2 className="text-xl font-bold"> New Order! </h2>
             <ul className="lg:grid grid-cols-2 gap-4">
               {unconfirmedOrder.order.map(currOrder => {
                 return (
@@ -86,9 +74,10 @@ export const Orders = () => {
                 )
               })}
             </ul>
-            <p className=""><strong>Total:</strong> ${unconfirmedOrder.total}</p>
+            <p className="text-lg"><strong>Total:</strong> ${unconfirmedOrder.total}</p>
+            <p className=""> Are you sure you want to buy these items? </p>
             <input type="submit" value="CONFIRM" onClick={() => handleConfirm()} className="w-72 m-auto py-5 mt-4 rounded-full font-bold -bg--color-black -text--color-light-grey-violet shadow-md -shadow--color-greyest-violet duration-150 hover:opacity-85 hover:cursor-pointer" />
-          </article>
+          </li>
         }
         {orders.map(order => {
           return (
