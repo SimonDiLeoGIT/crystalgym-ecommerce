@@ -26,7 +26,8 @@ type OrderContext = {
   orders: Order[],
   unconfirmedOrder: Order,
   unconfirmedOrderExists: boolean,
-  cancelOrder: (orderId: number) => void
+  cancelOrder: (orderId: number) => void,
+  cancelUnconfirmedOrder: () => void,
   // removeFromOrder: (product: product) => void,
 }
 
@@ -68,13 +69,21 @@ export const OrderProvider = ({ children }: Props) => {
   const confirmOrder = () => {
     if (unconfirmedOrderExists) {
       setOrders([unconfirmedOrder, ...orders])
-      setUnconfirmedOrder({ id: 0, order: [], date: new Date(), total: 0 })
-      setUnconfirmedOrderExists(false)
+      clearUnconfirmed()
     }
   }
 
   const cancelOrder = (orderId: number) => {
     setOrders(orders.filter(order => order.id !== orderId))
+  }
+
+  const cancelUnconfirmedOrder = () => {
+    clearUnconfirmed()
+  }
+
+  function clearUnconfirmed() {
+    setUnconfirmedOrder({ id: 0, order: [], date: new Date(), total: 0 })
+    setUnconfirmedOrderExists(false)
   }
 
   const getOrders = () => {
@@ -89,7 +98,8 @@ export const OrderProvider = ({ children }: Props) => {
       unconfirmedOrder,
       confirmOrder,
       unconfirmedOrderExists,
-      cancelOrder
+      cancelOrder,
+      cancelUnconfirmedOrder
     }}
     >
       {children}

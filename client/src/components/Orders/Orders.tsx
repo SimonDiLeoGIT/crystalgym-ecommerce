@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 export const Orders = () => {
 
 
-  const { orders, unconfirmedOrderExists, confirmOrder, unconfirmedOrder, cancelOrder } = useOrder()
+  const { orders, unconfirmedOrderExists, confirmOrder, unconfirmedOrder, cancelOrder, cancelUnconfirmedOrder } = useOrder()
 
   const [orderIsConfirmed, setOrderIsConfirmed] = useState<boolean>(false)
 
@@ -77,7 +77,12 @@ export const Orders = () => {
             </ul>
             <p className="text-lg"><strong>Total:</strong> ${unconfirmedOrder.total}</p>
             <p className=""> Are you sure you want to buy these items? </p>
-            <input type="submit" value="CONFIRM" onClick={() => handleConfirm()} className="w-72 m-auto py-5 mt-4 rounded-full font-bold -bg--color-black -text--color-light-grey-violet shadow-md -shadow--color-greyest-violet duration-150 hover:opacity-85 hover:cursor-pointer" />
+            <div className="m-auto my-4">
+              <button onClick={() => cancelUnconfirmedOrder()} className="w-full max-w-72 mx-4 font-bold py-4 rounded-full -bg--color-white -text--color-red border-4 shadow-md -shadow--color-greyest-violet duration-150 hover:-bg--color-red hover:bg-opacity-60 hover:-shadow--color-red">
+                CANCEL
+              </button>
+              <input type="submit" value="CONFIRM" onClick={() => handleConfirm()} className="w-full max-w-72 mx-4 m-auto py-5 mt-4 rounded-full font-bold -bg--color-black -text--color-light-grey-violet shadow-md -shadow--color-greyest-violet duration-150 hover:opacity-85 hover:cursor-pointer" />
+            </div>
           </li>
         }
         {orders.map(order => {
