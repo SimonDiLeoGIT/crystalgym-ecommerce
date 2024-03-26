@@ -9,6 +9,7 @@ interface OrderItem {
 }
 
 interface Order {
+  id: number,
   order: OrderItem[],
   total: number,
   date: Date
@@ -24,7 +25,8 @@ type OrderContext = {
   confirmOrder: () => void,
   orders: Order[],
   unconfirmedOrder: Order,
-  unconfirmedOrderExists: boolean
+  unconfirmedOrderExists: boolean,
+  cancelOrder: (orderId: number) => void
   // removeFromOrder: (product: product) => void,
 }
 
@@ -34,8 +36,9 @@ export const OrderContext = createContext({} as OrderContext)
 export const OrderProvider = ({ children }: Props) => {
 
   const [orders, setOrders] = useState<Order[]>([])
-  const [unconfirmedOrder, setUnconfirmedOrder] = useState<Order>({ order: [], date: new Date(), total: 0 })
+  const [unconfirmedOrder, setUnconfirmedOrder] = useState<Order>({ id: 0, order: [], date: new Date(), total: 0 })
   const [unconfirmedOrderExists, setUnconfirmedOrderExists] = useState<boolean>(false)
+  const [nextId, setNextId] = useState(1)
 
   const addOrder = (products: OrderItem[]) => {
     let totalPrice = 0;
@@ -47,8 +50,9 @@ export const OrderProvider = ({ children }: Props) => {
     })
 
     if (!unconfirmedOrderExists) {
-      setUnconfirmedOrder({ order: products, total: totalPrice, date: date })
+      setUnconfirmedOrder({ id: nextId, order: products, total: totalPrice, date: date })
       setUnconfirmedOrderExists(true)
+      setNextId(nextId + 1)
     } else {
       const newUnconfirmedOrder = unconfirmedOrder
       products.map(p => {
@@ -58,17 +62,19 @@ export const OrderProvider = ({ children }: Props) => {
       setUnconfirmedOrder(newUnconfirmedOrder)
     }
 
-
-
     console.log(orders)
   }
 
   const confirmOrder = () => {
     if (unconfirmedOrderExists) {
       setOrders([unconfirmedOrder, ...orders])
-      setUnconfirmedOrder({ order: [], date: new Date(), total: 0 })
+      setUnconfirmedOrder({ id: 0, order: [], date: new Date(), total: 0 })
       setUnconfirmedOrderExists(false)
     }
+  }
+
+  const cancelOrder = (orderId: number) => {
+    setOrders(orders.filter(order => order.id !== orderId))
   }
 
   const getOrders = () => {
@@ -82,7 +88,8 @@ export const OrderProvider = ({ children }: Props) => {
       orders,
       unconfirmedOrder,
       confirmOrder,
-      unconfirmedOrderExists
+      unconfirmedOrderExists,
+      cancelOrder
     }}
     >
       {children}
