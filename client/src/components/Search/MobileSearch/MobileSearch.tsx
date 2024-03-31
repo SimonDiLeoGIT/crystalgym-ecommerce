@@ -46,16 +46,16 @@ export const MobileSearch = () => {
 
       <aside className={`fixed top-0 left-0 w-screen h-screen z-50 overflow-hidden md:left-0 -bg--color-white ${!viewSearch && " hidden"} ${search_classes()}`}>
         <header className='m-4 flex'>
-          <form className="w-10/12 border-2 -border--color-very-light-grey rounded-xl grid grid-cols-5 gap-2 p-2">
+          <form className="w-10/12 border-2 -border--color-very-light-grey rounded-xl flex p-2">
             <input type="text" placeholder="Search for a Product..."
-              className="rounded-full col-span-4 px-2"
+              className="rounded-full px-2 flex-1"
               onChange={handleInputChange}
             />
             <button
-              className="m-auto p-2 rounded-full bg-slate-100"
+              className="m-auto mr-0 p-2 rounded-full -bg--color-very-light-grey bg-opacity-40"
             // onClick={() => }
             >
-              <img src={search_icon} className="w-5" />
+              <img src={search_icon} className="min-w-5 w-5" />
             </button>
           </form>
           <button
