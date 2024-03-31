@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import data from "../../../assets/json/shop/clothes.json"
+import { ProductImg } from "../../ProductImg/ProductImg"
 
 interface props {
   input: string
@@ -7,28 +8,27 @@ interface props {
 
 export const SearchResult: React.FC<props> = ({ input }) => {
 
-  const categories = ['t-shirt', 'top', 'hoodie', 'jogger', 'short', 'caps', 'belt', 'bag']
+  const categories = ['t-shirt', 'top', 'hoodie', 'jogger', 'short', 'cap', 'belt', 'bag']
 
   return (
-    <section className="h-full overflow-y-auto">
+    <section className="h-full overflow-y-auto mx-4 -text--color-black">
       {input !== '' &&
-        <>
+        <div className="">
           <div>
-            <h1>CATEGORY</h1>
-            <ul className="mx-4">
+            <h1 className="font-bold font-roboto">CATEGORY</h1>
+            <ul className="m-1">
               {categories.map(category => {
                 const subName = category.slice(0, input.length)
                 if (subName.toUpperCase() === input.toUpperCase()) {
                   return (
                     <li>
-                      <Link to="/" className="block"><p>{category.toUpperCase()}</p></Link>
-                      <ul className="mx-4">
+                      <Link to="/" className="block"><p className="font-bold -text--color-grey">{category.toUpperCase()}</p></Link>
+                      <ul className="grid grid-cols-2 gap-4">
                         {data.all.map(article => {
-                          // const subName = article.category.slice(0, input.length)
                           if (article.category.toUpperCase() === category.toUpperCase()) {
                             return (
-                              <li>
-                                <Link to="/" className="block"><p>{article.name}</p></Link>
+                              <li className="p-1">
+                                <ProductImg product={article} />
                               </li>
                             )
                           }
@@ -41,21 +41,21 @@ export const SearchResult: React.FC<props> = ({ input }) => {
             </ul>
           </div>
           <div>
-            <h1>CLOTHES</h1>
-            <ul className="mx-4 mb-24">
+            <h1 className="font-bold font-roboto">CLOTHES</h1>
+            <ul className="m-1 mb-24 grid grid-cols-2 gap-4">
               {data.all.map(article => {
                 const subName = article.name.slice(0, input.length)
                 if (subName.toUpperCase() === input.toUpperCase()) {
                   return (
                     <li>
-                      <Link to="/" className="block"><p>{article.name}</p></Link>
+                      <ProductImg product={article} />
                     </li>
                   )
                 }
               })}
             </ul>
           </div>
-        </>
+        </div>
       }
     </section >
   )
