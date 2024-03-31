@@ -7,7 +7,7 @@ interface props {
 
 export const SearchResult: React.FC<props> = ({ input }) => {
 
-  const categories = ['t-shirt', 'top', 'hoodie', 'jogger', 'short', 'caps', 'belts', 'bags']
+  const categories = ['t-shirt', 'top', 'hoodie', 'jogger', 'short', 'caps', 'belt', 'bag']
 
   return (
     <section className="h-full overflow-y-auto">
@@ -22,22 +22,22 @@ export const SearchResult: React.FC<props> = ({ input }) => {
                   return (
                     <li>
                       <Link to="/" className="block"><p>{category.toUpperCase()}</p></Link>
+                      <ul className="mx-4">
+                        {data.all.map(article => {
+                          // const subName = article.category.slice(0, input.length)
+                          if (article.category.toUpperCase() === category.toUpperCase()) {
+                            return (
+                              <li>
+                                <Link to="/" className="block"><p>{article.name}</p></Link>
+                              </li>
+                            )
+                          }
+                        })}
+                      </ul>
                     </li>
                   )
                 }
               })}
-              <ul className="mx-4">
-                {data.all.map(article => {
-                  const subName = article.category.slice(0, input.length)
-                  if (subName.toUpperCase() === input.toUpperCase()) {
-                    return (
-                      <li>
-                        <Link to="/" className="block"><p>{article.name}</p></Link>
-                      </li>
-                    )
-                  }
-                })}
-              </ul>
             </ul>
           </div>
           <div>

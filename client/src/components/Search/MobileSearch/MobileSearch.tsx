@@ -41,7 +41,7 @@ export const MobileSearch = () => {
         className="h-full"
         onClick={() => handleViewSearch()}
       >
-        <img src={search_icon} className="h-full w-7 min-w-5" />
+        <img src={search_icon} className="h-full w-7 min-w-5 mr-2" />
       </button>
 
       <aside className={`fixed top-0 left-0 w-screen h-screen z-50 overflow-hidden md:left-0 -bg--color-white ${!viewSearch && " hidden"} ${search_classes()}`}>
