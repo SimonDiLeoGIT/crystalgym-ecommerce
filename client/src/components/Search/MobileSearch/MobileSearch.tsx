@@ -6,17 +6,9 @@ import "./MobileSearch.css"
 
 export const MobileSearch = () => {
 
-  // const [closeSearchMode, setCloseSearchMode] = useState(false);
-  const [openSearch, setOpenSearch] = useState(false);
-  const [viewSearch, setViewSearch] = useState(false)
-  // const [sectionOpen, setSectionOpen] = useState<string[]>([])
-
-  // function handleViewSearch() {
-  //   setCloseSearchMode(true);
-  //   setTimeout(function () {
-  //     setSearchMode(false);
-  //   }, 400);
-  // }
+  const [openSearch, setOpenSearch] = useState<boolean>(false)
+  const [viewSearch, setViewSearch] = useState<boolean>(false)
+  const [searchInput, setSearchInput] = useState<string>("")
 
   function handleViewSearch() {
     console.log("view search")
@@ -39,6 +31,10 @@ export const MobileSearch = () => {
     return classes;
   }
 
+  const handleInputChange = (event) => {
+    setSearchInput(event.target.value);
+  };
+
   return (
     <>
       <button
@@ -49,10 +45,11 @@ export const MobileSearch = () => {
       </button>
 
       <aside className={`fixed top-0 left-0 w-screen h-screen z-50 overflow-hidden md:left-0 -bg--color-white ${!viewSearch && " hidden"} ${search_classes()}`}>
-        <section className='m-4 flex'>
+        <header className='m-4 flex'>
           <form className="w-10/12 border-2 -border--color-very-light-grey rounded-xl grid grid-cols-5 gap-2 p-2">
             <input type="text" placeholder="Search for a Product..."
               className="rounded-full col-span-4 px-2"
+              onChange={handleInputChange}
             />
             <button
               className="m-auto p-2 rounded-full bg-slate-100"
@@ -67,8 +64,8 @@ export const MobileSearch = () => {
           >
             <img src={close_icon} className="" />
           </button>
-        </section>
-        <SearchResult />
+        </header>
+        <SearchResult input={searchInput} />
       </aside>
     </>
   )
