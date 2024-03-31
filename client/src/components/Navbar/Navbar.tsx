@@ -3,10 +3,9 @@ import account_avatar from '../../assets/icons/nav icons/account-user-avatar.svg
 import instagram_icon from '../../assets/icons/nav icons/instagram.svg'
 import search_icon from '../../assets/icons/nav icons/mobile and desktop/search-svgrepo-com.svg'
 import logo from '../../assets/icons/CrystalGymLogo.png'
-import close_icon from '../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg'
 import { useCallback, useEffect, useState } from "react"
 import { MobileMenu } from "../MobileMenu/MobileMenu"
-import { MobileSearch } from "../MobileSearch/MobileSearch"
+import { MobileSearch } from "../Search/MobileSearch/MobileSearch"
 import { Cart } from "../Cart/Cart"
 import "./Navbar.css"
 import { useCart } from "../../hook/useCart"
@@ -14,8 +13,6 @@ import { useCart } from "../../hook/useCart"
 export const Navbar = () => {
 
   const { isOpenCart } = useCart();
-
-  const [searchMode, setSearchMode] = useState(false);
 
   const [y, setY] = useState(window.scrollY);
   const [scrollUp, setScrollUp] = useState(false);
@@ -49,14 +46,6 @@ export const Navbar = () => {
       setScrollUp(true)
     }
   }, [isOpenCart])
-
-  const search_mode = () => {
-    if (searchMode) {
-      return (
-        <MobileSearch setSearchMode={setSearchMode} search_icon={search_icon} close_icon={close_icon} />
-      )
-    }
-  }
 
   const nav_links = [
     {
@@ -206,7 +195,7 @@ export const Navbar = () => {
             />
             <button
               className="p-2 mx-1 rounded-full hover:opacity-60 hover:-bg--color-very-light-grey "
-              onClick={() => setSearchMode(false)}
+
             >
               <img src={search_icon} className="" />
             </button>
@@ -227,10 +216,7 @@ export const Navbar = () => {
           </Link>
         </li>
         <li className="my-auto px-1 h-full flex items-center lg:hidden">
-          <button onClick={() => setSearchMode(true)} className="w-10 h-10 flex items-center duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
-            <img src={search_icon} className="m-auto w-7 min-w-5" />
-          </button>
-          {search_mode()}
+          <MobileSearch />
         </li>
         <li className="h-full px-1">
           <Cart />
