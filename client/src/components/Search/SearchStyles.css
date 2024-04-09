@@ -1,0 +1,86 @@
+.none-scroll {
+  overflow: hidden;
+}
+
+
+@keyframes open-menu {
+  from {
+    transform: translateX(-100vh);
+  }
+
+  to {
+    transform: translateX(0vh);
+  }
+}
+
+@keyframes close-menu {
+  from {
+    transform: translateX(0vh);
+  }
+
+  to {
+    transform: translateX(-100vh);
+  }
+}
+
+.open-menu {
+  animation: open-menu forwards;
+  animation-duration: 400ms;
+  animation-delay: 0ms;
+}
+
+.close-menu {
+  animation: close-menu forwards;
+  animation-duration: 400ms;
+  animation-delay: 0ms;
+}
+
+@keyframes open-desktop-menu {
+  from {
+    transform: translateX(100vh);
+  }
+
+  to {
+    transform: translateX(0vh);
+  }
+}
+
+@keyframes close-desktop-menu {
+  from {
+    transform: translateX(0vh);
+  }
+
+  to {
+    transform: translateX(100vh);
+  }
+}
+
+@keyframes opacity-animation {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.opacity-animation {
+  animation: opacity-animation forwards;
+  animation-duration: 400ms;
+  animation-delay: 200ms;
+}
+
+@media (min-width: 1024px) {
+  .open-menu {
+    animation: open-desktop-menu forwards;
+    animation-duration: 400ms;
+    animation-delay: 0ms;
+  }
+
+  .close-menu {
+    animation: close-desktop-menu forwards;
+    animation-duration: 400ms;
+    animation-delay: 0ms;
+  }
+}

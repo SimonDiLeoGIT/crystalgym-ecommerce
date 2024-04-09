@@ -13,7 +13,7 @@ export const Cart = () => {
   const { addOrder } = useOrder()
 
   function cartClasses() {
-    let classes = "fixed top-0 left-0 w-screen h-screen z-50  md:left-0 opacity-animation"
+    let classes = "fixed top-0 left-0 w-screen h-screen z-50 opacity-animation"
     hiddenCart && (classes += " hidden")
     return classes
   }

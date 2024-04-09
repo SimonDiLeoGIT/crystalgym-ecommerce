@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SearchResult } from "../SearchResults/SearchResults";
 import search_icon from '../../../assets/icons/nav icons/mobile and desktop/search-svgrepo-com.svg'
 import close_icon from '../../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg'
-import "./MobileSearch.css"
+import "./../SearchStyles.css"
 
 export const MobileSearch = () => {
 

@@ -9,6 +9,7 @@ import { MobileSearch } from "../Search/MobileSearch/MobileSearch"
 import { Cart } from "../Cart/Cart"
 import "./Navbar.css"
 import { useCart } from "../../hook/useCart"
+import { DesktopSearch } from "../Search/DesktopSearch/DesktopSearch"
 
 export const Navbar = () => {
 
@@ -189,17 +190,7 @@ export const Navbar = () => {
       </ul>
       <ul className="flex place-content-end min-w-28 mr-2">
         <li className="invisible hidden h-full items-center lg:visible lg:flex lg:relative mr-1">
-          <form className="border rounded-lg h-12 max-w-56 -border--color-very-light-grey flex items-center">
-            <input type="text" placeholder="Search for a Product..."
-              className="rounded-lg h-full w-full p-2 outline-none"
-            />
-            <button
-              className="p-2 mx-1 rounded-full hover:opacity-60 hover:-bg--color-very-light-grey "
-
-            >
-              <img src={search_icon} className="" />
-            </button>
-          </form>
+          <DesktopSearch />
         </li>
         <li className="invisible hidden fixed my-auto px-1 h-full lg:flex items-center lg:visible lg:relative">
           <Link to='/'>
