@@ -28,7 +28,7 @@ type OrderContext = {
   unconfirmedOrderExists: boolean,
   cancelOrder: (orderId: number) => void,
   cancelUnconfirmedOrder: () => void,
-  // removeFromOrder: (product: product) => void,
+  removeFromPreOrder: (product: product) => void,
 }
 
 
@@ -86,6 +86,26 @@ export const OrderProvider = ({ children }: Props) => {
     setUnconfirmedOrderExists(false)
   }
 
+  function removeFromPreOrder(product: product) {
+    console.log('unconfirmedOrderExists: ', unconfirmedOrderExists)
+    if (unconfirmedOrderExists) {
+      let products = unconfirmedOrder.order
+
+      products = products.filter(item => item.product.id !== product.id)
+
+      if (products.length === 0) {
+        clearUnconfirmed()
+      } else {
+        let totalPrice = 0;
+        products.map(p => {
+          totalPrice += (p.quantity * p.product.price)
+        })
+
+        setUnconfirmedOrder({ id: unconfirmedOrder.id, order: products, total: totalPrice, date: unconfirmedOrder.date })
+      }
+    }
+  }
+
   const getOrders = () => {
     return orders
   }
@@ -99,7 +119,8 @@ export const OrderProvider = ({ children }: Props) => {
       confirmOrder,
       unconfirmedOrderExists,
       cancelOrder,
-      cancelUnconfirmedOrder
+      cancelUnconfirmedOrder,
+      removeFromPreOrder
     }}
     >
       {children}

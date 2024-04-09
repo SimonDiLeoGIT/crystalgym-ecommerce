@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 export const Orders = () => {
 
 
-  const { orders, unconfirmedOrderExists, confirmOrder, unconfirmedOrder, cancelOrder, cancelUnconfirmedOrder } = useOrder()
+  const { orders, unconfirmedOrderExists, confirmOrder, unconfirmedOrder, cancelOrder, cancelUnconfirmedOrder, removeFromPreOrder } = useOrder()
 
   const [orderIsConfirmed, setOrderIsConfirmed] = useState<boolean>(false)
 
@@ -45,6 +45,11 @@ export const Orders = () => {
     confirm && cancelOrder(orderId)
   }
 
+  function handleRemoveFromPreOrder(product) {
+    const confirm = window.confirm("Are you sure you want to remove this item from order? \n :(")
+    confirm && removeFromPreOrder(product)
+  }
+
   return (
     <section className="-text--color-black">
       {orders.length === 0 && !unconfirmedOrderExists &&
@@ -72,7 +77,7 @@ export const Orders = () => {
                       <p>Subtotal: ${currOrder.quantity * currOrder.product.price}</p>
                     </div>
                     <div className="m-auto mr-2">
-                      <button /*onClick={() => clearFromCart(item.product)}*/ className="duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
+                      <button onClick={() => handleRemoveFromPreOrder(currOrder.product)} className="duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
                         <img src={delete_icon} className="w-10 min-w-10 p-2" />
                       </button>
                     </div>
