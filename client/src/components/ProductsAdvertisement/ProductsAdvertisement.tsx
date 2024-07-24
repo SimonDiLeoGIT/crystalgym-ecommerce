@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import './ProductsAdvertisement.css'
 import { ProductImg } from "../ProductImg/ProductImg"
+import { ProductInterface } from "../../interfaces/interfaces"
 
 type ProductList = ProductInterface[]
 

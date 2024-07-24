@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
+import { ProductInterface } from "../interfaces/interfaces";
 
 type product = ProductInterface
 

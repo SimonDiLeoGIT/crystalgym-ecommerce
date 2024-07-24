@@ -3,6 +3,7 @@ import add_to_bag_icon from "../../assets/icons/nav icons/bag-plus-1122-svgrepo-
 import like_icon from "../../assets/icons/like-icon.svg"
 import { useCart } from "../../hook/useCart";
 import { Link } from "react-router-dom";
+import { ProductInterface } from "../../interfaces/interfaces";
 
 type productType = ProductInterface
 

@@ -66,11 +66,14 @@ export const Product = () => {
             </p>
           </div>
           <ProductColors />
-          <button
-            onClick={() => addToCart(product)}
-            className="block m-auto -bg--color-black -text--color-light-grey-violet font-bold p-4 my-4 rounded-full w-11/12 max-w-md max-h-20 duration-150 hover:opacity-85">
-            ADD TO BAG
-          </button>
+          {
+            product &&
+            <button
+              onClick={() => addToCart(product)}
+              className="block m-auto -bg--color-black -text--color-light-grey-violet font-bold p-4 my-4 rounded-full w-11/12 max-w-md max-h-20 duration-150 hover:opacity-85">
+              ADD TO BAG
+            </button>
+          }
         </section>
       </section>
       <ProductsAdvertisement products={all_clothes.all.filter(item => product?.accessory ? (item.accessory) : (item.category === product?.category && item.sex === product.sex && item.id !== product.id)).slice(0, 6)} title="Similar Products" link={`/${product?.accessory ? "accessories/all" : product?.sex + "/" + product?.category}`} />
