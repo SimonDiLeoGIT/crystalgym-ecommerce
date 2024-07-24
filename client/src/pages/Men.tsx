@@ -5,8 +5,14 @@ import hoodies from "../assets/json/men/advertisement/hoodies.json"
 import hoodies_post from "../assets/json/men/post/hoodies.json"
 
 import { Carousel } from "../components/Carousel/Carousel"
+import { useEffect } from "react"
 
 export const Men = () => {
+
+  useEffect(() => {
+    document.title = "CrystalGym | Men";
+  })
+
   return (
     <main className="max-w-screen overflow-x-hidden font-roboto lg:w-11/12 lg:m-auto xl:9/12">
       <header>

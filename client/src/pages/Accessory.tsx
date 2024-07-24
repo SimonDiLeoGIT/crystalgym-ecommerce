@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import accessories from '../assets/json/shop/accessories.json'
 import { Products } from "../components/Products/Products";
 import { useParams } from "react-router-dom";
+import { ProductInterface } from "../interfaces/interfaces";
 
 
 type product = ProductInterface;
@@ -23,6 +24,10 @@ export const Accessory = () => {
     })
     return clotheList
   }
+
+  useEffect(() => {
+    document.title = "CrystalGym | Accessory";
+  })
 
   useEffect(() => {
     window.scrollTo(0, 0);

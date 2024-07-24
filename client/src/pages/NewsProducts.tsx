@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Products } from "../components/Products/Products";
+import { ProductInterface } from "../interfaces/interfaces";
 
 type productList = ProductInterface[]
 
@@ -11,6 +12,9 @@ interface Props {
 
 export const NewsProducts: React.FC<Props> = ({ title, products }) => {
 
+  useEffect(() => {
+    document.title = "CrystalGym | New";
+  })
 
   useEffect(() => {
     window.scrollTo(0, 0);

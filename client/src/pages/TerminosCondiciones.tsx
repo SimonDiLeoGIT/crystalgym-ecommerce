@@ -1,4 +1,11 @@
+import { useEffect } from "react";
+
 export const TerminosCondiciones = () => {
+
+  useEffect(() => {
+    document.title = "CrystalGym | Terms & Conditions";
+  })
+
   return (
     <section className="w-10/12 m-auto -text--color-black my-4 md:w-9/12 max-w-3xl">
       <h1 className="text-3xl font-bold mb-2">Terms and Conditions of Use</h1>

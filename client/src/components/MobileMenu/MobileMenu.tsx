@@ -137,7 +137,7 @@ export const MobileMenu = () => {
         <img src={menu} className="h-full w-8" />
       </button>
 
-      <aside className={`fixed top-0 left-0 w-screen h-screen z-50 overflow-hidden md:left-0 opacity-animation ${!viewMenu && " hidden"} overflow-hidden`}>
+      <aside className={`fixed top-0 left-0 w-screen h-screen z-50 md:left-0 opacity-animation ${!viewMenu && " hidden"} overflow-hidden`}>
         <nav className={nav_classes()}>
           <header className="w-full border-b -border--color-very-light-grey min-h-16 grid">
             <h1 className=" m-auto h-full px-2">

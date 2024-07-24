@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import account_avatar from '../../assets/icons/nav icons/account-user-avatar.svg'
 import instagram_icon from '../../assets/icons/nav icons/instagram.svg'
-import search_icon from '../../assets/icons/nav icons/mobile and desktop/search-svgrepo-com.svg'
 import logo from '../../assets/icons/CrystalGymLogo.png'
 import { useCallback, useEffect, useState } from "react"
 import { MobileMenu } from "../MobileMenu/MobileMenu"
@@ -19,8 +18,8 @@ export const Navbar = () => {
   const [scrollUp, setScrollUp] = useState(false);
   const [scrollDown, setScrollDown] = useState(false);
 
-  const handleNavigation = useCallback((e) => {
-    const window = e.currentTarget;
+  const handleNavigation = useCallback((e: Event) => {
+    const window = e.currentTarget as Window;
     if (y > window.scrollY) {
       setScrollDown(false)
       setScrollUp(true)

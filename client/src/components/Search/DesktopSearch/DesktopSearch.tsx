@@ -55,7 +55,10 @@ export const DesktopSearch = () => {
       </form>
 
       <aside className={`fixed top-20 left-0 w-screen bottom-0 z-10 opacity-animation ${!viewSearch && " hidden"}`}>
-        <section className={`max-w-xl py-2 m-auto mr-0 -bg--color-white h-full ${search_classes()}`}>
+        <section
+          className={`max-w-xl py-2 m-auto mr-0 -bg--color-white h-full ${search_classes()}`}
+          onClick={() => handleViewSearch('')}
+        >
           <SearchResult input={searchInput} />
         </section>
       </aside>

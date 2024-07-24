@@ -5,8 +5,13 @@ import off_20 from "../assets/json/home/advertisement/20-off.json"
 import off_20_posts from "../assets/json/home/post/20-off.json"
 
 import { Carousel } from "../components/Carousel/Carousel"
+import { useEffect } from "react"
 
 export const Home = () => {
+
+  useEffect(() => {
+    document.title = "CrystalGym | Home";
+  })
 
   return (
     <main className="max-w-screen overflow-x-hidden font-roboto lg:w-11/12 lg:m-auto xl:9/12">

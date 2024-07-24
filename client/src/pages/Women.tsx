@@ -5,8 +5,13 @@ import tops from "../assets/json/women/advertisement/tops.json"
 import tops_post from "../assets/json/women/post/tops.json"
 
 import { Carousel } from "../components/Carousel/Carousel"
+import { useEffect } from "react"
 
 export const Women = () => {
+
+  useEffect(() => {
+    document.title = "CrystalGym | Women";
+  })
 
   return (
     <main className="max-w-screen overflow-x-hidden font-roboto lg:w-11/12 lg:m-auto xl:9/12">

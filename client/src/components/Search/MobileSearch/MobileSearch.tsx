@@ -31,7 +31,7 @@ export const MobileSearch = () => {
     return classes;
   }
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(event.target.value);
   };
 
@@ -44,7 +44,10 @@ export const MobileSearch = () => {
         <img src={search_icon} className="h-full w-7 min-w-5 mr-2" />
       </button>
 
-      <aside className={`fixed top-0 left-0 w-screen h-screen z-50 overflow-hidden md:left-0 -bg--color-white ${!viewSearch && " hidden"} ${search_classes()}`}>
+      <aside
+        className={`fixed top-0 left-0 w-screen h-screen z-50 overflow-hidden md:left-0 -bg--color-white ${!viewSearch && " hidden"} ${search_classes()}`}
+        onClick={() => handleViewSearch()}
+      >
         <header className='m-4 flex'>
           <form className="w-10/12 border-2 -border--color-very-light-grey rounded-xl flex p-2">
             <input type="text" placeholder="Search for a Product..."

@@ -5,6 +5,7 @@ import { ProductsAdvertisement } from "../components/ProductsAdvertisement/Produ
 import { ArrowButtons } from "../components/ArrowButtons/ArrowButtons"
 import all_clothes from "../assets/json/shop/clothes.json"
 import { ProductColors } from "../components/ProductColors/ProductColors"
+import { ProductInterface } from "../interfaces/interfaces"
 type product = ProductInterface
 
 export const Product = () => {
@@ -16,6 +17,10 @@ export const Product = () => {
   const [product, setProduct] = useState<product | null>()
   const [currentImage, changeCurrentImage] = useState(0);
   const [translateValue, setTranslateValue] = useState(0);
+
+  useEffect(() => {
+    document.title = "CrystalGym | Product";
+  })
 
   useEffect(() => {
     const productAssigned = all_clothes.all.find(clothe => clothe.id.toString() === id && clothe.colorId.toString() === colorId)
@@ -32,7 +37,7 @@ export const Product = () => {
           <div className="relative">
             <section className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${translateValue}%)` }}>
               {
-                product?.images.map(image => {
+                product?.images.map((image: string) => {
                   return (
                     <img
                       className="w-screen h-1/3 object-cover"

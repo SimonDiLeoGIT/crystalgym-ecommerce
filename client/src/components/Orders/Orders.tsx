@@ -3,9 +3,9 @@ import { useOrder } from "../../hook/useOrder"
 import open from "../../assets/icons/open.svg"
 import delete_icon from "../../assets/icons/nav icons/trash-slash-alt-svgrepo-com.svg"
 import { useEffect, useState } from "react"
+import { ProductInterface } from "../../interfaces/interfaces"
 
 export const Orders = () => {
-
 
   const { orders, unconfirmedOrderExists, confirmOrder, unconfirmedOrder, cancelOrder, cancelUnconfirmedOrder, removeFromPreOrder } = useOrder()
 
@@ -14,7 +14,7 @@ export const Orders = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
 
-    const handleBeforeUnload = (event) => {
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
       if (unconfirmedOrder && !orderIsConfirmed) {
         event.preventDefault()
         event.returnValue = ''
@@ -45,7 +45,7 @@ export const Orders = () => {
     confirm && cancelOrder(orderId)
   }
 
-  function handleRemoveFromPreOrder(product) {
+  function handleRemoveFromPreOrder(product: ProductInterface) {
     const confirm = window.confirm("Are you sure you want to remove this item from order? \n :(")
     confirm && removeFromPreOrder(product)
   }

@@ -22,12 +22,19 @@ export const SearchResult: React.FC<props> = ({ input }) => {
                 if (subName.toUpperCase() === input.toUpperCase()) {
                   return (
                     <li>
-                      <Link to="/" className="block"><p className="font-bold -text--color-grey">{category.toUpperCase()}</p></Link>
+                      <Link
+                        to="/"
+                        className="block"
+                      >
+                        <p className="font-bold -text--color-grey">{category.toUpperCase()}</p>
+                      </Link>
                       <ul className="grid grid-cols-2 gap-4">
                         {data.all.map(article => {
                           if (article.category.toUpperCase() === category.toUpperCase()) {
                             return (
-                              <li className="p-1">
+                              <li
+                                className="p-1"
+                              >
                                 <ProductImg product={article} />
                               </li>
                             )

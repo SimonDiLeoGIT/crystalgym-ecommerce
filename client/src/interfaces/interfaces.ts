@@ -1,7 +1,7 @@
 
 type images = string[]
 
-interface ProductInterface {
+export interface ProductInterface {
   id: number,
   name: string,
   category: string,

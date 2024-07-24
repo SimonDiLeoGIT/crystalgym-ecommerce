@@ -5,8 +5,14 @@ import cap from "../assets/json/accessories/advertisement/cap.json"
 import caps from "../assets/json/accessories/post/cap.json"
 
 import { Carousel } from "../components/Carousel/Carousel"
+import { useEffect } from "react"
 
 export const Accessories = () => {
+
+  useEffect(() => {
+    document.title = "CrystalGym | Accessories";
+  })
+
   return (
     <main className="max-w-screen overflow-x-hidden font-roboto lg:w-11/12 lg:m-auto xl:9/12">
       <header>
