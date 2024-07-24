@@ -10,29 +10,29 @@
   "mobileImages": [
     {
       "id": "0",
-      "image": "/src/assets/images/women/advertisement/gym-clothes/violet-women.jpeg"
+      "image": "/images/women/advertisement/gym-clothes/violet-women.jpeg"
     },
     {
       "id": "1",
-      "image": "/src/assets/images/women/advertisement/gym-clothes/cap-gym-women.jpg"
+      "image": "/images/women/advertisement/gym-clothes/cap-gym-women.jpg"
     },
     {
       "id": "2",
-      "image": "/src/assets/images/women/advertisement/gym-clothes/blue-gym-woman.jpg"
+      "image": "/images/women/advertisement/gym-clothes/blue-gym-woman.jpg"
     }
   ],
   "desktopImages": [
     {
       "id": "0",
-      "image": "/src/assets/images/women/advertisement/gym-clothes/desktop/black-clothe-gym-women.jpg"
+      "image": "/images/women/advertisement/gym-clothes/desktop/black-clothe-gym-women.jpg"
     },
     {
       "id": "1",
-      "image": "/src/assets/images/women/advertisement/gym-clothes/desktop/gym-girl.jpg"
+      "image": "/images/women/advertisement/gym-clothes/desktop/gym-girl.jpg"
     },
     {
       "id": "2",
-      "image": "/src/assets/images/women/advertisement/gym-clothes/desktop/three-girls.jpg"
+      "image": "/images/women/advertisement/gym-clothes/desktop/three-girls.jpg"
     }
   ]
 }

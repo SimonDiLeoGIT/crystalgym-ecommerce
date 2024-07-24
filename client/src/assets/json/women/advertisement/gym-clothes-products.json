@@ -11,9 +11,9 @@
       "colorId": 1,
       "colorName": "Red",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/bombshell/red/bombshell-3.jpg"
+        "/images/women/clothing/hoodies/bombshell/red/bombshell-1.jpg",
+        "/images/women/clothing/hoodies/bombshell/red/bombshell-2.jpg",
+        "/images/women/clothing/hoodies/bombshell/red/bombshell-3.jpg"
       ],
       "price": 21
     },
@@ -28,9 +28,9 @@
       "colorId": 2,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/bombshell/black/bombshell-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/bombshell/black/bombshell-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/bombshell/black/bombshell-3.jpg"
+        "/images/women/clothing/hoodies/bombshell/black/bombshell-1.jpg",
+        "/images/women/clothing/hoodies/bombshell/black/bombshell-2.jpg",
+        "/images/women/clothing/hoodies/bombshell/black/bombshell-3.jpg"
       ],
       "price": 21
     },
@@ -45,9 +45,9 @@
       "colorId": 3,
       "colorName": "Blue",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/bombshell/blue/bombshell-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/bombshell/blue/bombshell-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/bombshell/blue/bombshell-3.jpg"
+        "/images/women/clothing/hoodies/bombshell/blue/bombshell-1.jpg",
+        "/images/women/clothing/hoodies/bombshell/blue/bombshell-2.jpg",
+        "/images/women/clothing/hoodies/bombshell/blue/bombshell-3.jpg"
       ],
       "price": 21
     },
@@ -62,9 +62,9 @@
       "colorId": 1,
       "colorName": "Blue",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-3.jpg"
+        "/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-1.jpg",
+        "/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-2.jpg",
+        "/images/women/clothing/hoodies/comfort rib jacket/blue/comfort-rib-jacket-3.jpg"
       ],
       "price": 21
     },
@@ -79,9 +79,9 @@
       "colorId": 2,
       "colorName": "Brown",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/comfort rib jacket/brown/comfort-rib-jacket-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/comfort rib jacket/brown/comfort-rib-jacket-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/comfort rib jacket/brown/comfort-rib-jacket-3.jpg"
+        "/images/women/clothing/hoodies/comfort rib jacket/brown/comfort-rib-jacket-1.jpg",
+        "/images/women/clothing/hoodies/comfort rib jacket/brown/comfort-rib-jacket-2.jpg",
+        "/images/women/clothing/hoodies/comfort rib jacket/brown/comfort-rib-jacket-3.jpg"
       ],
       "price": 21
     },
@@ -96,9 +96,9 @@
       "colorId": 3,
       "colorName": "White",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/comfort rib jacket/white/comfort-rib-jacket-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/comfort rib jacket/white/comfort-rib-jacket-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/comfort rib jacket/white/comfort-rib-jacket-3.jpg"
+        "/images/women/clothing/hoodies/comfort rib jacket/white/comfort-rib-jacket-1.jpg",
+        "/images/women/clothing/hoodies/comfort rib jacket/white/comfort-rib-jacket-2.jpg",
+        "/images/women/clothing/hoodies/comfort rib jacket/white/comfort-rib-jacket-3.jpg"
       ],
       "price": 21
     },
@@ -113,9 +113,9 @@
       "colorId": 1,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-3.jpg"
+        "/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-1.jpg",
+        "/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-2.jpg",
+        "/images/women/clothing/hoodies/gs power creopped zip/black/gs-power-creopped-zip-3.jpg"
       ],
       "price": 21
     },
@@ -130,9 +130,9 @@
       "colorId": 1,
       "colorName": "Green",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-3.jpg"
+        "/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-1.jpg",
+        "/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-2.jpg",
+        "/images/women/clothing/hoodies/midi track jacket/green/midi-track-jacket-3.jpg"
       ],
       "price": 21
     },
@@ -147,9 +147,9 @@
       "colorId": 2,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-3.jpg"
+        "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-1.jpg",
+        "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-2.jpg",
+        "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-3.jpg"
       ],
       "price": 21
     },
@@ -164,9 +164,9 @@
       "colorId": 1,
       "colorName": "Grey",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-3.jpg"
+        "/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-1.jpg",
+        "/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-2.jpg",
+        "/images/women/clothing/hoodies/oversized hoodie/grey/oversized-hoodie-3.jpg"
       ],
       "price": 21
     },
@@ -181,9 +181,9 @@
       "colorId": 2,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-3.jpg"
+        "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-1.jpg",
+        "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-2.jpg",
+        "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-3.jpg"
       ],
       "price": 21
     },
@@ -198,9 +198,9 @@
       "colorId": 3,
       "colorName": "White",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/oversized hoodie/white/oversized-hoodie-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/oversized hoodie/white/oversized-hoodie-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/oversized hoodie/white/oversized-hoodie-3.jpg"
+        "/images/women/clothing/hoodies/oversized hoodie/white/oversized-hoodie-1.jpg",
+        "/images/women/clothing/hoodies/oversized hoodie/white/oversized-hoodie-2.jpg",
+        "/images/women/clothing/hoodies/oversized hoodie/white/oversized-hoodie-3.jpg"
       ],
       "price": 21
     },
@@ -215,9 +215,9 @@
       "colorId": 1,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-3.jpg"
+        "/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-1.jpg",
+        "/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-2.jpg",
+        "/images/women/clothing/hoodies/rest day sweats/black/rest-day-sweats-3.jpg"
       ],
       "price": 21
     },
@@ -232,9 +232,9 @@
       "colorId": 2,
       "colorName": "Pink",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/rest day sweats/pink/rest-day-sweats-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/rest day sweats/pink/rest-day-sweats-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/rest day sweats/pink/rest-day-sweats-3.jpg"
+        "/images/women/clothing/hoodies/rest day sweats/pink/rest-day-sweats-1.jpg",
+        "/images/women/clothing/hoodies/rest day sweats/pink/rest-day-sweats-2.jpg",
+        "/images/women/clothing/hoodies/rest day sweats/pink/rest-day-sweats-3.jpg"
       ],
       "price": 21
     },
@@ -249,9 +249,9 @@
       "colorId": 3,
       "colorName": "White",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/rest day sweats/white/rest-day-sweats-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/rest day sweats/white/rest-day-sweats-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/rest day sweats/white/rest-day-sweats-3.jpg"
+        "/images/women/clothing/hoodies/rest day sweats/white/rest-day-sweats-1.jpg",
+        "/images/women/clothing/hoodies/rest day sweats/white/rest-day-sweats-2.jpg",
+        "/images/women/clothing/hoodies/rest day sweats/white/rest-day-sweats-3.jpg"
       ],
       "price": 21
     },
@@ -266,9 +266,9 @@
       "colorId": 1,
       "colorName": "Blue",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-3.jpg"
+        "/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-1.jpg",
+        "/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-2.jpg",
+        "/images/women/clothing/hoodies/signature jacket/blue/signature-jacket-3.jpg"
       ],
       "price": 21
     },
@@ -283,9 +283,9 @@
       "colorId": 2,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/signature jacket/black/signature-jacket-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/signature jacket/black/signature-jacket-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/signature jacket/black/signature-jacket-3.jpg"
+        "/images/women/clothing/hoodies/signature jacket/black/signature-jacket-1.jpg",
+        "/images/women/clothing/hoodies/signature jacket/black/signature-jacket-2.jpg",
+        "/images/women/clothing/hoodies/signature jacket/black/signature-jacket-3.jpg"
       ],
       "price": 21
     },
@@ -300,9 +300,9 @@
       "colorId": 3,
       "colorName": "Grey",
       "images": [
-        "/src/assets/images/women/clothing/hoodies/signature jacket/grey/signature-jacket-1.jpg",
-        "/src/assets/images/women/clothing/hoodies/signature jacket/grey/signature-jacket-2.jpg",
-        "/src/assets/images/women/clothing/hoodies/signature jacket/grey/signature-jacket-3.jpg"
+        "/images/women/clothing/hoodies/signature jacket/grey/signature-jacket-1.jpg",
+        "/images/women/clothing/hoodies/signature jacket/grey/signature-jacket-2.jpg",
+        "/images/women/clothing/hoodies/signature jacket/grey/signature-jacket-3.jpg"
       ],
       "price": 21
     },
@@ -317,9 +317,9 @@
       "colorId": 1,
       "colorName": "Blue",
       "images": [
-        "/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-1.jpg",
-        "/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-2.jpg",
-        "/src/assets/images/women/clothing/joggers/comfort rib/blue/comfort-rib-3.jpg"
+        "/images/women/clothing/joggers/comfort rib/blue/comfort-rib-1.jpg",
+        "/images/women/clothing/joggers/comfort rib/blue/comfort-rib-2.jpg",
+        "/images/women/clothing/joggers/comfort rib/blue/comfort-rib-3.jpg"
       ],
       "price": 21
     },
@@ -334,9 +334,9 @@
       "colorId": 2,
       "colorName": "Light Brown",
       "images": [
-        "/src/assets/images/women/clothing/joggers/comfort rib/light brown/comfort-rib-1.jpg",
-        "/src/assets/images/women/clothing/joggers/comfort rib/light brown/comfort-rib-2.jpg",
-        "/src/assets/images/women/clothing/joggers/comfort rib/light brown/comfort-rib-3.jpg"
+        "/images/women/clothing/joggers/comfort rib/light brown/comfort-rib-1.jpg",
+        "/images/women/clothing/joggers/comfort rib/light brown/comfort-rib-2.jpg",
+        "/images/women/clothing/joggers/comfort rib/light brown/comfort-rib-3.jpg"
       ],
       "price": 21
     },
@@ -351,9 +351,9 @@
       "colorId": 3,
       "colorName": "White",
       "images": [
-        "/src/assets/images/women/clothing/joggers/comfort rib/white/comfort-rib-1.jpg",
-        "/src/assets/images/women/clothing/joggers/comfort rib/white/comfort-rib-2.jpg",
-        "/src/assets/images/women/clothing/joggers/comfort rib/white/comfort-rib-3.jpg"
+        "/images/women/clothing/joggers/comfort rib/white/comfort-rib-1.jpg",
+        "/images/women/clothing/joggers/comfort rib/white/comfort-rib-2.jpg",
+        "/images/women/clothing/joggers/comfort rib/white/comfort-rib-3.jpg"
       ],
       "price": 21
     },
@@ -368,9 +368,9 @@
       "colorId": 1,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/joggers/cozy/black/cozy-1.jpg",
-        "/src/assets/images/women/clothing/joggers/cozy/black/cozy-2.jpg",
-        "/src/assets/images/women/clothing/joggers/cozy/black/cozy-3.jpg"
+        "/images/women/clothing/joggers/cozy/black/cozy-1.jpg",
+        "/images/women/clothing/joggers/cozy/black/cozy-2.jpg",
+        "/images/women/clothing/joggers/cozy/black/cozy-3.jpg"
       ],
       "price": 21
     },
@@ -385,9 +385,9 @@
       "colorId": 2,
       "colorName": "Pink",
       "images": [
-        "/src/assets/images/women/clothing/joggers/cozy/pink/cozy-1.jpg",
-        "/src/assets/images/women/clothing/joggers/cozy/pink/cozy-2.jpg",
-        "/src/assets/images/women/clothing/joggers/cozy/pink/cozy-3.jpg"
+        "/images/women/clothing/joggers/cozy/pink/cozy-1.jpg",
+        "/images/women/clothing/joggers/cozy/pink/cozy-2.jpg",
+        "/images/women/clothing/joggers/cozy/pink/cozy-3.jpg"
       ],
       "price": 21
     },
@@ -402,9 +402,9 @@
       "colorId": 1,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-1.jpg",
-        "/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-2.jpg",
-        "/src/assets/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-3.jpg"
+        "/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-1.jpg",
+        "/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-2.jpg",
+        "/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-3.jpg"
       ],
       "price": 21
     },
@@ -419,9 +419,9 @@
       "colorId": 2,
       "colorName": "Blue",
       "images": [
-        "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-1.jpg",
-        "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-2.jpg",
-        "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-3.jpg"
+        "/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-1.jpg",
+        "/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-2.jpg",
+        "/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-3.jpg"
       ],
       "price": 21
     },
@@ -436,9 +436,9 @@
       "colorId": 3,
       "colorName": "Green",
       "images": [
-        "/src/assets/images/women/clothing/joggers/lifting lightweight/green/lifting-lightweight-1.jpg",
-        "/src/assets/images/women/clothing/joggers/lifting lightweight/green/lifting-lightweight-2.jpg",
-        "/src/assets/images/women/clothing/joggers/lifting lightweight/green/lifting-lightweight-3.jpg"
+        "/images/women/clothing/joggers/lifting lightweight/green/lifting-lightweight-1.jpg",
+        "/images/women/clothing/joggers/lifting lightweight/green/lifting-lightweight-2.jpg",
+        "/images/women/clothing/joggers/lifting lightweight/green/lifting-lightweight-3.jpg"
       ],
       "price": 21
     },
@@ -453,9 +453,9 @@
       "colorId": 1,
       "colorName": "Light Brown",
       "images": [
-        "/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-3.jpg",
-        "/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-1.jpg",
-        "/src/assets/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-2.jpg"
+        "/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-3.jpg",
+        "/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-1.jpg",
+        "/images/women/clothing/joggers/liifting straight leg/light brown/lifting-straight-leg-2.jpg"
       ],
       "price": 21
     },
@@ -470,9 +470,9 @@
       "colorId": 2,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/joggers/liifting straight leg/black/liifting-straight-leg-3.jpg",
-        "/src/assets/images/women/clothing/joggers/liifting straight leg/black/liifting-straight-leg-1.jpg",
-        "/src/assets/images/women/clothing/joggers/liifting straight leg/black/liifting-straight-leg-2.jpg"
+        "/images/women/clothing/joggers/liifting straight leg/black/liifting-straight-leg-3.jpg",
+        "/images/women/clothing/joggers/liifting straight leg/black/liifting-straight-leg-1.jpg",
+        "/images/women/clothing/joggers/liifting straight leg/black/liifting-straight-leg-2.jpg"
       ],
       "price": 21
     },
@@ -487,9 +487,9 @@
       "colorId": 1,
       "colorName": "White",
       "images": [
-        "/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-1.jpg",
-        "/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-2.jpg",
-        "/src/assets/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-3.jpg"
+        "/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-1.jpg",
+        "/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-2.jpg",
+        "/images/women/clothing/joggers/rest day sweats/white/rest-day-sweats-3.jpg"
       ],
       "price": 21
     },
@@ -504,9 +504,9 @@
       "colorId": 2,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/joggers/rest day sweats/black/rest-day-sweats-1.jpg",
-        "/src/assets/images/women/clothing/joggers/rest day sweats/black/rest-day-sweats-2.jpg",
-        "/src/assets/images/women/clothing/joggers/rest day sweats/black/rest-day-sweats-3.jpg"
+        "/images/women/clothing/joggers/rest day sweats/black/rest-day-sweats-1.jpg",
+        "/images/women/clothing/joggers/rest day sweats/black/rest-day-sweats-2.jpg",
+        "/images/women/clothing/joggers/rest day sweats/black/rest-day-sweats-3.jpg"
       ],
       "price": 21
     },
@@ -521,9 +521,9 @@
       "colorId": 3,
       "colorName": "Light Brown",
       "images": [
-        "/src/assets/images/women/clothing/joggers/rest day sweats/light brown/rest-day-sweats-1.jpg",
-        "/src/assets/images/women/clothing/joggers/rest day sweats/light brown/rest-day-sweats-2.jpg",
-        "/src/assets/images/women/clothing/joggers/rest day sweats/light brown/rest-day-sweats-3.jpg"
+        "/images/women/clothing/joggers/rest day sweats/light brown/rest-day-sweats-1.jpg",
+        "/images/women/clothing/joggers/rest day sweats/light brown/rest-day-sweats-2.jpg",
+        "/images/women/clothing/joggers/rest day sweats/light brown/rest-day-sweats-3.jpg"
       ],
       "price": 21
     },
@@ -538,9 +538,9 @@
       "colorId": 1,
       "colorName": "Blue",
       "images": [
-        "/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-1.jpg",
-        "/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-2.jpg",
-        "/src/assets/images/women/clothing/joggers/signature jogger/blue/signature-jogger-3.jpg"
+        "/images/women/clothing/joggers/signature jogger/blue/signature-jogger-1.jpg",
+        "/images/women/clothing/joggers/signature jogger/blue/signature-jogger-2.jpg",
+        "/images/women/clothing/joggers/signature jogger/blue/signature-jogger-3.jpg"
       ],
       "price": 21
     },
@@ -555,9 +555,9 @@
       "colorId": 1,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-1.jpg",
-        "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-2.jpg",
-        "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-3.jpg"
+        "/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-1.jpg",
+        "/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-2.jpg",
+        "/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-3.jpg"
       ],
       "price": 21
     },
@@ -572,9 +572,9 @@
       "colorId": 2,
       "colorName": "Grey",
       "images": [
-        "/src/assets/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-1.jpg",
-        "/src/assets/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-2.jpg",
-        "/src/assets/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-3.jpg"
+        "/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-1.jpg",
+        "/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-2.jpg",
+        "/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-3.jpg"
       ],
       "price": 21
     },
@@ -589,9 +589,9 @@
       "colorId": 1,
       "colorName": "Violet",
       "images": [
-        "/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-1.jpg",
-        "/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-2.jpg",
-        "/src/assets/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-3.jpg"
+        "/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-1.jpg",
+        "/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-2.jpg",
+        "/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-3.jpg"
       ],
       "price": 21
     },
@@ -606,9 +606,9 @@
       "colorId": 2,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/top/crop mesh tank/black/crop-mesh-tank-1.jpg",
-        "/src/assets/images/women/clothing/top/crop mesh tank/black/crop-mesh-tank-2.jpg",
-        "/src/assets/images/women/clothing/top/crop mesh tank/black/crop-mesh-tank-3.jpg"
+        "/images/women/clothing/top/crop mesh tank/black/crop-mesh-tank-1.jpg",
+        "/images/women/clothing/top/crop mesh tank/black/crop-mesh-tank-2.jpg",
+        "/images/women/clothing/top/crop mesh tank/black/crop-mesh-tank-3.jpg"
       ],
       "price": 21
     },
@@ -623,9 +623,9 @@
       "colorId": 3,
       "colorName": "White",
       "images": [
-        "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-1.jpg",
-        "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-2.jpg",
-        "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-3.jpg"
+        "/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-1.jpg",
+        "/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-2.jpg",
+        "/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-3.jpg"
       ],
       "price": 21
     },
@@ -640,9 +640,9 @@
       "colorId": 1,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-1.jpg",
-        "/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-2.jpg",
-        "/src/assets/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-3.jpg"
+        "/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-1.jpg",
+        "/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-2.jpg",
+        "/images/women/clothing/top/jordan indy/black/taupe-notre-dame-boxy-oversized-3.jpg"
       ],
       "price": 21
     },
@@ -657,9 +657,9 @@
       "colorId": 2,
       "colorName": "Brown",
       "images": [
-        "/src/assets/images/women/clothing/top/jordan indy/brown/jordan-indy-1.jpg",
-        "/src/assets/images/women/clothing/top/jordan indy/brown/taupe-notre-dame-boxy-oversized-2.jpg",
-        "/src/assets/images/women/clothing/top/jordan indy/brown/taupe-notre-dame-boxy-oversized-3.jpg"
+        "/images/women/clothing/top/jordan indy/brown/jordan-indy-1.jpg",
+        "/images/women/clothing/top/jordan indy/brown/taupe-notre-dame-boxy-oversized-2.jpg",
+        "/images/women/clothing/top/jordan indy/brown/taupe-notre-dame-boxy-oversized-3.jpg"
       ],
       "price": 21
     },
@@ -674,9 +674,9 @@
       "colorId": 1,
       "colorName": "Red",
       "images": [
-        "/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-1.jpg",
-        "/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-2.jpg",
-        "/src/assets/images/women/clothing/top/motivation tee/red/motivation-tee-3.jpg"
+        "/images/women/clothing/top/motivation tee/red/motivation-tee-1.jpg",
+        "/images/women/clothing/top/motivation tee/red/motivation-tee-2.jpg",
+        "/images/women/clothing/top/motivation tee/red/motivation-tee-3.jpg"
       ],
       "price": 21
     },
@@ -691,9 +691,9 @@
       "colorId": 2,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-1.jpg",
-        "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-2.jpg",
-        "/src/assets/images/women/clothing/top/motivation tee/black/motivation-tee-3.jpg"
+        "/images/women/clothing/top/motivation tee/black/motivation-tee-1.jpg",
+        "/images/women/clothing/top/motivation tee/black/motivation-tee-2.jpg",
+        "/images/women/clothing/top/motivation tee/black/motivation-tee-3.jpg"
       ],
       "price": 21
     },
@@ -708,9 +708,9 @@
       "colorId": 3,
       "colorName": "White",
       "images": [
-        "/src/assets/images/women/clothing/top/motivation tee/white/motivation-tee-1.jpg",
-        "/src/assets/images/women/clothing/top/motivation tee/white/motivation-tee-2.jpg",
-        "/src/assets/images/women/clothing/top/motivation tee/white/motivation-tee-3.jpg"
+        "/images/women/clothing/top/motivation tee/white/motivation-tee-1.jpg",
+        "/images/women/clothing/top/motivation tee/white/motivation-tee-2.jpg",
+        "/images/women/clothing/top/motivation tee/white/motivation-tee-3.jpg"
       ],
       "price": 21
     },
@@ -725,9 +725,9 @@
       "colorId": 1,
       "colorName": "White",
       "images": [
-        "/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-1.jpg",
-        "/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-2.jpg",
-        "/src/assets/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-3.jpg"
+        "/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-1.jpg",
+        "/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-2.jpg",
+        "/images/women/clothing/top/strappy crop cami tank/white/strappy-crop-cami-tank-3.jpg"
       ],
       "price": 21
     },
@@ -742,9 +742,9 @@
       "colorId": 2,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/top/strappy crop cami tank/black/strappy-crop-cami-tank-1.jpg",
-        "/src/assets/images/women/clothing/top/strappy crop cami tank/black/strappy-crop-cami-tank-2.jpg",
-        "/src/assets/images/women/clothing/top/strappy crop cami tank/black/strappy-crop-cami-tank-3.jpg"
+        "/images/women/clothing/top/strappy crop cami tank/black/strappy-crop-cami-tank-1.jpg",
+        "/images/women/clothing/top/strappy crop cami tank/black/strappy-crop-cami-tank-2.jpg",
+        "/images/women/clothing/top/strappy crop cami tank/black/strappy-crop-cami-tank-3.jpg"
       ],
       "price": 21
     },
@@ -759,9 +759,9 @@
       "colorId": 1,
       "colorName": "Pink",
       "images": [
-        "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-1.jpg",
-        "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-2.jpg",
-        "/src/assets/images/women/clothing/top/swoosh light/pink/swoosh-light-3.jpg"
+        "/images/women/clothing/top/swoosh light/pink/swoosh-light-1.jpg",
+        "/images/women/clothing/top/swoosh light/pink/swoosh-light-2.jpg",
+        "/images/women/clothing/top/swoosh light/pink/swoosh-light-3.jpg"
       ],
       "price": 21
     },
@@ -776,9 +776,9 @@
       "colorId": 2,
       "colorName": "Purple",
       "images": [
-        "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-1.jpg",
-        "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-2.jpg",
-        "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-3.jpg"
+        "/images/women/clothing/top/swoosh light/purple/swoosh-light-1.jpg",
+        "/images/women/clothing/top/swoosh light/purple/swoosh-light-2.jpg",
+        "/images/women/clothing/top/swoosh light/purple/swoosh-light-3.jpg"
       ],
       "price": 21
     },
@@ -793,9 +793,9 @@
       "colorId": 1,
       "colorName": "Light Brown",
       "images": [
-        "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1.jpg",
-        "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-2.jpg",
-        "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-3.jpg"
+        "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1.jpg",
+        "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-2.jpg",
+        "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-3.jpg"
       ],
       "price": 21
     },
@@ -810,9 +810,9 @@
       "colorId": 2,
       "colorName": "Pink",
       "images": [
-        "/src/assets/images/women/clothing/top/tiny twist bra/pink/tiny-twist-bra-1.jpg",
-        "/src/assets/images/women/clothing/top/tiny twist bra/pink/tiny-twist-bra-2.jpg",
-        "/src/assets/images/women/clothing/top/tiny twist bra/pink/tiny-twist-bra-3.jpg"
+        "/images/women/clothing/top/tiny twist bra/pink/tiny-twist-bra-1.jpg",
+        "/images/women/clothing/top/tiny twist bra/pink/tiny-twist-bra-2.jpg",
+        "/images/women/clothing/top/tiny twist bra/pink/tiny-twist-bra-3.jpg"
       ],
       "price": 21
     },
@@ -827,9 +827,9 @@
       "colorId": 3,
       "colorName": "Violet",
       "images": [
-        "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-1.jpg",
-        "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-2.jpg",
-        "/src/assets/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-3.jpg"
+        "/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-1.jpg",
+        "/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-2.jpg",
+        "/images/women/clothing/top/tiny twist bra/violet/tyni-twist-bra-3.jpg"
       ],
       "price": 21
     },
@@ -844,9 +844,9 @@
       "colorId": 1,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-1.jpg",
-        "/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-2.jpg",
-        "/src/assets/images/women/clothing/top/vital seamless/black/vital-seamless-3.jpg"
+        "/images/women/clothing/top/vital seamless/black/vital-seamless-1.jpg",
+        "/images/women/clothing/top/vital seamless/black/vital-seamless-2.jpg",
+        "/images/women/clothing/top/vital seamless/black/vital-seamless-3.jpg"
       ],
       "price": 21
     },
@@ -861,9 +861,9 @@
       "colorId": 2,
       "colorName": "Blue",
       "images": [
-        "/src/assets/images/women/clothing/top/vital seamless/blue/vital-seamless-1.jpg",
-        "/src/assets/images/women/clothing/top/vital seamless/blue/vital-seamless-2.jpg",
-        "/src/assets/images/women/clothing/top/vital seamless/blue/vital-seamless-3.jpg"
+        "/images/women/clothing/top/vital seamless/blue/vital-seamless-1.jpg",
+        "/images/women/clothing/top/vital seamless/blue/vital-seamless-2.jpg",
+        "/images/women/clothing/top/vital seamless/blue/vital-seamless-3.jpg"
       ],
       "price": 21
     },
@@ -878,9 +878,9 @@
       "colorId": 3,
       "colorName": "Green",
       "images": [
-        "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-1.jpg",
-        "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-2.jpg",
-        "/src/assets/images/women/clothing/top/vital seamless/green/vital-seamless-3.jpg"
+        "/images/women/clothing/top/vital seamless/green/vital-seamless-1.jpg",
+        "/images/women/clothing/top/vital seamless/green/vital-seamless-2.jpg",
+        "/images/women/clothing/top/vital seamless/green/vital-seamless-3.jpg"
       ],
       "price": 21
     },
@@ -895,9 +895,9 @@
       "colorId": 1,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-1.jpg",
-        "/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-2.jpg",
-        "/src/assets/images/women/clothing/t-shirt/block oversized/black/block-oversized-3.jpg"
+        "/images/women/clothing/t-shirt/block oversized/black/block-oversized-1.jpg",
+        "/images/women/clothing/t-shirt/block oversized/black/block-oversized-2.jpg",
+        "/images/women/clothing/t-shirt/block oversized/black/block-oversized-3.jpg"
       ],
       "price": 21
     },
@@ -912,9 +912,9 @@
       "colorId": 2,
       "colorName": "Light Blue",
       "images": [
-        "/src/assets/images/women/clothing/t-shirt/block oversized/light blue/block-oversized-1.jpg",
-        "/src/assets/images/women/clothing/t-shirt/block oversized/light blue/block-oversized-2.jpg",
-        "/src/assets/images/women/clothing/t-shirt/block oversized/light blue/block-oversized-3.jpg"
+        "/images/women/clothing/t-shirt/block oversized/light blue/block-oversized-1.jpg",
+        "/images/women/clothing/t-shirt/block oversized/light blue/block-oversized-2.jpg",
+        "/images/women/clothing/t-shirt/block oversized/light blue/block-oversized-3.jpg"
       ],
       "price": 21
     },
@@ -929,9 +929,9 @@
       "colorId": 1,
       "colorName": "White",
       "images": [
-        "/src/assets/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-1.jpg",
-        "/src/assets/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-2.jpg",
-        "/src/assets/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-3.jpg"
+        "/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-1.jpg",
+        "/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-2.jpg",
+        "/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-3.jpg"
       ],
       "price": 21
     },
@@ -946,9 +946,9 @@
       "colorId": 2,
       "colorName": "Black",
       "images": [
-        "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-1.jpg",
-        "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-2.jpg",
-        "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-3.jpg"
+        "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-1.jpg",
+        "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-2.jpg",
+        "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-3.jpg"
       ],
       "price": 21
     }

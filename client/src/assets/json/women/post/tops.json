@@ -10,7 +10,7 @@
     "colorId": 3,
     "colorName": "White",
     "images": [
-      "/src/assets/images/women/post/tops/crop-mesh-tank-1.jpg"
+      "/images/women/post/tops/crop-mesh-tank-1.jpg"
     ],
     "price": 21
   },
@@ -25,7 +25,7 @@
     "colorId": 2,
     "colorName": "Black",
     "images": [
-      "/src/assets/images/women/post/tops/motivation-tee-1.jpg"
+      "/images/women/post/tops/motivation-tee-1.jpg"
     ],
     "price": 21
   },
@@ -40,7 +40,7 @@
     "colorId": 1,
     "colorName": "Pink",
     "images": [
-      "/src/assets/images/women/post/tops/strappy-crop-cami-tank-1.jpg"
+      "/images/women/post/tops/strappy-crop-cami-tank-1.jpg"
     ],
     "price": 21
   },
@@ -55,7 +55,7 @@
     "colorId": 3,
     "colorName": "Violet",
     "images": [
-      "/src/assets/images/women/post/tops/swoosh-light-1.jpg"
+      "/images/women/post/tops/swoosh-light-1.jpg"
     ],
     "price": 21
   },
@@ -70,7 +70,7 @@
     "colorId": 3,
     "colorName": "Green",
     "images": [
-      "/src/assets/images/women/post/tops/tiny-twist-bra-1.jpg"
+      "/images/women/post/tops/tiny-twist-bra-1.jpg"
     ],
     "price": 21
   },
@@ -85,7 +85,7 @@
     "colorId": 3,
     "colorName": "Green",
     "images": [
-      "/src/assets/images/women/post/tops/vital-seamless-1.jpg"
+      "/images/women/post/tops/vital-seamless-1.jpg"
     ],
     "price": 21
   }

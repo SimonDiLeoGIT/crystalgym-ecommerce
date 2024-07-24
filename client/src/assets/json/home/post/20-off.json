@@ -10,9 +10,9 @@
     "colorId": 2,
     "colorName": "Black",
     "images": [
-      "/src/assets/images/men/clothes/Jogger/Global/Black/global-1.jpg",
-      "/src/assets/images/men/clothes/Jogger/Global/Black/global-2.jpg",
-      "/src/assets/images/men/clothes/Jogger/Global/Black/global-3.jpg"
+      "/images/men/clothes/Jogger/Global/Black/global-1.jpg",
+      "/images/men/clothes/Jogger/Global/Black/global-2.jpg",
+      "/images/men/clothes/Jogger/Global/Black/global-3.jpg"
     ],
     "price": 21
   },
@@ -27,9 +27,9 @@
     "colorId": 3,
     "colorName": "White",
     "images": [
-      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-1.jpg",
-      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-2.jpg",
-      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-3.jpg"
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-1.jpg",
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-2.jpg",
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-3.jpg"
     ],
     "price": 21
   },
@@ -44,9 +44,9 @@
     "colorId": 2,
     "colorName": "Black",
     "images": [
-      "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-1.jpg",
-      "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-2.jpg",
-      "/src/assets/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-3.jpg"
+      "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-1.jpg",
+      "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-2.jpg",
+      "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-3.jpg"
     ],
     "price": 21
   },
@@ -61,9 +61,9 @@
     "colorId": 2,
     "colorName": "Blue",
     "images": [
-      "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-1.jpg",
-      "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-2.jpg",
-      "/src/assets/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-3.jpg"
+      "/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-1.jpg",
+      "/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-2.jpg",
+      "/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-3.jpg"
     ],
     "price": 21
   },
@@ -78,9 +78,9 @@
     "colorId": 3,
     "colorName": "White",
     "images": [
-      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-1.jpg",
-      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-2.jpg",
-      "/src/assets/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-3.jpg"
+      "/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-1.jpg",
+      "/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-2.jpg",
+      "/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-3.jpg"
     ],
     "price": 21
   },
@@ -95,9 +95,9 @@
     "colorId": 1,
     "colorName": "Light Brown",
     "images": [
-      "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1.jpg",
-      "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-2.jpg",
-      "/src/assets/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-3.jpg"
+      "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1.jpg",
+      "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-2.jpg",
+      "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-3.jpg"
     ],
     "price": 21
   },
@@ -112,9 +112,9 @@
     "colorId": 2,
     "colorName": "Black",
     "images": [
-      "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-1.jpg",
-      "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-2.jpg",
-      "/src/assets/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-3.jpg"
+      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-1.jpg",
+      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-2.jpg",
+      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-3.jpg"
     ],
     "price": 21
   }

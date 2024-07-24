@@ -10,29 +10,29 @@
   "mobileImages": [
     {
       "id": "0",
-      "image": "/src/assets/images/home/advertisement/new-this-month/new-this-month-1.jpg"
+      "image": "/images/home/advertisement/new-this-month/new-this-month-1.jpg"
     },
     {
       "id": "1",
-      "image": "/src/assets/images/home/advertisement/new-this-month/new-this-month-2.jpg"
+      "image": "/images/home/advertisement/new-this-month/new-this-month-2.jpg"
     },
     {
       "id": "2",
-      "image": "/src/assets/images/home/advertisement/new-this-month/new-this-month-3.jpg"
+      "image": "/images/home/advertisement/new-this-month/new-this-month-3.jpg"
     }
   ],
   "desktopImages": [
     {
       "id": "0",
-      "image": "/src/assets/images/home/advertisement/new-this-month/desktop/the-rock.jpg"
+      "image": "/images/home/advertisement/new-this-month/desktop/the-rock.jpg"
     },
     {
       "id": "1",
-      "image": "/src/assets/images/home/advertisement/new-this-month/desktop/resting-girl.jpg"
+      "image": "/images/home/advertisement/new-this-month/desktop/resting-girl.jpg"
     },
     {
       "id": "2",
-      "image": "/src/assets/images/home/advertisement/new-this-month/desktop/muscle.jpg"
+      "image": "/images/home/advertisement/new-this-month/desktop/muscle.jpg"
     }
   ]
 }

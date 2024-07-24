@@ -10,10 +10,10 @@
     "colorId": 1,
     "colorName": "Dark Red",
     "images": [
-      "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-1.jpg",
-      "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-2.jpg",
-      "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-3.jpg",
-      "/src/assets/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-4.jpg"
+      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-1.jpg",
+      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-2.jpg",
+      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-3.jpg",
+      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-4.jpg"
     ],
     "price": 29.99
   },
@@ -28,9 +28,9 @@
     "colorId": 4,
     "colorName": "Yellow",
     "images": [
-      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-1.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-2.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-3.jpg"
+      "/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-1.jpg",
+      "/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-2.jpg",
+      "/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-3.jpg"
     ],
     "price": 38
   },
@@ -45,10 +45,10 @@
     "colorId": 2,
     "colorName": "Green",
     "images": [
-      "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 1.jpg",
-      "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 2.jpg",
-      "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 3.jpg",
-      "/src/assets/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 4.jpg"
+      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 1.jpg",
+      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 2.jpg",
+      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 3.jpg",
+      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 4.jpg"
     ],
     "price": 31
   },
@@ -63,10 +63,10 @@
     "colorId": 1,
     "colorName": "Brown",
     "images": [
-      "/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-1.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-2.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-3.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-4.jpg"
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-1.jpg",
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-2.jpg",
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-3.jpg",
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-4.jpg"
     ],
     "price": 21
   },
@@ -81,10 +81,10 @@
     "colorId": 1,
     "colorName": "Black",
     "images": [
-      "/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-1.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-2.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-3.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-4.jpg"
+      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-1.jpg",
+      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-2.jpg",
+      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-3.jpg",
+      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-4.jpg"
     ],
     "price": 21
   }

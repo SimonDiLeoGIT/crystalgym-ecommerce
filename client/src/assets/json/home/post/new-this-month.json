@@ -10,9 +10,9 @@
     "colorId": 1,
     "colorName": "Green",
     "images": [
-      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-2.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-3.jpg"
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1.jpg",
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-2.jpg",
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-3.jpg"
     ],
     "price": 38
   },
@@ -27,10 +27,10 @@
     "colorId": 4,
     "colorName": "Red",
     "images": [
-      "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-1.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-2.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-3.jpg",
-      "/src/assets/images/men/clothes/Hoodie/Rest Day/Red/rest-day-4.jpg"
+      "/images/men/clothes/Hoodie/Rest Day/Red/rest-day-1.jpg",
+      "/images/men/clothes/Hoodie/Rest Day/Red/rest-day-2.jpg",
+      "/images/men/clothes/Hoodie/Rest Day/Red/rest-day-3.jpg",
+      "/images/men/clothes/Hoodie/Rest Day/Red/rest-day-4.jpg"
     ],
     "price": 21
   },
@@ -45,9 +45,9 @@
     "colorId": 2,
     "colorName": "Black",
     "images": [
-      "/src/assets/images/men/clothes/Jogger/Global/Black/global-1.jpg",
-      "/src/assets/images/men/clothes/Jogger/Global/Black/global-2.jpg",
-      "/src/assets/images/men/clothes/Jogger/Global/Black/global-3.jpg"
+      "/images/men/clothes/Jogger/Global/Black/global-1.jpg",
+      "/images/men/clothes/Jogger/Global/Black/global-2.jpg",
+      "/images/men/clothes/Jogger/Global/Black/global-3.jpg"
     ],
     "price": 21
   },
@@ -62,9 +62,9 @@
     "colorId": 1,
     "colorName": "Green",
     "images": [
-      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-1.jpg",
-      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-2.jpg",
-      "/src/assets/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-3.jpg"
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-1.jpg",
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-2.jpg",
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-3.jpg"
     ],
     "price": 21
   },
@@ -79,9 +79,9 @@
     "colorId": 2,
     "colorName": "Black",
     "images": [
-      "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-1.jpg",
-      "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-2.jpg",
-      "/src/assets/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-3.jpg"
+      "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-1.jpg",
+      "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-2.jpg",
+      "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-3.jpg"
     ],
     "price": 21
   },
@@ -96,9 +96,9 @@
     "colorId": 1,
     "colorName": "Black",
     "images": [
-      "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-1.jpg",
-      "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-2.jpg",
-      "/src/assets/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-3.jpg"
+      "/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-1.jpg",
+      "/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-2.jpg",
+      "/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-3.jpg"
     ],
     "price": 21
   },
@@ -113,9 +113,9 @@
     "colorId": 2,
     "colorName": "Purple",
     "images": [
-      "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-1.jpg",
-      "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-2.jpg",
-      "/src/assets/images/women/clothing/top/swoosh light/purple/swoosh-light-3.jpg"
+      "/images/women/clothing/top/swoosh light/purple/swoosh-light-1.jpg",
+      "/images/women/clothing/top/swoosh light/purple/swoosh-light-2.jpg",
+      "/images/women/clothing/top/swoosh light/purple/swoosh-light-3.jpg"
     ],
     "price": 21
   }

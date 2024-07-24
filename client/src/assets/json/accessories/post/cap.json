@@ -10,9 +10,9 @@
     "colorId": 1,
     "colorName": "Black",
     "images": [
-      "/src/assets/images/accessories/clothes/cap/sharked/black/cap-1.jpg",
-      "/src/assets/images/accessories/clothes/cap/sharked/black/cap-2.jpg",
-      "/src/assets/images/accessories/clothes/cap/sharked/black/cap-2.jpg"
+      "/images/accessories/clothes/cap/sharked/black/cap-1.jpg",
+      "/images/accessories/clothes/cap/sharked/black/cap-2.jpg",
+      "/images/accessories/clothes/cap/sharked/black/cap-2.jpg"
     ],
     "price": 29.99
   },
@@ -27,9 +27,9 @@
     "colorId": 2,
     "colorName": "Light Brown",
     "images": [
-      "/src/assets/images/accessories/clothes/cap/sharked/light brown/cap-1.jpg",
-      "/src/assets/images/accessories/clothes/cap/sharked/light brown/cap-2.jpg",
-      "/src/assets/images/accessories/clothes/cap/sharked/light brown/cap-2.jpg"
+      "/images/accessories/clothes/cap/sharked/light brown/cap-1.jpg",
+      "/images/accessories/clothes/cap/sharked/light brown/cap-2.jpg",
+      "/images/accessories/clothes/cap/sharked/light brown/cap-2.jpg"
     ],
     "price": 29.99
   }

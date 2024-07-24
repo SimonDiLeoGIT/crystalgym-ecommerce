@@ -10,29 +10,29 @@
   "mobileImages": [
     {
       "id": "0",
-      "image": "/src/assets/images/accessories/advertisement/cap/cap-1.jpg"
+      "image": "/images/accessories/advertisement/cap/cap-1.jpg"
     },
     {
       "id": "1",
-      "image": "/src/assets/images/accessories/advertisement/cap/cap-2.jpg"
+      "image": "/images/accessories/advertisement/cap/cap-2.jpg"
     },
     {
       "id": "2",
-      "image": "/src/assets/images/accessories/advertisement/cap/cap-3.jpg"
+      "image": "/images/accessories/advertisement/cap/cap-3.jpg"
     }
   ],
   "desktopImages": [
     {
       "id": "0",
-      "image": "/src/assets/images/accessories/advertisement/cap/desktop/cap-1.jpg"
+      "image": "/images/accessories/advertisement/cap/desktop/cap-1.jpg"
     },
     {
       "id": "1",
-      "image": "/src/assets/images/accessories/advertisement/cap/desktop/cap-2.jpg"
+      "image": "/images/accessories/advertisement/cap/desktop/cap-2.jpg"
     },
     {
       "id": "2",
-      "image": "/src/assets/images/accessories/advertisement/cap/desktop/cap-3.jpg"
+      "image": "/images/accessories/advertisement/cap/desktop/cap-3.jpg"
     }
   ]
 }
