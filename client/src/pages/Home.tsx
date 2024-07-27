@@ -4,9 +4,8 @@ import new_this_month from "../assets/json/home/advertisement/new-this-month.jso
 import new_this_month_posts from "../assets/json/home/post/new-this-month.json"
 import off_20 from "../assets/json/home/advertisement/20-off.json"
 import off_20_posts from "../assets/json/home/post/20-off.json"
-import Carousel from "../components/Carousel/Carousel"
 
-// const Carousel = lazy(() => import("../components/Carousel/Carousel"))
+const Carousel = lazy(() => import("../components/Carousel/Carousel"))
 const ProductsAdvertisement = lazy(() => import("../components/ProductsAdvertisement/ProductsAdvertisement"))
 
 const Home = () => {
