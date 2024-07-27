@@ -11,7 +11,7 @@ interface Props {
   link: string
 }
 
-export const ProductsAdvertisement: React.FC<Props> = ({ products, title, link }) => {
+const ProductsAdvertisement: React.FC<Props> = ({ products, title, link }) => {
 
   return (
     <section className="p-2 mb-4 lg:w-11/12 lg:m-auto">
@@ -33,3 +33,5 @@ export const ProductsAdvertisement: React.FC<Props> = ({ products, title, link }
     </section>
   )
 }
+
+export default ProductsAdvertisement;

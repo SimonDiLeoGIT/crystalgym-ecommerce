@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import './carousel.css'
 import { useEffect, useState } from 'react'
 import { ArrowButtons } from '../ArrowButtons/ArrowButtons'
+import { ImageLoad } from '../ImageLoad/ImageLoad'
+
 interface image {
   title_front: string,
   title_middle: string,
@@ -25,7 +27,7 @@ interface Props {
 }
 
 
-export const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktopImages }) => {
+const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktopImages }) => {
 
   const [currentImage, changeCurrentImage] = useState(0);
   const [translateValue, setTranslateValue] = useState(0);
@@ -53,15 +55,19 @@ export const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktop
 
   return (
     <section className='relative w-full overflow-x-auto -bg--color-very-light-grey bg-opacity-65 shadow-lg -shadow--color-grey m-auto lg:my-8 lg:w-11/12 lg:rounded-xl'>
-      <div className='overflow-hidden m-auto '>
-        <section className='flex transition-transform duration-500 ease-in-out' style={{ transform: `translateX(${translateValue}%)` }}>
+      <div className='overflow-hidden m-auto'>
+        <section className='md:h-[32rem] lg:h-[40rem] xl:h-[48rem] flex transition-transform duration-500 ease-in-out' style={{ transform: `translateX(${translateValue}%)` }}>
           {getImages().map((image) => {
             return (
-              <img
-                src={image.image}
-                alt={image.id}
-                className='min-w-full h-screen max-h-screen object-cover md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
+              <ImageLoad
+                imageUrl={image.image}
               />
+              // <img
+              //   src={image.image}
+              //   alt={image.id}
+              //   className='min-w-full h-screen max-h-screen object-cover md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
+              //   loading='lazy'
+              // />
             )
           })}
         </section>
@@ -77,3 +83,5 @@ export const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktop
     </section>
   )
 }
+
+export default Carousel;

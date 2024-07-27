@@ -22,9 +22,14 @@ export const ProductImg: React.FC<Props> = ({ product }) => {
 
   return (
     <figure className="overflow-hidden">
-      <div className="relative overflow-hidden ">
-        <Link to={`/product/${product.id}/${product.colorId}`} className="">
-          <img className="h-full w-full object-cover overflow-hidden duration-500 hover:scale-110" src={product.images[0]} alt={product.name} />
+      <div className="relative overflow-hidden h-full w-full">
+        <Link to={`/product/${product.id}/${product.colorId}`} className="h-full w-full">
+          <img
+            className="h-full w-full object-cover overflow-hidden duration-500 hover:scale-110"
+            src={product.images[0]}
+            alt={product.name}
+            loading='lazy'
+          />
         </Link>
         <button onClick={() => addProduct(product)} className="absolute top-2 right-2 -bg--color-white rounded-full p-2 duration-150 hover:bg-opacity-60 hover:scale-105 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-white"> <img src={add_to_bag_icon} alt="bag icon" className="w-4" />  </button>
         <button className="absolute bottom-2 right-2 -bg--color-white rounded-full p-2 duration-150 hover:bg-opacity-60 hover:scale-105 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-white"> <img src={like_icon} alt="like icon" className="w-4" /> </button>

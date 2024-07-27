@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export const TerminosCondiciones = () => {
 
   useEffect(() => {
-    document.title = "CrystalGym | Terms & Conditions";
+    document.title = "Terms & Conditions | CrystalGym";
   })
 
   return (
@@ -48,3 +48,5 @@ export const TerminosCondiciones = () => {
     </section>
   )
 }
+
+export default TerminosCondiciones;

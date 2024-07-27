@@ -4,7 +4,7 @@ import { Orders } from "../components/Orders/Orders"
 export const Profile = () => {
 
   useEffect(() => {
-    document.title = "CrystalGym | Profile";
+    document.title = "Profile | CrystalGym";
   })
 
   return (
@@ -23,3 +23,5 @@ export const Profile = () => {
     </section>
   )
 }
+
+export default Profile;
