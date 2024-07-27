@@ -1,16 +1,16 @@
-import { ProductsAdvertisement } from "../components/ProductsAdvertisement/ProductsAdvertisement"
+import ProductsAdvertisement from "../components/ProductsAdvertisement/ProductsAdvertisement"
 import accessories from "../assets/json/shop/accessories.json"
 import gym_accessories from "../assets/json/accessories/advertisement/gym-accessories.json"
 import cap from "../assets/json/accessories/advertisement/cap.json"
 import caps from "../assets/json/accessories/post/cap.json"
 
-import { Carousel } from "../components/Carousel/Carousel"
+import Carousel from "../components/Carousel/Carousel"
 import { useEffect } from "react"
 
-export const Accessories = () => {
+const Accessories = () => {
 
   useEffect(() => {
-    document.title = "CrystalGym | Accessories";
+    document.title = "Accessories | CrystalGym";
   })
 
   return (
@@ -28,3 +28,5 @@ export const Accessories = () => {
     </main>
   )
 }
+
+export default Accessories;

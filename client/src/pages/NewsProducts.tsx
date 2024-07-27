@@ -10,10 +10,10 @@ interface Props {
 }
 
 
-export const NewsProducts: React.FC<Props> = ({ title, products }) => {
+const NewsProducts: React.FC<Props> = ({ title, products }) => {
 
   useEffect(() => {
-    document.title = "CrystalGym | New";
+    document.title = "New | CrystalGym";
   })
 
   useEffect(() => {
@@ -29,3 +29,5 @@ export const NewsProducts: React.FC<Props> = ({ title, products }) => {
     </section>
   )
 }
+
+export default NewsProducts;

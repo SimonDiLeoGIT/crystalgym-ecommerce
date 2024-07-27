@@ -7,7 +7,7 @@ import { ProductInterface } from "../interfaces/interfaces";
 
 type product = ProductInterface;
 
-export const Category = () => {
+const Category = () => {
 
   const clothes = clothe_data.all
 
@@ -42,3 +42,5 @@ export const Category = () => {
     </section>
   )
 }
+
+export default Category;

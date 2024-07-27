@@ -7,7 +7,7 @@ import { ProductInterface } from "../interfaces/interfaces";
 
 type product = ProductInterface;
 
-export const Accessory = () => {
+const Accessory = () => {
 
   const clothes = accessories
 
@@ -26,7 +26,7 @@ export const Accessory = () => {
   }
 
   useEffect(() => {
-    document.title = "CrystalGym | Accessory";
+    document.title = "Accessory | CrystalGym";
   })
 
   useEffect(() => {
@@ -42,3 +42,5 @@ export const Accessory = () => {
     </section>
   )
 }
+
+export default Accessory;

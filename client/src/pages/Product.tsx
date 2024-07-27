@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useCart } from "../hook/useCart"
-import { ProductsAdvertisement } from "../components/ProductsAdvertisement/ProductsAdvertisement"
+import ProductsAdvertisement from "../components/ProductsAdvertisement/ProductsAdvertisement"
 import { ArrowButtons } from "../components/ArrowButtons/ArrowButtons"
 import all_clothes from "../assets/json/shop/clothes.json"
 import { ProductColors } from "../components/ProductColors/ProductColors"
 import { ProductInterface } from "../interfaces/interfaces"
 type product = ProductInterface
 
-export const Product = () => {
+const Product = () => {
 
   const { id } = useParams()
   const { colorId } = useParams()
@@ -19,7 +19,7 @@ export const Product = () => {
   const [translateValue, setTranslateValue] = useState(0);
 
   useEffect(() => {
-    document.title = "CrystalGym | Product";
+    document.title = "Product | CrystalGym";
   })
 
   useEffect(() => {
@@ -80,3 +80,5 @@ export const Product = () => {
     </section >
   )
 }
+
+export default Product;

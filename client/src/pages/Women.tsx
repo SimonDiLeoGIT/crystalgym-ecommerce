@@ -1,16 +1,16 @@
-import { ProductsAdvertisement } from "../components/ProductsAdvertisement/ProductsAdvertisement"
+import ProductsAdvertisement from "../components/ProductsAdvertisement/ProductsAdvertisement"
 import gym_clothes from "../assets/json/women/advertisement/gym-clothes.json"
 import gym_clothes_post from "../assets/json/women/post/gym-clothes.json"
 import tops from "../assets/json/women/advertisement/tops.json"
 import tops_post from "../assets/json/women/post/tops.json"
 
-import { Carousel } from "../components/Carousel/Carousel"
+import Carousel from "../components/Carousel/Carousel"
 import { useEffect } from "react"
 
-export const Women = () => {
+const Women = () => {
 
   useEffect(() => {
-    document.title = "CrystalGym | Women";
+    document.title = "Women | CrystalGym";
   })
 
   return (
@@ -28,3 +28,5 @@ export const Women = () => {
     </main>
   )
 }
+
+export default Women;
