@@ -6,7 +6,7 @@ import menu from "../../assets/icons/nav icons/mobile/menu-svgrepo-com.svg"
 import close_menu from "../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg"
 import logo from "../../assets/icons/nav icons/mobile and desktop/amazon-svgrepo-com.svg"
 
-export const MobileMenu = () => {
+const MobileMenu = () => {
 
   const [openMenu, setOpenMenu] = useState(false);
   const [sectionOpen, setSectionOpen] = useState<string[]>([])
@@ -104,7 +104,7 @@ export const MobileMenu = () => {
           "links": [
             {
               "label": "All Products",
-              "link": "/accessories/all"
+              "link": "/accessories/"
             },
             {
               "label": "Caps",
@@ -206,3 +206,5 @@ export const MobileMenu = () => {
     </>
   )
 }
+
+export default MobileMenu;

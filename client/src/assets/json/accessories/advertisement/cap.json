@@ -10,29 +10,35 @@
   "mobileImages": [
     {
       "id": "0",
-      "image": "/images/accessories/advertisement/cap/cap-1.jpg"
+      "image": "/images/accessories/advertisement/cap/cap-1.jpg",
+      "hashcode": "L7Ame,E14TM{H?9Z~qof4nWq%Ms:"
     },
     {
       "id": "1",
-      "image": "/images/accessories/advertisement/cap/cap-2.jpg"
+      "image": "/images/accessories/advertisement/cap/cap-2.jpg",
+      "hashcode": "KQDJI+RjR*~qWBM{x]RPRP"
     },
     {
       "id": "2",
-      "image": "/images/accessories/advertisement/cap/cap-3.jpg"
+      "image": "/images/accessories/advertisement/cap/cap-3.jpg",
+      "hashcode": "KQGa|IMx%gysR*xv%MofxG"
     }
   ],
   "desktopImages": [
     {
       "id": "0",
-      "image": "/images/accessories/advertisement/cap/desktop/cap-1.jpg"
+      "image": "/images/accessories/advertisement/cap/desktop/cap-1.jpg",
+      "hashcode": "LbLEA_DikqRj_NWBIAkC%1WYaxWB"
     },
     {
       "id": "1",
-      "image": "/images/accessories/advertisement/cap/desktop/cap-2.jpg"
+      "image": "/images/accessories/advertisement/cap/desktop/cap-2.jpg",
+      "hashcode": "ToJ@^1s9x]~qoLkC?bX8V@tQNGn%"
     },
     {
       "id": "2",
-      "image": "/images/accessories/advertisement/cap/desktop/cap-3.jpg"
+      "image": "/images/accessories/advertisement/cap/desktop/cap-3.jpg",
+      "hashcode": "35J[Fm4.00~p"
     }
   ]
 }

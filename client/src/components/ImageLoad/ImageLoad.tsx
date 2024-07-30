@@ -1,34 +1,37 @@
 import { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
-// import { encode } from "blurhash";
 
 interface props {
   imageUrl: string
+  imageBlurHash: string
+  imageStyles: string
+  alt: string
 }
 
-export const ImageLoad: React.FC<props> = ({ imageUrl }) => {
+export const ImageLoad: React.FC<props> = ({ imageUrl, imageBlurHash, imageStyles, alt }) => {
 
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
+    // Cargar la imagen para mostrarla
     const img = new Image();
-    img.onload = () => {
-      setImageLoaded(true)
-    }
-    img.src = imageUrl
-  }, [imageUrl])
+    img.onload = () => setImageLoaded(true);
+    img.src = imageUrl;
+  }, [imageUrl]);
 
   return (
     <>
-      {!imageLoaded &&
+      {
+        !imageLoaded &&
+        imageBlurHash &&
         <Blurhash
-          // className="min-w-full h-screen max-h-screen object-cover"
           style={{
             minWidth: "100%",
             height: "100%",
             maxHeight: "100%",
           }}
-          hash="L4Am#hRP008_?^_2nNR:Xo%gIU-;"
+          // hash="LqLz?WWV~qoL?bj[M|f6xvofoLay"
+          hash={imageBlurHash}
           resolutionX={32}
           resolutionY={32}
           punch={1}
@@ -39,7 +42,8 @@ export const ImageLoad: React.FC<props> = ({ imageUrl }) => {
         <img
           src={imageUrl}
           onLoad={() => setImageLoaded(true)}
-          className="min-w-full h-screen max-h-screen object-cover"
+          className={imageStyles}
+          alt={alt}
           loading="lazy"
         />
       }

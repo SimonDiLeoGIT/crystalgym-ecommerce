@@ -4,7 +4,7 @@ import search_icon from '../../../assets/icons/nav icons/mobile and desktop/sear
 import close_icon from '../../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg'
 import "./../SearchStyles.css"
 
-export const DesktopSearch = () => {
+const DesktopSearch = () => {
 
   const [openSearch, setOpenSearch] = useState<boolean>(false)
   const [viewSearch, setViewSearch] = useState<boolean>(false)
@@ -65,3 +65,5 @@ export const DesktopSearch = () => {
     </>
   )
 }
+
+export default DesktopSearch;

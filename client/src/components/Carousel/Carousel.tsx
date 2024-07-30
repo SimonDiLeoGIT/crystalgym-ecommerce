@@ -16,6 +16,7 @@ interface image {
 interface Image {
   id: string,
   image: string,
+  hashcode: string
 }
 
 type ImagesType = Image[]
@@ -56,18 +57,15 @@ const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktopImages 
   return (
     <section className='relative w-full overflow-x-auto -bg--color-very-light-grey bg-opacity-65 shadow-lg -shadow--color-grey m-auto lg:my-8 lg:w-11/12 lg:rounded-xl'>
       <div className='overflow-hidden m-auto'>
-        <section className='md:h-[32rem] lg:h-[40rem] xl:h-[48rem] flex transition-transform duration-500 ease-in-out' style={{ transform: `translateX(${translateValue}%)` }}>
+        <section className='h-screen md:h-[32rem] lg:h-[40rem] xl:h-[48rem] flex transition-transform duration-500 ease-in-out' style={{ transform: `translateX(${translateValue}%)` }}>
           {getImages().map((image) => {
             return (
               <ImageLoad
                 imageUrl={image.image}
+                imageBlurHash={image.hashcode}
+                imageStyles='min-w-full h-screen max-h-screen object-cover md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
+                alt={image.id}
               />
-              // <img
-              //   src={image.image}
-              //   alt={image.id}
-              //   className='min-w-full h-screen max-h-screen object-cover md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
-              //   loading='lazy'
-              // />
             )
           })}
         </section>
