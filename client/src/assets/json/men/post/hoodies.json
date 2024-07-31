@@ -15,6 +15,7 @@
       "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-3.jpg",
       "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-4.jpg"
     ],
+    "hashcode": "SJLgqtx[_Njs?^ofj[WB",
     "price": 29.99
   },
   {
@@ -25,13 +26,14 @@
     "new": true,
     "off": false,
     "accessory": false,
-    "colorId": 4,
-    "colorName": "Yellow",
+    "colorId": 1,
+    "colorName": "Green",
     "images": [
-      "/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-1.jpg",
-      "/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-2.jpg",
-      "/images/men/clothes/Hoodie/Heritage Washed/Yellow/heritage-washed-3.jpg"
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1.jpg",
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-2.jpg",
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-3.jpg"
     ],
+    "hashcode": "SLM7u+Rj~qxu?IWAR%Rj",
     "price": 38
   },
   {
@@ -50,6 +52,7 @@
       "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 3.jpg",
       "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 4.jpg"
     ],
+    "hashcode": "SUL#5:j[~qWB-qofoyWB",
     "price": 31
   },
   {
@@ -68,6 +71,7 @@
       "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-3.jpg",
       "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-4.jpg"
     ],
+    "hashcode": "SNN0xQbv~qWB*0oJxaa}",
     "price": 21
   },
   {
@@ -86,6 +90,7 @@
       "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-3.jpg",
       "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-4.jpg"
     ],
+    "hashcode": "SKM*2ARi?bay~qof%Mj[",
     "price": 21
   }
 ]

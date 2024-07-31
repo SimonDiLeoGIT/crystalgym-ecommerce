@@ -12,5 +12,6 @@ export interface ProductInterface {
   colorId: number,
   colorName: string,
   images: images,
+  hashcode: string
   price: number
 }

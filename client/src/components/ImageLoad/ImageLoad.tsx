@@ -13,10 +13,15 @@ export const ImageLoad: React.FC<props> = ({ imageUrl, imageBlurHash, imageStyle
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
-    // Cargar la imagen para mostrarla
+    // Crear una nueva imagen para cargar
     const img = new Image();
-    img.onload = () => setImageLoaded(true);
     img.src = imageUrl;
+    img.onload = () => setImageLoaded(true);
+
+    // Limpiar el efecto al desmontar el componente
+    return () => {
+      setImageLoaded(false);
+    };
   }, [imageUrl]);
 
   return (

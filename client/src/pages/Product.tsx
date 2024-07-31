@@ -6,6 +6,7 @@ import { ArrowButtons } from "../components/ArrowButtons/ArrowButtons"
 import all_clothes from "../assets/json/shop/clothes.json"
 import { ProductColors } from "../components/ProductColors/ProductColors"
 import { ProductInterface } from "../interfaces/interfaces"
+import { ImageLoad } from "../components/ImageLoad/ImageLoad"
 type product = ProductInterface
 
 const Product = () => {
@@ -35,13 +36,19 @@ const Product = () => {
       <section className="md:grid md:grid-cols-2 md:w-11/12 md:m-auto max-w-7xl md:my-10">
         <header className="overflow-x-hidden">
           <div className="relative">
-            <section className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${translateValue}%)` }}>
+            <section className="h-screen flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${translateValue}%)` }}>
               {
                 product?.images.map((image: string) => {
                   return (
-                    <img
-                      className="w-screen h-1/3 object-cover"
-                      src={image}
+                    // <img
+                    //   className="w-screen h-1/3 object-cover"
+                    //   src={image}
+                    // />
+                    <ImageLoad
+                      imageUrl={image}
+                      imageBlurHash={product?.hashcode}
+                      alt={product?.name}
+                      imageStyles="w-full object-cover"
                     />
                   )
                 })

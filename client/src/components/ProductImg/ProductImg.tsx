@@ -27,6 +27,7 @@ export const ProductImg: React.FC<Props> = ({ product }) => {
         <Link to={`/product/${product.id}/${product.colorId}`} className="h-full w-full block">
           <ImageLoad
             imageUrl={product.images[0]}
+            imageBlurHash={product.hashcode}
             alt={product.name}
             imageStyles="h-full w-full object-cover duration-500 hover:scale-110"
           />
