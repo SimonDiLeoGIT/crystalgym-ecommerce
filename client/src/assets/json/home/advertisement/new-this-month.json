@@ -10,34 +10,34 @@
   "mobileImages": [
     {
       "id": "0",
-      "image": "/images/home/advertisement/new-this-month/new-this-month-1.jpg",
+      "image": "/images/home/advertisement/new-this-month/new-this-month-1-compress.webp",
       "hashcode": "LiKK{8ayIoof~qRiM{of-;RjRjof"
     },
     {
       "id": "1",
-      "image": "/images/home/advertisement/new-this-month/new-this-month-2.jpg",
+      "image": "/images/home/advertisement/new-this-month/new-this-month-2-compress.webp",
       "hashcode": "L5EMB+Rj~p_2D%-:WXR*s.xuWB%L"
     },
     {
       "id": "2",
-      "image": "/images/home/advertisement/new-this-month/new-this-month-3.jpg",
+      "image": "/images/home/advertisement/new-this-month/new-this-month-3-compress.webp",
       "hashcode": "LuK-qPxuWBoL~qofj[jsx]t7off6"
     }
   ],
   "desktopImages": [
     {
       "id": "0",
-      "image": "/images/home/advertisement/new-this-month/desktop/the-rock.jpg",
+      "image": "/images/home/advertisement/new-this-month/desktop/the-rock-compress.webp",
       "hashcode": "L4Am#hRP008_?^_2nNR:Xo%gIU-;"
     },
     {
       "id": "1",
-      "image": "/images/home/advertisement/new-this-month/desktop/resting-girl.jpg",
+      "image": "/images/home/advertisement/new-this-month/desktop/resting-girl-compress.webp",
       "hashcode": "LAD0fc$y5R00?wV?X8IT00Io?H%1"
     },
     {
       "id": "2",
-      "image": "/images/home/advertisement/new-this-month/desktop/muscle.jpg",
+      "image": "/images/home/advertisement/new-this-month/desktop/muscle-compress.webp",
       "hashcode": "LZKd}JxaIVog_Ns:V@j[Mxt7WAjt"
     }
   ]

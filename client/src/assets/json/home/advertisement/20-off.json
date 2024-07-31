@@ -10,34 +10,34 @@
   "mobileImages": [
     {
       "id": "0",
-      "image": "/images/home/advertisement/20-off/20-off-1.jpg",
+      "image": "/images/home/advertisement/20-off/20-off-1-compress.webp",
       "hashcode": "LWM7[bxu?vD%_NtRbFoft5M{ITxu"
     },
     {
       "id": "1",
-      "image": "/images/home/advertisement/20-off/20-off-2.jpg",
+      "image": "/images/home/advertisement/20-off/20-off-2-compress.webp",
       "hashcode": "L4Ja_:D%%g4m00M|?v00-pRk?wD%"
     },
     {
       "id": "2",
-      "image": "/images/home/advertisement/20-off/20-off-3.jpg",
+      "image": "/images/home/advertisement/20-off/20-off-3-compress.webp",
       "hashcode": "LJI}^v-=?E%M~Uxuxtoz%LRkNLW="
     }
   ],
   "desktopImages": [
     {
       "id": "0",
-      "image": "/images/home/advertisement/20-off/desktop/the-rock.jpg",
+      "image": "/images/home/advertisement/20-off/desktop/the-rock-compress.webp",
       "hashcode": "LEKw,*9Z-;xZ_3fPRjWB~qxaD%NH"
     },
     {
       "id": "1",
-      "image": "/images/home/advertisement/20-off/desktop/resting-girl.jpg",
+      "image": "/images/home/advertisement/20-off/desktop/resting-girl-compress.webp",
       "hashcode": "LKGu|4t7t8R%?wM{M{Rj_3j[RPV@"
     },
     {
       "id": "2",
-      "image": "/images/home/advertisement/20-off/desktop/muscle.jpg",
+      "image": "/images/home/advertisement/20-off/desktop/muscle-compress.webp",
       "hashcode": "LZKd}JxaIVog_Ns:V@j[Mxt7WAjt"
     }
   ]
