@@ -4,7 +4,7 @@ import './mobile-menu.css'
 import open_arrow from "../../assets/icons/moblile menu/arrow-open-down-svg.svg"
 import menu from "../../assets/icons/nav icons/mobile/menu-svgrepo-com.svg"
 import close_menu from "../../assets/icons/nav icons/mobile/close-sm-svgrepo-com.svg"
-import logo from "../../assets/icons/nav icons/mobile and desktop/amazon-svgrepo-com.svg"
+import logo from "../../assets/icons/CrystalGymLogo.png"
 
 const MobileMenu = () => {
 
@@ -141,8 +141,12 @@ const MobileMenu = () => {
         <nav className={nav_classes()}>
           <header className="w-full border-b -border--color-very-light-grey min-h-16 grid">
             <h1 className=" m-auto h-full px-2">
-              <Link to='/'>
-                <img src={logo} className="h-full w-8" />
+              <Link
+                to='/'
+                onClick={() => handleViewMenu()}
+                className="block h-full content-center"
+              >
+                <img src={logo} className="h-12 w-12" />
               </Link>
             </h1>
             <button

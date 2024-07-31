@@ -10,34 +10,34 @@
   "mobileImages": [
     {
       "id": "0",
-      "image": "/images/men/advertisement/Hoodies/hoodie-1.jpg",
+      "image": "/images/men/advertisement/Hoodies/hoodie-1-compress.webp",
       "hashcode": "KVF~U5NGtR~qM|xut7t7of"
     },
     {
       "id": "1",
-      "image": "/images/men/advertisement/Hoodies/hoodie-2.jpg",
+      "image": "/images/men/advertisement/Hoodies/hoodie-2-compress.webp",
       "hashcode": "LRDcdlD%o#tR~qD$M{xu?bIUWBoz"
     },
     {
       "id": "2",
-      "image": "/images/men/advertisement/Hoodies/hoodie-3jpg.jpg",
+      "image": "/images/men/advertisement/Hoodies/hoodie--compress.webp",
       "hashcode": "LHDl~B~qozt7_3.8M{oe%MM|M|WB"
     }
   ],
   "desktopImages": [
     {
       "id": "0",
-      "image": "/images/men/advertisement/Hoodies/desktop/hoodie-1.jpg",
+      "image": "/images/men/advertisement/Hoodies/desktop/hoodie-1-compress.webp",
       "hashcode": "LGI5oN00_N_2tS?bMx9Ff+xuMxM{"
     },
     {
       "id": "1",
-      "image": "/images/men/advertisement/Hoodies/desktop/hoodie-2.jpg",
+      "image": "/images/men/advertisement/Hoodies/desktop/hoodie-2-compress.webp",
       "hashcode": "LHODd?Rj~WRi-;xuRkM{V@ofofRj"
     },
     {
       "id": "2",
-      "image": "/images/men/advertisement/Hoodies/desktop/hoodie-3.jpg",
+      "image": "/images/men/advertisement/Hoodies/desktop/hoodie-3-compress.webp  ",
       "hashcode": "L15X#_}?w[DN~qNyE44.9tyYEONH"
     }
   ]

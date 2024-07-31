@@ -10,10 +10,10 @@
     "colorId": 1,
     "colorName": "Dark Red",
     "images": [
-      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-1.jpg",
-      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-2.jpg",
-      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-3.jpg",
-      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-4.jpg"
+      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-1-compress.webp",
+      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-2-compress.webp",
+      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-3-compress.webp",
+      "/images/men/clothes/Hoodie/GS x David Laid/Dark Red/gs-x-david-laid-4-compress.webp"
     ],
     "hashcode": "SJLgqtx[_Njs?^ofj[WB",
     "price": 29.99
@@ -29,12 +29,30 @@
     "colorId": 1,
     "colorName": "Green",
     "images": [
-      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1.jpg",
-      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-2.jpg",
-      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-3.jpg"
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1-compress.webp",
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-2-compress.webp",
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-3-compress.webp"
     ],
     "hashcode": "SLM7u+Rj~qxu?IWAR%Rj",
     "price": 38
+  },
+  {
+    "id": 3,
+    "name": "SWEATSHIRT",
+    "category": "Hoodie",
+    "sex": "men",
+    "new": false,
+    "off": true,
+    "accessory": false,
+    "colorId": 1,
+    "colorName": "Black",
+    "images": [
+      "/images/men/clothes/Hoodie/Hoodie Sweatshirt/hoodie-sewatshirt-1-compress.webp",
+      "/images/men/clothes/Hoodie/Hoodie Sweatshirt/hoodie-sewatshirt-2-compress.webp",
+      "/images/men/clothes/Hoodie/Hoodie Sweatshirt/hoodie-sewatshirt-3-compress.webp"
+    ],
+    "hashcode": "SYL4vnRj_3ay~qj[WBay",
+    "price": 10
   },
   {
     "id": 4,
@@ -47,10 +65,10 @@
     "colorId": 2,
     "colorName": "Green",
     "images": [
-      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 1.jpg",
-      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 2.jpg",
-      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 3.jpg",
-      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 4.jpg"
+      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 1-compress.webp",
+      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 2-compress.webp",
+      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 3-compress.webp",
+      "/images/men/clothes/Hoodie/POWER WASHED CREW/Green/POWER WASHED CREW 4-compress.webp"
     ],
     "hashcode": "SUL#5:j[~qWB-qofoyWB",
     "price": 31
@@ -66,10 +84,10 @@
     "colorId": 1,
     "colorName": "Brown",
     "images": [
-      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-1.jpg",
-      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-2.jpg",
-      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-3.jpg",
-      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-4.jpg"
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-1-compress.webp",
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-2-compress.webp",
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-3-compress.webp",
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-4-compress.webp"
     ],
     "hashcode": "SNN0xQbv~qWB*0oJxaa}",
     "price": 21
@@ -85,10 +103,10 @@
     "colorId": 1,
     "colorName": "Black",
     "images": [
-      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-1.jpg",
-      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-2.jpg",
-      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-3.jpg",
-      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-4.jpg"
+      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-1-compress.webp",
+      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-2-compress.webp",
+      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-3-compress.webp",
+      "/images/men/clothes/Hoodie/Ripped Hoodie/ripped-hoodie-4-compress.webp"
     ],
     "hashcode": "SKM*2ARi?bay~qof%Mj[",
     "price": 21
