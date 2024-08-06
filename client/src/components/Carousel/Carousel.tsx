@@ -28,12 +28,10 @@ interface Props {
   advertisement: image
 }
 
-
 const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktopImages }) => {
 
   const [currentImage, changeCurrentImage] = useState(0);
   const [translateValue, setTranslateValue] = useState(0);
-
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
