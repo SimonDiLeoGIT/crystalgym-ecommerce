@@ -32,7 +32,7 @@ type CartContext = {
 
 export const CartContext = createContext({} as CartContext)
 
-export const CartProvider = ({ children }: Props) => {
+const CartProvider = ({ children }: Props) => {
   const [cart, setCart] = useState<cartItem[]>([])
   const [isOpenCart, setIsOpenCart] = useState<boolean>(false)
   const [hiddenCart, setHiddenCart] = useState<boolean>(true)
@@ -132,3 +132,5 @@ export const CartProvider = ({ children }: Props) => {
     </CartContext.Provider>
   )
 }
+
+export default CartProvider

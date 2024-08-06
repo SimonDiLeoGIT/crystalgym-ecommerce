@@ -6,9 +6,10 @@ interface props {
   imageBlurHash: string
   imageStyles: string
   alt: string
+  loading: "eager" | "lazy" | undefined;
 }
 
-export const ImageLoad: React.FC<props> = ({ imageUrl, imageBlurHash, imageStyles, alt }) => {
+const ImageLoad: React.FC<props> = ({ imageUrl, imageBlurHash, imageStyles, alt, loading }) => {
 
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -43,15 +44,17 @@ export const ImageLoad: React.FC<props> = ({ imageUrl, imageBlurHash, imageStyle
         />
       }
       {
-        imageLoaded &&
+        imageLoaded && 
         <img
           src={imageUrl}
           onLoad={() => setImageLoaded(true)}
           className={imageStyles}
           alt={alt}
-          loading="lazy"
+          loading={loading}
         />
       }
     </>
   )
 }
+
+export default ImageLoad

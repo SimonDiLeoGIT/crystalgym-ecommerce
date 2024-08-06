@@ -46,7 +46,6 @@ const MobileSearch = () => {
 
       <aside
         className={`fixed top-0 left-0 w-screen h-screen z-50 overflow-hidden md:left-0 -bg--color-white ${!viewSearch && " hidden"} ${search_classes()}`}
-        onClick={() => handleViewSearch()}
       >
         <header className='m-4 flex'>
           <form className="w-10/12 border-2 -border--color-very-light-grey rounded-xl flex p-2">
@@ -56,7 +55,6 @@ const MobileSearch = () => {
             />
             <button
               className="m-auto mr-0 p-2 rounded-full -bg--color-very-light-grey bg-opacity-40"
-            // onClick={() => }
             >
               <img src={search_icon} className="min-w-5 w-5" />
             </button>
@@ -68,7 +66,9 @@ const MobileSearch = () => {
             <img src={close_icon} className="" />
           </button>
         </header>
-        <SearchResult input={searchInput} />
+        <div onClick={() => handleViewSearch()}>
+          <SearchResult input={searchInput} />
+        </div>
       </aside>
     </>
   )

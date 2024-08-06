@@ -9,7 +9,7 @@ interface Props {
   carousel: boolean
 }
 
-export const ArrowButtons: React.FC<Props> = ({ currentImage, changeCurrentImage, setTranslateValue, carousel }) => {
+const ArrowButtons: React.FC<Props> = ({ currentImage, changeCurrentImage, setTranslateValue, carousel }) => {
 
   function nextImage() {
     let newIndex = (currentImage + 1);
@@ -56,3 +56,5 @@ export const ArrowButtons: React.FC<Props> = ({ currentImage, changeCurrentImage
     </div>
   )
 }
+
+export default ArrowButtons

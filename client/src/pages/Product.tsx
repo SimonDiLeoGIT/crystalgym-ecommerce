@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { lazy, useEffect, useState } from "react"
 import { useCart } from "../hook/useCart"
 import ProductsAdvertisement from "../components/ProductsAdvertisement/ProductsAdvertisement"
-import { ArrowButtons } from "../components/ArrowButtons/ArrowButtons"
 import all_clothes from "../assets/json/shop/clothes.json"
 import { ProductColors } from "../components/ProductColors/ProductColors"
 import { ProductInterface } from "../interfaces/interfaces"
-import { ImageLoad } from "../components/ImageLoad/ImageLoad"
+
+const ImageLoad = lazy(() => import("../components/ImageLoad/ImageLoad"))
+const ArrowButtons = lazy(() => import("../components/ArrowButtons/ArrowButtons"))
+
 type product = ProductInterface
 
 const Product = () => {
@@ -40,15 +42,12 @@ const Product = () => {
               {
                 product?.images.map((image: string) => {
                   return (
-                    // <img
-                    //   className="w-screen h-1/3 object-cover"
-                    //   src={image}
-                    // />
                     <ImageLoad
                       imageUrl={image}
                       imageBlurHash={product?.hashcode}
                       alt={product?.name}
                       imageStyles="w-full object-cover"
+                      loading="eager"
                     />
                   )
                 })

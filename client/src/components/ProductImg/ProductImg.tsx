@@ -1,10 +1,11 @@
-
+import { lazy } from "react";
+import { Link } from "react-router-dom";
 import add_to_bag_icon from "../../assets/icons/nav icons/bag-plus-1122-svgrepo-com.svg"
 import like_icon from "../../assets/icons/like-icon.svg"
 import { useCart } from "../../hook/useCart";
-import { Link } from "react-router-dom";
 import { ProductInterface } from "../../interfaces/interfaces";
-import { ImageLoad } from "../ImageLoad/ImageLoad";
+
+const ImageLoad = lazy(() => import("../ImageLoad/ImageLoad"))
 
 type productType = ProductInterface
 
@@ -30,6 +31,7 @@ export const ProductImg: React.FC<Props> = ({ product }) => {
             imageBlurHash={product.hashcode}
             alt={product.name}
             imageStyles="h-full w-full object-cover duration-500 hover:scale-110"
+            loading="lazy"
           />
         </Link>
         <button onClick={() => addProduct(product)} className="absolute top-2 right-2 -bg--color-white rounded-full p-2 duration-150 hover:bg-opacity-60 hover:scale-105 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-white"> <img src={add_to_bag_icon} alt="bag icon" className="w-4" />  </button>

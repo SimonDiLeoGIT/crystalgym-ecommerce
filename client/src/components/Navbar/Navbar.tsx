@@ -13,7 +13,7 @@ const MobileMenu = lazy(() => import("../MobileMenu/MobileMenu"))
 const MobileSearch = lazy(() => import("../Search/MobileSearch/MobileSearch"))
 const DesktopSearch = lazy(() => import("../Search/DesktopSearch/DesktopSearch"))
 
-export const Navbar = () => {
+const Navbar = () => {
 
   const { isOpenCart } = useCart();
 
@@ -115,14 +115,14 @@ export const Navbar = () => {
     },
     {
       "name": "ACCESSORIES",
-      "link": "/accessories/",
+      "link": "/accessories",
       "sections": [
         {
           "title": "Products",
           "links": [
             {
               "label": "All Products",
-              "link": "/accessories/all"
+              "link": "/accessories"
             },
             {
               "label": "Caps",
@@ -220,3 +220,5 @@ export const Navbar = () => {
     </nav>
   )
 }
+
+export default Navbar

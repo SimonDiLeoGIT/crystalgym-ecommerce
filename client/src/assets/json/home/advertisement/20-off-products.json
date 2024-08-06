@@ -1119,41 +1119,5 @@
     ],
     "hashcode": "SDLqX@~q_24n^*D%_3%M",
     "price": 21
-  },
-  {
-    "id": 40,
-    "name": "TRAINING OVERSIZED",
-    "category": "T-Shirt",
-    "sex": "women",
-    "new": true,
-    "off": true,
-    "accessory": false,
-    "colorId": 1,
-    "colorName": "White",
-    "images": [
-      "/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-1-compress.webp",
-      "/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-2-compress.webp",
-      "/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-3-compress.webp"
-    ],
-    "hashcode": "SMO:*2ax~qoz4njYxtfl",
-    "price": 21
-  },
-  {
-    "id": 40,
-    "name": "TRAINING OVERSIZED",
-    "category": "T-Shirt",
-    "sex": "women",
-    "new": true,
-    "off": true,
-    "accessory": false,
-    "colorId": 2,
-    "colorName": "Black",
-    "images": [
-      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-1-compress.webp",
-      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-2-compress.webp",
-      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-3-compress.webp"
-    ],
-    "hashcode": "SQL;a6xu~qj[?baet7M{",
-    "price": 21
   }
 ]

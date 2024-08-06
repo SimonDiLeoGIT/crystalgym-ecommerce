@@ -35,7 +35,7 @@ type OrderContext = {
 
 export const OrderContext = createContext({} as OrderContext)
 
-export const OrderProvider = ({ children }: Props) => {
+const OrderProvider = ({ children }: Props) => {
 
   const [orders, setOrders] = useState<Order[]>([])
   const [unconfirmedOrder, setUnconfirmedOrder] = useState<Order>({ id: 0, order: [], date: new Date(), total: 0 })
@@ -128,3 +128,5 @@ export const OrderProvider = ({ children }: Props) => {
     </OrderContext.Provider>
   )
 }
+
+export default OrderProvider

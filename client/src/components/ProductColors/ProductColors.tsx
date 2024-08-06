@@ -1,6 +1,9 @@
 import { Link, useParams } from "react-router-dom"
 import all_clothes from "../../assets/json/shop/clothes.json"
-import { ImageLoad } from "../ImageLoad/ImageLoad"
+import { lazy } from "react"
+
+
+const ImageLoad = lazy(() => import("../ImageLoad/ImageLoad"))
 
 export const ProductColors = () => {
 
@@ -20,6 +23,7 @@ export const ProductColors = () => {
                     imageBlurHash={clothe.hashcode}
                     alt={clothe.name}
                     imageStyles={`border-2 ${clothe.colorId.toString() === colorId ? "-border--color-black" : "-border--color-very-light-grey"}`}
+                    loading="lazy"
                   />
                   <p className="-text--color-black font-semibold text-sm">
                     {clothe.colorName}

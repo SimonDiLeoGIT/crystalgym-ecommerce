@@ -56,7 +56,7 @@ export const Orders = () => {
         <article className="min-h-96 grid place-content-center -bg--color-very-light-grey bg-opacity-30 rounded-3xl my-8 gap-8">
           <h2 className="text-3xl font-bold">There's no orders :(</h2>
           <p>Find a product you like, add it to your cart, and proceed to purchase.</p>
-          <Link to="/new" className="text-center -bg--color-black -text--color-light-grey-violet font-bold p-4 rounded-full w-11/12 max-w-lg m-auto mb-4 duration-150 hover:opacity-85">Shop Products</Link>
+          <Link to="/new-this-month" className="text-center -bg--color-black -text--color-light-grey-violet font-bold p-4 rounded-full w-11/12 max-w-lg m-auto mb-4 duration-150 hover:opacity-85">Shop Products</Link>
         </article>
       }
       <ul className="min-w-64">

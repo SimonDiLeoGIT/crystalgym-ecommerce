@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import './carousel.css'
-import { useEffect, useState } from 'react'
-import { ArrowButtons } from '../ArrowButtons/ArrowButtons'
-import { ImageLoad } from '../ImageLoad/ImageLoad'
+import { lazy, useEffect, useState } from 'react'
+
+const ImageLoad = lazy(() => import("../ImageLoad/ImageLoad"))
+const ArrowButtons = lazy(() => import("../ArrowButtons/ArrowButtons"))
 
 interface image {
   title_front: string,
@@ -65,6 +66,7 @@ const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktopImages 
                 imageBlurHash={image.hashcode}
                 imageStyles='min-w-full h-screen max-h-screen object-cover md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
                 alt={image.id}
+                loading='eager'
               />
             )
           })}

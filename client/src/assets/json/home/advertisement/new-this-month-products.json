@@ -1157,42 +1157,6 @@
     "price": 21
   },
   {
-    "id": 40,
-    "name": "TRAINING OVERSIZED",
-    "category": "T-Shirt",
-    "sex": "women",
-    "new": true,
-    "off": true,
-    "accessory": false,
-    "colorId": 1,
-    "colorName": "White",
-    "images": [
-      "/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-1-compress.webp",
-      "/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-2-compress.webp",
-      "/images/women/clothing/t-shirt/traning oversized/white/traning-oversized-3-compress.webp"
-    ],
-    "hashcode": "SMO:*2ax~qoz4njYxtfl",
-    "price": 21
-  },
-  {
-    "id": 40,
-    "name": "TRAINING OVERSIZED",
-    "category": "T-Shirt",
-    "sex": "women",
-    "new": true,
-    "off": true,
-    "accessory": false,
-    "colorId": 2,
-    "colorName": "Black",
-    "images": [
-      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-1-compress.webp",
-      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-2-compress.webp",
-      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-3-compress.webp"
-    ],
-    "hashcode": "SQL;a6xu~qj[?baet7M{",
-    "price": 21
-  },
-  {
     "id": 41,
     "name": "MEDIUM EVERYDAY GYM",
     "category": "Bag",
@@ -1203,9 +1167,9 @@
     "colorId": 1,
     "colorName": "Black",
     "images": [
-      "/images/accessories/clothes/bag/medium everyday gym/black/bag-1-compress.webp",
-      "/images/accessories/clothes/bag/medium everyday gym/black/bag-2-compress.webp",
-      "/images/accessories/clothes/bag/medium everyday gym/black/bag-3-compress.webp"
+      "/images/accessories/clothes/bag/medium everyday gym/black/bag-1.jpg",
+      "/images/accessories/clothes/bag/medium everyday gym/black/bag-2.jpg",
+      "/images/accessories/clothes/bag/medium everyday gym/black/bag-3.jpg"
     ],
     "hashcode": "SfNAr3ay~qj[-;j[00ay",
     "price": 29.99
@@ -1221,9 +1185,9 @@
     "colorId": 1,
     "colorName": "Black",
     "images": [
-      "/images/accessories/clothes/cap/sharked/black/cap-1-compress.webp",
-      "/images/accessories/clothes/cap/sharked/black/cap-2-compress.webp",
-      "/images/accessories/clothes/cap/sharked/black/cap-2-compress.webp"
+      "/images/accessories/clothes/cap/sharked/black/cap-1.jpg",
+      "/images/accessories/clothes/cap/sharked/black/cap-2.jpg",
+      "/images/accessories/clothes/cap/sharked/black/cap-2.jpg"
     ],
     "hashcode": "SVNdO8WB~qof_3of00WB",
     "price": 29.99
@@ -1239,9 +1203,9 @@
     "colorId": 2,
     "colorName": "Light Brown",
     "images": [
-      "/images/accessories/clothes/cap/sharked/light brown/cap-1-compress.webp",
-      "/images/accessories/clothes/cap/sharked/light brown/cap-2-compress.webp",
-      "/images/accessories/clothes/cap/sharked/light brown/cap-2-compress.webp"
+      "/images/accessories/clothes/cap/sharked/light brown/cap-1.jpg",
+      "/images/accessories/clothes/cap/sharked/light brown/cap-2.jpg",
+      "/images/accessories/clothes/cap/sharked/light brown/cap-2.jpg"
     ],
     "hashcode": "SMPQ1:NG_4t7%NofDhRj",
     "price": 29.99
@@ -1257,9 +1221,9 @@
     "colorId": 1,
     "colorName": "Black",
     "images": [
-      "/images/accessories/clothes/cinturon/rdx/black/cinturon-1-compress.webp",
-      "/images/accessories/clothes/cinturon/rdx/black/cinturon-2-compress.webp",
-      "/images/accessories/clothes/cinturon/rdx/black/cinturon-2-compress.webp"
+      "/images/accessories/clothes/cinturon/rdx/black/cinturon-1.jpg",
+      "/images/accessories/clothes/cinturon/rdx/black/cinturon-2.jpg",
+      "/images/accessories/clothes/cinturon/rdx/black/cinturon-2.jpg"
     ],
     "hashcode": "90Lqe900",
     "price": 29.99
@@ -1275,9 +1239,9 @@
     "colorId": 1,
     "colorName": "Black",
     "images": [
-      "/images/accessories/clothes/cinturon/fitgriff/black/cinturon-1-compress.webp",
-      "/images/accessories/clothes/cinturon/fitgriff/black/cinturon-2-compress.webp",
-      "/images/accessories/clothes/cinturon/fitgriff/black/cinturon-2-compress.webp"
+      "/images/accessories/clothes/cinturon/fitgriff/black/cinturon-1.jpg",
+      "/images/accessories/clothes/cinturon/fitgriff/black/cinturon-2.jpg",
+      "/images/accessories/clothes/cinturon/fitgriff/black/cinturon-2.jpg"
     ],
     "hashcode": "BOL}BEof~qayWBfQ",
     "price": 29.99
