@@ -28,12 +28,10 @@ interface Props {
   advertisement: image
 }
 
-
 const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktopImages }) => {
 
   const [currentImage, changeCurrentImage] = useState(0);
   const [translateValue, setTranslateValue] = useState(0);
-
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -57,14 +55,14 @@ const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktopImages 
 
   return (
     <section className='relative w-full overflow-x-auto -bg--color-very-light-grey bg-opacity-65 shadow-lg -shadow--color-grey m-auto lg:my-8 lg:w-11/12 lg:rounded-xl'>
-      <div className='overflow-hidden m-auto'>
-        <section className='h-screen md:h-[32rem] lg:h-[40rem] xl:h-[48rem] flex transition-transform duration-500 ease-in-out' style={{ transform: `translateX(${translateValue}%)` }}>
+      <div className='overflow-hidden m-auto h-screen md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'>
+        <section className='h-full flex transition-transform duration-500 ease-in-out' style={{ transform: `translateX(${translateValue}%)` }}>
           {getImages().map((image) => {
             return (
               <ImageLoad
                 imageUrl={image.image}
                 imageBlurHash={image.hashcode}
-                imageStyles='min-w-full h-screen max-h-screen object-cover md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
+                imageStyles='min-w-full h-full object-cover md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
                 alt={image.id}
                 loading='eager'
               />
