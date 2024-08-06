@@ -152,7 +152,7 @@ const Navbar = () => {
       </section>
       <h1 className="m-auto h-full py-2 lg:py-0 lg:ml-0 overflow-hidden flex items-center">
         <Link to='/' className="flex items-center">
-          <img src={logo} className="min-w-16 w-16 lg: mx-2" />
+          <img src={logo} className="min-w-16 w-16 lg: mx-2" alt="CrystalGym Logo"/>
           <div className="hidden md:block font-bold">CrystalGym</div>
         </Link>
       </h1>
@@ -199,14 +199,14 @@ const Navbar = () => {
         <li className="invisible hidden fixed my-auto px-1 h-full lg:flex items-center lg:visible lg:relative">
           <Link to='/'>
             <div className="w-10 h-10 flex items-center duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
-              <img src={instagram_icon} className="m-auto w-10" />
+              <img src={instagram_icon} className="m-auto w-10" alt="Instagram Icon"/>
             </div>
           </Link>
         </li>
         <li className="invisible hidden fixed px-1 my-auto h-full lg:flex items-center lg:visible lg:relative">
           <Link to='/profile' className="">
             <div className="w-10 h-10 flex items-center duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
-              <img src={account_avatar} className="m-auto w-7" />
+              <img src={account_avatar} className="m-auto w-7" alt="Profile Icon"/>
             </div>
           </Link>
         </li>

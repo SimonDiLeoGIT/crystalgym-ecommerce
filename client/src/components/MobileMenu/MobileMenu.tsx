@@ -132,9 +132,11 @@ const MobileMenu = () => {
     <>
       <button
         className="h-full"
+        aria-label="Open Menu Button"
         onClick={() => handleViewMenu()}
       >
-        <img src={menu} className="h-full w-8" />
+        <span className="hidden">Open Menu Button</span>
+        <img src={menu} className="h-full w-8" alt="Open Menu Button"/>
       </button>
 
       <aside className={`fixed top-0 left-0 w-screen h-screen z-50 md:left-0 opacity-animation ${!viewMenu && " hidden"} overflow-hidden`}>
@@ -151,8 +153,10 @@ const MobileMenu = () => {
             </h1>
             <button
               className="absolute right-0 top-0 p-4"
+              aria-label="Close Menu Button"
               onClick={() => handleViewMenu()}
             >
+              <span className="hidden">Close Menu Button</span>
               <img src={close_menu} className="" />
             </button>
           </header>

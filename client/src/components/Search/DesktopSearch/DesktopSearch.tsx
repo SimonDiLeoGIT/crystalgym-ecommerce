@@ -48,9 +48,11 @@ const DesktopSearch = () => {
         />
         <button
           className="p-2 mx-1 rounded-full"
+          aria-label="Search Button"
           onClick={() => handleSearchButtonClick()}
         >
-          <img src={searchInput === '' ? search_icon : close_icon} className="" />
+          <span className="hidden">Search Button</span>
+          <img src={searchInput === '' ? search_icon : close_icon} className="" alt="Search Button"/>
         </button>
       </form>
 

@@ -39,9 +39,11 @@ const MobileSearch = () => {
     <>
       <button
         className="h-full"
+        aria-label="Search Button"
         onClick={() => handleViewSearch()}
       >
-        <img src={search_icon} className="h-full w-7 min-w-5 mr-2" />
+        <span className="hidden">Search Button</span>
+        <img src={search_icon} className="h-full w-7 min-w-5 mr-2" alt="Search Button"/>
       </button>
 
       <aside

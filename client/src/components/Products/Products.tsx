@@ -56,14 +56,14 @@ export const Products: React.FC<Props> = ({ products }) => {
         <ReactPaginate
           breakLabel="..."
           nextLabel={
-            <img src={right_arrow} className="w-4" />
+            <img src={right_arrow} className="w-4" alt="Next Page"/>
           }
           onPageChange={handlePageClick}
           pageRangeDisplayed={1}
           pageCount={totalPages}
           marginPagesDisplayed={2}
           previousLabel={
-            <img src={left_arrow} className="w-4" />
+            <img src={left_arrow} className="w-4" alt="Prev Page"/>
           }
           renderOnZeroPageCount={null}
           containerClassName=" flex justify-center hover:cursor-pointer  m-auto"
