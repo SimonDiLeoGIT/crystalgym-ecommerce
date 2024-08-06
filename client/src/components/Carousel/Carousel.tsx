@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import './carousel.css'
-import { useEffect, useState } from 'react'
-import { ArrowButtons } from '../ArrowButtons/ArrowButtons'
-import { ImageLoad } from '../ImageLoad/ImageLoad'
+import { lazy, useEffect, useState } from 'react'
+
+const ImageLoad = lazy(() => import("../ImageLoad/ImageLoad"))
+const ArrowButtons = lazy(() => import("../ArrowButtons/ArrowButtons"))
 
 interface image {
   title_front: string,
@@ -16,6 +17,7 @@ interface image {
 interface Image {
   id: string,
   image: string,
+  hashcode: string
 }
 
 type ImagesType = Image[]
@@ -56,18 +58,16 @@ const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktopImages 
   return (
     <section className='relative w-full overflow-x-auto -bg--color-very-light-grey bg-opacity-65 shadow-lg -shadow--color-grey m-auto lg:my-8 lg:w-11/12 lg:rounded-xl'>
       <div className='overflow-hidden m-auto'>
-        <section className='md:h-[32rem] lg:h-[40rem] xl:h-[48rem] flex transition-transform duration-500 ease-in-out' style={{ transform: `translateX(${translateValue}%)` }}>
+        <section className='h-screen md:h-[32rem] lg:h-[40rem] xl:h-[48rem] flex transition-transform duration-500 ease-in-out' style={{ transform: `translateX(${translateValue}%)` }}>
           {getImages().map((image) => {
             return (
               <ImageLoad
                 imageUrl={image.image}
+                imageBlurHash={image.hashcode}
+                imageStyles='min-w-full h-screen max-h-screen object-cover md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
+                alt={image.id}
+                loading='eager'
               />
-              // <img
-              //   src={image.image}
-              //   alt={image.id}
-              //   className='min-w-full h-screen max-h-screen object-cover md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
-              //   loading='lazy'
-              // />
             )
           })}
         </section>

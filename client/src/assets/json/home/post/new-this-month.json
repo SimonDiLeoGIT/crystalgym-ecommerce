@@ -10,10 +10,11 @@
     "colorId": 1,
     "colorName": "Green",
     "images": [
-      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1.jpg",
-      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-2.jpg",
-      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-3.jpg"
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-1-compress.webp",
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-2-compress.webp",
+      "/images/men/clothes/Hoodie/Heritage Washed/Green/heritage-washed-3-compress.webp"
     ],
+    "hashcode": "SLM7u+Rj~qxu?IWAR%Rj",
     "price": 38
   },
   {
@@ -24,14 +25,15 @@
     "new": true,
     "off": true,
     "accessory": false,
-    "colorId": 4,
-    "colorName": "Red",
+    "colorId": 1,
+    "colorName": "Brown",
     "images": [
-      "/images/men/clothes/Hoodie/Rest Day/Red/rest-day-1.jpg",
-      "/images/men/clothes/Hoodie/Rest Day/Red/rest-day-2.jpg",
-      "/images/men/clothes/Hoodie/Rest Day/Red/rest-day-3.jpg",
-      "/images/men/clothes/Hoodie/Rest Day/Red/rest-day-4.jpg"
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-1-compress.webp",
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-2-compress.webp",
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-3-compress.webp",
+      "/images/men/clothes/Hoodie/Rest Day/Brown/rest-day-4-compress.webp"
     ],
+    "hashcode": "SNN0xQbv~qWB*0oJxaa}",
     "price": 21
   },
   {
@@ -42,13 +44,14 @@
     "new": true,
     "off": true,
     "accessory": false,
-    "colorId": 2,
-    "colorName": "Black",
+    "colorId": 1,
+    "colorName": "Light Grey",
     "images": [
-      "/images/men/clothes/Jogger/Global/Black/global-1.jpg",
-      "/images/men/clothes/Jogger/Global/Black/global-2.jpg",
-      "/images/men/clothes/Jogger/Global/Black/global-3.jpg"
+      "/images/men/clothes/Jogger/Global/Light Grey/global-1-compress.webp",
+      "/images/men/clothes/Jogger/Global/Light Grey/global-2-compress.webp",
+      "/images/men/clothes/Jogger/Global/Light Grey/global-3-compress.webp"
     ],
+    "hashcode": "S2OzPj?H00_N00D$00xa",
     "price": 21
   },
   {
@@ -59,13 +62,14 @@
     "new": true,
     "off": false,
     "accessory": false,
-    "colorId": 1,
-    "colorName": "Green",
+    "colorId": 3,
+    "colorName": "White",
     "images": [
-      "/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-1.jpg",
-      "/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-2.jpg",
-      "/images/men/clothes/T-Shirt/Dense Sweatshirt/Green/dense-sweatshirt-3.jpg"
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-1-compress.webp",
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-2-compress.webp",
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-3-compress.webp"
     ],
+    "hashcode": "SEQ9[-9F~qxuxvtRIUIU",
     "price": 21
   },
   {
@@ -79,10 +83,11 @@
     "colorId": 2,
     "colorName": "Black",
     "images": [
-      "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-1.jpg",
-      "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-2.jpg",
-      "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-3.jpg"
+      "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-1-compress.webp",
+      "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-2-compress.webp",
+      "/images/women/clothing/hoodies/oversized hoodie/black/oversized-hoodie-3-compress.webp"
     ],
+    "hashcode": "SPLXJWxu?bRj~qofkWof",
     "price": 21
   },
   {
@@ -93,13 +98,14 @@
     "new": true,
     "off": true,
     "accessory": false,
-    "colorId": 1,
-    "colorName": "Black",
+    "colorId": 2,
+    "colorName": "Grey",
     "images": [
-      "/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-1.jpg",
-      "/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-2.jpg",
-      "/images/women/clothing/joggers/training fleece joggers/black/training-fleece-joggers-3.jpg"
+      "/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-1-compress.webp",
+      "/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-2-compress.webp",
+      "/images/women/clothing/joggers/training fleece joggers/grey/training-fleece-joggers-3-compress.webp"
     ],
+    "hashcode": "S2Psx3Mw*^8_}PIAzTi_",
     "price": 21
   },
   {
@@ -110,13 +116,14 @@
     "new": false,
     "off": true,
     "accessory": false,
-    "colorId": 2,
-    "colorName": "Purple",
+    "colorId": 1,
+    "colorName": "Pink",
     "images": [
-      "/images/women/clothing/top/swoosh light/purple/swoosh-light-1.jpg",
-      "/images/women/clothing/top/swoosh light/purple/swoosh-light-2.jpg",
-      "/images/women/clothing/top/swoosh light/purple/swoosh-light-3.jpg"
+      "/images/women/clothing/top/swoosh light/pink/swoosh-light-1-compress.webp",
+      "/images/women/clothing/top/swoosh light/pink/swoosh-light-2-compress.webp",
+      "/images/women/clothing/top/swoosh light/pink/swoosh-light-3-compress.webp"
     ],
+    "hashcode": "SGOp71k?.m.9E1%h$*Dh",
     "price": 21
   }
 ]

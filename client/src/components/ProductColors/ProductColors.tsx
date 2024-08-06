@@ -1,5 +1,9 @@
 import { Link, useParams } from "react-router-dom"
 import all_clothes from "../../assets/json/shop/clothes.json"
+import { lazy } from "react"
+
+
+const ImageLoad = lazy(() => import("../ImageLoad/ImageLoad"))
 
 export const ProductColors = () => {
 
@@ -14,7 +18,13 @@ export const ProductColors = () => {
             return (
               <Link to={`/product/${id}/${clothe.colorId}`}>
                 <article className="w-24 mx-4 inline-block">
-                  <img src={clothe.images[0]} className={`border-2 ${clothe.colorId.toString() === colorId ? "-border--color-black" : "-border--color-very-light-grey"}`} />
+                  <ImageLoad
+                    imageUrl={clothe.images[0]}
+                    imageBlurHash={clothe.hashcode}
+                    alt={clothe.name}
+                    imageStyles={`border-2 ${clothe.colorId.toString() === colorId ? "-border--color-black" : "-border--color-very-light-grey"}`}
+                    loading="lazy"
+                  />
                   <p className="-text--color-black font-semibold text-sm">
                     {clothe.colorName}
                   </p>

@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom"
+import { lazy, useCallback, useEffect, useState } from "react"
+import { Cart } from "../Cart/Cart"
+import { useCart } from "../../hook/useCart"
+import "./Navbar.css"
 import account_avatar from '../../assets/icons/nav icons/account-user-avatar.svg'
 import instagram_icon from '../../assets/icons/nav icons/instagram.svg'
 import logo from '../../assets/icons/CrystalGymLogo.png'
-import { useCallback, useEffect, useState } from "react"
-import { MobileMenu } from "../MobileMenu/MobileMenu"
-import { MobileSearch } from "../Search/MobileSearch/MobileSearch"
-import { Cart } from "../Cart/Cart"
-import "./Navbar.css"
-import { useCart } from "../../hook/useCart"
-import { DesktopSearch } from "../Search/DesktopSearch/DesktopSearch"
 
-export const Navbar = () => {
+import useWindowSize from "../../utils/useWindowSize"
+
+const MobileMenu = lazy(() => import("../MobileMenu/MobileMenu"))
+const MobileSearch = lazy(() => import("../Search/MobileSearch/MobileSearch"))
+const DesktopSearch = lazy(() => import("../Search/DesktopSearch/DesktopSearch"))
+
+const Navbar = () => {
 
   const { isOpenCart } = useCart();
 
@@ -112,14 +115,14 @@ export const Navbar = () => {
     },
     {
       "name": "ACCESSORIES",
-      "link": "/accessories/",
+      "link": "/accessories",
       "sections": [
         {
           "title": "Products",
           "links": [
             {
               "label": "All Products",
-              "link": "/accessories/all"
+              "link": "/accessories"
             },
             {
               "label": "Caps",
@@ -139,11 +142,13 @@ export const Navbar = () => {
     }
   ]
 
+  const { width } = useWindowSize();
+  const isMobile = width !== undefined && width < 1024;
 
   return (
     <nav className={`grid grid-cols-3 border-b -border--color-very-light-grey h-20 shadow-lg -shadow--color-very-light-grey z-40 -bg--color-white transition-transform duration-500 fixed w-screen px-4 top-0 ${scrollDown && !isOpenCart && " scroll-down shadow-none"} ${scrollUp && " scroll-up"}`}>
       <section className="m-auto ml-4 h-full lg:hidden">
-        <MobileMenu />
+        {isMobile && <MobileMenu />}
       </section>
       <h1 className="m-auto h-full py-2 lg:py-0 lg:ml-0 overflow-hidden flex items-center">
         <Link to='/' className="flex items-center">
@@ -189,7 +194,7 @@ export const Navbar = () => {
       </ul>
       <ul className="flex place-content-end min-w-28 mr-2">
         <li className="invisible hidden h-full items-center lg:visible lg:flex lg:relative mr-1">
-          <DesktopSearch />
+          {!isMobile && <DesktopSearch />}
         </li>
         <li className="invisible hidden fixed my-auto px-1 h-full lg:flex items-center lg:visible lg:relative">
           <Link to='/'>
@@ -206,7 +211,7 @@ export const Navbar = () => {
           </Link>
         </li>
         <li className="my-auto px-1 h-full flex items-center lg:hidden">
-          <MobileSearch />
+          {isMobile && <MobileSearch />}
         </li>
         <li className="h-full px-1">
           <Cart />
@@ -215,3 +220,5 @@ export const Navbar = () => {
     </nav>
   )
 }
+
+export default Navbar

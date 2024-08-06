@@ -10,29 +10,35 @@
   "mobileImages": [
     {
       "id": "0",
-      "image": "/images/women/advertisement/gym-clothes/violet-women.jpeg"
+      "image": "/images/women/advertisement/gym-clothes/violet-women.jpeg",
+      "hashcode": "LHMR0[~q~NIrRO?b%MWCrnofI^V@"
     },
     {
       "id": "1",
-      "image": "/images/women/advertisement/gym-clothes/cap-gym-women.jpg"
+      "image": "/images/women/advertisement/gym-clothes/cap-gym-women-compress.webp",
+      "hashcode": "LYKKsGD%x[xu~qIUs:t7ofWAWCIU"
     },
     {
       "id": "2",
-      "image": "/images/women/advertisement/gym-clothes/blue-gym-woman.jpg"
+      "image": "/images/women/advertisement/gym-clothes/blue-gym-woman-compress.webp",
+      "hashcode": "LAFO}=0000tl~WD$%g-;?YIoxKs;"
     }
   ],
   "desktopImages": [
     {
       "id": "0",
-      "image": "/images/women/advertisement/gym-clothes/desktop/black-clothe-gym-women.jpg"
+      "image": "/images/women/advertisement/gym-clothes/desktop/black-clothe-gym-women-compress.webp",
+      "hashcode": "L15#Fa~B0000-;t6D*E10L9u~B~B"
     },
     {
       "id": "1",
-      "image": "/images/women/advertisement/gym-clothes/desktop/gym-girl.jpg"
+      "image": "/images/women/advertisement/gym-clothes/desktop/gym-girl-compress.webp",
+      "hashcode": "L38zfL0gv}R5M{IVoext02}@EgWC"
     },
     {
       "id": "2",
-      "image": "/images/women/advertisement/gym-clothes/desktop/three-girls.jpg"
+      "image": "/images/women/advertisement/gym-clothes/desktop/three-girls-compress.webp",
+      "hashcode": "L4C?cRDh00_N^cxuIw4o00-=-WRi"
     }
   ]
 }

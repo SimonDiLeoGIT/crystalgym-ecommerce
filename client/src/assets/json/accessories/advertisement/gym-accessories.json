@@ -10,29 +10,35 @@
   "mobileImages": [
     {
       "id": "0",
-      "image": "/images/accessories/advertisement/gym-accessories/gym-accessories-1.jpg"
+      "image": "/images/accessories/advertisement/gym-accessories/gym-accessories-1.jpg",
+      "hashcode": "LGDmBs%No~IT_NtRR*Rj.9xuRPof"
     },
     {
       "id": "1",
-      "image": "/images/accessories/advertisement/gym-accessories/gym-accessories-2.jpg"
+      "image": "/images/accessories/advertisement/gym-accessories/gym-accessories-2.jpg",
+      "hashcode": "LVE3bq_N%NV@_4%gt8WBWBRPRjj["
     },
     {
       "id": "2",
-      "image": "/images/accessories/advertisement/gym-accessories/gym-accessories-3.jpg"
+      "image": "/images/accessories/advertisement/gym-accessories/gym-accessories-3.jpg",
+      "hashcode": "LEDSt89G4nIV~pM{M|RkWBoeoft7"
     }
   ],
   "desktopImages": [
     {
       "id": "0",
-      "image": "/images/accessories/advertisement/gym-accessories/desktop/accesorie-1.jpg"
+      "image": "/images/accessories/advertisement/gym-accessories/desktop/accesorie-1.jpg",
+      "hashcode": "L35},H004T.T4oxu-;Mx00.S%gVX"
     },
     {
       "id": "1",
-      "image": "/images/accessories/advertisement/gym-accessories/desktop/accesorie-2.jpg"
+      "image": "/images/accessories/advertisement/gym-accessories/desktop/accesorie-2.jpg",
+      "hashcode": "L26*8f5m00^402^jtR57Q,9u%M-o"
     },
     {
       "id": "2",
-      "image": "/images/accessories/advertisement/gym-accessories/desktop/accesorie-3.jpg"
+      "image": "/images/accessories/advertisement/gym-accessories/desktop/accesorie-3.jpg",
+      "hashcode": "LEEeiT?b4.Me~B%#ELQ-S5OES1rW"
     }
   ]
 }

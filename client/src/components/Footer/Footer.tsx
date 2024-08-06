@@ -3,7 +3,7 @@ import ig from "../../assets/icons/social_media_icons/instagramsvg.svg"
 import linkedin from "../../assets/icons/social_media_icons/linkedin.svg"
 import git from "../../assets/icons/social_media_icons/github.svg"
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className="-bg--color-black -text--color-white px-4 mt-4 lg:grid lg:grid-cols-2 ">
       <nav className="text-center p-2 m-auto max-w-lg lg:text-start">
@@ -83,3 +83,5 @@ export const Footer = () => {
     </footer>
   )
 }
+
+export default Footer

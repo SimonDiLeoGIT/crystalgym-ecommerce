@@ -7,13 +7,14 @@
     "new": true,
     "off": true,
     "accessory": false,
-    "colorId": 2,
-    "colorName": "Black",
+    "colorId": 1,
+    "colorName": "Light Grey",
     "images": [
-      "/images/men/clothes/Jogger/Global/Black/global-1.jpg",
-      "/images/men/clothes/Jogger/Global/Black/global-2.jpg",
-      "/images/men/clothes/Jogger/Global/Black/global-3.jpg"
+      "/images/men/clothes/Jogger/Global/Light Grey/global-1-compress.webp",
+      "/images/men/clothes/Jogger/Global/Light Grey/global-2-compress.webp",
+      "/images/men/clothes/Jogger/Global/Light Grey/global-3-compress.webp"
     ],
+    "hashcode": "S2OzPj?H00_N00D$00xa",
     "price": 21
   },
   {
@@ -27,10 +28,11 @@
     "colorId": 3,
     "colorName": "White",
     "images": [
-      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-1.jpg",
-      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-2.jpg",
-      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-3.jpg"
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-1-compress.webp",
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-2-compress.webp",
+      "/images/men/clothes/T-Shirt/Dense Sweatshirt/White/dense-sweatshirt-3-compress.webp"
     ],
+    "hashcode": "SEQ9[-9F~qxuxvtRIUIU",
     "price": 21
   },
   {
@@ -44,10 +46,11 @@
     "colorId": 2,
     "colorName": "Black",
     "images": [
-      "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-1.jpg",
-      "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-2.jpg",
-      "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-3.jpg"
+      "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-1-compress.webp",
+      "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-2-compress.webp",
+      "/images/women/clothing/hoodies/midi track jacket/black/midi-track-jacket-3-compress.webp"
     ],
+    "hashcode": "SQLgz^IU?v%g~pf6ShIU",
     "price": 21
   },
   {
@@ -58,13 +61,14 @@
     "new": true,
     "off": false,
     "accessory": false,
-    "colorId": 2,
-    "colorName": "Blue",
+    "colorId": 1,
+    "colorName": "Black",
     "images": [
-      "/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-1.jpg",
-      "/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-2.jpg",
-      "/images/women/clothing/joggers/lifting lightweight/blue/lifting-lightweight-3.jpg"
+      "/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-1-compress.webp",
+      "/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-2-compress.webp",
+      "/images/women/clothing/joggers/lifting lightweight/black/lifting-lightweight-3-compress.webp"
     ],
+    "hashcode": "S9MQx2_N00_N^*t7-pNG",
     "price": 21
   },
   {
@@ -75,13 +79,14 @@
     "new": false,
     "off": true,
     "accessory": false,
-    "colorId": 3,
-    "colorName": "White",
+    "colorId": 1,
+    "colorName": "Violet",
     "images": [
-      "/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-1.jpg",
-      "/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-2.jpg",
-      "/images/women/clothing/top/crop mesh tank/white/crop-mesh-tank-3.jpg"
+      "/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-1-compress.webp",
+      "/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-2-compress.webp",
+      "/images/women/clothing/top/crop mesh tank/violet/crop-mesh-tank-3-compress.webp"
     ],
+    "hashcode": "SVMQV7WX~qt7tlWBR+j[",
     "price": 21
   },
   {
@@ -95,27 +100,11 @@
     "colorId": 1,
     "colorName": "Light Brown",
     "images": [
-      "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1.jpg",
-      "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-2.jpg",
-      "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-3.jpg"
+      "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-1-compress.webp",
+      "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-2-compress.webp",
+      "/images/women/clothing/top/tiny twist bra/light brown/tyni-twist-bra-3-compress.webp"
     ],
-    "price": 21
-  },
-  {
-    "id": 42,
-    "name": "TRAINING OVERSIZED",
-    "category": "T-Shirt",
-    "sex": "women",
-    "new": true,
-    "off": true,
-    "accessory": false,
-    "colorId": 2,
-    "colorName": "Black",
-    "images": [
-      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-1.jpg",
-      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-2.jpg",
-      "/images/women/clothing/t-shirt/traning oversized/black/traning-oversized-3.jpg"
-    ],
+    "hashcode": "S9K-LKRND~%guPMwyCR5",
     "price": 21
   }
 ]
