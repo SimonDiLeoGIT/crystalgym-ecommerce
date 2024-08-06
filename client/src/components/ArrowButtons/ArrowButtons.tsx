@@ -37,8 +37,10 @@ const ArrowButtons: React.FC<Props> = ({ currentImage, changeCurrentImage, setTr
     <div>
       <button
         className={`absolute top-1/2 left-4 rounded-full -bg--color-light-grey-violet opacity-60 shadow-md -shadow--color-greyest-violet hover:opacity-45 ${carousel && " md:bottom-2 md:top-2 md:left-2 md:px-2"}`}
+        aria-label="Move Left Button"
         onClick={() => prevImage()}
       >
+        <span className='hidden'>Move Left Button</span>
         <img
           src={left_arrow} alt=""
           width='30px'
@@ -46,8 +48,10 @@ const ArrowButtons: React.FC<Props> = ({ currentImage, changeCurrentImage, setTr
       </button>
       <button
         className={`absolute top-1/2 right-4 rounded-full -bg--color-light-grey-violet opacity-60 shadow-md -shadow--color-greyest-violet hover:opacity-45 ${carousel && " md:bottom-2 md:top-2 md:right-2 md:px-2"}`}
+        aria-label="Move Right Button"
         onClick={() => nextImage()}
       >
+        <span className='hidden'>Move Right Button</span>
         <img
           src={right_arrow} alt=""
           width='30px'
