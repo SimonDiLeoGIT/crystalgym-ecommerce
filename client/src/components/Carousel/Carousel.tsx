@@ -62,7 +62,7 @@ const Carousel: React.FC<Props> = ({ advertisement, mobileImages, desktopImages 
               <ImageLoad
                 imageUrl={image.image}
                 imageBlurHash={image.hashcode}
-                imageStyles='min-w-full h-full object-cover md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
+                imageStyles='min-w-full h-full object-cover'
                 alt={image.id}
                 loading='eager'
               />
