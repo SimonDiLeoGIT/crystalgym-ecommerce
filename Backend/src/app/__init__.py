@@ -20,3 +20,4 @@ from app.models.order import Order
 from app.models.image import Image
 from app.models.clothe_advertisement import ClotheAdvertisement
 from app.models.clothe_order import ClotheOrder
+from app.models.clothe_color import ClotheColor
