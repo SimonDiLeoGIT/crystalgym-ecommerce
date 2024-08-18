@@ -15,3 +15,13 @@ class Clothe(db.Model):
     self.release_date = release_date
     self.id_gender = id_gender
     self.id_type = id_type
+
+  def to_json(self):
+    return {
+        'id': self.id,
+        'name': self.name,
+        'price': self.price,
+        'release_date': self.release_date,
+        'id_gender': self.id_gender,
+        'id_type': self.id_type
+      }

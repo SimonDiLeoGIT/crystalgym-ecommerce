@@ -8,3 +8,9 @@ class Promo(db.Model):
 
   def __init__(self, promo):
     self.promo = promo
+
+  def to_json(self):
+    return {
+      'id': self.id,
+      'promo': self.promo
+    }
