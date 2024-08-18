@@ -9,6 +9,7 @@ app.config.from_object(Config)
 db.init_app(app)
 migrate = Migrate(app, db)
 
+# import models
 from app.models.color import Color
 from app.models.gender import Gender
 from app.models.promo import Promo
@@ -21,3 +22,7 @@ from app.models.image import Image
 from app.models.clothe_advertisement import ClotheAdvertisement
 from app.models.clothe_order import ClotheOrder
 from app.models.clothe_color import ClotheColor
+
+# register blueprints
+from app.controllers.clotheController import clothe_bp
+app.register_blueprint(clothe_bp, url_prefix="/api")
