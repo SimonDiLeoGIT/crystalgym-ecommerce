@@ -19,8 +19,6 @@ def getClothesByCategory(id_gender, id_type, page=1, page_size=10):
     clothes_query = db.session.query(Clothe, Type.name.label('type_name')).join(Type, Clothe.id_type == Type.id).filter(Clothe.id_gender == id_gender, Clothe.id_type == id_type)
     clothes = clothes_query.offset(offset).limit(page_size).all()
     
-    
-    
     response = {
         'clothes': [clothe.to_json() for clothe, type_name in clothes],
         'category': clothes[0][1] if clothes else None  # Para manejar el caso de que no haya resultados
