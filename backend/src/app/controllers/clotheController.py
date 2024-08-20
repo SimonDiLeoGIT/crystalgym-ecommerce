@@ -17,14 +17,14 @@ def get_clothes(id_gender, id_category, page, total_items):
     try:
         clothes = getClothesByCategory(id_gender, id_category, page, total_items)
         
-        if not clothes:
+        if not clothes['clothes']:
             return error_handler.create_error_response('Clothes not found', 'No clothes found for the given category and gender', 404)
         
         # Procesar y marcar ropa nueva
         clothes['clothes'] = [add_new_atribute(clothe) for clothe in clothes['clothes']]
 
         # Generar datos de paginación
-        paginationData = pagination.generate_pagination(page, total_items)
+        paginationData = pagination.get_pagination_data(page, total_items, clothes['total_pages'])
 
         response = {
             'id_category': id_category,
