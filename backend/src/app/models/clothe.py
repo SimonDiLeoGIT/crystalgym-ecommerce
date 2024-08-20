@@ -8,6 +8,7 @@ class Clothe(db.Model):
   release_date = db.Column(db.Date, nullable=False)
   id_gender = db.Column(db.Integer, db.ForeignKey('genders.id'), nullable=False)
   id_type = db.Column(db.Integer, db.ForeignKey('types.id'), nullable=False)
+  id_promo = db.Column(db.Integer, db.ForeignKey('promos.id'), nullable=True)
   
   def __init__(self, name, price, release_date, id_gender, id_type):
     self.name = name
@@ -23,5 +24,6 @@ class Clothe(db.Model):
         'price': self.price,
         'release_date': self.release_date,
         'id_gender': self.id_gender,
-        'id_type': self.id_type
+        'id_type': self.id_type,
+        'id_promo': self.id_promo
       }

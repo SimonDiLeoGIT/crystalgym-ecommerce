@@ -22,6 +22,7 @@ def get_clothes(id_gender, id_category, page, total_items):
         
         # Procesar y marcar ropa nueva
         clothes['clothes'] = [add_new_atribute(clothe) for clothe in clothes['clothes']]
+        clothes['clothes'] = [add_promo_atribute(clothe) for clothe in clothes['clothes']]
 
         # Generar datos de paginación
         paginationData = pagination.get_pagination_data(page, total_items, clothes['total_pages'])
@@ -44,6 +45,11 @@ def add_new_atribute(clothe):
     today = datetime.now()
     delta = relativedelta(today, release_date)
     clothe['new'] = delta.months < 1
+    return clothe
+
+def add_promo_atribute(clothe):
+    id_promo = clothe['id_promo']
+    clothe['promo'] = True if id_promo else False
     return clothe
 
 
