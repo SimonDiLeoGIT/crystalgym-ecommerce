@@ -23,6 +23,7 @@ from app.models.clothe_advertisement import ClotheAdvertisement
 from app.models.clothe_order import ClotheOrder
 from app.models.clothe_color import ClotheColor
 
-# register blueprints
+# Import controllers
 from app.controllers.clotheController import clothe_bp
+
 app.register_blueprint(clothe_bp, url_prefix="/api")
