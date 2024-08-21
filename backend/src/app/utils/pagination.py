@@ -1,4 +1,4 @@
-from app.services.singletonMeta import SingletonMeta
+from app.utils.singletonMeta import SingletonMeta
 
 class PaginationHelper(metaclass=SingletonMeta):
 

@@ -1,4 +1,4 @@
-# from flask import request, jsonify, Blueprint
-# from app.repositories.promoRepository import getClothesByCategory
+from flask import request, jsonify, Blueprint
 
-# promo_bp = Blueprint("promo_bp", __name__)
+promo_bp = Blueprint("promo_bp", __name__)
+
