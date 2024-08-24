@@ -3,9 +3,7 @@ venv/
 gckeys.json
 migrations/
 jsons/
+__pycache__/
 
 # SQL code
-insert-clothe-colors.sql
-insert-clothe-images.sql
-insert-clothes.sql
-insert_roles.sql
+full_dump.sql
