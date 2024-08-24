@@ -11,12 +11,12 @@ user_bp = Blueprint("user_bp", __name__)
 @user_bp.route("/users/register", methods=["POST"])
 def register():
   try:
-    if not request.is_json:
-      return ErrorResponseHandler().create_error_response('Bad request', 'Request body must be JSON', 400)
+    if request.is_json:
+      return ErrorResponseHandler().create_error_response('Bad request', 'Request body must not be JSON', 400)
     
-    username = request.get_json().get('username')
-    password = request.get_json().get('password')
-    email = request.get_json().get('email')
+    username = request.form['username']
+    email = request.form['email']
+    password = request.form['password']
     
     user = UserService().register(username, password, email)
 
