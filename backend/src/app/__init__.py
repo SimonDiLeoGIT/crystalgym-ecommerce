@@ -22,6 +22,9 @@ from app.models.image import Image
 from app.models.clothe_advertisement import ClotheAdvertisement
 from app.models.clothe_order import ClotheOrder
 from app.models.clothe_color import ClotheColor
+from app.models.clothe_promo import ClothePromo
+from app.models.role import Role
+from app.models.role_user import RoleUser
 
 # Import controllers
 from app.controllers.clotheController import clothe_bp
