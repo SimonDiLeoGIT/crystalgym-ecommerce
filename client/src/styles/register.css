@@ -1,0 +1,9 @@
+@import url('index.css');
+
+.register input {
+  box-shadow: 1px 1px 4px 0px rgba(23, 23, 23, 0.4);
+  border-radius: 6px;
+  padding: 6px;
+  width: 75%;
+  margin: auto  ;
+}

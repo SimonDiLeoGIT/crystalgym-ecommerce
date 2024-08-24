@@ -1,20 +1,62 @@
+import { useEffect } from "react"
+import logo from '/CrystalGymLogo.png'
+import '../styles/register.css'
+import UserService from "../services/user.service"
+import { UserInterface } from "../interfaces/UserInterface"
+
 const Register = () => {
+
+  useEffect(() => {
+    document.title = "Sign Up | CrystalGym";
+  })
+
+  async function signUp(event: React.FormEvent){
+    event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
+
+    const formData = new FormData(event.target as HTMLFormElement);
+
+    const data: UserInterface = {
+      username: formData.get('username') as string,
+      email: formData.get('email') as string,
+      password: formData.get('password') as string,
+    };
+
+    try {
+      const response = await UserService.register(data)
+      console.log(response)
+    } catch (error) {
+      alert("Error en la conexión: " + error);
+    }
+  }
+
   return (
-    <>
+    <section className="fixed top-0 left-0 w-screen h-screen -bg--color-white z-50 flex overflow-hidden">
       <form 
-        action="http://localhost:5000/api/users/register"
+        onSubmit={signUp}
         method="POST"
-        target="resultIframe"
-        className="flex flex-col gap-2"
+        className="register flex flex-col gap-4 border -border--color-very-light-grey rounded-lg w-10/12 max-w-lg m-auto shadow-lg -shadow--color-very-light-grey p-4 pb-10 "
       >
+        <figure className="m-auto">
+          <image>
+            <img src={logo} alt="Crystal Gym Logo" width={60}/>
+          </image>
+          <figcaption>
+            <span className="hidden">Crystal Gym Logo</span>
+          </figcaption>
+        </figure>
+        <legend className="font-semibold m-auto -text--color-black">Sign Up</legend>
         <input name='username' type="text" placeholder="Name" />
         <input name='email' type="email" placeholder="Email" />
         <input name='password' type="password" placeholder="Password" />
         {/* <input type="password" placeholder="Confirm Password" /> */}
-        <button type="submit">Register</button>
+        <button 
+          type="submit"
+          className="w-9/12 m-auto p-2 -bg--color-black -text--color-light-grey-violet font-semibold rounded-lg hover:opacity-90 hover:scale-105 transition-transform duration-150"
+        >
+          Register
+        </button>
       </form>
-      <iframe name="resultIframe" className="hidden"></iframe>
-    </>
+    </section>
   )
 }
 
