@@ -1,0 +1,9 @@
+venv/
+.env
+gckeys.json
+migrations/
+jsons/
+__pycache__/
+
+# SQL code
+full_dump.sql
