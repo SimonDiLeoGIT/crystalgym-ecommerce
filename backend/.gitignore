@@ -3,3 +3,4 @@ venv/
 gckeys.json
 migrations/
 jsons/
+insert_roles.sql

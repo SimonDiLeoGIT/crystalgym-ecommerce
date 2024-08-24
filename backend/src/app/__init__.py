@@ -24,9 +24,10 @@ from app.models.clothe_order import ClotheOrder
 from app.models.clothe_color import ClotheColor
 from app.models.clothe_promo import ClothePromo
 from app.models.role import Role
-from app.models.role_user import RoleUser
 
 # Import controllers
 from app.controllers.clotheController import clothe_bp
+from app.controllers.userController import user_bp
 
 app.register_blueprint(clothe_bp, url_prefix="/api")
+app.register_blueprint(user_bp, url_prefix="/api")
