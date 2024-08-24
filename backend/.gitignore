@@ -1,0 +1,11 @@
+venv/
+.env
+gckeys.json
+migrations/
+jsons/
+
+# SQL code
+insert-clothe-colors.sql
+insert-clothe-images.sql
+insert-clothes.sql
+insert_roles.sql
