@@ -1,11 +1,21 @@
-import { useEffect } from "react";
+import { lazy, useEffect } from "react";
 import { Orders } from "../components/Orders/Orders"
+
+const Login = lazy(() => import("./Login"))
 
 export const Profile = () => {
 
   useEffect(() => {
     document.title = "Profile | CrystalGym";
   })
+
+  const register = false
+
+  if (!register) {
+    return (
+      <Login />
+    )
+  }
 
   return (
     <section className="p-2 -text--color-black max-w-md m-auto md:max-w-7xl lg:w-11/12 lg:m-auto xl:9/12">
