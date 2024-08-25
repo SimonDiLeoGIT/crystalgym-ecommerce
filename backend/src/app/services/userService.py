@@ -13,8 +13,19 @@ class UserService:
         user = self.user_repository.save_user(username, password, email, user_role.id)
         return user
     
+    def login(self, username, password):
+        user = self.user_repository.get_user_by_username(username)
+
+        if user is None:
+            return None
+
+        if user.password != password:
+            return None
+
+        return user.to_json()
+    
     def username_exists(self, username):
-        return self.user_repository.get_user_by_username(username)
+        return self.user_repository.exists_username(username)
     
     def email_exists(self, email):
-        return self.user_repository.get_user_by_email(email)
+        return self.user_repository.exists_email(email)

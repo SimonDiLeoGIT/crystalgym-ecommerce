@@ -3,6 +3,7 @@ import logo from '/CrystalGymLogo.png'
 import '../styles/register.css'
 import UserService from "../services/user.service"
 import { UserInterface } from "../interfaces/UserInterface"
+import { Link } from "react-router-dom"
 
 const Register = () => {
 
@@ -48,7 +49,7 @@ const Register = () => {
         <input name='username' type="text" placeholder="Name" />
         <input name='email' type="email" placeholder="Email" />
         <input name='password' type="password" placeholder="Password" />
-        {/* <input type="password" placeholder="Confirm Password" /> */}
+        <p className="text-center text-sm -text--color-black opacity-90">You already have an account? <Link to="/login" className="-text--color-dark-grey-violet border-b hover:opacity-60">Login</Link></p>
         <button 
           type="submit"
           className="w-9/12 m-auto p-2 -bg--color-black -text--color-light-grey-violet font-semibold rounded-lg hover:opacity-90 hover:scale-105 transition-transform duration-150"

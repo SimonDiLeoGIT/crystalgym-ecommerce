@@ -13,6 +13,8 @@ const Profile = lazy(() => import("../../pages/Profile"))
 const TerminosCondiciones = lazy(() => import("../../pages/TerminosCondiciones"))
 const Navbar = lazy(() => import("../Navbar/Navbar"))
 const Footer = lazy(() => import("../Footer/Footer"))
+const Register = lazy(() => import("../../pages/Register"))
+const Login = lazy(() => import("../../pages/Login"))
 
 const Router = () => {
   return (
@@ -23,6 +25,8 @@ const Router = () => {
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/men" element={<Men />} />
           <Route path="/women" element={<Women />} />
           <Route path="/accessories" element={<Accessories />} />

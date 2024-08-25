@@ -13,11 +13,16 @@ class UserRepository:
     return user.to_json()
   
   def get_user_by_username(self, username):
+    user = User.query.filter_by(username=username).first()
+    db.session.commit()
+    return user
+
+  def exists_username(self, username):
     user = User.query.filter_by(username=username).count()
     db.session.commit()
     return user > 0
   
-  def get_user_by_email(self, email):
+  def exists_email(self, email):
     user = User.query.filter_by(email=email).count()
     db.session.commit()
     return user > 0

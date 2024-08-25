@@ -1,7 +1,7 @@
 import { lazy, useEffect } from "react";
 import { Orders } from "../components/Orders/Orders"
 
-const Register = lazy(() => import("./Register"))
+const Login = lazy(() => import("./Login"))
 
 export const Profile = () => {
 
@@ -13,7 +13,7 @@ export const Profile = () => {
 
   if (!register) {
     return (
-      <Register />
+      <Login />
     )
   }
 
