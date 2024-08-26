@@ -24,7 +24,9 @@ class UserService {
   }
   
   static async me() {
-    const response: UserLoginResponse = await ApiService.get('/users/me');
+    const token = localStorage.getItem('access_token');
+    const headers = { headers: {Authorization: `Bearer ${token}` }};
+    const response: UserLoginResponse = await ApiService.get('/users/me', headers);
     if (response)
       localStorage.setItem('access_token', response.data.access_token);
     return response;

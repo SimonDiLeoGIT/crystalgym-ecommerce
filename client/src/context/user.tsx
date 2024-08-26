@@ -8,7 +8,7 @@ interface Props {
 
 type UserContext = {
   initializeUser: (user: UserInterface) => void
-  getUser: () => UserInterface | null
+  getUser: () => Promise<UserInterface | null>
 }
 
 export const UserContext = createContext({} as UserContext)
@@ -20,14 +20,10 @@ const UserProvider = ({ children }: Props) => {
     setUser(user)
   }
   
-  const getUser = async () => {
-    if (!user) {
-      try {
+  const getUser = async (): Promise<UserInterface | null> => {
+    if (user === null) {
         const response = await UserService.me()
         initializeUser(response.data.user)
-      } catch (error) {
-        alert("Error en la conexión: " + error);
-      }
     }
 
     return user

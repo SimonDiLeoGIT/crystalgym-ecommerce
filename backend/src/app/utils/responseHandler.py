@@ -23,7 +23,7 @@ class ResponseHandler(metaclass=SingletonMeta):
             'refresh_token',
             data.get('refresh_token'),
             httponly=True,
-            secure=True,
+            # secure=True,
             samesite='Strict'
         )
         
