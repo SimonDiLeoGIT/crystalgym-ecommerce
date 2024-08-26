@@ -10,7 +10,7 @@ class ResponseHandler(metaclass=SingletonMeta):
             'code': code
         }, code
     
-    def create_protected_response(self, status, message, data, code):
+    def create_protected_response(self, status, message, data, refresh_token, code):
         # Crear la respuesta básica
         response_data, status_code = self.create_response(status, message, data, code)
         
@@ -21,7 +21,7 @@ class ResponseHandler(metaclass=SingletonMeta):
         # Establecer la cookie para el token de refresco
         response.set_cookie(
             'refresh_token',
-            data.get('refresh_token'),
+            refresh_token,
             httponly=True,
             # secure=True,
             samesite='Strict'

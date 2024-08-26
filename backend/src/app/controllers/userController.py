@@ -52,11 +52,10 @@ def login():
 
     data = {
       'access_token': access_token,
-      'refresh_token': refresh_token,
       'user': user
     }
 
-    response = ResponseHandler().create_protected_response('success', 'User logged in successfully', data, 200)
+    response = ResponseHandler().create_protected_response('success', 'User logged in successfully', data, refresh_token, 200)
     return response
   except Exception as e:
     return ErrorResponseHandler().create_error_response('Error logging in user', str(e), 500)
@@ -83,9 +82,8 @@ def get_current_user():
 
   data = {
     'access_token': access_token,
-    'refresh_token': refresh_token,
     'user': user
   }
 
-  response = ResponseHandler().create_protected_response('success', 'User logged in successfully', data, 200)
+  response = ResponseHandler().create_protected_response('success', 'User logged in successfully', data, refresh_token, 200)
   return response
