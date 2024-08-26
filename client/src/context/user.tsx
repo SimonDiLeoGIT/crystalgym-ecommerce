@@ -1,5 +1,6 @@
 import { ReactNode, createContext, useState } from "react";
 import { UserInterface } from "../interfaces/UserInterface";
+import UserService from "../services/user.service";
 
 interface Props {
   children: ReactNode
@@ -19,7 +20,16 @@ const UserProvider = ({ children }: Props) => {
     setUser(user)
   }
   
-  const getUser = () => {
+  const getUser = async () => {
+    if (!user) {
+      try {
+        const response = await UserService.me()
+        initializeUser(response.data.user)
+      } catch (error) {
+        alert("Error en la conexión: " + error);
+      }
+    }
+
     return user
   }
 

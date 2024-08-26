@@ -4,6 +4,7 @@ import ApiService from './api.service';
 type data = {
   user: UserInterface;
   access_token: string;
+  refresh_token: string;
 }
 
 interface UserLoginResponse {
@@ -17,6 +18,13 @@ class UserService {
 
   static async login(credentials: UserLoginInterface) {
     const response: UserLoginResponse = await ApiService.post('/users/login', credentials);
+    if (response)
+      localStorage.setItem('access_token', response.data.access_token);
+    return response;
+  }
+  
+  static async me() {
+    const response: UserLoginResponse = await ApiService.get('/users/me');
     if (response)
       localStorage.setItem('access_token', response.data.access_token);
     return response;
