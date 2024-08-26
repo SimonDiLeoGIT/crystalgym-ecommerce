@@ -15,7 +15,7 @@ const DesktopSearch = lazy(() => import("../Search/DesktopSearch/DesktopSearch")
 
 const Navbar = () => {
 
-  const { isOpenCart } = useCart();
+  const { isOpenCart } = useCart()
 
   const [y, setY] = useState(window.scrollY);
   const [scrollUp, setScrollUp] = useState(false);

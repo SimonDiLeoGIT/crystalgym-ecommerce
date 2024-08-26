@@ -4,14 +4,17 @@ import '../styles/register.css'
 import UserService from "../services/user.service"
 import { UserLoginInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom";
+import { useUser } from "../hook/useUser";
 
 const Login = () => {
+
+  const { initializeUser } = useUser()
 
   useEffect(() => {
     document.title = "Login | CrystalGym";
   })
 
-  async function signUp(event: React.FormEvent) {
+  async function login(event: React.FormEvent) {
     event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
 
     const formData = new FormData(event.target as HTMLFormElement);
@@ -23,7 +26,7 @@ const Login = () => {
 
     try {
       const response = await UserService.login(data)
-      console.log(response)
+      initializeUser(response.data.user)
     } catch (error) {
       alert("Error en la conexión: " + error);
     }
@@ -32,7 +35,7 @@ const Login = () => {
   return (
     <section className="fixed top-0 left-0 w-screen h-screen -bg--color-white z-50 flex overflow-hidden">
     <form 
-      onSubmit={signUp}
+      onSubmit={login}
       method="POST"
       className="register flex flex-col gap-4 border -border--color-very-light-grey rounded-lg w-10/12 max-w-lg m-auto shadow-lg -shadow--color-very-light-grey p-4 pb-10 "
     >
@@ -52,7 +55,7 @@ const Login = () => {
         type="submit"
         className="w-9/12 m-auto p-2 -bg--color-black -text--color-light-grey-violet font-semibold rounded-lg hover:opacity-90 hover:scale-105 transition-transform duration-150"
       >
-        Register
+        Login
       </button>
     </form>
   </section>

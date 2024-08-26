@@ -21,12 +21,10 @@ const Router = () => {
     <Suspense fallback={<h3>Loading...</h3>}>
       <BrowserRouter>
         <header className="h-20">
-          <Navbar />
+            <Navbar />
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/men" element={<Men />} />
           <Route path="/women" element={<Women />} />
           <Route path="/accessories" element={<Accessories />} />
@@ -36,6 +34,8 @@ const Router = () => {
           <Route path="/:type/news/gym-clothes" element={<NewsProducts />} />
           <Route path="/:type" element={<NewsProducts />} />
           <Route path="/product/:id/:colorId" element={<Product />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/terms&conditions" element={<TerminosCondiciones />} />
         </Routes>
