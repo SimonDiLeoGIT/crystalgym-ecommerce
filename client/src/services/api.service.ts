@@ -1,10 +1,10 @@
+
 class ApiService {
   static baseURL = 'http://localhost:5000/api';
 
   static async get(endpoint: string, options = {}) {
     return this.request(endpoint, {
       method: 'GET',
-      credentials: 'include', // Permite enviar cookies con la solicitud
       ...options,
     });
   }
@@ -13,7 +13,6 @@ class ApiService {
     return this.request(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      credentials: 'include', // Permite enviar cookies con la solicitud
       body: JSON.stringify(body),
       ...options,
     });

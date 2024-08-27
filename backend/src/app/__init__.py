@@ -34,6 +34,8 @@ from app.models.role import Role
 # Import controllers
 from app.controllers.clotheController import clothe_bp
 from app.controllers.userController import user_bp
+from app.controllers.authController import auth_bp
 
 app.register_blueprint(clothe_bp, url_prefix="/api")
 app.register_blueprint(user_bp, url_prefix="/api")
+app.register_blueprint(auth_bp, url_prefix="/api")

@@ -2,14 +2,15 @@ from flask import jsonify, Blueprint, request
 
 # import services
 from app.services.userService import UserService
+from app.services.authService import AuthService
 # import utils
 from app.utils.errorResponseHandler import ErrorResponseHandler
 from app.utils.responseHandler import ResponseHandler
 # import jwt
+from flask_jwt_extended import jwt_required
 from flask_jwt_extended import create_access_token
 from flask_jwt_extended import create_refresh_token
 from flask_jwt_extended import get_jwt_identity
-from flask_jwt_extended import jwt_required
 
 user_bp = Blueprint("user_bp", __name__)
 
@@ -59,13 +60,6 @@ def login():
     return response
   except Exception as e:
     return ErrorResponseHandler().create_error_response('Error logging in user', str(e), 500)
-  
-@user_bp.route("/users/refresh", methods=["POST"])
-@jwt_required(refresh=True)
-def refresh():
-  identity = get_jwt_identity()
-  access_token = create_access_token(identity=identity)
-  return ResponseHandler().create_response('success', 'Access Token refreshed successfully', {"access_token": access_token} , 200)
 
 @user_bp.route("/users/logout", methods=["POST"])
 @jwt_required()
@@ -75,14 +69,15 @@ def logout():
 @user_bp.route("/users/me", methods=["GET"])
 @jwt_required()
 def get_current_user():
-  user = get_jwt_identity()
   
-  access_token = create_access_token(identity=user)
-  refresh_token = create_refresh_token(identity=user)
+  user_identity = get_jwt_identity()
+  
+  access_token = create_access_token(identity=user_identity)
+  refresh_token = create_refresh_token(identity=user_identity)
 
   data = {
     'access_token': access_token,
-    'user': user
+    'user': user_identity
   }
 
   response = ResponseHandler().create_protected_response('success', 'User logged in successfully', data, refresh_token, 200)

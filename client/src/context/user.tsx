@@ -21,9 +21,14 @@ const UserProvider = ({ children }: Props) => {
   }
   
   const getUser = async (): Promise<UserInterface | null> => {
-    if (user === null) {
-        const response = await UserService.me()
-        initializeUser(response.data.user)
+    if (!user) {
+      const response = await UserService.me();
+      if (response && response.data?.user) {
+        initializeUser(response.data.user);
+        return response.data.user;
+      }
+      
+      return null;
     }
 
     return user
