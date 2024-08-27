@@ -1,15 +1,20 @@
+
 class ApiService {
   static baseURL = 'http://localhost:5000/api';
 
   static async get(endpoint: string, options = {}) {
-    return this.request(endpoint, { method: 'GET', ...options });
+    return this.request(endpoint, {
+      method: 'GET',
+      ...options,
+    });
   }
-
-  static async post<T>(endpoint: string, body: T) {
+  
+  static async post<T>(endpoint: string, body: T, options = {}) {
     return this.request(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
+      ...options,
     });
   }
 

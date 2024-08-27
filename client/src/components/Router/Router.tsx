@@ -15,18 +15,17 @@ const Navbar = lazy(() => import("../Navbar/Navbar"))
 const Footer = lazy(() => import("../Footer/Footer"))
 const Register = lazy(() => import("../../pages/Register"))
 const Login = lazy(() => import("../../pages/Login"))
+const UserProvider = lazy(() => import("../../context/user"))
 
 const Router = () => {
   return (
     <Suspense fallback={<h3>Loading...</h3>}>
       <BrowserRouter>
         <header className="h-20">
-          <Navbar />
+            <Navbar />
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/men" element={<Men />} />
           <Route path="/women" element={<Women />} />
           <Route path="/accessories" element={<Accessories />} />
@@ -36,7 +35,9 @@ const Router = () => {
           <Route path="/:type/news/gym-clothes" element={<NewsProducts />} />
           <Route path="/:type" element={<NewsProducts />} />
           <Route path="/product/:id/:colorId" element={<Product />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/register" element={<UserProvider><Register /></UserProvider>} />
+          <Route path="/login" element={<UserProvider><Login /></UserProvider>} />
+          <Route path="/profile" element={<UserProvider><Profile /></UserProvider>} />
           <Route path="/terms&conditions" element={<TerminosCondiciones />} />
         </Routes>
         <Footer />
