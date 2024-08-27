@@ -1,11 +1,7 @@
-from flask_jwt_extended import create_access_token
-from flask_jwt_extended import create_refresh_token
-from flask_jwt_extended import get_jwt_identity
-from flask_jwt_extended import jwt_required
+from flask_jwt_extended import create_access_token, create_refresh_token, get_jwt_identity
+from app.utils.singletonMeta import SingletonMeta
 
-class AuthService:
-    def __init__(self):
-      pass
+class AuthService(metaclass=SingletonMeta):
 
     def create_access_token(self, user):
       access_token = create_access_token(identity=user)
