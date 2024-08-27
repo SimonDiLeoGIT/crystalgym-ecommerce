@@ -3,8 +3,9 @@ from app.repositories.clothePromoRepository import ClothePromoRepository
 from app.utils.pagination import PaginationHelper
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+from app.utils.singletonMeta import SingletonMeta
 
-class ClotheService:
+class ClotheService(metaclass=SingletonMeta):
     def __init__(self):
         self.clothe_repository = ClotheRepository()
         self.clothe_promo_repository = ClothePromoRepository()

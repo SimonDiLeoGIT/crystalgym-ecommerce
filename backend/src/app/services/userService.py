@@ -1,7 +1,8 @@
 from app.repositories.userRepository import UserRepository
 from app.repositories.roleRepository import RoleRepository
+from app.utils.singletonMeta import SingletonMeta
 
-class UserService:
+class UserService(metaclass=SingletonMeta):
     def __init__(self):
         self.user_repository = UserRepository()
         self.role_repository = RoleRepository()
