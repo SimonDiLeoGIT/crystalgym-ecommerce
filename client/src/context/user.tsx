@@ -7,7 +7,7 @@ interface Props {
 }
 
 type UserContext = {
-  initializeUser: (user: UserInterface) => void
+  initializeUser: (user: UserInterface | null) => void
   getUser: () => Promise<UserInterface | null>
 }
 
@@ -16,7 +16,7 @@ export const UserContext = createContext({} as UserContext)
 const UserProvider = ({ children }: Props) => {
   const [user, setUser] = useState<UserInterface | null>(null)
 
-  const initializeUser = (user: UserInterface) => {
+  const initializeUser = (user: UserInterface | null) => {
     setUser(user)
   }
   

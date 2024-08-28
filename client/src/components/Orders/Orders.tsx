@@ -2,37 +2,20 @@ import { Link } from "react-router-dom"
 import { useOrder } from "../../hook/useOrder"
 import open from "../../assets/icons/open.svg"
 import delete_icon from "../../assets/icons/nav icons/trash-slash-alt-svgrepo-com.svg"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { ProductInterface } from "../../interfaces/interfaces"
 
 export const Orders = () => {
 
   const { orders, unconfirmedOrderExists, confirmOrder, unconfirmedOrder, cancelOrder, cancelUnconfirmedOrder, removeFromPreOrder } = useOrder()
 
-  const [orderIsConfirmed, setOrderIsConfirmed] = useState<boolean>(false)
-
   useEffect(() => {
     window.scrollTo(0, 0)
-
-    // const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-    //   if (unconfirmedOrder && !orderIsConfirmed) {
-    //     event.preventDefault()
-    //     return alert('Attention! If you leave the page, the purchase will be deleted.')
-    //   }
-    // }
-
-
-    // window.addEventListener("beforeunload", handleBeforeUnload);
-
-    // return () => {
-    //   window.removeEventListener("beforeunload", handleBeforeUnload);
-    // };
 
   }, []);
 
 
   function handleConfirm() {
-    setOrderIsConfirmed(true)
     confirmOrder()
     setTimeout(() =>
       alert("Confirmed purchase. \n THANKS :) "), 400

@@ -10,6 +10,7 @@ import red_logout from '../../assets/icons/nav icons/logout-red.svg'
 
 import useWindowSize from "../../utils/useWindowSize"
 import { useUser } from "../../hook/useUser"
+import { UserInterface } from "../../interfaces/UserInterface"
 
 const MobileMenu = lazy(() => import("../MobileMenu/MobileMenu"))
 const MobileSearch = lazy(() => import("../Search/MobileSearch/MobileSearch"))
@@ -147,9 +148,22 @@ const Navbar = () => {
   const { width } = useWindowSize();
   const isMobile = width !== undefined && width < 1024;
 
-  const { getUser } = useUser();
+  const { getUser, initializeUser } = useUser();
+
+  const [user, setUser] = useState<UserInterface | null>(null)
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const fetchedUser = await getUser();
+      setUser(fetchedUser);
+    };
+
+    fetchUser();
+  }, [ getUser ]);
+
 
   const logout = () => {
+    initializeUser(null)
     localStorage.clear()
     window.location.reload()
   }
@@ -219,7 +233,7 @@ const Navbar = () => {
           <Cart />
         </li>
         {
-          getUser() !== null &&
+          user &&
           <li className="invisible hidden fixed my-auto px-1 h-full lg:flex items-center lg:visible lg:relative">
             <button onClick={() => logout()} className="realative">
               <div className="w-10 h-10 flex items-center rounded-full hover:opacity-0">
