@@ -8,7 +8,8 @@ class ResponseHandler(metaclass=SingletonMeta):
         response_data = {
             "status": status,
             "message": message,
-            "data": data
+            "data": data,
+            "code": code
         }
         response = make_response(jsonify(response_data))
         response.status_code = code
@@ -32,6 +33,7 @@ class ResponseHandler(metaclass=SingletonMeta):
         response_data = {
             "error": status,
             "message": message,
+            "code": code
         }
         response = make_response(jsonify(response_data))
         response.status_code = code

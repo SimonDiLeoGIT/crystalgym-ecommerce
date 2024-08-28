@@ -19,6 +19,7 @@ export const Profile = () => {
     const fetchUser = async () => {
       const fetchedUser = await getUser();
       setUser(fetchedUser);
+      console.log(fetchedUser)
       setLoading(false);
     };
 
@@ -29,7 +30,7 @@ export const Profile = () => {
     return <div className="h-screen">Loading...</div>;
   }
 
-  if (user === null) {
+  if (!user) {
     return <Login />;
   }
 

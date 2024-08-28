@@ -1,17 +1,30 @@
-import { UserInterface, UserLoginInterface, UserResponseData } from '../interfaces/UserInterface';
+import { ErrorInterface } from '../interfaces/ErrorInterface';
+import { UserLoginInterface, UserRegisterInterface, UserResponseData } from '../interfaces/UserInterface';
+import { isUserResponseData } from '../utils/ResponseType';
 import ApiService from './api.service';
 import AuthService from './auth.service';
 
-
 class UserService {
-  static async register(userData: UserInterface) {
-    return ApiService.post('/users/register', userData);
+  static async register(userData: UserRegisterInterface): Promise<UserResponseData | ErrorInterface> {
+    const response: UserResponseData | ErrorInterface = await ApiService.post('/users/register', userData);
+    
+    if (isUserResponseData(response)) {
+      this.storeAccessToken(response.data.access_token);
+    }
+    
+    return response;
   }
 
-  static async login(credentials: UserLoginInterface) {
-    const response: UserResponseData = await ApiService.post('/users/login', credentials);
-    if (response)
-      localStorage.setItem('access_token', response.data.access_token);
+  static storeAccessToken(access_token: string) {
+    localStorage.setItem('access_token', access_token);
+  }
+
+  static async login(credentials: UserLoginInterface): Promise<UserResponseData | ErrorInterface> {
+    const response: UserResponseData | ErrorInterface = await ApiService.post('/users/login', credentials);
+    if (isUserResponseData(response)) {
+      this.storeAccessToken(response.data.access_token);
+    }
+    
     return response;
   }
   

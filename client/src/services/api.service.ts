@@ -1,3 +1,4 @@
+import { ErrorInterface } from "../interfaces/ErrorInterface";
 
 class ApiService {
   static baseURL = 'http://localhost:5000/api';
@@ -22,7 +23,10 @@ class ApiService {
     const url = `${this.baseURL}${endpoint}`;
     try {
       const response = await fetch(url, options);
-      if (!response.ok) throw new Error(`Error: ${response.status}`);
+      if (!response.ok) {
+        const errorData: ErrorInterface = await response.json();
+        return errorData;
+      }
       return await response.json();
     } catch (error) {
       console.error('API Error:', error);

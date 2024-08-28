@@ -5,6 +5,12 @@ export interface UserInterface {
   access_token: string
 }
 
+export interface UserRegisterInterface {
+  username: string
+  email: string
+  password: string
+}
+
 export interface UserLoginInterface {
   username: string
   password: string

@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import logo from '/CrystalGymLogo.png'
 import '../styles/register.css'
 import UserService from "../services/user.service"
 import { UserLoginInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom";
 import { useUser } from "../hook/useUser";
+import { isUserResponseData } from "../utils/ResponseType";
 
 const Login = () => {
 
@@ -13,6 +14,8 @@ const Login = () => {
   useEffect(() => {
     document.title = "Login | CrystalGym";
   })
+
+  const [errorMessage, setErrorMessage] = useState<string>("")
 
   async function login(event: React.FormEvent) {
     event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
@@ -26,9 +29,14 @@ const Login = () => {
 
     try {
       const response = await UserService.login(data)
-      initializeUser(response.data.user)
+      if (response.code === 404) {
+        console.log("error")
+        setErrorMessage(response.message)
+      } else if (response.code === 200) {
+        isUserResponseData(response) && initializeUser(response.data.user)
+      }
     } catch (error) {
-      alert("Error en la conexión: " + error);
+      console.log(error)
     }
   }
 
@@ -48,8 +56,26 @@ const Login = () => {
         </figcaption>
       </figure>
       <legend className="font-semibold m-auto -text--color-black">Login</legend>
-      <input name='username' type="text" placeholder="Name" />
-      <input name='password' type="password" placeholder="Password" />
+      <span className="-text--color-red font-semibold">{errorMessage}</span>
+      <input 
+        name='username' 
+        type="text" 
+        placeholder="Username" 
+        required 
+        minLength={3} 
+        maxLength={30} 
+        pattern="[A-Za-z0-9]+"
+        title="Must contain only letters and numbers."
+      />
+      <input 
+        name='password' 
+        type="password" 
+        placeholder="Password" 
+        required 
+        minLength={8} 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must be at least 8 characters long, including at least one number, one uppercase letter, and one lowercase letter."
+      />
       <p className="text-center text-sm -text--color-black opacity-90">You don't have an account? <Link to="/register" className="-text--color-dark-grey-violet border-b hover:opacity-60">Sign up</Link></p>
       <button 
         type="submit"
