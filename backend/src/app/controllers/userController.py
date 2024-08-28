@@ -24,8 +24,16 @@ def register():
 
     if user is None:
       return ResponseHandler().create_error_response('User already exists', 'User already exists', 409)
+    
+    access_token = AuthService().create_access_token(user)
+    refresh_token = AuthService().crete_refresh_token(user)
 
-    response = ResponseHandler().create_response('success', 'User registered successfully', user, code=201)
+    data = {
+      'access_token': access_token,
+      'user': user
+    }
+
+    response = ResponseHandler().create_response('success', 'User logged in successfully', data, refresh_token=refresh_token, code=200)
     return response
   except Exception as e:
     return ResponseHandler().create_error_response('Error registering user', str(e), 500)

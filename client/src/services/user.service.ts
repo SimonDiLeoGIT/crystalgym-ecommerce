@@ -1,17 +1,24 @@
-import { UserInterface, UserLoginInterface, UserResponseData } from '../interfaces/UserInterface';
+import { UserLoginInterface, UserRegisterInterface, UserResponseData } from '../interfaces/UserInterface';
 import ApiService from './api.service';
 import AuthService from './auth.service';
 
 
 class UserService {
-  static async register(userData: UserInterface) {
-    return ApiService.post('/users/register', userData);
+  static async register(userData: UserRegisterInterface) {
+    const response: UserResponseData = await ApiService.post('/users/register', userData);
+    if (response)
+      this.storeAccessToken(response.data.access_token);
+    return response;
+  }
+
+  static storeAccessToken(access_token: string) {
+    localStorage.setItem('access_token', access_token);
   }
 
   static async login(credentials: UserLoginInterface) {
     const response: UserResponseData = await ApiService.post('/users/login', credentials);
     if (response)
-      localStorage.setItem('access_token', response.data.access_token);
+      this.storeAccessToken(response.data.access_token);
     return response;
   }
   

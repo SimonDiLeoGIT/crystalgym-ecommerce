@@ -48,8 +48,25 @@ const Login = () => {
         </figcaption>
       </figure>
       <legend className="font-semibold m-auto -text--color-black">Login</legend>
-      <input name='username' type="text" placeholder="Name" />
-      <input name='password' type="password" placeholder="Password" />
+      <input 
+        name='username' 
+        type="text" 
+        placeholder="Username" 
+        required 
+        minLength={3} 
+        maxLength={30} 
+        pattern="[A-Za-z0-9]+"
+        title="Must contain only letters and numbers."
+      />
+      <input 
+        name='password' 
+        type="password" 
+        placeholder="Password" 
+        required 
+        minLength={8} 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must be at least 8 characters long, including at least one number, one uppercase letter, and one lowercase letter."
+      />
       <p className="text-center text-sm -text--color-black opacity-90">You don't have an account? <Link to="/register" className="-text--color-dark-grey-violet border-b hover:opacity-60">Sign up</Link></p>
       <button 
         type="submit"

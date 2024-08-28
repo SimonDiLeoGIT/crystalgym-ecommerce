@@ -2,8 +2,9 @@ import { useEffect } from "react"
 import logo from '/CrystalGymLogo.png'
 import '../styles/register.css'
 import UserService from "../services/user.service"
-import { UserInterface } from "../interfaces/UserInterface"
+import { UserRegisterInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom"
+import { useUser } from "../hook/useUser"
 
 const Register = () => {
 
@@ -11,12 +12,14 @@ const Register = () => {
     document.title = "Sign Up | CrystalGym";
   })
 
+  const { initializeUser } = useUser()
+
   async function signUp(event: React.FormEvent){
     event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
 
     const formData = new FormData(event.target as HTMLFormElement);
 
-    const data: UserInterface = {
+    const data: UserRegisterInterface = {
       username: formData.get('username') as string,
       email: formData.get('email') as string,
       password: formData.get('password') as string,
@@ -24,7 +27,8 @@ const Register = () => {
 
     try {
       const response = await UserService.register(data)
-      console.log(response)
+      initializeUser(response.data.user)
+      window.location.href = "/profile"
     } catch (error) {
       alert("Error en la conexión: " + error);
     }
@@ -46,9 +50,35 @@ const Register = () => {
           </figcaption>
         </figure>
         <legend className="font-semibold m-auto -text--color-black">Sign Up</legend>
-        <input name='username' type="text" placeholder="Name" />
-        <input name='email' type="email" placeholder="Email" />
-        <input name='password' type="password" placeholder="Password" />
+        <input 
+          name='username' 
+          type="text" 
+          placeholder="Username" 
+          required 
+          minLength={3} 
+          maxLength={30} 
+          pattern="[A-Za-z0-9]+"
+          title="Must contain only letters and numbers."
+        />
+        <input name='email' type="email" placeholder="Email" required/>
+        <input 
+          name='password' 
+          type="password" 
+          placeholder="Password" 
+          required 
+          minLength={8} 
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must be at least 8 characters long, including at least one number, one uppercase letter, and one lowercase letter."
+        />
+        <input 
+          name='password-confirmation' 
+          type="password" 
+          placeholder="Confirm Password" 
+          required 
+          minLength={8} 
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must be at least 8 characters long, including at least one number, one uppercase letter, and one lowercase letter."
+        />
         <p className="text-center text-sm -text--color-black opacity-90">You already have an account? <Link to="/login" className="-text--color-dark-grey-violet border-b hover:opacity-60">Login</Link></p>
         <button 
           type="submit"
