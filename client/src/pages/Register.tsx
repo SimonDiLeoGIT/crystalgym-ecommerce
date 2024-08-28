@@ -54,7 +54,7 @@ const Register = () => {
       >
         <figure className="m-auto">
           <image>
-            <img src={logo} alt="Crystal Gym Logo" width={60}/>
+            <Link to="/" className=""><img src={logo} alt="Crystal Gym Logo" width={60}/></Link>
           </image>
           <figcaption>
             <span className="hidden">Crystal Gym Logo</span>
