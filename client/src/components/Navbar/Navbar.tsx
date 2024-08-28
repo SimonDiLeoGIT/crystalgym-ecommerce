@@ -4,10 +4,12 @@ import { Cart } from "../Cart/Cart"
 import { useCart } from "../../hook/useCart"
 import "./Navbar.css"
 import account_avatar from '../../assets/icons/nav icons/account-user-avatar.svg'
-import instagram_icon from '../../assets/icons/nav icons/instagram.svg'
 import logo from '../../assets/icons/CrystalGymLogo.png'
+import black_logout from '../../assets/icons/nav icons/logout.svg'
+import red_logout from '../../assets/icons/nav icons/logout-red.svg'
 
 import useWindowSize from "../../utils/useWindowSize"
+import { useUser } from "../../hook/useUser"
 
 const MobileMenu = lazy(() => import("../MobileMenu/MobileMenu"))
 const MobileSearch = lazy(() => import("../Search/MobileSearch/MobileSearch"))
@@ -145,6 +147,13 @@ const Navbar = () => {
   const { width } = useWindowSize();
   const isMobile = width !== undefined && width < 1024;
 
+  const { getUser } = useUser();
+
+  const logout = () => {
+    localStorage.clear()
+    window.location.reload()
+  }
+
   return (
     <nav className={`grid grid-cols-3 border-b -border--color-very-light-grey h-20 shadow-lg -shadow--color-very-light-grey z-40 -bg--color-white transition-transform duration-500 fixed w-screen px-4 top-0 ${scrollDown && !isOpenCart && " scroll-down shadow-none"} ${scrollUp && " scroll-up"}`}>
       <section className="m-auto ml-4 h-full lg:hidden">
@@ -196,13 +205,6 @@ const Navbar = () => {
         <li className="invisible hidden h-full items-center lg:visible lg:flex lg:relative mr-1">
           {!isMobile && <DesktopSearch />}
         </li>
-        <li className="invisible hidden fixed my-auto px-1 h-full lg:flex items-center lg:visible lg:relative">
-          <Link to='/'>
-            <div className="w-10 h-10 flex items-center duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
-              <img src={instagram_icon} className="m-auto w-10" alt="Instagram Icon"/>
-            </div>
-          </Link>
-        </li>
         <li className="invisible hidden fixed px-1 my-auto h-full lg:flex items-center lg:visible lg:relative">
           <Link to='/profile' className="">
             <div className="w-10 h-10 flex items-center duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
@@ -216,6 +218,19 @@ const Navbar = () => {
         <li className="h-full px-1">
           <Cart />
         </li>
+        {
+          getUser() !== null &&
+          <li className="invisible hidden fixed my-auto px-1 h-full lg:flex items-center lg:visible lg:relative">
+            <button onClick={() => logout()} className="realative">
+              <div className="w-10 h-10 flex items-center rounded-full hover:opacity-0">
+                <img src={black_logout} className="m-auto w-8" alt="Instagram Icon"/>
+              </div>
+              <div className="absolute top-1/4 opacity-0 hover:opacity-100 w-10 h-10 flex items-center duration-150 hover:bg-opacity-20 hover:-bg--color-red hover:shadow-md hover:-shadow--color-red rounded-full">
+                <img src={red_logout} className="m-auto w-8" alt="Instagram Icon"/>
+              </div>
+            </button>
+          </li>
+        }
       </ul>
     </nav>
   )

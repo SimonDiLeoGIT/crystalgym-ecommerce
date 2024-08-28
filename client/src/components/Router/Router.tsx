@@ -22,7 +22,7 @@ const Router = () => {
     <Suspense fallback={<h3>Loading...</h3>}>
       <BrowserRouter>
         <header className="h-20">
-            <Navbar />
+          <UserProvider><Navbar /></UserProvider>
         </header>
         <Routes>
           <Route path="/" element={<Home />} />

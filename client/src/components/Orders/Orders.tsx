@@ -14,22 +14,21 @@ export const Orders = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
 
-    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-      if (unconfirmedOrder && !orderIsConfirmed) {
-        event.preventDefault()
-        event.returnValue = ''
-        return alert('Attention! If you leave the page, the purchase will be deleted.')
-      }
-    };
+    // const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+    //   if (unconfirmedOrder && !orderIsConfirmed) {
+    //     event.preventDefault()
+    //     return alert('Attention! If you leave the page, the purchase will be deleted.')
+    //   }
+    // }
 
 
-    window.addEventListener("beforeunload", handleBeforeUnload);
+    // window.addEventListener("beforeunload", handleBeforeUnload);
 
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
+    // return () => {
+    //   window.removeEventListener("beforeunload", handleBeforeUnload);
+    // };
 
-  }, [orderIsConfirmed, unconfirmedOrder]);
+  }, []);
 
 
   function handleConfirm() {
