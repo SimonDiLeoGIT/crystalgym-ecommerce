@@ -1,10 +1,3 @@
-export interface UserInterface {
-  username: string
-  email: string
-  password: string
-  access_token: string
-}
-
 export interface UserRegisterInterface {
   username: string
   email: string
@@ -16,12 +9,19 @@ export interface UserLoginInterface {
   password: string
 }
 
+export interface UserData {
+  username: string
+  email: string
+  id: number
+  id_role: number
+}
+
 type data = {
-  user: UserInterface;
+  user: UserData;
   access_token: string;
 }
 
-export interface UserResponseData {
+export interface UserResponseInterface {
   data: data;
   code: number;
   message: string;

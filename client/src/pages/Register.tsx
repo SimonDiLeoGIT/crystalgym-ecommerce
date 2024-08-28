@@ -5,7 +5,7 @@ import UserService from "../services/user.service"
 import { UserRegisterInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom"
 import { useUser } from "../hook/useUser"
-import { isUserResponseData } from "../utils/ResponseType"
+import { isUserResponseInterface } from "../utils/ResponseType"
 
 const Register = () => {
 
@@ -18,7 +18,7 @@ const Register = () => {
   const [errorMessage, setErrorMessage] = useState<string>("")
 
   async function signUp(event: React.FormEvent){
-    event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
+    event.preventDefault();
 
     const formData = new FormData(event.target as HTMLFormElement);
 
@@ -35,7 +35,7 @@ const Register = () => {
         console.log("error");
         setErrorMessage(response.message);
       } else if (response.code === 201) {
-        if (isUserResponseData(response)) {
+        if (isUserResponseInterface(response)) {
           initializeUser(response.data.user);
           window.location.href = "/profile";
         }
@@ -54,7 +54,7 @@ const Register = () => {
       >
         <figure className="m-auto">
           <image>
-            <img src={logo} alt="Crystal Gym Logo" width={60}/>
+            <Link to="/" className=""><img src={logo} alt="Crystal Gym Logo" width={60}/></Link>
           </image>
           <figcaption>
             <span className="hidden">Crystal Gym Logo</span>
@@ -77,15 +77,6 @@ const Register = () => {
           name='password' 
           type="password" 
           placeholder="Password" 
-          required 
-          minLength={8} 
-          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-          title="Must be at least 8 characters long, including at least one number, one uppercase letter, and one lowercase letter."
-        />
-        <input 
-          name='password-confirmation' 
-          type="password" 
-          placeholder="Confirm Password" 
           required 
           minLength={8} 
           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"

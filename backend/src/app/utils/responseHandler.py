@@ -1,5 +1,6 @@
 from app.utils.singletonMeta import SingletonMeta
 from flask import make_response, jsonify
+from app.services.authService import AuthService
 
 class ResponseHandler(metaclass=SingletonMeta):
 
@@ -38,4 +39,20 @@ class ResponseHandler(metaclass=SingletonMeta):
         response = make_response(jsonify(response_data))
         response.status_code = code
         
+        return response
+    
+    def make_data(self, user_identity):
+        access_token = AuthService().create_access_token(user_identity)
+        refresh_token = AuthService().crete_refresh_token(user_identity)
+
+        data = {
+            'access_token': access_token,
+            'user': user_identity
+        }
+
+        response = {
+            'data': data,
+            'refresh_token': refresh_token
+        }
+
         return response

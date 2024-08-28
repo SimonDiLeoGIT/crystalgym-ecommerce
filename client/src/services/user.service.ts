@@ -1,14 +1,14 @@
 import { ErrorInterface } from '../interfaces/ErrorInterface';
-import { UserLoginInterface, UserRegisterInterface, UserResponseData } from '../interfaces/UserInterface';
-import { isUserResponseData } from '../utils/ResponseType';
+import { UserLoginInterface, UserRegisterInterface, UserResponseInterface } from '../interfaces/UserInterface';
+import { isUserResponseInterface } from '../utils/ResponseType';
 import ApiService from './api.service';
 import AuthService from './auth.service';
 
 class UserService {
-  static async register(userData: UserRegisterInterface): Promise<UserResponseData | ErrorInterface> {
-    const response: UserResponseData | ErrorInterface = await ApiService.post('/users/register', userData);
+  static async register(userData: UserRegisterInterface): Promise<UserResponseInterface | ErrorInterface> {
+    const response: UserResponseInterface | ErrorInterface = await ApiService.post('/users/register', userData);
     
-    if (isUserResponseData(response)) {
+    if (isUserResponseInterface(response)) {
       this.storeAccessToken(response.data.access_token);
     }
     
@@ -19,20 +19,20 @@ class UserService {
     localStorage.setItem('access_token', access_token);
   }
 
-  static async login(credentials: UserLoginInterface): Promise<UserResponseData | ErrorInterface> {
-    const response: UserResponseData | ErrorInterface = await ApiService.post('/users/login', credentials);
-    if (isUserResponseData(response)) {
+  static async login(credentials: UserLoginInterface): Promise<UserResponseInterface | ErrorInterface> {
+    const response: UserResponseInterface | ErrorInterface = await ApiService.post('/users/login', credentials);
+    if (isUserResponseInterface(response)) {
       this.storeAccessToken(response.data.access_token);
     }
     
     return response;
   }
   
-  static async me(): Promise<UserResponseData | null> {
+  static async me(): Promise<UserResponseInterface | null> {
     try {
       const token = localStorage.getItem('access_token');
       const headers = { headers: { Authorization: `Bearer ${token}` } };
-      const response: UserResponseData = await ApiService.get('/users/me', headers);
+      const response: UserResponseInterface = await ApiService.get('/users/me', headers);
       if (response) {
         localStorage.setItem('access_token', response.data.access_token);
         return response;

@@ -1,6 +1,6 @@
 import { ErrorInterface } from "../interfaces/ErrorInterface";
-import { UserResponseData } from "../interfaces/UserInterface";
+import { UserResponseInterface } from "../interfaces/UserInterface";
 
-export function isUserResponseData(response: UserResponseData | ErrorInterface): response is UserResponseData {
-  return (response as UserResponseData).data !== undefined;
+export function isUserResponseInterface(response: UserResponseInterface | ErrorInterface): response is UserResponseInterface {
+  return (response as UserResponseInterface).data !== undefined;
 }

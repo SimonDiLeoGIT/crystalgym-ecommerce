@@ -16,15 +16,9 @@ def refresh():
   try:
     user_identity = AuthService().get_user_jwt_identity()
 
-    access_token = AuthService().create_access_token(user_identity)
-    refresh_token = AuthService().create_refresh_token(user_identity)
-
-    data = {
-      'access_token': access_token,
-      'user': user_identity
-    }
-
-    response = ResponseHandler().create_response('success', 'User logged in successfully', data, refresh_token=refresh_token, code=200)
+    data = ResponseHandler().make_data(user_identity)
+    
+    response = ResponseHandler().create_response('success', 'User logged in successfully', data['data'], refresh_token=data['refresh_token'], code=200)
     return response
   except Exception as e:
     return ResponseHandler().create_error_response('Error refreshing access token', str(e), 500)
