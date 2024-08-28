@@ -20,12 +20,12 @@ class UserService(metaclass=SingletonMeta):
         user = self.user_repository.get_user_by_username(username)
 
         if user is None:
-            return None
+            return [None, 'User does not exist']
 
         if user.password != password:
-            return None
+            return [None, 'Username and password do not match']
 
-        return user.to_json()
+        return [user.to_json(), 'Login successful']
     
     def username_exists(self, username):
         return self.user_repository.exists_username(username)

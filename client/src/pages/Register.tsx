@@ -32,11 +32,13 @@ const Register = () => {
       const response = await UserService.register(data)
       
       if (response.code === 409) {
-        console.log("error")
-        setErrorMessage(response.message)
-      } else {
-        isUserResponseData(response) && initializeUser(response.data.user)
-        window.location.href = "/profile"
+        console.log("error");
+        setErrorMessage(response.message);
+      } else if (response.code === 201) {
+        if (isUserResponseData(response)) {
+          initializeUser(response.data.user);
+          window.location.href = "/profile";
+        }
       }
     } catch (error: unknown) {
       console.log(error)

@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import logo from '/CrystalGymLogo.png'
 import '../styles/register.css'
 import UserService from "../services/user.service"
 import { UserLoginInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom";
 import { useUser } from "../hook/useUser";
+import { isUserResponseData } from "../utils/ResponseType";
 
 const Login = () => {
 
@@ -13,6 +14,8 @@ const Login = () => {
   useEffect(() => {
     document.title = "Login | CrystalGym";
   })
+
+  const [errorMessage, setErrorMessage] = useState<string>("")
 
   async function login(event: React.FormEvent) {
     event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
@@ -26,9 +29,14 @@ const Login = () => {
 
     try {
       const response = await UserService.login(data)
-      initializeUser(response.data.user)
+      if (response.code === 404) {
+        console.log("error")
+        setErrorMessage(response.message)
+      } else if (response.code === 200) {
+        isUserResponseData(response) && initializeUser(response.data.user)
+      }
     } catch (error) {
-      alert("Error en la conexión: " + error);
+      console.log(error)
     }
   }
 
@@ -48,6 +56,7 @@ const Login = () => {
         </figcaption>
       </figure>
       <legend className="font-semibold m-auto -text--color-black">Login</legend>
+      <span className="-text--color-red font-semibold">{errorMessage}</span>
       <input 
         name='username' 
         type="text" 

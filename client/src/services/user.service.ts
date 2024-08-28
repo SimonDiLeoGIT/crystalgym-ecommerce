@@ -19,10 +19,12 @@ class UserService {
     localStorage.setItem('access_token', access_token);
   }
 
-  static async login(credentials: UserLoginInterface) {
-    const response: UserResponseData = await ApiService.post('/users/login', credentials);
-    if (response)
+  static async login(credentials: UserLoginInterface): Promise<UserResponseData | ErrorInterface> {
+    const response: UserResponseData | ErrorInterface = await ApiService.post('/users/login', credentials);
+    if (isUserResponseData(response)) {
       this.storeAccessToken(response.data.access_token);
+    }
+    
     return response;
   }
   
