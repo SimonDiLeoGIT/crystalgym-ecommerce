@@ -5,7 +5,7 @@ import UserService from "../services/user.service"
 import { UserLoginInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom";
 import { useUser } from "../hook/useUser";
-import { isUserResponseData } from "../utils/ResponseType";
+import { isUserResponseInterface } from "../utils/ResponseType";
 
 const Login = () => {
 
@@ -33,7 +33,7 @@ const Login = () => {
         console.log("error")
         setErrorMessage(response.message)
       } else if (response.code === 200) {
-        isUserResponseData(response) && initializeUser(response.data.user)
+        isUserResponseInterface(response) && initializeUser(response.data.user)
       }
     } catch (error) {
       console.log(error)

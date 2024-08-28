@@ -5,7 +5,7 @@ import UserService from "../services/user.service"
 import { UserRegisterInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom"
 import { useUser } from "../hook/useUser"
-import { isUserResponseData } from "../utils/ResponseType"
+import { isUserResponseInterface } from "../utils/ResponseType"
 
 const Register = () => {
 
@@ -35,7 +35,7 @@ const Register = () => {
         console.log("error");
         setErrorMessage(response.message);
       } else if (response.code === 201) {
-        if (isUserResponseData(response)) {
+        if (isUserResponseInterface(response)) {
           initializeUser(response.data.user);
           window.location.href = "/profile";
         }
