@@ -1,13 +1,17 @@
+import { ErrorInterface } from '../interfaces/ErrorInterface';
 import { UserLoginInterface, UserRegisterInterface, UserResponseData } from '../interfaces/UserInterface';
+import { isUserResponseData } from '../utils/ResponseType';
 import ApiService from './api.service';
 import AuthService from './auth.service';
 
-
 class UserService {
-  static async register(userData: UserRegisterInterface) {
-    const response: UserResponseData = await ApiService.post('/users/register', userData);
-    if (response)
+  static async register(userData: UserRegisterInterface): Promise<UserResponseData | ErrorInterface> {
+    const response: UserResponseData | ErrorInterface = await ApiService.post('/users/register', userData);
+    
+    if (isUserResponseData(response)) {
       this.storeAccessToken(response.data.access_token);
+    }
+    
     return response;
   }
 

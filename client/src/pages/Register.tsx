@@ -1,10 +1,11 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import logo from '/CrystalGymLogo.png'
 import '../styles/register.css'
 import UserService from "../services/user.service"
 import { UserRegisterInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom"
 import { useUser } from "../hook/useUser"
+import { isUserResponseData } from "../utils/ResponseType"
 
 const Register = () => {
 
@@ -13,6 +14,8 @@ const Register = () => {
   })
 
   const { initializeUser } = useUser()
+  
+  const [errorMessage, setErrorMessage] = useState<string>("")
 
   async function signUp(event: React.FormEvent){
     event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
@@ -27,10 +30,16 @@ const Register = () => {
 
     try {
       const response = await UserService.register(data)
-      initializeUser(response.data.user)
-      window.location.href = "/profile"
-    } catch (error) {
-      alert("Error en la conexión: " + error);
+      
+      if (response.code === 409) {
+        console.log("error")
+        setErrorMessage(response.message)
+      } else {
+        isUserResponseData(response) && initializeUser(response.data.user)
+        window.location.href = "/profile"
+      }
+    } catch (error: unknown) {
+      console.log(error)
     }
   }
 
@@ -50,6 +59,7 @@ const Register = () => {
           </figcaption>
         </figure>
         <legend className="font-semibold m-auto -text--color-black">Sign Up</legend>
+        <span className="-text--color-red font-semibold">{errorMessage}</span>
         <input 
           name='username' 
           type="text" 
