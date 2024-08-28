@@ -18,7 +18,7 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState<string>("")
 
   async function login(event: React.FormEvent) {
-    event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
+    event.preventDefault();
 
     const formData = new FormData(event.target as HTMLFormElement);
 
