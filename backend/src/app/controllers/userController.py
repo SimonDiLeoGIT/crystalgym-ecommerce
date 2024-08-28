@@ -25,7 +25,7 @@ def register():
     if user[0] is None:
       return ResponseHandler().create_error_response('User already exists', user[1], 409)
 
-    data = make_data(user[0])
+    data = ResponseHandler().make_data(user[0])
 
     response = ResponseHandler().create_response('success', user[1], data['data'], refresh_token=data['refresh_token'], code=201)
     return response
@@ -46,7 +46,7 @@ def login():
     if user[0] is None:
       return ResponseHandler().create_error_response('User not found', user[1], 404)
 
-    data = make_data(user[0])
+    data = ResponseHandler().make_data(user[0])
 
     response = ResponseHandler().create_response('success', user[1], data['data'], refresh_token=data['refresh_token'], code=200)
     return response
@@ -64,23 +64,7 @@ def get_current_user():
   
   user_identity = AuthService().get_user_jwt_identity()
 
-  data = make_data(user_identity)
+  data = ResponseHandler().make_data(user_identity)
 
   response = ResponseHandler().create_response('success', 'User logged in successfully', data['data'], refresh_token=data['refresh_token'], code=200)
-  return response
-
-def make_data(user_identity):
-  access_token = AuthService().create_access_token(user_identity)
-  refresh_token = AuthService().crete_refresh_token(user_identity)
-
-  data = {
-    'access_token': access_token,
-    'user': user_identity
-  }
-
-  response = {
-    'data': data,
-    'refresh_token': refresh_token
-  }
-
   return response

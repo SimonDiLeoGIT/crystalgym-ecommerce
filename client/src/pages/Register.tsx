@@ -18,7 +18,7 @@ const Register = () => {
   const [errorMessage, setErrorMessage] = useState<string>("")
 
   async function signUp(event: React.FormEvent){
-    event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
+    event.preventDefault();
 
     const formData = new FormData(event.target as HTMLFormElement);
 
@@ -77,15 +77,6 @@ const Register = () => {
           name='password' 
           type="password" 
           placeholder="Password" 
-          required 
-          minLength={8} 
-          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-          title="Must be at least 8 characters long, including at least one number, one uppercase letter, and one lowercase letter."
-        />
-        <input 
-          name='password-confirmation' 
-          type="password" 
-          placeholder="Confirm Password" 
           required 
           minLength={8} 
           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
