@@ -43,7 +43,7 @@ class ResponseHandler(metaclass=SingletonMeta):
     
     def make_data(self, user_identity):
         access_token = AuthService().create_access_token(user_identity)
-        refresh_token = AuthService().crete_refresh_token(user_identity)
+        refresh_token = AuthService().create_refresh_token(user_identity)
 
         data = {
             'access_token': access_token,

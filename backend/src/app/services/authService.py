@@ -7,7 +7,7 @@ class AuthService(metaclass=SingletonMeta):
       access_token = create_access_token(identity=user)
       return access_token
     
-    def crete_refresh_token(self, user):
+    def create_refresh_token(self, user):
       refresh_token = create_refresh_token(identity=user)
       return refresh_token
     

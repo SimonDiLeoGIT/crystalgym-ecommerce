@@ -22,13 +22,15 @@ const UserProvider = ({ children }: Props) => {
   
   const getUser = async (): Promise<UserData | null> => {
     if (!user) {
-      const response = await UserService.me();
-      if (response && response.data?.user) {
-        initializeUser(response.data.user);
-        return response.data.user;
+      try {
+        const response = await UserService.me();
+        if (response) {
+          initializeUser(response.data.user);
+          return response.data.user;
+        }
+      } catch (error) {
+        return null;
       }
-      
-      return null;
     }
 
     return user

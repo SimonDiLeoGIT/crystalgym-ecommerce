@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 import logo from '/CrystalGymLogo.png'
 import '../styles/register.css'
 import UserService from "../services/user.service"
 import { UserLoginInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom";
 import { useUser } from "../hook/useUser";
-import { isUserResponseInterface } from "../utils/ResponseType";
+import { ErrorInterface } from "../interfaces/ErrorInterface";
 
 const Login = () => {
 
@@ -29,14 +29,12 @@ const Login = () => {
 
     try {
       const response = await UserService.login(data)
-      if (response.code === 404) {
-        console.log("error")
-        setErrorMessage(response.message)
-      } else if (response.code === 200) {
-        isUserResponseInterface(response) && initializeUser(response.data.user)
-      }
+      startTransition(() => {
+        initializeUser(response.data.user);
+      });
     } catch (error) {
-      console.log(error)
+        const apiError = error as ErrorInterface;
+        setErrorMessage(apiError.message);
     }
   }
 
