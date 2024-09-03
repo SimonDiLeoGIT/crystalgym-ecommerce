@@ -8,22 +8,31 @@ class UserService(metaclass=SingletonMeta):
         self.role_repository = RoleRepository()
 
     def register(self, username, password, email):
-        if self.username_exists(username):
-            return [None, 'Username already exists']
-        if self.email_exists(email):
-            return [None, 'Email already exists']
-        user_role = self.role_repository.get_user_called_role()
-        user = self.user_repository.save_user(username, password, email, user_role.id)
-        return [user, 'User registered successfully']
-    
+        try:
+            
+            if self.username_exists(username):
+                return [None, 'Username already exists']
+            if self.email_exists(email):
+                return [None, 'Email already exists']
+            
+            user_role = self.role_repository.get_user_called_role()
+            if user_role is None:
+                raise ValueError('User role not found')
+            
+            user = self.user_repository.save_user(username, password, email, user_role.id)
+            
+            return [user, 'User registered successfully']
+        except Exception as e:
+            raise e
+        
     def login(self, username, password):
         user = self.user_repository.get_user_by_username(username)
 
         if user is None:
-            return [None, 'User does not exist']
+            return [None, 'User does not exist', 404]
 
         if user.password != password:
-            return [None, 'Username and password do not match']
+            return [None, 'Username and password do not match', 401]
 
         return [user.to_json(), 'Login successful']
     

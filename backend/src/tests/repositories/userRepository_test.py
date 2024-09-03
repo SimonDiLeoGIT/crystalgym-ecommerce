@@ -1,9 +1,5 @@
 import pytest
-from app import create_app, db
-from app.models.user import User
 from app.repositories.userRepository import UserRepository
-from app.services.userService import UserService
-from app.utils.responseHandler import ResponseHandler
 
 class TestUserRepository:
   

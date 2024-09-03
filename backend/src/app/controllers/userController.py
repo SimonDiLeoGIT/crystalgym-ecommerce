@@ -30,6 +30,7 @@ def register():
     response = ResponseHandler().create_response('success', user[1], data['data'], refresh_token=data['refresh_token'], code=201)
     return response
   except Exception as e:
+    print(e)
     return ResponseHandler().create_error_response('Error registering user', str(e), 500)
   
 @user_bp.route("/users/login", methods=["POST"])
@@ -44,7 +45,7 @@ def login():
     user = UserService().login(username, password)
 
     if user[0] is None:
-      return ResponseHandler().create_error_response('User not found', user[1], 404)
+      return ResponseHandler().create_error_response('Error', user[1], user[2])
 
     data = ResponseHandler().make_data(user[0])
 
