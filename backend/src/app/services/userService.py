@@ -11,9 +11,9 @@ class UserService(metaclass=SingletonMeta):
         try:
             
             if self.username_exists(username):
-                return [None, 'Username already exists']
+                return [None, 'Username already exists', 404]
             if self.email_exists(email):
-                return [None, 'Email already exists']
+                return [None, 'Email already exists', 404]
             
             user_role = self.role_repository.get_user_called_role()
             if user_role is None:

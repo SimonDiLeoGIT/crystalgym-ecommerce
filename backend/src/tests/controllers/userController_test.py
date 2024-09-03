@@ -33,7 +33,7 @@ class TestUserController:
       assert response.status_code == 200
       assert response.json['data']['user']['username'] == user['username']
 
-  def test_get_current_user_npt_authenticated(self, test_client):
+  def test_get_current_user_not_authenticated(self, test_client):
     with test_client.application.app_context():
       user = {
         'username': 'username',
