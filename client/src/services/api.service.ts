@@ -1,33 +1,39 @@
 import { ErrorInterface } from "../interfaces/ErrorInterface";
 
+
 class ApiService {
   static baseURL = 'http://localhost:5000/api';
 
-  static async get(endpoint: string, options = {}) {
-    return this.request(endpoint, {
-      method: 'GET',
+  static async makeRequest<T>(endpoint: string, method = 'GET', body?: T, options: RequestInit = {}) {
+    const config: RequestInit = {
+      method,
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
+      },
       ...options,
-    });
-  }
-  
-  static async post<T>(endpoint: string, body: T, options = {}) {
-    return this.request(endpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-      ...options,
-    });
+    };
+    if (body) {
+      config.headers = {
+        ...config.headers,
+        'Content-Type': 'application/json',
+      };
+      config.body = JSON.stringify(body);
+    }
+    return this.request(endpoint, config);
   }
 
   static async request(endpoint: string, options: RequestInit) {
     const url = `${this.baseURL}${endpoint}`;
     try {
       const response = await fetch(url, options);
+      const responseData = await response.json();
       if (!response.ok) {
-        const errorData: ErrorInterface = await response.json();
-        return errorData;
+        const errorData: ErrorInterface = await responseData;
+        throw errorData;
       }
-      return await response.json();
+      localStorage.setItem('access_token', responseData.data.access_token);
+      return responseData;
     } catch (error) {
       console.error('API Error:', error);
       throw error;

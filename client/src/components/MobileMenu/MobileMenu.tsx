@@ -174,13 +174,12 @@ const MobileMenu = () => {
               {
                 nav_links.map(link => {
                   return (
-                    <li className="border-b -border--color-very-light-grey">
+                    <li key={link.name} className="border-b -border--color-very-light-grey">
                       <details className="block p-4 hover:cursor-pointer" onClick={() => handleOpenSection(link.name)}>
                         <summary className="list-none grid grid-cols-2 relative ">
                           {link.name}
                           <span><img src={open_arrow} alt="open arrow" className={`w-3 absolute bottom-0 right-0 transition-transform ${(sectionOpen.includes(link.name)) ? "rotate-180" : ""}`} /></span>
                         </summary>
-                        <ul>
                           {
                             link.sections.map(section => {
                               return (
@@ -188,7 +187,7 @@ const MobileMenu = () => {
                                   {
                                     section.links.map(link => {
                                       return (
-                                        <li className="-text--color-greyest-violet hover:-text--color-dark-grey-violet">
+                                        <li key={link.label} className="-text--color-greyest-violet hover:-text--color-dark-grey-violet">
                                           <Link to={link.link} onClick={() => handleViewMenu()} className="block p-4">{link.label}</Link>
                                         </li>
                                       )
@@ -198,7 +197,6 @@ const MobileMenu = () => {
                               )
                             })
                           }
-                        </ul>
                       </details>
                     </li>
                   )
