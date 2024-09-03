@@ -1,21 +1,8 @@
 from flask import Flask
-from flask_cors import CORS
-from flask_migrate import Migrate
-from config import Config
-from database import db
-from flask_jwt_extended import JWTManager
+from config import Config, TestingConfig
+from extensions import db, migrate, jwt, cors
 
-app = Flask(__name__)
-
-app.config.from_object(Config)
-
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
-
-jwt = JWTManager(app)
-db.init_app(app)
-migrate = Migrate(app, db)
-
-# import models
+# Importar modelos
 from app.models.color import Color
 from app.models.gender import Gender
 from app.models.promo import Promo
@@ -31,11 +18,32 @@ from app.models.clothe_color import ClotheColor
 from app.models.clothe_promo import ClothePromo
 from app.models.role import Role
 
-# Import controllers
+# Importar controladores
 from app.controllers.clotheController import clothe_bp
 from app.controllers.userController import user_bp
 from app.controllers.authController import auth_bp
 
-app.register_blueprint(clothe_bp, url_prefix="/api")
-app.register_blueprint(user_bp, url_prefix="/api")
-app.register_blueprint(auth_bp, url_prefix="/api")
+def create_app(config_class=Config):
+    app = Flask(__name__)
+
+    if config_class == 'testing':
+        app.config.from_object(TestingConfig)
+    else:
+        app.config.from_object(Config)
+
+    # Inicializar extensiones
+    db.init_app(app)
+    migrate.init_app(app, db)
+    jwt.init_app(app)
+    cors.init_app(app, resources={r"/api/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
+
+    # Registrar blueprints
+    from app.controllers.clotheController import clothe_bp
+    from app.controllers.userController import user_bp
+    from app.controllers.authController import auth_bp
+
+    app.register_blueprint(clothe_bp, url_prefix="/api")
+    app.register_blueprint(user_bp, url_prefix="/api")
+    app.register_blueprint(auth_bp, url_prefix="/api")
+
+    return app
