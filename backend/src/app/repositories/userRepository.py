@@ -7,6 +7,10 @@ class UserRepository:
     pass
 
   def save_user(self, username, password, email, id_role):
+    if self.exists_username(username):
+      raise ValueError("Username already exists")
+    if self.exists_email(email):
+      raise ValueError("Email already exists")
     user = User(username, password, email, id_role)
     db.session.add(user)
     db.session.commit()
