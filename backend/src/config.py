@@ -20,6 +20,7 @@ class Config(object):
     AWS_BUCKET_REGION = os.getenv("AWS_BUCKET_REGION")
     AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
     AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+    ALLOWED_EXTENSIONS = os.getenv("ALLOWED_EXTENSIONS")
 
 class TestingConfig(Config):
     TESTING = True

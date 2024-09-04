@@ -11,6 +11,10 @@ class ClotheService(metaclass=SingletonMeta):
         self.clothe_promo_repository = ClothePromoRepository()
         self.pagination = PaginationHelper()
 
+    def save_clothe(self, name, description, price, id_gender, id_category):
+        clothe = self.clothe_repository.save_clothe(name, description, price, datetime.now(), id_gender, id_category)
+        return clothe.to_json()
+
     def get_clothes_by_category(self, id_gender, id_category, page, total_items):
         clothes_data = self.clothe_repository.get_clothes_by_category(id_gender, id_category, page, total_items)
 

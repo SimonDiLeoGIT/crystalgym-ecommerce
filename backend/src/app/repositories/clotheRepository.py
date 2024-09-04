@@ -9,6 +9,12 @@ class ClotheRepository:
     def __init__(self):
         self.pagination = PaginationHelper()
 
+    def save_clothe(self, name, description, price, release_date, id_gender, id_type):
+        new_clothe = Clothe(name, description,  price, release_date, id_gender, id_type)
+        db.session.add(new_clothe)
+        db.session.commit()
+        return new_clothe
+
     def get_clothes_by_category(self, id_gender, id_type, page=1, page_size=10):
         page = int(page)
         page_size = int(page_size)
