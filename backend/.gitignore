@@ -12,4 +12,4 @@ __pycache__/
 .pytest_cache/
 
 # SQL code
-full_dump.sql
+init.sql
