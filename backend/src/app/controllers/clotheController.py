@@ -25,21 +25,14 @@ def allowed_file(filename):
 @clothe_bp.route("/clothe", methods=["POST"])
 def post_clothe():
     try:
-        # Extraer los datos no relacionados con archivos
-        form_data = request.form.to_dict()
-        # Validar los datos estructurales usando Marshmallow
-        schema = ClothesSchema()
-        clothe_data = schema.load(form_data)
-        
-        # Guardar la prenda
-        saved_clothe = clothe_service.save_clothe(
-            clothe_data['name'],
-            clothe_data['description'],
-            clothe_data['id_category'],
-            clothe_data['id_gender'],
-            clothe_data.get('price')
-        )
 
+        name = request.form.get('name')
+        description = request.form.get('description')
+        id_category = request.form.get('id_category')
+        id_gender = request.form.get('id_gender')
+        price = request.form.get('price')
+        
+        saved_clothe = clothe_service.save_clothe(name, description, price, id_gender, id_category)
 
         # Procesar imágenes
         colors = request.form.getlist('colors')
@@ -61,8 +54,6 @@ def post_clothe():
         data = ResponseHandler().make_data({})
         return ResponseHandler().create_response('success', 'Clothe created successfully', data['data'], refresh_token=data['refresh_token'], code=201)
         
-    except ValidationError as err:
-        return ResponseHandler().create_error_response(str(err), 'Invalid clothe data', 400)
     except Exception as e:
         print (e)
         return ResponseHandler().create_error_response(str(e), 'An error occurred while creating the clothe', 500)

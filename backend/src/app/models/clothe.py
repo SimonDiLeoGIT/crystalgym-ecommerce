@@ -5,7 +5,7 @@ class Clothe(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(255), nullable=False)
   description = db.Column(db.String(255), nullable=False)
-  price = db.Column(db.Double, nullable=False)
+  price = db.Column(db.Double, nullable=True, default=0.0)
   release_date = db.Column(db.Date, nullable=False)
   id_gender = db.Column(db.Integer, db.ForeignKey('genders.id'), nullable=False)
   id_type = db.Column(db.Integer, db.ForeignKey('types.id'), nullable=False)
