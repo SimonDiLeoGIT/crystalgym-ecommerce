@@ -14,6 +14,9 @@ class ClotheRepository:
         db.session.add(new_clothe)
         db.session.commit()
         return new_clothe
+    
+    def get_clothe_by_id(self, id_clothe):
+        return db.session.query(Clothe).filter(Clothe.id == id_clothe).first()
 
     def get_clothes_by_category(self, id_gender, id_type, page=1, page_size=10):
         page = int(page)
@@ -40,3 +43,25 @@ class ClotheRepository:
         }
 
         return response
+    
+    def update_clothe(self, id_clothe, name, description, price, release_date, id_gender, id_type):
+
+        if not db.session.query(Clothe).filter(Clothe.id == id_clothe).first():
+            return None
+
+        updated_clothe = db.session.query(Clothe).filter(Clothe.id == id_clothe).first()
+        updated_clothe.name = name
+        updated_clothe.description = description
+        updated_clothe.price = price
+        updated_clothe.release_date = release_date
+        updated_clothe.id_gender = id_gender
+        updated_clothe.id_type = id_type
+        db.session.commit()
+        return updated_clothe
+    
+    def delete_clothe(self, id_clothe):
+        if not db.session.query(Clothe).filter(Clothe.id == id_clothe).first():
+            return None
+        db.session.query(Clothe).filter(Clothe.id == id_clothe).delete()
+        db.session.commit()
+        return True

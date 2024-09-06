@@ -21,7 +21,6 @@ class TestClotheController:
               'price': '10',
               'colors[0][id_color]': '1',
               'colors[0][stock]': '10',
-              'colors[0][price]': '10',
               'colors[0][images][0][image]': fake_image
           }
           response = test_client.post('/api/clothe', data=data, content_type='multipart/form-data')

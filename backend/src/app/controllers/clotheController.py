@@ -4,8 +4,6 @@ from app.services.clotheService import ClotheService
 # import utils
 from app.utils.pagination import PaginationHelper
 from app.utils.responseHandler import ResponseHandler
-# import schemas
-from app.schemas.clotheSchemas import ClothesSchema
 # import marshmallow
 from app.services.imageService import ImageService
 from marshmallow import ValidationError
@@ -34,12 +32,10 @@ def post_clothe():
         
         saved_clothe = clothe_service.save_clothe(name, description, price, id_gender, id_category)
 
-        # Procesar imágenes
         colors = request.form.getlist('colors')
         for color in colors:
             color_id = request.form.get(f'colors[{color}][id_color]')
             stock = request.form.get(f'colors[{color}][stock]')
-            color_price = request.form.get(f'colors[{color}][price]')
             images = request.files.getlist(f'colors[{color}][images]')
 
             for image_file in images:
