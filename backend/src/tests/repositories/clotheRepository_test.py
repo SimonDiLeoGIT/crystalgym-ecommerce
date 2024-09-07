@@ -39,13 +39,13 @@ class TestClotheRepository:
   # Test that get clothes by category works
   def test_get_clothes_by_category(self, test_client, clothe_repository):
     with test_client.application.app_context():
-      data = clothe_repository.get_clothes_by_category(1, 1)
+      data = clothe_repository.get_clothes_by_category(1, 1, 1, 10)
       assert data
 
   # Test that update clothe works
   def test_update_clothe(self, test_client, clothe_repository):
     with test_client.application.app_context():
-      data = clothe_repository.update_clothe(1, 'new_name', 'new_description', 1, datetime.now(), 1, 1)
+      data = clothe_repository.update_clothe(1, 'new_name', 'new_description', 1)
       clothe = data.to_json()
       assert clothe['name'] == 'new_name'
       assert clothe['description'] == 'new_description'
@@ -56,7 +56,7 @@ class TestClotheRepository:
   # Test that update non-existing clothe returns None
   def test_update_clothe_not_found(self, test_client, clothe_repository):
     with test_client.application.app_context():
-      data = clothe_repository.update_clothe(100, 'new_name', 'new_description', 1, datetime.now(), 1, 1)
+      data = clothe_repository.update_clothe(100, 'new_name', 'new_description', 1)
       assert data is None
 
   # Test that delete clothe works

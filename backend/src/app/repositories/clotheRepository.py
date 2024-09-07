@@ -18,7 +18,7 @@ class ClotheRepository:
     def get_clothe_by_id(self, id_clothe):
         return db.session.query(Clothe).filter(Clothe.id == id_clothe).first()
 
-    def get_clothes_by_category(self, id_gender, id_type, page=1, page_size=10):
+    def get_clothes_by_category(self, id_gender, id_type, page, page_size):
         page = int(page)
         page_size = int(page_size)
 
@@ -44,8 +44,8 @@ class ClotheRepository:
 
         return response
     
-    def update_clothe(self, id_clothe, name, description, price, release_date, id_gender, id_type):
-
+    def update_clothe(self, id_clothe, name, description, price):
+        
         if not db.session.query(Clothe).filter(Clothe.id == id_clothe).first():
             return None
 
@@ -53,9 +53,6 @@ class ClotheRepository:
         updated_clothe.name = name
         updated_clothe.description = description
         updated_clothe.price = price
-        updated_clothe.release_date = release_date
-        updated_clothe.id_gender = id_gender
-        updated_clothe.id_type = id_type
         db.session.commit()
         return updated_clothe
     

@@ -26,3 +26,23 @@ class TestClotheController:
           response = test_client.post('/api/clothe', data=data, content_type='multipart/form-data')
 
           assert response.status_code == 201
+
+  def test_get_clothe_by_id(self, test_client):
+    with test_client.application.app_context():
+      data = test_client.get('/api/clothe/1')
+      assert data.status_code == 200
+      assert data.json['data']['id'] == 1
+
+  def test_get_clothe_not_found(self, test_client):
+    with test_client.application.app_context():
+      data = test_client.get('/api/clothe/100')
+      assert data.status_code == 404
+  
+  def test_get_clothes_by_category(self, test_client):
+      with test_client.application.app_context():
+          response = test_client.get('/api/clothes/1/1/1/10')
+          assert response.status_code == 200
+          data = response.json
+          clothes = data.get('clothes', [])
+          assert len(clothes) > 0, "No clothes returned in the response"
+          assert clothes[0]['id'] == 1
