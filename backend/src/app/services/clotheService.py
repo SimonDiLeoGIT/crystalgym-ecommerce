@@ -39,12 +39,12 @@ class ClotheService(metaclass=SingletonMeta):
         clothes_data = self.clothe_repository.get_clothes_by_category(id_gender, id_category, page, page_size)
         
         # Marcar como "new" y verificar promociones
-        # clothes_data['clothes'] = [self.add_new_attribute(clothe) for clothe in clothes_data['clothes']]
-        # clothes_data['clothes'] = [self.add_promo_attribute(clothe) for clothe in clothes_data['clothes']]
+        clothes_data['clothes'] = [self.add_new_attribute(clothe) for clothe in clothes_data['clothes']]
+        clothes_data['clothes'] = [self.add_promo_attribute(clothe) for clothe in clothes_data['clothes']]
 
-        # # Agregar los datos de paginación
-        # clothes_data['pagination'] = self.pagination.get_pagination_data(page, page_size, clothes_data['total_pages'])
-        print(clothes_data)
+        # Agregar los datos de paginación
+        clothes_data['pagination'] = self.pagination.get_pagination_data(page, page_size, clothes_data['total_pages'])
+        
         return [clothes_data, 'Clothes retrieved successfully', 200]
 
     def add_new_attribute(self, clothe):
