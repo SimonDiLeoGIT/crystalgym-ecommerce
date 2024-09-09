@@ -4,7 +4,7 @@ import { useCart } from "../hook/useCart"
 import ProductsAdvertisement from "../components/ProductsAdvertisement/ProductsAdvertisement"
 import all_clothes from "../assets/json/shop/clothes.json"
 import { ProductColors } from "../components/ProductColors/ProductColors"
-import { ProductInterface } from "../interfaces/interfaces"
+import { ProductInterface } from "../interfaces/ProductInterfaces"
 
 const ImageLoad = lazy(() => import("../components/ImageLoad/ImageLoad"))
 const ArrowButtons = lazy(() => import("../components/ArrowButtons/ArrowButtons"))

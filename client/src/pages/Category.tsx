@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import clothe_data from '../assets/json/shop/clothes.json'
 import { Products } from "../components/Products/Products";
 import { useParams } from "react-router-dom";
-import { ProductInterface } from "../interfaces/interfaces";
+import { ProductInterface } from "../interfaces/ProductInterfaces";
 
 
 type product = ProductInterface;

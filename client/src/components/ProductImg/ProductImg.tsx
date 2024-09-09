@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import add_to_bag_icon from "../../assets/icons/nav icons/bag-plus-1122-svgrepo-com.svg"
 import like_icon from "../../assets/icons/like-icon.svg"
 import { useCart } from "../../hook/useCart";
-import { ProductInterface } from "../../interfaces/interfaces";
+import { ProductInterface } from "../../interfaces/ProductInterfaces";
 
 const ImageLoad = lazy(() => import("../ImageLoad/ImageLoad"))
 

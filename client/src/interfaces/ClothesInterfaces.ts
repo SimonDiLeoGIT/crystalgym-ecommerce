@@ -1,20 +1,20 @@
-export interface ClothesInterface {
-  id?: number,
-  name: string,
-  description: string,
-  id_category: number,
-  id_gender: number,
-  price?: number,
-  colors: ClotheColor[],
+export interface ClotheInterface {
+  code: number;
+  data: ClotheDataInterface;
+  message: string;
+}
+
+export interface ClotheDataInterface {
+  name: string;
+  description: string;
+  price: number;
+  id_gender: number;
+  id_category: number;
+  colors: ClotheColor[];
 }
 
 export interface ClotheColor {
-  color_id: number
-  images: ClotheImage[]
-  stock: number
-  price?: number
-}
-
-export interface ClotheImage {
-  image: File
+  id_color: number; 
+  stock: number;
+  images: File[];
 }

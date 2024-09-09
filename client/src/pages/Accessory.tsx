@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import accessories from '../assets/json/shop/accessories.json'
 import { Products } from "../components/Products/Products";
 import { useParams } from "react-router-dom";
-import { ProductInterface } from "../interfaces/interfaces";
+import { ProductInterface } from "../interfaces/ProductInterfaces";
 
 
 type product = ProductInterface;

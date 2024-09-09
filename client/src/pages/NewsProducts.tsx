@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Products } from "../components/Products/Products";
-import { ProductInterface } from "../interfaces/interfaces";
+import { ProductInterface } from "../interfaces/ProductInterfaces";
 import { useParams } from "react-router-dom";
 
 interface Props {

@@ -18,11 +18,6 @@ from app.models.clothe_color import ClotheColor
 from app.models.clothe_promo import ClothePromo
 from app.models.role import Role
 
-# Importar controladores
-from app.controllers.clotheController import clothe_bp
-from app.controllers.userController import user_bp
-from app.controllers.authController import auth_bp
-
 def create_app(config_class=Config):
     app = Flask(__name__)
 
@@ -41,9 +36,13 @@ def create_app(config_class=Config):
     from app.controllers.clotheController import clothe_bp
     from app.controllers.userController import user_bp
     from app.controllers.authController import auth_bp
+    from app.controllers.categoriesController import type_bp
+    from app.controllers.colorController import color_bp
 
     app.register_blueprint(clothe_bp, url_prefix="/api")
     app.register_blueprint(user_bp, url_prefix="/api")
     app.register_blueprint(auth_bp, url_prefix="/api")
+    app.register_blueprint(type_bp, url_prefix="/api")
+    app.register_blueprint(color_bp, url_prefix="/api")
 
     return app
