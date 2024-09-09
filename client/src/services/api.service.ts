@@ -4,7 +4,7 @@ import { ErrorInterface } from "../interfaces/ErrorInterface";
 class ApiService {
   static baseURL = 'http://localhost:5000/api';
 
-  static async makeRequest<T>(endpoint: string, method = 'GET', body?: T, options: RequestInit = {}) {
+  static async makeRequest<T>(endpoint: string, method = 'GET', body?: T,  options: RequestInit = {}) {
     const config: RequestInit = {
       method,
       headers: {
@@ -13,7 +13,9 @@ class ApiService {
       },
       ...options,
     };
-    if (body) {
+    if (body instanceof FormData) {
+      config.body = body;
+    } else if (body) {
       config.headers = {
         ...config.headers,
         'Content-Type': 'application/json',

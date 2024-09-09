@@ -6,7 +6,7 @@ class ColorRepository:
   def get_color_by_id(self, id_color):
     return db.session.query(Color).filter(Color.id == id_color).first()
 
-  def get_all_colors(self):
+  def get_colors(self):
     return db.session.query(Color).all()
 
   def save_color(self, name):

@@ -3,7 +3,7 @@ import ReactPaginate from "react-paginate";
 import left_arrow from '../../assets/icons/carousel/left-arrow.svg'
 import right_arrow from '../../assets/icons/carousel/right-arrow.svg'
 import { ProductImg } from "../ProductImg/ProductImg";
-import { ProductInterface } from "../../interfaces/interfaces";
+import { ProductInterface } from "../../interfaces/ProductInterfaces";
 
 type productList = ProductInterface[];
 

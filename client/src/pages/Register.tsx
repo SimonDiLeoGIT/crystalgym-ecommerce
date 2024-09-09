@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import logo from '/CrystalGymLogo.png'
-import '../styles/register.css'
+import '../styles/form.css'
 import UserService from "../services/user.service"
 import { UserRegisterInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom"
@@ -50,7 +50,7 @@ const Register = () => {
       <form 
         onSubmit={signUp}
         method="POST"
-        className="register flex flex-col gap-4 border -border--color-very-light-grey rounded-lg w-10/12 max-w-lg m-auto shadow-lg -shadow--color-very-light-grey p-4 pb-10 "
+        className="form flex flex-col gap-4 border -border--color-very-light-grey rounded-lg w-10/12 max-w-lg m-auto shadow-lg -shadow--color-very-light-grey p-4 pb-10 "
       >
         <figure className="m-auto">
           <image>

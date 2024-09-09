@@ -3,7 +3,7 @@ import { useOrder } from "../../hook/useOrder"
 import open from "../../assets/icons/open.svg"
 import delete_icon from "../../assets/icons/nav icons/trash-slash-alt-svgrepo-com.svg"
 import { useEffect } from "react"
-import { ProductInterface } from "../../interfaces/interfaces"
+import { ProductInterface } from "../../interfaces/ProductInterfaces"
 
 export const Orders = () => {
 

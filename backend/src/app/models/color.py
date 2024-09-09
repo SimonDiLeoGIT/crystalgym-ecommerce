@@ -8,3 +8,9 @@ class Color(db.Model):
 
   def __init__(self, name):
     self.name = name
+
+  def to_json(self):
+    return {
+      "id": self.id,
+      "name": self.name
+    }

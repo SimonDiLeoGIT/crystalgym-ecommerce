@@ -15,6 +15,7 @@ const Navbar = lazy(() => import("../Navbar/Navbar"))
 const Footer = lazy(() => import("../Footer/Footer"))
 const Register = lazy(() => import("../../pages/Register"))
 const Login = lazy(() => import("../../pages/Login"))
+const PostNewClothe = lazy(() => import("../../pages/PostNewClothe"))
 
 const Router = () => {
   return (
@@ -38,6 +39,7 @@ const Router = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/terms&conditions" element={<TerminosCondiciones />} />
+          <Route path="/post-new-clothe" element={<PostNewClothe />} />
         </Routes>
         <Footer />
       </BrowserRouter>
