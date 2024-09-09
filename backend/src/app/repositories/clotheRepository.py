@@ -32,7 +32,9 @@ class ClotheRepository:
         ).join(Type, Clothe.id_type == Type.id) \
          .join(ClotheColor, Clothe.id == ClotheColor.id_clothe) \
          .filter(Clothe.id_gender == id_gender, Clothe.id_type == id_type)
-
+        print(id_gender)
+        print(id_type)
+        print(clothes_query)
         clothes = self.pagination.generate_pagination(page, page_size, clothes_query)
         total_pages = (clothes_query.count() // page_size) + 1
 
@@ -41,7 +43,7 @@ class ClotheRepository:
             'category': clothes[0][1] if clothes else None,
             'total_pages': total_pages
         }
-
+        print(response)
         return response
     
     def update_clothe(self, id_clothe, name, description, price):

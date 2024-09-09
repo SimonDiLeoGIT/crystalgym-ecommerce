@@ -3,6 +3,8 @@ from app import create_app, db
 from app.models.user import User
 from app.models.role import Role
 from app.models.color import Color
+from app.models.type import Type
+from app.models.gender import Gender
 
 @pytest.fixture(scope='module')
 def test_client():
@@ -27,6 +29,16 @@ def test_client():
         # Crear un color de prueba
         color = {'name': 'red'}
         db.session.add(Color(**color))
+        db.session.commit()
+
+        # Crear una categoría de prueba
+        category = {'name': 'hoodie_test'}
+        db.session.add(Type(**category))
+        db.session.commit()
+
+        # Crear un género de prueba
+        gender = {'name': 'male'}
+        db.session.add(Gender(**gender))
         db.session.commit()
 
         # Limpiar usuarios y otros datos si es necesario
