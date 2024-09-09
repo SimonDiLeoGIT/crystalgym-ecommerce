@@ -11,5 +11,5 @@ class ColorService(metaclass=SingletonMeta):
     if colors is None:
       return [None, 'Colors not found', 404]
     
-    colors_json = [category.to_json() for category in colors]
+    colors_json = [color.to_json() for color in colors]
     return [colors_json, 'Colors retrieved successfully', 200]

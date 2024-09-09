@@ -7,7 +7,10 @@ export default class ClotheService {
     return response;
   }
 
-  static async postClothe(clothe: ClotheDataInterface): Promise<ClotheInterface> {
+  static async postClothe(clothe: FormData): Promise<ClotheInterface> {
+    for (const [key, value] of clothe.entries()) {
+      console.log(`${key}:`, value);
+    }
     const response = await ApiService.makeRequest('/clothe', 'POST', clothe);
     return response;
   }

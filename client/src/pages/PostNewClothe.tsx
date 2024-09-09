@@ -5,11 +5,15 @@ import '../styles/form.css'
 import { ColorDataInterface } from "../interfaces/ColorInterfaces";
 import ColorService from "../services/color.service";
 import { ClotheDataInterface } from "../interfaces/ClothesInterfaces";
+import GenderService from "../services/gender.service";
+import { GenderDataInterface } from "../interfaces/GenderInterfaces";
+import ClotheService from "../services/clothe.service";
 
 const PostNewClothe = () => {
 
   const [categories, setCategories] = useState<CategoryDataInterface[] | null>(null);
   const [clotheColors, setClotheColors] = useState<ColorDataInterface[] | null>(null);
+  const [genders, setGenders] = useState<GenderDataInterface[] | null>(null);
   const [colorsCount, setColorsCount] = useState<number>(0);
 
   const [formData, setFormData] = useState<ClotheDataInterface>({
@@ -25,6 +29,7 @@ const PostNewClothe = () => {
     document.title = "Post New Clothe | CrystalGym";
   })
 
+  // Get categories
   useEffect(() => {
     const fetchCategories = async () => {
       const response = await CategoryService.getCategories();
@@ -36,6 +41,7 @@ const PostNewClothe = () => {
     fetchCategories();
   }, []);
 
+  // Get colors
   useEffect(() => {
     const fetchColors = async () => {
       const response = await ColorService.getColors();
@@ -47,6 +53,18 @@ const PostNewClothe = () => {
     fetchColors();
   }, []);
 
+  // Get genders
+  useEffect(() => {
+    const fetchGenders = async () => {
+      const response = await GenderService.getGenders();
+      if (response.code == 200) {
+        setGenders(response.data)
+      }
+    };
+
+    fetchGenders();
+  }, []);
+    
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -98,9 +116,29 @@ const PostNewClothe = () => {
     console.log(formData)
   }
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    console.log('formData: ', formData)
+    const submitData = new FormData();
+    submitData.append("name", formData.name);
+    submitData.append("description", formData.description);
+    submitData.append("id_category", formData.id_category.toString());
+    submitData.append("price", formData.price.toString());
+    submitData.append("id_gender", formData.id_gender.toString());
 
+    formData.colors.forEach((color, index) => {
+      submitData.append(`colors[${index}][id_color]`, color.id_color.toString());
+      submitData.append(`colors[${index}][stock]`, color.stock.toString());
+
+      color.images.forEach((image, imgIndex) => {
+        submitData.append(`colors[${index}][images][${imgIndex}]`, image);
+      });
+    });
+
+    const response = await ClotheService.postClothe(submitData);
+    if (response.code == 201) {
+      console.log(response.data);
+    }
   }
 
 
@@ -112,15 +150,20 @@ const PostNewClothe = () => {
         <input type="text" name="name" onChange={handleInputChange} />
         <label htmlFor="description">Description</label>
         <input type="text" name="description" onChange={handleInputChange} />
-        <label htmlFor="category">Category</label>
-        <select name="category" onChange={handleInputChange}>
+        <label htmlFor="id_category">Category</label>
+        <select name="id_category" onChange={handleInputChange}>
           <option value={-1} key={-1} selected>Select Category</option>
           {categories?.map(category => <option value={category.id} key={category.id}>{category.name}</option>)}
         </select>
         <label htmlFor="price">Price</label>
         <input type="text" name="price" onChange={handleInputChange} />
-        <label htmlFor="gender">Gender</label>
-        <input type="text" name="gender" onChange={handleInputChange} />
+        <label htmlFor="id_gender">Gender</label>
+        {genders?.map(gender => 
+          <>
+            <input type="radio" name="id_gender" value={gender.id} key={gender.id} onChange={handleInputChange} />
+            <label htmlFor="id_gender">{gender.name}</label>
+          </>
+        )}
         <section>
           <header>
             <h2>Images</h2>
