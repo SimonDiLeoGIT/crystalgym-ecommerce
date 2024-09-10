@@ -165,16 +165,15 @@ const PostNewClothe = () => {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-
     if (!validatePrice(formData.price.toString())) {
       console.log("Price must be a positive number");
       return;
     }
-
+    
     if (!validateData()) {
       console.log("All fields must be filled");
-      return;
     } else {  
+        setLoading(true)
         const submitData = new FormData();
         submitData.append("name", formData.name);
         submitData.append("description", formData.description);
@@ -195,6 +194,7 @@ const PostNewClothe = () => {
         console.log(response.data);
       }
     }
+    setLoading(false)
   }
   
   return (
