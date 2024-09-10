@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import CategoryService from "../services/category.service";
 import { CategoryDataInterface} from "../interfaces/CategoryInterfaces";
 import { ColorDataInterface } from "../interfaces/ColorInterfaces";
@@ -9,6 +9,10 @@ import { GenderDataInterface } from "../interfaces/GenderInterfaces";
 import ClotheService from "../services/clothe.service";
 
 import '../styles/form.css';
+import { UserData } from "../interfaces/UserInterface";
+import { useUser } from "../hook/useUser";
+
+const Login = lazy(() => import("./Login"))
 
 const PostNewClothe = () => {
 
@@ -16,6 +20,11 @@ const PostNewClothe = () => {
   const [clotheColors, setClotheColors] = useState<ColorDataInterface[] | null>(null);
   const [genders, setGenders] = useState<GenderDataInterface[] | null>(null);
   const [colorsCount, setColorsCount] = useState<number>(0);
+
+  const [user, setUser] = useState<UserData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  const { getUser } = useUser();
 
   const [formData, setFormData] = useState<ClotheDataInterface>({
     name: "",
@@ -30,42 +39,56 @@ const PostNewClothe = () => {
     document.title = "Post New Clothe | CrystalGym";
   })
 
-  // Get categories
   useEffect(() => {
-    const fetchCategories = async () => {
-      const response = await CategoryService.getCategories();
-      if (response.code == 200) {
-        setCategories(response.data)
-      }
+    const fetchUser = async () => {
+      const fetchedUser = await getUser();
+      setUser(fetchedUser);
+      setLoading(false);
     };
 
+    fetchUser();
+  }, [ getUser ]);
+
+  // Get categories / colors / genders
+  useEffect(() => {
     fetchCategories();
-  }, []);
-
-  // Get colors
-  useEffect(() => {
-    const fetchColors = async () => {
-      const response = await ColorService.getColors();
-      if (response.code == 200) {
-        setClotheColors(response.data)
-      }
-    };
-
     fetchColors();
-  }, []);
-
-  // Get genders
-  useEffect(() => {
-    const fetchGenders = async () => {
-      const response = await GenderService.getGenders();
-      if (response.code == 200) {
-        setGenders(response.data)
-      }
-    };
-
     fetchGenders();
   }, []);
-    
+  
+  useEffect(() => {
+    if (categories && clotheColors && genders) setLoading(false);
+  }, [categories, clotheColors, genders]);
+
+  const fetchCategories = async () => {
+    const response = await CategoryService.getCategories();
+    if (response.code == 200) {
+      setCategories(response.data)
+    }
+  };
+
+  const fetchColors = async () => {
+    const response = await ColorService.getColors();
+    if (response.code == 200) {
+      setClotheColors(response.data)
+    }
+  };
+  
+  const fetchGenders = async () => {
+    const response = await GenderService.getGenders();
+    if (response.code == 200) {
+      setGenders(response.data)
+    }
+  };
+
+  if (loading) {
+    return <div className="h-screen">Loading...</div>;
+  }
+
+  if (!user || user.id_role != 1) {
+    return <Login />;
+  }
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -117,14 +140,9 @@ const PostNewClothe = () => {
     console.log(formData)
   }
 
-  function validateFormData(fd: FormData) {
-    let isValid = true;
-    const priceString = fd.get("price") as string; 
-    const price = parseInt(priceString, 10);
-    if (price < 0) {
-      isValid = false;
-    }
-    return isValid;
+  function validatePrice(input: string) {
+    const regex = /^[0-9]+(\.[0-9]+)?$/;
+    return regex.test(input) && parseFloat(input) > 0;
   }
 
   const handleSubmit = async (event: React.FormEvent) => {
@@ -145,8 +163,8 @@ const PostNewClothe = () => {
       });
     });
 
-    if (!validateFormData(submitData)) {
-      console.log('Invalid form data');
+    if (!validatePrice(formData.price.toString())) {
+      console.log("Price must be a positive number");
       return;
     }
 
@@ -155,7 +173,6 @@ const PostNewClothe = () => {
       console.log(response.data);
     }
   }
-
 
   return (
     <section className="w-11/12 lg:w-10/12 m-auto">
@@ -176,7 +193,7 @@ const PostNewClothe = () => {
         {genders?.map(gender => 
           <section className="w-9/12 m-auto">
             <input className="mr-2" type="radio" name="id_gender" value={gender.id} key={gender.id} onChange={handleInputChange} required/>
-            <label className="" htmlFor="id_gender">{gender.name}</label>
+            <label className="" htmlFor="id_gender">{gender.description}</label>
           </section>
         )}
         <section className="">
