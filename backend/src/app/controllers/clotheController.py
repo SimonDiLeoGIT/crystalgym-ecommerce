@@ -42,7 +42,6 @@ def post_clothe():
             id_color = request.form.get(f'colors[{color_index}][id_color]')
             stock = request.form.get(f'colors[{color_index}][stock]')
 
-            
             if not id_color:
                 break
 
@@ -55,17 +54,21 @@ def post_clothe():
             if color_clothe_data[0] is None:
                 return ResponseHandler().create_error_response('Error', color_clothe_data[1], color_clothe_data[2])
 
-            images = request.files.getlist(f'colors[{color_index}][images]')
-            
-            for image_file in images:
-                if image_file and allowed_file(image_file.filename):
+            image_index = 0
+            while True:
+                image = request.files.get(f'colors[{color_index}][images][{image_index}]')
+                
+                if not image:
+                    break
+                
+                has_images = True
 
-                    has_images = True
-
-                    file_name_in_s3 = FileNameGenerator().generate_unique_filename(image_file.filename)
+                if allowed_file(image.filename):
+                    print('allowed: ', image.filename)
+                    file_name_in_s3 = FileNameGenerator().generate_unique_filename(image.filename)
                     # Subimos la imagen a S3
                     aws_bucket = AwsBucket()
-                    upload_response = aws_bucket.upload_file(image_file, file_name_in_s3)
+                    upload_response = aws_bucket.upload_file(image, file_name_in_s3)
 
                     if (upload_response[0] is None):
                         return ResponseHandler().create_error_response('Error', upload_response[1], upload_response[2])
@@ -79,8 +82,13 @@ def post_clothe():
                         id_color,
                         'hashcode',
                         image_url,
-                        image_file.filename,
+                        image.filename,
                     )
+                else:
+                    clothe_service.delete_clothe(saved_clothe['id'])
+                    return ResponseHandler().create_error_response('Error', 'Invalid image format', 400)
+                
+                image_index += 1
             
             color_index += 1
 

@@ -117,6 +117,16 @@ const PostNewClothe = () => {
     console.log(formData)
   }
 
+  function validateFormData(fd: FormData) {
+    let isValid = true;
+    const priceString = fd.get("price") as string; 
+    const price = parseInt(priceString, 10);
+    if (price < 0) {
+      isValid = false;
+    }
+    return isValid;
+  }
+
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     console.log('formData: ', formData)
@@ -130,11 +140,15 @@ const PostNewClothe = () => {
     formData.colors.forEach((color, index) => {
       submitData.append(`colors[${index}][id_color]`, color.id_color.toString());
       submitData.append(`colors[${index}][stock]`, color.stock.toString());
-
       color.images.forEach((image, imgIndex) => {
         submitData.append(`colors[${index}][images][${imgIndex}]`, image);
       });
     });
+
+    if (!validateFormData(submitData)) {
+      console.log('Invalid form data');
+      return;
+    }
 
     const response = await ClotheService.postClothe(submitData);
     if (response.code == 201) {
@@ -145,7 +159,7 @@ const PostNewClothe = () => {
 
   return (
     <section className="w-11/12 lg:w-10/12 m-auto">
-      <form onSubmit={handleSubmit} className="form grid p-4">
+      <form onSubmit={handleSubmit} className="form grid p-4 max-w-3xl m-auto">
         <legend className="w-9/12 m-auto font-semibold">Add New Clothe</legend>
         <label htmlFor="name">Name</label>
         <input type="text" name="name" onChange={handleInputChange} required/>
@@ -179,8 +193,8 @@ const PostNewClothe = () => {
               </select>
               <label htmlFor={`colors[${index}][stock]`}>Stock</label>
               <input type="number" min={0} multiple name={`colors[${index}][stock]`} onChange={(event) => handleInputColorChange(event, index)} required/>
-              <label htmlFor={`colors[${index}][images]`}>Image</label>
-              <input type="file" multiple name={`colors[${index}][images]`} onChange={(event) => handleInputImageChange(event, index)} required/>
+              <label htmlFor={`colors[${index}][images]`}>Images</label>
+              <input className="" type="file" multiple name={`colors[${index}][images]`} onChange={(event) => handleInputImageChange(event, index)} required/>
             </article>
           ))}
         </section>
