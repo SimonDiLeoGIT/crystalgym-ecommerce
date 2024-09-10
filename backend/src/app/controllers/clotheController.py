@@ -3,6 +3,8 @@ from flask import Blueprint, request
 from app.services.clotheService import ClotheService
 # import utils
 from app.utils.responseHandler import ResponseHandler
+from app.utils.AwsS3 import AwsBucket
+from app.utils.FileNameGenerator import FileNameGenerator
 # import marshmallow
 from app.services.imageService import ImageService
 
@@ -26,35 +28,69 @@ def post_clothe():
         id_category = request.form.get('id_category')
         id_gender = request.form.get('id_gender')
         price = request.form.get('price')
+
+        if not all([name, description, id_category, id_gender, price]):
+            return ResponseHandler().create_error_response('Error', 'Missing required fields', 400)
         
         data = clothe_service.save_clothe(name, description, price, id_gender, id_category)
         saved_clothe = data[0]
         
         color_index = 0
+        has_colors = False
+
         while True:
             id_color = request.form.get(f'colors[{color_index}][id_color]')
             stock = request.form.get(f'colors[{color_index}][stock]')
 
+            
             if not id_color:
                 break
+
+            has_images = False
+            has_colors = True
             
             color_clothe_data = clothe_service.save_clothe_color(id_color, saved_clothe['id'], stock)
+            
             
             if color_clothe_data[0] is None:
                 return ResponseHandler().create_error_response('Error', color_clothe_data[1], color_clothe_data[2])
 
             images = request.files.getlist(f'colors[{color_index}][images]')
+            
             for image_file in images:
                 if image_file and allowed_file(image_file.filename):
+
+                    has_images = True
+
+                    file_name_in_s3 = FileNameGenerator().generate_unique_filename(image_file.filename)
+                    # Subimos la imagen a S3
+                    aws_bucket = AwsBucket()
+                    upload_response = aws_bucket.upload_file(image_file, file_name_in_s3)
+
+                    if (upload_response[0] is None):
+                        return ResponseHandler().create_error_response('Error', upload_response[1], upload_response[2])
+
+                    # Construimos la URL de la imagen subida en S3
+                    image_url = f"https://{config.AWS_BUCKET_NAME}.s3.{config.AWS_BUCKET_REGION}.amazonaws.com/{file_name_in_s3}"
+
+                    # Guardar la imagen en la base de datos
                     ImageService().save_image(
                         saved_clothe['id'],
                         id_color,
                         'hashcode',
-                        'url',
+                        image_url,
                         image_file.filename,
                     )
             
             color_index += 1
+
+        if not has_colors:
+            clothe_service.delete_clothe(saved_clothe['id'])
+            return ResponseHandler().create_error_response('Error', 'No colors provided', 400)
+        
+        if not has_images:
+            clothe_service.delete_clothe(saved_clothe['id'])
+            return ResponseHandler().create_error_response('Error', 'No images provided', 400)
 
         return ResponseHandler().create_response('success', data[1], data[0], code=data[2])
         
