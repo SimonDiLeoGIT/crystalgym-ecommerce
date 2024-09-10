@@ -8,6 +8,9 @@ from app.utils.FileNameGenerator import FileNameGenerator
 # import marshmallow
 from app.services.imageService import ImageService
 
+from flask_jwt_extended import jwt_required
+from app.services.authService import AuthService
+
 from app import Config as config
 
 
@@ -21,8 +24,14 @@ def allowed_file(filename):
 
 # Post new clothe
 @clothe_bp.route("/clothe", methods=["POST"])
+@jwt_required()
 def post_clothe():
     try:
+        user_identity = AuthService().get_user_jwt_identity()
+
+        if user_identity['id_role'] != 1:
+            return ResponseHandler().create_error_response('Error', 'Only admins can perform this action', 403)
+
         name = request.form.get('name')
         description = request.form.get('description')
         id_category = request.form.get('id_category')
@@ -99,8 +108,10 @@ def post_clothe():
         if not has_images:
             clothe_service.delete_clothe(saved_clothe['id'])
             return ResponseHandler().create_error_response('Error', 'No images provided', 400)
+        
 
-        return ResponseHandler().create_response('success', data[1], data[0], code=data[2])
+        refresh_token = AuthService().create_refresh_token(user_identity)
+        return ResponseHandler().create_response('success', data[1], data[0], refresh_token=refresh_token, code=data[2])
         
     except Exception as e:
         print(e)
