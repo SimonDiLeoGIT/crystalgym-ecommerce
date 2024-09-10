@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import CategoryService from "../services/category.service";
 import { CategoryDataInterface} from "../interfaces/CategoryInterfaces";
-import '../styles/form.css'
 import { ColorDataInterface } from "../interfaces/ColorInterfaces";
 import ColorService from "../services/color.service";
 import { ClotheDataInterface } from "../interfaces/ClothesInterfaces";
 import GenderService from "../services/gender.service";
 import { GenderDataInterface } from "../interfaces/GenderInterfaces";
 import ClotheService from "../services/clothe.service";
+
+import '../styles/form.css';
 
 const PostNewClothe = () => {
 
@@ -143,49 +144,49 @@ const PostNewClothe = () => {
 
 
   return (
-    <>
-      <h1>Add New Clothe</h1>
-      <form onSubmit={handleSubmit} className="form grid">
+    <section className="w-11/12 lg:w-10/12 m-auto">
+      <form onSubmit={handleSubmit} className="form grid p-4">
+        <legend className="w-9/12 m-auto font-semibold">Add New Clothe</legend>
         <label htmlFor="name">Name</label>
-        <input type="text" name="name" onChange={handleInputChange} />
+        <input type="text" name="name" onChange={handleInputChange} required/>
         <label htmlFor="description">Description</label>
-        <input type="text" name="description" onChange={handleInputChange} />
+        <input type="text" name="description" onChange={handleInputChange} required/>
         <label htmlFor="id_category">Category</label>
         <select name="id_category" onChange={handleInputChange}>
           <option value={-1} key={-1} selected>Select Category</option>
           {categories?.map(category => <option value={category.id} key={category.id}>{category.name}</option>)}
         </select>
         <label htmlFor="price">Price</label>
-        <input type="text" name="price" onChange={handleInputChange} />
+        <input type="text" name="price" onChange={handleInputChange} required/>
         <label htmlFor="id_gender">Gender</label>
         {genders?.map(gender => 
-          <>
-            <input type="radio" name="id_gender" value={gender.id} key={gender.id} onChange={handleInputChange} />
-            <label htmlFor="id_gender">{gender.name}</label>
-          </>
+          <section className="w-9/12 m-auto">
+            <input className="mr-2" type="radio" name="id_gender" value={gender.id} key={gender.id} onChange={handleInputChange} required/>
+            <label className="" htmlFor="id_gender">{gender.name}</label>
+          </section>
         )}
-        <section>
-          <header>
-            <h2>Images</h2>
-            <button type="button" onClick={() => setColorsCount((prev) => prev + 1)}>+</button>
+        <section className="">
+          <header className="grid grid-cols-2 w-9/12 m-auto font-bold -text--color-black">
+            <h2 className="m-auto ml-0">Colors</h2>
+            <button className="-bg--color-black -text--color-grey rounded-full h-10 w-28 m-auto mr-0" type="button" onClick={() => setColorsCount((prev) => prev + 1)}>Add Color</button>
           </header>
           {Array.from({ length: colorsCount }).map((_, index) => (
-            <article key={index}>
+            <article key={index} className="grid">
               <label htmlFor={`colors[${index}]`}>Color</label>
               <select name={`colors[${index}]`} onChange={(event) => handleInputColorChange(event, index)}>
                 <option value={-1} key={-1}>Select Color</option>
                 {clotheColors?.map(clotheColor => <option value={clotheColor.id} key={clotheColor.id}>{clotheColor.name}</option>)}
               </select>
               <label htmlFor={`colors[${index}][stock]`}>Stock</label>
-              <input type="number" min={0} multiple name={`colors[${index}][stock]`} onChange={(event) => handleInputColorChange(event, index)} />
+              <input type="number" min={0} multiple name={`colors[${index}][stock]`} onChange={(event) => handleInputColorChange(event, index)} required/>
               <label htmlFor={`colors[${index}][images]`}>Image</label>
-              <input type="file" multiple name={`colors[${index}][images]`} onChange={(event) => handleInputImageChange(event, index)} />
+              <input type="file" multiple name={`colors[${index}][images]`} onChange={(event) => handleInputImageChange(event, index)} required/>
             </article>
           ))}
         </section>
-        <input type="submit" value="Submit" />
+        <input className="w-9/12 m-auto mt-4 p-2 -bg--color-black -text--color-light-grey-violet font-semibold rounded-lg hover:scale-105 transition-transform duration-150 hover:cursor-pointer" type="submit" value="Submit" required/>
       </form>
-    </>
+    </section>
   )
 };
 
