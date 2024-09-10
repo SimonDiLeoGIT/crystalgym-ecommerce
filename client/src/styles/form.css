@@ -1,11 +1,11 @@
 @import url('index.css');
 
-.form input, .form span, .form label, .form select {
+.form input[type="text"], .form input[type="password"], .form input[type="number"], .form input[type="file"], .form span, .form label, .form select {
   width: 75%;
   margin: auto;
 }
 
-.form input, .form select {
+.form input[type="text"], .form input[type="password"], .form input[type="number"], .form input[type="file"], .form select {
   box-shadow: 1px 1px 4px 0px rgba(23, 23, 23, 0.4);
   border-radius: 6px;
   padding: 6px;

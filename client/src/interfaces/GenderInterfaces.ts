@@ -7,4 +7,5 @@ export interface GenderInterface {
 export interface GenderDataInterface {
   id: number
   name: string
+  description: string
 }

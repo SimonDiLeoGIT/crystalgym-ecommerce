@@ -13,3 +13,6 @@ class AuthService(metaclass=SingletonMeta):
     
     def get_user_jwt_identity(self):
       return get_jwt_identity()
+    
+    def is_admin(self, user):
+      return user['id_role'] == 1

@@ -4,7 +4,7 @@ class Image(db.Model):
   __tablename__ = "images"
 
   id = db.Column(db.Integer, primary_key=True)
-  id_clothe = db.Column(db.Integer, db.ForeignKey('clothes.id'), nullable=False)
+  id_clothe = db.Column(db.Integer, db.ForeignKey('clothes.id', ondelete='CASCADE'), nullable=False)
   id_color = db.Column(db.Integer, db.ForeignKey('colors.id'), nullable=False)
   hashcode = db.Column(db.String(255), nullable=False)
   url = db.Column(db.String(255), nullable=False)

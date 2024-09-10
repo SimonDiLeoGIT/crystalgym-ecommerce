@@ -26,6 +26,7 @@ class ApiService {
   }
 
   static async request(endpoint: string, options: RequestInit) {
+    console.log(options)
     const url = `${this.baseURL}${endpoint}`;
     try {
       const response = await fetch(url, options);
