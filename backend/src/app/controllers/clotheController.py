@@ -50,8 +50,11 @@ def post_clothe():
         
         access_token = AuthService().create_access_token(user_identity)
         refresh_token = AuthService().create_refresh_token(user_identity)
-        data[0]['access_token'] = access_token
-        return ResponseHandler().create_response('success', data[1], data[0], refresh_token=refresh_token, code=data[2])
+        response = {
+            'access_token': access_token,
+            'clothe': data[0]
+        }
+        return ResponseHandler().create_response('success', data[1], response, refresh_token=refresh_token, code=data[2])
         
     except Exception as e:
         return ResponseHandler().create_error_response(str(e), 'An error occurred while creating the clothe', 500)

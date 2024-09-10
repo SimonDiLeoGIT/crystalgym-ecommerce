@@ -29,10 +29,16 @@ const PostNewClothe = () => {
   const [formData, setFormData] = useState<ClotheDataInterface>({
     name: "",
     description: "",
-    price: -1,
+    price: 0.0,
     id_category: -1,
     id_gender: -1,
-    colors: []
+    colors: [
+      {
+        id_color: -1,
+        stock: 0,
+        images: []
+      }
+    ]
   })
 
   useEffect(() => {
@@ -94,7 +100,6 @@ const PostNewClothe = () => {
       ...formData,
       [event.target.name]: event.target.value
     })
-    console.log(formData)
   }
 
   const handleInputColorChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>, index: number) => {
@@ -118,7 +123,6 @@ const PostNewClothe = () => {
       ...formData,
       colors: updateColors
     })
-    console.log(formData)
   }
 
   const handleInputImageChange = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
@@ -137,7 +141,6 @@ const PostNewClothe = () => {
       ...formData,
       colors: updateColors
     })
-    console.log(formData)
   }
 
   function validatePrice(input: string) {
@@ -145,35 +148,55 @@ const PostNewClothe = () => {
     return regex.test(input) && parseFloat(input) > 0;
   }
 
+  function validateData() {
+    if (formData.colors.length === 0) return false;
+  
+    for (const color of formData.colors) {
+      if (color.images.length === 0) return false;
+      if (color.id_color === -1) return false;
+    }
+  
+    return formData.name.length > 0 &&
+           formData.description.length > 0 &&
+           formData.id_category > -1 &&
+           formData.id_gender > -1 &&
+           formData.price > 0;
+  }
+
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    console.log('formData: ', formData)
-    const submitData = new FormData();
-    submitData.append("name", formData.name);
-    submitData.append("description", formData.description);
-    submitData.append("id_category", formData.id_category.toString());
-    submitData.append("price", formData.price.toString());
-    submitData.append("id_gender", formData.id_gender.toString());
-
-    formData.colors.forEach((color, index) => {
-      submitData.append(`colors[${index}][id_color]`, color.id_color.toString());
-      submitData.append(`colors[${index}][stock]`, color.stock.toString());
-      color.images.forEach((image, imgIndex) => {
-        submitData.append(`colors[${index}][images][${imgIndex}]`, image);
-      });
-    });
 
     if (!validatePrice(formData.price.toString())) {
       console.log("Price must be a positive number");
       return;
     }
 
-    const response = await ClotheService.postClothe(submitData);
-    if (response.code == 201) {
-      console.log(response.data);
+    if (!validateData()) {
+      console.log("All fields must be filled");
+      return;
+    } else {  
+        const submitData = new FormData();
+        submitData.append("name", formData.name);
+        submitData.append("description", formData.description);
+        submitData.append("id_category", formData.id_category.toString());
+        submitData.append("price", formData.price.toString());
+        submitData.append("id_gender", formData.id_gender.toString());
+        
+        formData.colors.forEach((color, index) => {
+        submitData.append(`colors[${index}][id_color]`, color.id_color.toString());
+        submitData.append(`colors[${index}][stock]`, color.stock.toString());
+        color.images.forEach((image, imgIndex) => {
+          submitData.append(`colors[${index}][images][${imgIndex}]`, image);
+        });
+      });
+      
+      const response = await ClotheService.postClothe(submitData);
+      if (response.code == 201) {
+        console.log(response.data);
+      }
     }
   }
-
+  
   return (
     <section className="w-11/12 lg:w-10/12 m-auto">
       <form onSubmit={handleSubmit} className="form grid p-4 max-w-3xl m-auto">
