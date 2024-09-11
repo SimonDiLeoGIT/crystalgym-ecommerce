@@ -18,6 +18,7 @@ class UserService {
       const response: UserResponseInterface = await ApiService.makeRequest('/users/me', 'GET');
       return response;
     } catch (error: unknown) {
+      console.log('error');
       if (error instanceof Error && (error.message.includes('401') || error.message.includes('UNAUTHORIZED'))) {
         console.log('Refreshing access token...');
         try {

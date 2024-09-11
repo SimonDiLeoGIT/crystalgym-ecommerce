@@ -11,6 +11,7 @@ import ClotheService from "../services/clothe.service";
 import '../styles/form.css';
 import { UserData } from "../interfaces/UserInterface";
 import { useUser } from "../hook/useUser";
+import ErrorMessage from "../components/ErrorMessage";
 
 const Login = lazy(() => import("./Login"))
 
@@ -20,6 +21,9 @@ const PostNewClothe = () => {
   const [clotheColors, setClotheColors] = useState<ColorDataInterface[] | null>(null);
   const [genders, setGenders] = useState<GenderDataInterface[] | null>(null);
   const [colorsCount, setColorsCount] = useState<number>(0);
+
+  const [errorMessage, setErrorMessage] = useState<string>('');
+  const [visibleMessage, setVisibleMessage] = useState<boolean>(false);
 
   const [user, setUser] = useState<UserData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -103,27 +107,14 @@ const PostNewClothe = () => {
   }
 
   const handleInputColorChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>, index: number) => {
-    
     const { name, value } = event.target;
-    const updateColors = [...formData.colors]
-
-    if (name.includes('stock')) {
-      updateColors[index] = {
-        ...updateColors[index],
-        stock: parseInt(value, 10)
-      };
-    } else {
-      updateColors[index] = {
-        ...updateColors[index],
-        id_color: parseInt(value, 10)
-      };
-    }
-    
-    setFormData({
-      ...formData,
-      colors: updateColors
-    })
-  }
+    const updatedColors = [...formData.colors];
+    updatedColors[index] = {
+      ...updatedColors[index],
+      [name === "stock" ? "stock" : "id_color"]: parseInt(value, 10),
+    };
+    setFormData({ ...formData, colors: updatedColors });
+  };
 
   const handleInputImageChange = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
 
@@ -131,12 +122,11 @@ const PostNewClothe = () => {
     
     const updateColors = [...formData.colors]
 
-    if (files) {
-      updateColors[index] = {
-        ...updateColors[index],
-        images: [...files]
-      }
-    }
+    files && (updateColors[index] = {
+      ...updateColors[index],
+      images: [...updateColors[index].images, ...Array.from(files)]
+    })
+
     setFormData({
       ...formData,
       colors: updateColors
@@ -148,12 +138,16 @@ const PostNewClothe = () => {
     return regex.test(input) && parseFloat(input) > 0;
   }
 
-  function validateData() {
-    if (formData.colors.length === 0) return false;
-  
+  function validateData() { 
     for (const color of formData.colors) {
-      if (color.images.length === 0) return false;
-      if (color.id_color === -1) return false;
+      if (color.id_color === -1) {
+        handleViewErrorMessage("You must select at least one color");
+        return false
+      }
+      if (color.images.length === 0) {
+        handleViewErrorMessage("You must add at least one image in your color");
+        return false
+      }
     }
   
     return formData.name.length > 0 &&
@@ -166,13 +160,11 @@ const PostNewClothe = () => {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     if (!validatePrice(formData.price.toString())) {
-      console.log("Price must be a positive number");
+      handleViewErrorMessage("Price must be a number greater than 0");
       return;
     }
     
-    if (!validateData()) {
-      console.log("All fields must be filled");
-    } else {  
+    if (validateData()){  
         setLoading(true)
         const submitData = new FormData();
         submitData.append("name", formData.name);
@@ -196,9 +188,15 @@ const PostNewClothe = () => {
     }
     setLoading(false)
   }
+
+  const handleViewErrorMessage = (message: string) => {
+    setErrorMessage(message);
+    setVisibleMessage(true);
+  }
   
   return (
     <section className="w-11/12 lg:w-10/12 m-auto">
+      <ErrorMessage message={errorMessage} visible={visibleMessage} setVisible={setVisibleMessage} />
       <form onSubmit={handleSubmit} className="form grid p-4 max-w-3xl m-auto">
         <legend className="w-9/12 m-auto font-semibold">Add New Clothe</legend>
         <label htmlFor="name">Name</label>

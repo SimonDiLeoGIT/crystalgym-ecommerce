@@ -1,5 +1,6 @@
 import { ClotheDataInterface, ClotheInterface } from '../interfaces/ClothesInterfaces';
 import ApiService from './api.service';
+import AuthService from './auth.service';
 
 export default class ClotheService {
   static async getClothes(): Promise<ClotheDataInterface> {
@@ -11,7 +12,22 @@ export default class ClotheService {
     for (const [key, value] of clothe.entries()) {
       console.log(`${key}:`, value);
     }
-    const response = await ApiService.makeRequest('/clothe', 'POST', clothe);
-    return response;
+    try {
+      const response = await ApiService.makeRequest('/clothe', 'POST', clothe);
+      return response;
+    } catch (error: unknown) {
+      if (error instanceof Error && (error.message.includes('401') || error.message.includes('403') || error.message.includes('422'))) {
+        console.log('Refreshing access token...');
+        try {
+          await AuthService.refreshAccessToken();
+          const response = await ApiService.makeRequest('/clothe', 'POST', clothe);
+          return response;
+        } catch (refreshError) {
+          console.error('Error refreshing access token:', refreshError);
+          throw refreshError ;
+        }
+      }
+      throw error;
+    }
   }
 }

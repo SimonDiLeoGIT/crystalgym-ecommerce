@@ -34,7 +34,7 @@ class UserService(metaclass=SingletonMeta):
         if user.password != password:
             return [None, 'Username and password do not match', 401]
 
-        return [user.to_json(), 'Login successful']
+        return [user.to_json(), 'Login successful', 200]
     
     def username_exists(self, username):
         return self.user_repository.exists_username(username)
