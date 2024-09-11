@@ -140,6 +140,7 @@ const PostNewClothe = () => {
 
   function validateData() { 
     for (const color of formData.colors) {
+      console.log(color)
       if (color.id_color === -1) {
         handleViewErrorMessage("You must select at least one color");
         return false
@@ -182,8 +183,10 @@ const PostNewClothe = () => {
       });
       
       const response = await ClotheService.postClothe(submitData);
-      if (response.code == 201) {
-        console.log(response.data);
+      if (response.code !== 201) {
+        handleViewErrorMessage(response.message);
+      } else {
+        window.location.reload();
       }
     }
     setLoading(false)
@@ -224,13 +227,13 @@ const PostNewClothe = () => {
           </header>
           {Array.from({ length: colorsCount }).map((_, index) => (
             <article key={index} className="grid">
-              <label htmlFor={`colors[${index}]`}>Color</label>
-              <select name={`colors[${index}]`} onChange={(event) => handleInputColorChange(event, index)}>
+              <label htmlFor='id_color'>Color</label>
+              <select name='id_color' onChange={(event) => handleInputColorChange(event, index)}>
                 <option value={-1} key={-1}>Select Color</option>
                 {clotheColors?.map(clotheColor => <option value={clotheColor.id} key={clotheColor.id}>{clotheColor.name}</option>)}
               </select>
-              <label htmlFor={`colors[${index}][stock]`}>Stock</label>
-              <input type="number" min={0} multiple name={`colors[${index}][stock]`} onChange={(event) => handleInputColorChange(event, index)} required/>
+              <label htmlFor='stock'>Stock</label>
+              <input type="number" min={0} multiple name='stock' onChange={(event) => handleInputColorChange(event, index)} required/>
               <label htmlFor={`colors[${index}][images]`}>Images</label>
               <input className="" type="file" multiple name={`colors[${index}][images]`} onChange={(event) => handleInputImageChange(event, index)} required/>
             </article>
