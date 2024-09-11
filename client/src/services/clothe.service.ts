@@ -1,4 +1,5 @@
 import { ClotheDataInterface, ClotheInterface } from '../interfaces/ClothesInterfaces';
+import { ErrorInterface } from '../interfaces/ErrorInterface';
 import ApiService from './api.service';
 import AuthService from './auth.service';
 
@@ -15,8 +16,9 @@ export default class ClotheService {
     try {
       const response = await ApiService.makeRequest('/clothe', 'POST', clothe);
       return response;
-    } catch (error: unknown) {
-      if (error instanceof Error && (error.message.includes('401') || error.message.includes('403') || error.message.includes('422'))) {
+    } catch (error) {
+      const apiError = error as ErrorInterface;
+      if (apiError.code === 401 || apiError.code === 403 || apiError.code === 422) {
         console.log('Refreshing access token...');
         try {
           await AuthService.refreshAccessToken();
