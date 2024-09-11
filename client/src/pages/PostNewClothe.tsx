@@ -183,11 +183,7 @@ const PostNewClothe = () => {
       });
       
       const response = await ClotheService.postClothe(submitData);
-      if (response.code !== 201) {
-        handleViewErrorMessage(response.message);
-      } else {
-        window.location.reload();
-      }
+      response.code === 201 ? window.location.reload() : handleViewErrorMessage(response.message);
     }
     setLoading(false)
   }

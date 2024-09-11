@@ -110,7 +110,6 @@ def save_images(request, color_index, id_clothe, id_color):
 
             if (upload_response[0] is None):
                 return upload_response
-                return ResponseHandler().create_error_response('Error', upload_response[1], upload_response[2])
 
             # Construimos la URL de la imagen subida en S3
             image_url = f"https://{config.AWS_BUCKET_NAME}.s3.{config.AWS_BUCKET_REGION}.amazonaws.com/{file_name_in_s3}"
