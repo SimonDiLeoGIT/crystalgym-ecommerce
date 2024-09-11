@@ -1,3 +1,4 @@
+import { ErrorInterface } from '../interfaces/ErrorInterface';
 import { UserLoginInterface, UserRegisterInterface, UserResponseInterface } from '../interfaces/UserInterface';
 import ApiService from './api.service';
 import AuthService from './auth.service';
@@ -17,8 +18,9 @@ class UserService {
     try {
       const response: UserResponseInterface = await ApiService.makeRequest('/users/me', 'GET');
       return response;
-    } catch (error: unknown) {
-      if (error instanceof Error && (error.message.includes('401') || error.message.includes('UNAUTHORIZED'))) {
+    } catch (error) {
+      const apiError = error as ErrorInterface;
+      if (apiError.code === 401) {
         console.log('Refreshing access token...');
         try {
           const refreshedResponse = await AuthService.refreshAccessToken();

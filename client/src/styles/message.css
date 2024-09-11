@@ -1,0 +1,16 @@
+.dialog.visible {
+  translate: 0 0;
+  opacity: 1;
+  transition: translate .3s ease-in-out;
+
+  @starting-style {
+    opacity: 0;
+    translate: 0 -100px;
+  }
+}
+
+
+.dialog {
+  transition: opacity .5s ease, display .5s ease allow-discrete;
+  opacity: 0;
+}
