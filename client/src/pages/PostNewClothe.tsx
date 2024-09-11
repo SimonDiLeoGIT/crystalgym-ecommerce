@@ -9,9 +9,12 @@ import { GenderDataInterface } from "../interfaces/GenderInterfaces";
 import ClotheService from "../services/clothe.service";
 
 import '../styles/form.css';
+import trash from "../assets/icons/nav icons/trash-slash-alt-svgrepo-com.svg";
+
 import { UserData } from "../interfaces/UserInterface";
 import { useUser } from "../hook/useUser";
 import ErrorMessage from "../components/ErrorMessage";
+import { ErrorInterface } from "../interfaces/ErrorInterface";
 
 const Login = lazy(() => import("./Login"))
 
@@ -20,7 +23,6 @@ const PostNewClothe = () => {
   const [categories, setCategories] = useState<CategoryDataInterface[] | null>(null);
   const [clotheColors, setClotheColors] = useState<ColorDataInterface[] | null>(null);
   const [genders, setGenders] = useState<GenderDataInterface[] | null>(null);
-  const [colorsCount, setColorsCount] = useState<number>(0);
 
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [visibleMessage, setVisibleMessage] = useState<boolean>(false);
@@ -36,13 +38,7 @@ const PostNewClothe = () => {
     price: 0.0,
     id_category: -1,
     id_gender: -1,
-    colors: [
-      {
-        id_color: -1,
-        stock: 0,
-        images: []
-      }
-    ]
+    colors: []
   })
 
   useEffect(() => {
@@ -182,15 +178,33 @@ const PostNewClothe = () => {
         });
       });
       
-      const response = await ClotheService.postClothe(submitData);
-      response.code === 201 ? window.location.reload() : handleViewErrorMessage(response.message);
+      try {
+        const response = await ClotheService.postClothe(submitData);
+        response.code === 201 ? window.location.reload() : handleViewErrorMessage(response.message);
+      } catch (error) {
+        setLoading(false)
+        const apiError = error as ErrorInterface
+        handleViewErrorMessage(apiError.message)
+      }
     }
-    setLoading(false)
   }
 
   const handleViewErrorMessage = (message: string) => {
     setErrorMessage(message);
     setVisibleMessage(true);
+  }
+
+  const handleAddColor = () => {
+    setFormData({ ...formData, colors: [...formData.colors, { id_color: -1, stock: 0, images: [] }] });
+  }
+
+  const handleDeleteColor = (index: number) => {
+    console.log(index)
+    const updatedColors = [...formData.colors];
+    console.log(updatedColors)
+    updatedColors.splice(index, 1);
+    console.log(updatedColors)
+    setFormData({ ...formData, colors: updatedColors });
   }
   
   return (
@@ -219,23 +233,29 @@ const PostNewClothe = () => {
         <section className="">
           <header className="grid grid-cols-2 w-9/12 m-auto font-bold -text--color-black">
             <h2 className="m-auto ml-0">Colors</h2>
-            <button className="-bg--color-black -text--color-grey rounded-full h-10 w-28 m-auto mr-0" type="button" onClick={() => setColorsCount((prev) => prev + 1)}>Add Color</button>
+            <button className="-bg--color-black -text--color-grey rounded-full h-10 w-28 m-auto mr-0 hover:scale-105 duration-150" type="button" onClick={handleAddColor}>Add Color</button>
           </header>
-          {Array.from({ length: colorsCount }).map((_, index) => (
-            <article key={index} className="grid">
+          {formData.colors.map((color,index) => (
+            <article key={index} className="grid my-4">
+              <header className="grid grid-cols-2 w-9/12 m-auto font-semibold -text--color-black">
+                <h3>Color {index + 1}</h3>
+                <button className="rounded-full m-auto mr-0 hover:opacity-80" type="button" onClick={() => handleDeleteColor(index)}>
+                  <img src={trash} alt="Trash" className="w-6 m-auto" />
+                </button>
+              </header>
               <label htmlFor='id_color'>Color</label>
               <select name='id_color' onChange={(event) => handleInputColorChange(event, index)}>
                 <option value={-1} key={-1}>Select Color</option>
-                {clotheColors?.map(clotheColor => <option value={clotheColor.id} key={clotheColor.id}>{clotheColor.name}</option>)}
+                {clotheColors?.map(clotheColor => <option selected={clotheColor.id === color.id_color} value={clotheColor.id} key={clotheColor.id}>{clotheColor.name}</option>)}
               </select>
               <label htmlFor='stock'>Stock</label>
-              <input type="number" min={0} multiple name='stock' onChange={(event) => handleInputColorChange(event, index)} required/>
+              <input type="number" min={0} multiple name='stock' value={color.stock} onChange={(event) => handleInputColorChange(event, index)} required/>
               <label htmlFor={`colors[${index}][images]`}>Images</label>
               <input className="" type="file" multiple name={`colors[${index}][images]`} onChange={(event) => handleInputImageChange(event, index)} required/>
             </article>
           ))}
         </section>
-        <input className="w-9/12 m-auto mt-4 p-2 -bg--color-black -text--color-light-grey-violet font-semibold rounded-lg hover:scale-105 transition-transform duration-150 hover:cursor-pointer" type="submit" value="Submit" required/>
+        <input className="w-9/12 m-auto mt-4 p-2 -bg--color-black -text--color-light-grey-violet font-semibold rounded-lg hover:scale-105 duration-150 hover:cursor-pointer" type="submit" value="Submit" required/>
       </form>
     </section>
   )

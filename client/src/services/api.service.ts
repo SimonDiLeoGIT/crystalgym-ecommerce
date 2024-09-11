@@ -32,6 +32,13 @@ class ApiService {
       const response = await fetch(url, options);
       const responseData = await response.json();
       if (!response.ok) {
+        if (response.status === 401) {
+          const errorData: ErrorInterface = {
+            error: 'Unauthorized',
+            message: 'Access token expired',
+            code: 401,};
+            throw errorData;
+        }
         const errorData: ErrorInterface = await responseData;
         throw errorData;
       }

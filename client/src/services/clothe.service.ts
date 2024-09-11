@@ -15,7 +15,7 @@ export default class ClotheService {
       return response;
     } catch (error) {
       const apiError = error as ErrorInterface;
-      if (apiError.code === 401 || apiError.code === 403 || apiError.code === 422) {
+      if (apiError.code === 401) {
         console.log('Refreshing access token...');
         try {
           await AuthService.refreshAccessToken();
