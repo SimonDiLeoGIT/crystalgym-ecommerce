@@ -37,7 +37,7 @@ def test_client():
         db.session.commit()
 
         # Crear un género de prueba
-        gender = {'name': 'male'}
+        gender = {'name': 'M', 'description': 'male'}
         db.session.add(Gender(**gender))
         db.session.commit()
 

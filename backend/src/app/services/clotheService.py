@@ -2,10 +2,14 @@ from app.repositories.clotheRepository import ClotheRepository
 from app.repositories.clotheColorRepository import ClotheColorRepository
 from app.repositories.colorRepository import ColorRepository
 from app.repositories.clothePromoRepository import ClothePromoRepository
+from app.repositories.imageRepository import ImageRepository
 from app.utils.pagination import PaginationHelper
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from app.utils.singletonMeta import SingletonMeta
+from app.utils.AwsS3 import AwsBucket
+from app.utils.FileNameGenerator import FileNameGenerator
+from app import Config as config
 
 class ClotheService(metaclass=SingletonMeta):
     def __init__(self):
@@ -13,6 +17,7 @@ class ClotheService(metaclass=SingletonMeta):
         self.clothe_color_repository = ClotheColorRepository()
         self.color_repository = ColorRepository()
         self.clothe_promo_repository = ClothePromoRepository()
+        self.image_repository = ImageRepository()
         self.pagination = PaginationHelper()
 
     def save_clothe(self, name, description, price, id_gender, id_category):
@@ -28,6 +33,82 @@ class ClotheService(metaclass=SingletonMeta):
             return [None, 'Color not found', 404]
         self.clothe_color_repository.save_clothe_color(id_clothe, id_color, stock)
         return [True, 'success', 201]
+
+    def save_colors(self, request, id_clothe):
+        color_index = 0
+        has_colors = False
+
+        while True:
+            id_color = request.form.get(f'colors[{color_index}][id_color]')
+            stock = request.form.get(f'colors[{color_index}][stock]')
+
+            if not id_color:
+                break
+
+            has_colors = True
+            
+            color_clothe_data = self.save_clothe_color(id_color, id_clothe, stock)
+            
+            if color_clothe_data[0] is None:
+                return color_clothe_data
+
+            response = self.save_images(request, color_index, id_clothe, id_color)
+            if response[0] is None:
+                return response
+        
+            color_index += 1
+        
+        if not has_colors:
+            return [None, 'No colors provided', 400]
+        
+        return [True, 'Clothe created successfully', 201]
+    
+    def allowed_file(self, filename):
+        return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in config.ALLOWED_EXTENSIONS
+
+    def save_images(self, request, color_index, id_clothe, id_color):
+        
+        image_index = 0
+        has_images = False
+        
+        while True:
+            image = request.files.get(f'colors[{color_index}][images][{image_index}]')
+            
+            if not image:
+                break
+            
+            has_images = True
+
+            if self.allowed_file(image.filename):
+                file_name_in_s3 = FileNameGenerator().generate_unique_filename(image.filename)
+                # Subimos la imagen a S3
+                aws_bucket = AwsBucket()
+                upload_response = aws_bucket.upload_file(image, file_name_in_s3)
+
+                if (upload_response[0] is None):
+                    return upload_response
+
+                # Construimos la URL de la imagen subida en S3
+                image_url = f"https://{config.AWS_BUCKET_NAME}.s3.{config.AWS_BUCKET_REGION}.amazonaws.com/{file_name_in_s3}"
+
+                # Guardar la imagen en la base de datos
+                self.image_repository.save_image(
+                    id_clothe,
+                    id_color,
+                    'hashcode',
+                    image_url,
+                    image.filename,
+                )
+            else:
+                return [None, 'Invalid image format', 400]
+            
+            image_index += 1
+
+        if not has_images:
+            return [None, 'No images provided', 400]
+        
+        return [True, 'Clothe created successfully', 201]
 
     def get_clothe_by_id(self, id_clothe):
         clothe = self.clothe_repository.get_clothe_by_id(id_clothe)
