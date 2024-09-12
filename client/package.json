@@ -25,7 +25,8 @@
     "react-helmet-async": "^2.0.5",
     "react-lazy-load-image-component": "^1.6.2",
     "react-paginate": "^8.2.0",
-    "react-router-dom": "^6.21.3"
+    "react-router-dom": "^6.21.3",
+    "react-spinners": "^0.14.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
