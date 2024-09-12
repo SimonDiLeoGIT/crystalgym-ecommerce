@@ -1,15 +1,8 @@
 import { lazy, useEffect, useState } from "react";
-import CategoryService from "../services/category.service";
-import { CategoryDataInterface} from "../interfaces/CategoryInterfaces";
-import { ColorDataInterface } from "../interfaces/ColorInterfaces";
-import ColorService from "../services/color.service";
 import { ClotheDataInterface } from "../interfaces/ClothesInterfaces";
-import GenderService from "../services/gender.service";
-import { GenderDataInterface } from "../interfaces/GenderInterfaces";
 import ClotheService from "../services/clothe.service";
 
 import '../styles/form.css';
-import trash from "../assets/icons/nav icons/trash-slash-alt-svgrepo-com.svg";
 
 import { UserData } from "../interfaces/UserInterface";
 import { useUser } from "../hook/useUser";
@@ -17,14 +10,12 @@ import ErrorMessage from "../components/ErrorMessage";
 import { ErrorInterface } from "../interfaces/ErrorInterface";
 import Message from "../components/Message";
 import { BounceLoader } from "react-spinners";
+import useFetchData from "../hook/useFetchClotheData";
 
 const Login = lazy(() => import("./Login"))
+const ColorInputs = lazy(() => import("../components/PostClotheForm/ColorInputs"))
 
 const PostNewClothe = () => {
-
-  const [categories, setCategories] = useState<CategoryDataInterface[] | null>(null);
-  const [clotheColors, setClotheColors] = useState<ColorDataInterface[] | null>(null);
-  const [genders, setGenders] = useState<GenderDataInterface[] | null>(null);
 
   const [message, setMessage] = useState<string>('');
   const [visibleMessage, setVisibleMessage] = useState<boolean>(false);
@@ -38,6 +29,7 @@ const PostNewClothe = () => {
 
 
   const { getUser } = useUser();
+  const { categories, clotheColors, genders } = useFetchData();
 
   const [formData, setFormData] = useState<ClotheDataInterface>({
     name: "",
@@ -56,43 +48,14 @@ const PostNewClothe = () => {
     const fetchUser = async () => {
       const fetchedUser = await getUser();
       setUser(fetchedUser);
-      setLoading(false);
     };
 
     fetchUser();
   }, [ getUser ]);
 
-  // Get categories / colors / genders
-  useEffect(() => {
-    fetchCategories();
-    fetchColors();
-    fetchGenders();
-  }, []);
-  
   useEffect(() => {
     if (categories && clotheColors && genders) setLoading(false);
   }, [categories, clotheColors, genders]);
-
-  const fetchCategories = async () => {
-    const response = await CategoryService.getCategories();
-    if (response.code == 200) {
-      setCategories(response.data)
-    }
-  };
-
-  const fetchColors = async () => {
-    const response = await ColorService.getColors();
-    if (response.code == 200) {
-      setClotheColors(response.data)
-    }
-  };
-  
-  const fetchGenders = async () => {
-    const response = await GenderService.getGenders();
-    if (response.code == 200) {
-      setGenders(response.data)
-    }
-  };
 
   if (loading) {
     return <div className="h-screen">Loading...</div>;
@@ -117,33 +80,6 @@ const PostNewClothe = () => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value
-    })
-  }
-
-  const handleInputColorChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>, index: number) => {
-    const { name, value } = event.target;
-    const updatedColors = [...formData.colors];
-    updatedColors[index] = {
-      ...updatedColors[index],
-      [name === "stock" ? "stock" : "id_color"]: parseInt(value, 10),
-    };
-    setFormData({ ...formData, colors: updatedColors });
-  };
-
-  const handleInputImageChange = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
-
-    const { files } = event.target;
-    
-    const updateColors = [...formData.colors]
-
-    files && (updateColors[index] = {
-      ...updateColors[index],
-      images: [...updateColors[index].images, ...Array.from(files)]
-    })
-
-    setFormData({
-      ...formData,
-      colors: updateColors
     })
   }
 
@@ -266,25 +202,7 @@ const PostNewClothe = () => {
               <h2 className="m-auto ml-0">Colors</h2>
               <button className="-bg--color-black -text--color-grey rounded-full h-10 w-28 m-auto mr-0 hover:scale-105 duration-150" type="button" onClick={handleAddColor}>Add Color</button>
             </header>
-            {formData.colors.map((color,index) => (
-              <article key={index} className="grid my-4">
-                <header className="grid grid-cols-2 w-9/12 m-auto font-semibold -text--color-black">
-                  <h3>Color {index + 1}</h3>
-                  <button className="rounded-full m-auto mr-0 hover:opacity-80" type="button" onClick={() => handleDeleteColor(index)}>
-                    <img src={trash} alt="Trash" className="w-6 m-auto" />
-                  </button>
-                </header>
-                <label htmlFor='id_color'>Color</label>
-                <select name='id_color' onChange={(event) => handleInputColorChange(event, index)}>
-                  <option value={-1} key={-1}>Select Color</option>
-                  {clotheColors?.map(clotheColor => <option selected={clotheColor.id === color.id_color} value={clotheColor.id} key={clotheColor.id}>{clotheColor.name}</option>)}
-                </select>
-                <label htmlFor='stock'>Stock</label>
-                <input type="number" min={0} multiple name='stock' value={color.stock} onChange={(event) => handleInputColorChange(event, index)} required/>
-                <label htmlFor={`colors[${index}][images]`}>Images</label>
-                <input className="" type="file" multiple name={`colors[${index}][images]`} onChange={(event) => handleInputImageChange(event, index)} required/>
-              </article>
-            ))}
+            <ColorInputs handleDeleteColor={handleDeleteColor} clotheColors={clotheColors} formData={formData} setFormData={setFormData}/>
           </section>
           {
             submiting ?
