@@ -7,6 +7,10 @@
   <h1 align="center">CrystalGym</h1>
 </p>
 
+<picture>
+  <img alt="CrystalGym Mockup" src="https://raw.githubusercontent.com/SimonDiLeoGIT/crystalgym-ecommerce/develop/client/public/Mockup.png">
+</picture>
+
 ## Introduction
 CrystalGym is an ecommerce platform with essential ecommerce features built using Python and React.
 
@@ -27,3 +31,8 @@ CrystalGym is an ecommerce platform with essential ecommerce features built usin
 - Back End 🚧 –> Python with Flask is being used to develop the Back End of this application. PostgreSQL is utilized for data persistence, storing all necessary application data reliably.
 
 - Cloud Services 🚧 –> An AWS S3 bucket has been configured to store images for each product. The Front End is deployed using Vercel, allowing for fast and reliable delivery.
+
+## DER
+<picture>
+  <img alt="CrystalGym DataBase DER" src="https://raw.githubusercontent.com/SimonDiLeoGIT/crystalgym-ecommerce/develop/backend/CrystalGym-DER.drawio.png" >
+</picture>
