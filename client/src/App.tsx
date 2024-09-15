@@ -1,8 +1,6 @@
 import { lazy } from "react"
-// import { Router } from "./components/Router/Router"
-// import { CartProvider } from "./context/cart"
-// import { OrderProvider } from "./context/order"
 import './styles/global/fonts.css'
+import UserProvider from "./context/user"
 
 const Router = lazy(() => import("./components/Router/Router"))
 const CartProvider = lazy(() => import("./context/cart"))
@@ -11,11 +9,13 @@ const OrderProvider = lazy(() => import("./context/order"))
 function App() {
 
   return (
-    <OrderProvider>
-      <CartProvider>
-        <Router />
-      </CartProvider>
-    </OrderProvider>
+    <UserProvider>
+      <OrderProvider>
+        <CartProvider>
+          <Router />
+        </CartProvider>
+      </OrderProvider>
+    </UserProvider>
   )
 }
 

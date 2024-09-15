@@ -13,6 +13,9 @@ const Profile = lazy(() => import("../../pages/Profile"))
 const TerminosCondiciones = lazy(() => import("../../pages/TerminosCondiciones"))
 const Navbar = lazy(() => import("../Navbar/Navbar"))
 const Footer = lazy(() => import("../Footer/Footer"))
+const Register = lazy(() => import("../../pages/Register"))
+const Login = lazy(() => import("../../pages/Login"))
+const PostNewClothe = lazy(() => import("../../pages/PostNewClothe"))
 
 const Router = () => {
   return (
@@ -32,8 +35,11 @@ const Router = () => {
           <Route path="/:type/news/gym-clothes" element={<NewsProducts />} />
           <Route path="/:type" element={<NewsProducts />} />
           <Route path="/product/:id/:colorId" element={<Product />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/terms&conditions" element={<TerminosCondiciones />} />
+          <Route path="/post-new-clothe" element={<PostNewClothe />} />
         </Routes>
         <Footer />
       </BrowserRouter>

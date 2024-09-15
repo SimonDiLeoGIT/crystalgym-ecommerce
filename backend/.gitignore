@@ -1,0 +1,15 @@
+venv/
+.env
+gckeys.json
+migrations/
+jsons/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# pytest cache
+.pytest_cache/
+
+# SQL code
+init.sql
