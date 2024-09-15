@@ -4,7 +4,7 @@ import ClotheService from "../services/clothe.service";
 
 import '../styles/form.css';
 
-import { UserData } from "../interfaces/UserInterface";
+import { UserDataInterface } from "../interfaces/UserInterface";
 import { useUser } from "../hook/useUser";
 import ErrorMessage from "../components/ErrorMessage";
 import { ErrorInterface } from "../interfaces/ErrorInterface";
@@ -22,7 +22,7 @@ const PostNewClothe = () => {
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [visibleErrorMessage, setVisibleErrorMessage] = useState<boolean>(false);
 
-  const [user, setUser] = useState<UserData | null>(null);
+  const [user, setUser] = useState<UserDataInterface | null>(null);
   const [loading, setLoading] = useState(true);
 
   const [submiting, setSubmiting] = useState(false);

@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
-import { UserData } from "../interfaces/UserInterface";
+import { UserDataInterface } from "../interfaces/UserInterface";
 import UserService from "../services/user.service";
 
 interface Props {
@@ -7,20 +7,20 @@ interface Props {
 }
 
 type UserContext = {
-  initializeUser: (user: UserData | null) => void
-  getUser: () => Promise<UserData | null>
+  initializeUser: (user: UserDataInterface | null) => void
+  getUser: () => Promise<UserDataInterface | null>
 }
 
 export const UserContext = createContext({} as UserContext)
 
 const UserProvider = ({ children }: Props) => {
-  const [user, setUser] = useState<UserData | null>(null)
+  const [user, setUser] = useState<UserDataInterface | null>(null)
 
-  const initializeUser = (user: UserData | null) => {
+  const initializeUser = (user: UserDataInterface | null) => {
     setUser(user)
   }
   
-  const getUser = async (): Promise<UserData | null> => {
+  const getUser = async (): Promise<UserDataInterface | null> => {
     if (!user) {
       try {
         const response = await UserService.me();

@@ -10,7 +10,7 @@ import red_logout from '../../assets/icons/nav icons/logout-red.svg'
 
 import useWindowSize from "../../utils/useWindowSize"
 import { useUser } from "../../hook/useUser"
-import { UserInterface } from "../../interfaces/UserInterface"
+import { UserDataInterface } from "../../interfaces/UserInterface"
 
 const MobileMenu = lazy(() => import("../MobileMenu/MobileMenu"))
 const MobileSearch = lazy(() => import("../Search/MobileSearch/MobileSearch"))
@@ -150,7 +150,7 @@ const Navbar = () => {
 
   const { getUser, initializeUser } = useUser();
 
-  const [user, setUser] = useState<UserInterface | null>(null)
+  const [user, setUser] = useState<UserDataInterface | null>(null)
 
   useEffect(() => {
     const fetchUser = async () => {

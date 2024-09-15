@@ -1,12 +1,12 @@
 import { lazy, useEffect, useState } from "react";
 import { Orders } from "../components/Orders/Orders"
 import { useUser } from "../hook/useUser";
-import { UserData } from "../interfaces/UserInterface";
+import { UserDataInterface } from "../interfaces/UserInterface";
 
 const Login = lazy(() => import("./Login"))
 
 export const Profile = () => {
-  const [user, setUser] = useState<UserData | null>(null);
+  const [user, setUser] = useState<UserDataInterface | null>(null);
   const [loading, setLoading] = useState(true);
 
   const { getUser } = useUser();
