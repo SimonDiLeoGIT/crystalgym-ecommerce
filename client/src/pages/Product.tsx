@@ -38,7 +38,7 @@ const Product = () => {
       <section className="md:grid md:grid-cols-2 md:w-11/12 md:m-auto max-w-7xl md:my-10">
         <header className="overflow-x-hidden">
           <div className="relative">
-            <section className="h-screen flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${translateValue}%)` }}>
+            <section className="max-h-screen flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${translateValue}%)` }}>
               {
                 product?.images.map((image: string) => {
                   return (
