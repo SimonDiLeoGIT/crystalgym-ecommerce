@@ -9,7 +9,7 @@ export interface UserLoginInterface {
   password: string
 }
 
-export interface UserData {
+export interface UserDataInterface {
   username: string
   email: string
   id: number
@@ -17,7 +17,7 @@ export interface UserData {
 }
 
 type data = {
-  user: UserData;
+  user: UserDataInterface;
   access_token: string;
 }
 
