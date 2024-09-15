@@ -25,26 +25,8 @@ const ImageLoad: React.FC<props> = ({ imageUrl, imageBlurHash, imageStyles, alt,
     };
   }, [imageUrl]);
 
-  return (
-    <>
-      {
-        !imageLoaded &&
-        imageBlurHash &&
-        <Blurhash
-          style={{
-            minWidth: "100%",
-            height: "100%",
-            maxHeight: "100%",
-          }}
-          // hash="LqLz?WWV~qoL?bj[M|f6xvofoLay"
-          hash={imageBlurHash}
-          resolutionX={32}
-          resolutionY={32}
-          punch={1}
-        />
-      }
-      {
-        imageLoaded && 
+  if (imageLoaded) {
+    return (
         <img
           src={imageUrl}
           onLoad={() => setImageLoaded(true)}
@@ -52,8 +34,23 @@ const ImageLoad: React.FC<props> = ({ imageUrl, imageBlurHash, imageStyles, alt,
           alt={alt}
           loading={loading}
         />
-      }
-    </>
+    )
+  }
+
+  return (
+      imageBlurHash &&
+      <Blurhash
+        style={{
+          minWidth: "100%",
+          height: "100%",
+          maxHeight: "100%",
+        }}
+        // hash="LqLz?WWV~qoL?bj[M|f6xvofoLay"
+        hash={imageBlurHash}
+        resolutionX={32}
+        resolutionY={32}
+        punch={1}
+      />
   )
 }
 
