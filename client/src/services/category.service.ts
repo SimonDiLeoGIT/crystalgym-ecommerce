@@ -8,8 +8,8 @@ export default class CategoryService {
   }
 
 
-  static async getPaginatedCategories(): Promise<PaginatedCategoriesInterface> {
-    const response = await ApiService.makeRequest('/categories/admin/1/4');
+  static async getPaginatedCategories(page: number, perPage: number = 10): Promise<PaginatedCategoriesInterface> {
+    const response = await ApiService.makeRequest(`/categories/admin/${page}/${perPage}`);
     return response;
   }
 }

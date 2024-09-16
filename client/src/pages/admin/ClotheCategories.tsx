@@ -20,8 +20,7 @@ const ClotheCategories = () => {
   const [loading, setLoading] = useState(true);
 
   const [paginatedCategories, setPaginatedCategories] = useState<PaginatedCategoriesInterface | null>(null);
-  const totalArticles = 10
-  const [currentPage, setCurrentPage] = useState<number>(0)
+  // const [currentPage, setCurrentPage] = useState<number>(0)
 
   // const [submiting, setSubmiting] = useState(false);
 
@@ -43,15 +42,13 @@ const ClotheCategories = () => {
   }, [ getUser ]);
 
   useEffect(() => {
-    
     fetchCategories();
-  }, [paginatedCategories]);
+  }, []);
 
-  const fetchCategories = async () => {
-    const response = await CategoryService.getPaginatedCategories();
+  const fetchCategories = async (page: number = 1) => {
+    const response = await CategoryService.getPaginatedCategories(page);
     if (response.code == 200) {
       setPaginatedCategories(response);
-      setCurrentPage(response.data.pagination.current_page)
     }
   }
 
@@ -67,12 +64,18 @@ const ClotheCategories = () => {
     return <Login />;
   }
 
-  const handlePageClick = async (event: PageChangeEvent) => {
-    const next = (event.selected * totalArticles) % paginatedCategories?.data.pagination.total_items;
-    setCurrentPage(next)
-    await fetchCategories();
-    window.scrollTo(0, 0);
-  }
+  const handlePageClick = async (event: { selected: number }) => {
+    if (paginatedCategories) {
+      const nextPage = event.selected + 1;
+      const totalPages = paginatedCategories?.data.pagination.total_pages;
+
+      if (nextPage <= totalPages) {
+        await fetchCategories(nextPage);
+        window.scrollTo(0, 0);
+      }
+    }
+  };
+
 
   return (
     <section className=" w-11/12 lg:w-10/12 m-auto my-12">
@@ -98,19 +101,19 @@ const ClotheCategories = () => {
         }
         onPageChange={handlePageClick}
         pageRangeDisplayed={1}
-        pageCount={paginatedCategories?.data.pagination.total_pages}
+        pageCount={paginatedCategories ? paginatedCategories?.data.pagination.total_pages : 0}
         marginPagesDisplayed={2}
         previousLabel={
           <img src={left_arrow} className="w-4" alt="Prev Page"/>
         }
         renderOnZeroPageCount={null}
-        containerClassName=" flex justify-center hover:cursor-pointer  m-auto"
+        containerClassName=" flex justify-center hover:cursor-pointer m-auto my-8"
         pageLinkClassName="p-1 md:p-2"
         pageClassName="p-2 md:p-2 rounded-lg font-semibold -text--color-black hover:-bg--color-very-light-grey hover:opacity-60"
         activeClassName="-bg--color-light-grey-violet -text--color-white hover:-bg--color-light-grey-violet"
         previousClassName="h-8 w-4 md:w-8 flex items-center justify-center -bg--color-light-grey-violet rounded-lg m-auto mr-1 hover:opacity-60"
         nextClassName="h-8 w-4 md:w-8 flex items-center justify-center -bg--color-light-grey-violet rounded-lg m-auto ml-1 hover:opacity-60"
-      />
+        />
     </section>
   )
 }
