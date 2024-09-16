@@ -87,9 +87,11 @@ const ClotheCategories = () => {
         </li>
         {paginatedCategories?.data.categories.map((category, index) => {
           return (
-            <li key={category.id} className={`flex p-2 ${index % 2 === 0 ? "-bg--color-very-light-grey" : ""}`}>
-              <span className="w-24">{category.id}</span>
-              <span>{category.name}</span>
+            <li key={category.id} className={`${index % 2 === 0 ? "-bg--color-very-light-grey" : ""}`}>
+              <form className="flex">
+                <input className="w-24" disabled value={category.id} />
+                <input className="flex-1 p-2" disabled value={category.name} />
+              </form>
             </li>
           )
         })}
