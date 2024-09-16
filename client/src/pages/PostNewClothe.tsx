@@ -46,7 +46,7 @@ const PostNewClothe = () => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const fetchedUser = await getUser();
+      const fetchedUser : UserDataInterface | null = await getUser();
       setUser(fetchedUser);
     };
 

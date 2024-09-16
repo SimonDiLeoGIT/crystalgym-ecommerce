@@ -6,6 +6,8 @@ import { UserRegisterInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom"
 import { useUser } from "../hook/useUser"
 import { isUserResponseInterface } from "../utils/ResponseType"
+import { ErrorInterface } from "../interfaces/ErrorInterface"
+import ErrorMessage from "../components/ErrorMessage"
 
 const Register = () => {
 
@@ -15,7 +17,13 @@ const Register = () => {
 
   const { initializeUser } = useUser()
   
+  const [visibleErrorMessage, setVisibleErrorMessage] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>("")
+
+  const handleViewErrorMessage = (message: string) => {
+    setErrorMessage(message);
+    setVisibleErrorMessage(true);
+  }
 
   async function signUp(event: React.FormEvent){
     event.preventDefault();
@@ -40,13 +48,15 @@ const Register = () => {
           window.location.href = "/profile";
         }
       }
-    } catch (error: unknown) {
-      console.log(error)
+    } catch (error) {
+      const apiError = error as ErrorInterface;
+      apiError.code < 500 ? handleViewErrorMessage(apiError.message) : handleViewErrorMessage("Something went wrong, please try again later");
     }
   }
 
   return (
     <section className="fixed top-0 left-0 w-screen h-screen -bg--color-white z-50 flex overflow-hidden">
+      <ErrorMessage message={errorMessage} visible={visibleErrorMessage} setVisible={setVisibleErrorMessage} />
       <form 
         onSubmit={signUp}
         method="POST"
@@ -61,7 +71,6 @@ const Register = () => {
           </figcaption>
         </figure>
         <legend className="font-semibold m-auto -text--color-black">Sign Up</legend>
-        <span className="-text--color-red font-semibold">{errorMessage}</span>
         <input 
           name='username' 
           type="text" 

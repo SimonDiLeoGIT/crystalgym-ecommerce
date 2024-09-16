@@ -16,6 +16,7 @@ const Footer = lazy(() => import("../Footer/Footer"))
 const Register = lazy(() => import("../../pages/Register"))
 const Login = lazy(() => import("../../pages/Login"))
 const PostNewClothe = lazy(() => import("../../pages/PostNewClothe"))
+const ClotheCategories = lazy(() => import("../../pages/admin/ClotheCategories"))
 
 const Router = () => {
   return (
@@ -40,6 +41,7 @@ const Router = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/terms&conditions" element={<TerminosCondiciones />} />
           <Route path="/post-new-clothe" element={<PostNewClothe />} />
+          <Route path="/admin/categories" element={<ClotheCategories />} />
         </Routes>
         <Footer />
       </BrowserRouter>

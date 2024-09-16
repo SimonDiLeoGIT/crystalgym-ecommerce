@@ -6,6 +6,7 @@ import { UserLoginInterface } from "../interfaces/UserInterface"
 import { Link } from "react-router-dom";
 import { useUser } from "../hook/useUser";
 import { ErrorInterface } from "../interfaces/ErrorInterface";
+import ErrorMessage from "../components/ErrorMessage";
 
 const Login = () => {
 
@@ -15,7 +16,13 @@ const Login = () => {
     document.title = "Login | CrystalGym";
   })
 
+  const [visibleErrorMessage, setVisibleErrorMessage] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>("")
+
+  const handleViewErrorMessage = (message: string) => {
+    setErrorMessage(message);
+    setVisibleErrorMessage(true);
+  }
 
   async function login(event: React.FormEvent) {
     event.preventDefault();
@@ -34,12 +41,13 @@ const Login = () => {
       });
     } catch (error) {
         const apiError = error as ErrorInterface;
-        setErrorMessage(apiError.message);
+        apiError.code < 500 ? handleViewErrorMessage(apiError.message) : handleViewErrorMessage("Something went wrong, please try again later");
     }
   }
 
   return (
     <section className="fixed top-0 left-0 w-screen h-screen -bg--color-white z-50 flex overflow-hidden">
+    <ErrorMessage message={errorMessage} visible={visibleErrorMessage} setVisible={setVisibleErrorMessage} />
     <form 
       onSubmit={login}
       method="POST"
@@ -54,7 +62,6 @@ const Login = () => {
         </figcaption>
       </figure>
       <legend className="font-semibold m-auto -text--color-black">Login</legend>
-      <span className="-text--color-red font-semibold">{errorMessage}</span>
       <input 
         name='username' 
         type="text" 

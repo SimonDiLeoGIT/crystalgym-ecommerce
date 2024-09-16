@@ -16,5 +16,7 @@ class PaginationHelper(metaclass=SingletonMeta):
             'total_items': total_items,
             'total_pages': total_pages,  # Aquí puedes calcular el total de páginas si tienes el número total de prendas
             'next_page': page + 1 if page < total_pages else None,
-            'prev_page': page - 1 if page > 1 else None
+            'prev_page': page - 1 if page > 1 else None,
+            'has_next': page < total_pages,
+            'has_prev': page > 1
         }
