@@ -8,7 +8,7 @@
 </p>
 
 <picture>
-  <img alt="CrystalGym Mockup" src="https://raw.githubusercontent.com/SimonDiLeoGIT/crystalgym-ecommerce/develop/client/public/Mockup.png">
+  <img alt="CrystalGym Mockup" src="https://raw.githubusercontent.com/SimonDiLeoGIT/crystalgym-ecommerce/refs/heads/main/client/src/assets/Mockup.png">
 </picture>
 
 ## Introduction
@@ -34,5 +34,5 @@ CrystalGym is an ecommerce platform with essential ecommerce features built usin
 
 ## DER
 <picture>
-  <img alt="CrystalGym DataBase DER" src="https://raw.githubusercontent.com/SimonDiLeoGIT/crystalgym-ecommerce/develop/backend/CrystalGym-DER.drawio.png" >
+  <img alt="CrystalGym DataBase DER" src="https://raw.githubusercontent.com/SimonDiLeoGIT/crystalgym-ecommerce/refs/heads/main/backend/CrystalGym-DER.drawio.png" >
 </picture>
