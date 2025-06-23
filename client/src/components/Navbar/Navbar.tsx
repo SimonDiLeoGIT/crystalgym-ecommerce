@@ -12,6 +12,8 @@ import useWindowSize from "../../utils/useWindowSize"
 import { useUser } from "../../hook/useUser"
 import { UserInterface } from "../../interfaces/UserInterface"
 
+import { useAuth0 } from "@auth0/auth0-react"
+
 const MobileMenu = lazy(() => import("../MobileMenu/MobileMenu"))
 const MobileSearch = lazy(() => import("../Search/MobileSearch/MobileSearch"))
 const DesktopSearch = lazy(() => import("../Search/DesktopSearch/DesktopSearch"))
@@ -23,6 +25,8 @@ const Navbar = () => {
   const [y, setY] = useState(window.scrollY);
   const [scrollUp, setScrollUp] = useState(false);
   const [scrollDown, setScrollDown] = useState(false);
+
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
 
   const handleNavigation = useCallback((e: Event) => {
     const window = e.currentTarget as Window;
@@ -220,6 +224,9 @@ const Navbar = () => {
           {!isMobile && <DesktopSearch />}
         </li>
         <li className="invisible hidden fixed px-1 my-auto h-full lg:flex items-center lg:visible lg:relative">
+          {
+
+          }
           <Link to='/profile' className="">
             <div className="w-10 h-10 flex items-center duration-150 hover:bg-opacity-50 hover:-bg--color-very-light-grey hover:shadow-md hover:-shadow--color-very-light-grey rounded-full">
               <img src={account_avatar} className="m-auto w-7" alt="Profile Icon"/>

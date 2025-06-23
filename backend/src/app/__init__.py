@@ -18,6 +18,8 @@ from app.models.clothe_color import ClotheColor
 from app.models.clothe_promo import ClothePromo
 from app.models.role import Role
 
+from authlib.integrations.flask_client import OAuth
+
 def create_app(config_class=Config):
     app = Flask(__name__)
 
@@ -30,6 +32,20 @@ def create_app(config_class=Config):
     db.init_app(app)
     migrate.init_app(app, db)
     jwt.init_app(app)
+
+    # # oauth setup
+    # oauth = OAuth(app)
+
+    # oauth.register(
+    #     "auth0",
+    #     client_id=Config.AUTH0_CLIENT_ID,
+    #     client_secret=Config.AUTH0_CLIENT_SECRET,
+    #     client_kwargs={
+    #         "scope": "openid profile email",
+    #     },
+    #     server_metadata_url=f'https://{Config.AUTH0_DOMAIN}/.well-known/openid-configuration'
+    # )
+
     cors.init_app(app, resources={r"/api/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
 
     # Registrar blueprints

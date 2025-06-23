@@ -2,14 +2,27 @@ import { lazy, useEffect, useState } from "react";
 import { Orders } from "../components/Orders/Orders"
 import { useUser } from "../hook/useUser";
 import { UserData } from "../interfaces/UserInterface";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Login = lazy(() => import("./Login"))
 
+const LoginButton = () => {
+  const { loginWithRedirect } = useAuth0();
+
+  return <button onClick={() => loginWithRedirect()}>Log In</button>;
+};
+
 export const Profile = () => {
-  const [user, setUser] = useState<UserData | null>(null);
+  // const [user, setUser] = useState<UserData | null>(null);
   const [loading, setLoading] = useState(true);
 
   const { getUser } = useUser();
+
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
+  if (!isAuthenticated) {
+    return <LoginButton />;
+  }
 
   useEffect(() => {
     document.title = "Profile | CrystalGym";
@@ -18,7 +31,7 @@ export const Profile = () => {
   useEffect(() => {
     const fetchUser = async () => {
       const fetchedUser = await getUser();
-      setUser(fetchedUser);
+      // setUser(fetchedUser);
       setLoading(false);
     };
 
